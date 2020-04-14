@@ -65,10 +65,102 @@
         </nav>
         
         
-        <div class="container">
-            <br><h2 style="text-align: center; padding-left: 30px; padding-right: 30px;">Statistics overview</h2><br>
-            <iframe height="500em" id="api" style="width:100%;height:object-fit:cover;" frameborder=0 src="api.html"></iframe>
-            <p align="center" style="color: #777777">Data is gathered from <a style="color: #f39c12" href="https://raw.githubusercontent.com/revoxhere/duco-statistics/master/api.json">Duino-Coin public JSON API</a> and is updated every <a style="color: #f39c12">90 seconds</a>.</p>
+        <script>
+            $.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/api.json', function(data) {
+                var price = `<h5>${data["Duco price"]} USD</h5>`
+                var users = `<h5>${data["Registered users"]}</h5>`
+                var hash = `<h5>${data["Last block hash"]}</h5>`
+                var lastupdate = `<h5>${data["Last update"]}</h5>`
+                var hashrate = `<h5>${data["Pool hashrate"]}</h5>`
+                var blocks = `<h5>${data["Mined blocks"]}</h5>`
+                var difficulty = `<h5>${data["Current difficulty"]}</h5>`
+                var workers = `<h5>${data["Active workers"]}</h5>`
+                $("#price").html(price);
+                $("#users").html(users);
+                $("#hash").html(hash);
+                $("#lastupdate").html(lastupdate);
+                $("#hashrate").html(hashrate);
+                $("#blocks").html(blocks);
+                $("#difficulty").html(difficulty);
+                $("#workers").html(workers);
+            });
+        </script>
+        <style>
+            img {
+                margin-top: 20px;
+            }
+
+            .statisticsDiv {
+              display: inline-block;
+              width: 12em;
+            }
+        </style>
+ 
+    <style type="text/css"></style></head>
+    <body>
+        <div style="text-align:center;">
+            <br><h2>Network statistics overwiev</h2><br>
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-chevron-double-right" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L13.293 8 7.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                <p>Pool hashrate:</p>
+                <div id="hashrate">
+                </div>
+            </div>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-person" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                <p>Registered users:</p>
+                <div id="users">
+                </div>
+            </div>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-files" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 2h8a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V4a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V4a1 1 0 00-1-1H3z" clip-rule="evenodd"/><path d="M5 0h8a2 2 0 012 2v10a2 2 0 01-2 2v-1a1 1 0 001-1V2a1 1 0 00-1-1H5a1 1 0 00-1 1H3a2 2 0 012-2z"/></svg>
+                <p>Mined blocks:</p>
+                <div id="blocks">
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-award" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l-1.51-.229L8 1.126l-1.355.702-1.51.229-.684 1.365-1.086 1.072L3.614 6l-.25 1.506 1.087 1.072.684 1.365 1.51.229L8 10.874l1.356-.702 1.509-.229.684-1.365 1.086-1.072L12.387 6l.248-1.506-1.086-1.072-.684-1.365z" clip-rule="evenodd"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg>
+                <p>1 DUCO price:</p>
+                <div id="price">
+                </div>
+            </div>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-hash" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path d="M8.39 12.648a1.32 1.32 0 00-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1.06 1.06 0 00.016-.164.51.51 0 00-.516-.516.54.54 0 00-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.512.512 0 00-.523-.516.539.539 0 00-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532 0 .312.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531 0 .313.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242l-.515 2.492zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z"/></svg>
+                <p>Last block hash:</p>
+                <div id="hash">
+                </div>
+            </div>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-gear" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 014.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 01-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 011.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 012.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 012.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 011.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 01-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 018.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 001.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 00.52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 00-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 00-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 00-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 00-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 00.52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 001.255-.52l.094-.319z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 100 4.492 2.246 2.246 0 000-4.492zM4.754 8a3.246 3.246 0 116.492 0 3.246 3.246 0 01-6.492 0z" clip-rule="evenodd"/></svg>
+                <p>Current difficulty:</p>
+                <div id="difficulty">
+                </div>
+            </div>
+
+            <div class="statisticsDiv" align="center">
+                <svg class="bi bi-clock" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm8-7A8 8 0 110 8a8 8 0 0116 0z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M7.5 3a.5.5 0 01.5.5v5.21l3.248 1.856a.5.5 0 01-.496.868l-3.5-2A.5.5 0 017 9V3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"/></svg>
+                <p>Last API update</p>
+                <div id="lastupdate">
+                </div>
+            </div>
+
+            <br><br>
+
+            <div align="center">
+                <svg class="bi bi-person-lines-fill" width="3em" height="3em" viewBox="0 0 16 16" fill="#F39C12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm7 1.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5zm-2-3a.5.5 0 01.5-.5h5a.5.5 0 010 1h-4a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h5a.5.5 0 010 1h-4a.5.5 0 01-.5-.5zm2 9a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5z" clip-rule="evenodd"/></svg>
+                <p>Active workers:</p>
+                <div id="workers">
+                </div>
+            </div>
+        </div>
+            <br><p align="center" style="color: #777777">Data is gathered from <a style="color: #f39c12" href="https://raw.githubusercontent.com/revoxhere/duco-statistics/master/api.json">Duino-Coin public JSON API</a> and is updated every <a style="color: #f39c12">90 seconds</a>.</p>
         </div>
 
         <br><hr><br>
