@@ -1,31 +1,79 @@
 <!DOCTYPE html>
-<html>
     <head>
-      <meta http-equiv="refresh" content="4;url=https://revoxhere.github.io/duco-statistics/statistics" />
-      <title>Just a moment...</title>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-      <link rel="icon" href="https://i.imgur.com/RcSjLKK.png">
-	  <style>
-			hr {
-				border-top: 1px solid #95afc0;
-			}
-			body {
-				margin-left: 0px;
-				margin-right: 0px;
-				background-color: #fafafa;
-				font-family: 'Open Sans', sans-serif;
-			} 
-			h1, h2, h3, h4 {
-				color: #0d52bf;
-			}
-	  </style>
+        <meta charset="utf-8" />
+        <html lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Duino-Coin | Network statistics</title>
+        <link rel="icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" type="image/png"/>
+        <link rel="shortcut icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" type="image/png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/app.4aa08d6dcc3080b4c008.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <style>
+            .btn-success {
+                background-color: #f39c12;
+                border-color: #f39c12;
+            }
+            .btn-success:hover, .btn-success:focus, .btc-success:active, .btc-success:visited {
+                background-color: #f1c40f;
+                border-color: #f1c40f;
+            }
+            ::-webkit-scrollbar
+            {
+              width: 8px;  /* for vertical scrollbars */
+              height: 8px; /* for horizontal scrollbars */
+            }
+
+            ::-webkit-scrollbar-track
+            {
+              background: rgba(0, 0, 0, 0.1);
+            }
+
+            ::-webkit-scrollbar-thumb
+            {
+              background: #f39c12;
+            }
+        </style>
     </head>
     <body>
-      <p>
-      	<img style="display: block; margin-left: auto; margin-right: auto;" src="https://superstorefinder.net/support/wp-content/uploads/2018/01/blue_loading.gif" alt="" width="200px" height="auto" />
-      </p>
-      <h1 style="text-align: center;">Checking your browser before accessing DUCO Network Statistics.</h2>
-      <p style="text-align: center;">This process is automatic. Your browser will redirect to your requested content shortly.</p>
-      <p style="text-align: center;">Please allow up to 5 seconds...</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand mr-0 mr-md-2" href="index"><img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" width="30" height="30" alt="Duino-Coin" title="Duino-Coin" class="d-inline-block align-top" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="whitepaper">Whitepaper</a></li>
+                <li class="nav-item"><a class="nav-link active" href="https://revoxhere.github.io/duco-statistics/statistics">Network</a></li>
+                <li class="nav-item"><a class="nav-link" href="donate">Donate</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+            </ul>
+                <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <li class="nav-item"><a class="nav-link p-2" href="https://twitter.com/CoinDuino/" target="_blank" title="Twitter"><i class="fab fa-lg fa-twitter"></i></a></li>
+                <li class="nav-item"><a class="nav-link p-2" href="https://www.reddit.com/r/Duinocoin/" target="_blank" title="Reddit"><i class="fab fa-lg fa-reddit"></i></a></li>
+                <li class="nav-item"><a class="nav-link p-2" href="https://discord.gg/KyADZT3" target="_blank" title="Discord"><i class="fab fa-lg fa-discord"></i></a></li>
+                <li class="nav-item"><a class="nav-link p-2" href="https://github.com/revoxhere/duino-coin" target="_blank" title="GitHub"><i class="fab fa-lg fa-github"></i></a></li>
+            </ul>
+                <a class="btn btn-success d-none d-md-inline-block mb-3 mb-md-0 ml-md-3" href="getting-started"><svg class="bi bi-caret-right-fill" width="1em" height="100%" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 011.659-.753l5.48 4.796a1 1 0 010 1.506z"/></svg> Get started</a>
+          </div>
+        </nav>
+        
+        
+        <div class="container">
+            <br><h2 style="text-align: center; padding-left: 30px; padding-right: 30px;">Statistics overview</h2><br>
+            <iframe height="500em" id="api" style="width:100%;height:object-fit:cover;" frameborder=0 src="api.html"></iframe>
+            <p align="center" style="color: #777777">Data is gathered from <a style="color: #f39c12" href="https://raw.githubusercontent.com/revoxhere/duco-statistics/master/api.json">Duino-Coin public JSON API</a> and is updated every <a style="color: #f39c12">90 seconds</a>.</p>
+        </div>
+
+        <br><hr><br>
+
+        <p style="color: #777777" align="center" class="mb">
+            Website made by Furim & revox <br> 2019-2020 Duino-Coin community</p>
     </body>
 </html>
