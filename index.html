@@ -12,19 +12,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
-	    	function myFunction() {
-			jQuery.get('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/BigBlocksArchive_17-05-2020_to_11-12-2020.json', function(data) {
-	   			data = data.split("\n");
-	   			var hashToBeFound = document.getElementById("myText").value;
-	   			var found = data.filter(element => element.includes(hashToBeFound));
-	   			found = found.toString().replaceAll(",", "<hr>")
-	   			if(hashToBeFound != "" && found != "") {
-	   				document.getElementById("p1").innerHTML = found;
-	   			}
-			});
-		}
-		</script>
         <style>
             .btn-success {
                 background-color: #f39c12;
@@ -116,14 +103,15 @@
 			   <div class="col-sm-3"></div>
 			   <form class="form-horizontal col-sm-6">
 			      <div class="input-group">
-			         <input type="text" class="form-control" id="myText" placeholder="Search hash, username, date, time...">
-			         <div class="input-group-btn"> <p onclick="myFunction()" class="btn btn-warning"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/></svg></p>
+			         <input type="text" class="form-control" id="myText" name="search" placeholder="Search hash, username, date, time...">
+			         <div class="input-group-btn"><button type="submit" class="btn btn-warning"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/></svg></button>
 			         </div>
 			      </div>
 			   </form>
 			</div>
 
 			<br>
+			<h4 align="center" id="p2"></h4>
 			<div class="container w-75">
 				<p align="center" id="p1">Results will show up here<br>Note that this is an early version of the explorer<br>and it doesn't support the new transaction system and other upcoming features yet.<br>It will be improved soon.</p>
 			</div>
@@ -199,4 +187,19 @@
         <p style="color: #777777" align="center" class="mb">
             Website made by Furim & revox <br> 2019-2020 Duino-Coin community</p>
     </body>
+    <script>
+	    	var url_string = window.location;
+			var url = new URL(url_string);
+			var hashToBeFound = url.searchParams.get("search");
+			document.getElementById("p2").innerHTML = "Showing results for: " + hashToBeFound
+			jQuery.get('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/BigBlocksArchive_17-05-2020_to_11-12-2020.json', function(data) {
+	   			data = data.split("\n");
+	   			var found = data.filter(element => element.includes(hashToBeFound));
+	   			found = found.toString().replaceAll(",", "<hr>")
+	   			if(hashToBeFound != "" && found != "") {
+	   				document.getElementById("p1").innerHTML = found;
+
+	   			}
+			});
+		</script>
 </html>
