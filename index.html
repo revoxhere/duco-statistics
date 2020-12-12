@@ -191,7 +191,9 @@
 	    	var url_string = window.location;
 			var url = new URL(url_string);
 			var hashToBeFound = url.searchParams.get("search");
-			document.getElementById("p2").innerHTML = "Showing results for: " + hashToBeFound
+			if(hashToBeFound != null) {
+				document.getElementById("p2").innerHTML = "Showing results for: " + hashToBeFound;
+			}
 			jQuery.get('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/BigBlocksArchive_17-05-2020_to_11-12-2020.json', function(data) {
 	   			data = data.split("\n");
 	   			var found = data.filter(element => element.includes(hashToBeFound));
