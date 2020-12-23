@@ -50,7 +50,10 @@
                 var hashrate = `<h5>${data["Pool hashrate"]}</h5>`
                 var blocks = `<h5>up to block ${data["Mined blocks"]}</h5>`
                 var difficulty = `<h5>${data["Current difficulty"]}</h5>`
-                var workers = `<h5>${data["Active workers"]}</h5>`
+                var workerszz = "<h5>"
+                $.each(data["Active workers"], function(k, v){
+                    workerszz = workerszz.concat(k+' ('+v+'), ');
+                });
                 $("#price").html(price);
                 $("#users").html(users);
                 $("#hash").html(hash);
@@ -58,7 +61,7 @@
                 $("#hashrate").html(hashrate);
                 $("#blocks").html(blocks);
                 $("#difficulty").html(difficulty);
-                $("#workers").html(workers);
+                $("#workers").html(workerszz.slice(0,-2)+"</h5>");
             });
         </script>
     </head>
