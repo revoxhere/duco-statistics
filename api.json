@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
     "Active connections": 4,
-    "Last update": "24/12/2020 13:34 (UTC)",
-    "Pool hashrate": "0.27kH/s",
-    "Duco price": 0.0041,
+    "Last update": "24/12/2020 13:35 (UTC)",
+    "Pool hashrate": "0.34kH/s",
+    "Duco price": 0.004,
     "Registered users": 502,
-    "All-time mined DUCO": 283553.64,
+    "All-time mined DUCO": 283553.65,
     "Current difficulty": 11010,
-    "Mined blocks": 22018568,
-    "Full last block hash": "cb396ce5c5db95d0f4a0b5f40f028c7c03090800",
-    "Last block hash": "cb396ce5c5...",
+    "Mined blocks": 22018578,
+    "Full last block hash": "abc65e291badf9c2387d62ac8147c02f33dc1686",
+    "Last block hash": "abc65e291b...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,16 +23,25 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "revox": 1
+        "revox": 1,
+        "lulkas": 1
     },
     "Miners": {
         "139647961536256": {
             "User": "revox",
-            "Hashrate": 265960.0,
+            "Hashrate": 262240.0,
             "Is estimated": "False",
-            "Sharetime": 179.0,
+            "Sharetime": 994.0,
             "Diff": 11010,
             "Software": "Official Python Miner v1.8"
+        },
+        "139647936358144": {
+            "User": "lulkas",
+            "Hashrate": 74658.0,
+            "Is estimated": "False",
+            "Sharetime": 595.0,
+            "Diff": 11010,
+            "Software": "Unknown"
         }
     }
 }
