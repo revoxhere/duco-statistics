@@ -1,15 +1,15 @@
 {
     "Server version": 1.8,
-    "Active connections": 81,
-    "Last update": "24/12/2020 12:33 (UTC)",
-    "Pool hashrate": "0.45kH/s",
+    "Active connections": 420,
+    "Last update": "24/12/2020 12:34 (UTC)",
+    "Pool hashrate": "18.22kH/s",
     "Duco price": 0.0041,
     "Registered users": 502,
-    "All-time mined DUCO": 283547.21,
+    "All-time mined DUCO": 283547.31,
     "Current difficulty": 11010,
-    "Mined blocks": 22018416,
-    "Full last block hash": "18dffede117adabd8a2b34c83308477875cef536",
-    "Last block hash": "18dffede11...",
+    "Mined blocks": 22018428,
+    "Full last block hash": "e75c1e7b80c15571f03243179b98746aba997282",
+    "Last block hash": "e75c1e7b80...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,103 +23,591 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "lulkas": 1,
-        "ahmd": 11
+        "ahmd": 72,
+        "lulkas": 1
     },
     "Miners": {
-        "140154505258752": {
-            "User": "lulkas",
-            "Hashrate": 79800.0,
-            "Is estimated": "False",
-            "Sharetime": 94.0,
-            "Diff": 11010,
-            "Software": "Unknown"
-        },
-        "140153834071808": {
+        "140153254975232": {
             "User": "ahmd",
-            "Hashrate": 20350.40160176516,
+            "Hashrate": 180143.44326474366,
             "Is estimated": "True",
-            "Sharetime": 587.0,
+            "Sharetime": 406.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140154027104000": {
+        "140152885696256": {
             "User": "ahmd",
-            "Hashrate": 6388.233257087658,
+            "Hashrate": 62478.43911706623,
+            "Is estimated": "True",
+            "Sharetime": 872.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153540327168": {
+            "User": "ahmd",
+            "Hashrate": 91173.55999295077,
+            "Is estimated": "True",
+            "Sharetime": 402.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153129084672": {
+            "User": "ahmd",
+            "Hashrate": 621327.083452424,
+            "Is estimated": "True",
+            "Sharetime": 143.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152784983808": {
+            "User": "ahmd",
+            "Hashrate": 5416.971863310968,
+            "Is estimated": "True",
+            "Sharetime": 930.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140154733946624": {
+            "User": "ahmd",
+            "Hashrate": 221028.5022274123,
+            "Is estimated": "True",
+            "Sharetime": 441.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152382134016": {
+            "User": "ahmd",
+            "Hashrate": 228989.16727586894,
+            "Is estimated": "True",
+            "Sharetime": 410.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151912142592": {
+            "User": "ahmd",
+            "Hashrate": 17061.105113133286,
+            "Is estimated": "True",
+            "Sharetime": 318.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153028372224": {
+            "User": "ahmd",
+            "Hashrate": 7714118.478151175,
+            "Is estimated": "True",
+            "Sharetime": 9.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140154169714432": {
+            "User": "ahmd",
+            "Hashrate": 102522.18263117444,
             "Is estimated": "True",
             "Sharetime": 897.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
+        "140151005730560": {
+            "User": "ahmd",
+            "Hashrate": 74395.17793741227,
+            "Is estimated": "True",
+            "Sharetime": 88.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150955374336": {
+            "User": "ahmd",
+            "Hashrate": 65066.651987632904,
+            "Is estimated": "True",
+            "Sharetime": 198.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153607468800": {
+            "User": "ahmd",
+            "Hashrate": 16299.177780964674,
+            "Is estimated": "True",
+            "Sharetime": 304.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153196226304": {
+            "User": "ahmd",
+            "Hashrate": 68095.48985318639,
+            "Is estimated": "True",
+            "Sharetime": 201.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152323385088": {
+            "User": "ahmd",
+            "Hashrate": 447107.0070979244,
+            "Is estimated": "True",
+            "Sharetime": 108.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150972159744": {
+            "User": "ahmd",
+            "Hashrate": 134248.8646684832,
+            "Is estimated": "True",
+            "Sharetime": 100.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151777859328": {
+            "User": "ahmd",
+            "Hashrate": 10569.420361654695,
+            "Is estimated": "True",
+            "Sharetime": 704.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151526078208": {
+            "User": "ahmd",
+            "Hashrate": 366099.6622664303,
+            "Is estimated": "True",
+            "Sharetime": 103.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
         "140154496866048": {
             "User": "ahmd",
-            "Hashrate": 87947.92999683703,
+            "Hashrate": 4638.265912107874,
+            "Is estimated": "True",
+            "Sharetime": 208.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152793376512": {
+            "User": "ahmd",
+            "Hashrate": 106702.42472979761,
+            "Is estimated": "True",
+            "Sharetime": 698.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140154725553920": {
+            "User": "ahmd",
+            "Hashrate": 440801.53318644647,
+            "Is estimated": "True",
+            "Sharetime": 418.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140154010318592": {
+            "User": "ahmd",
+            "Hashrate": 70036.78024478197,
+            "Is estimated": "True",
+            "Sharetime": 505.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153632646912": {
+            "User": "ahmd",
+            "Hashrate": 12324.915350378096,
+            "Is estimated": "True",
+            "Sharetime": 522.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153800500992": {
+            "User": "ahmd",
+            "Hashrate": 204150.27986201525,
+            "Is estimated": "True",
+            "Sharetime": 203.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151803037440": {
+            "User": "ahmd",
+            "Hashrate": 19707.457264088276,
+            "Is estimated": "True",
+            "Sharetime": 335.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153934784256": {
+            "User": "ahmd",
+            "Hashrate": 385768.2690259136,
+            "Is estimated": "True",
+            "Sharetime": 81.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153120691968": {
+            "User": "ahmd",
+            "Hashrate": 872782.319103845,
+            "Is estimated": "True",
+            "Sharetime": 105.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152373741312": {
+            "User": "lulkas",
+            "Hashrate": 80901.0,
+            "Is estimated": "False",
+            "Sharetime": 536.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152063211264": {
+            "User": "ahmd",
+            "Hashrate": 63394.52800007629,
+            "Is estimated": "True",
+            "Sharetime": 762.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151400187648": {
+            "User": "ahmd",
+            "Hashrate": 93038.98722341133,
+            "Is estimated": "True",
+            "Sharetime": 373.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153691395840": {
+            "User": "ahmd",
+            "Hashrate": 123572.39339528169,
+            "Is estimated": "True",
+            "Sharetime": 312.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150703593216": {
+            "User": "ahmd",
+            "Hashrate": 31765.488480382748,
+            "Is estimated": "True",
+            "Sharetime": 710.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150443419392": {
+            "User": "ahmd",
+            "Hashrate": 9954.534764208373,
+            "Is estimated": "True",
+            "Sharetime": 699.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151845000960": {
+            "User": "ahmd",
+            "Hashrate": 34107.0724727092,
+            "Is estimated": "True",
+            "Sharetime": 212.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151618397952": {
+            "User": "ahmd",
+            "Hashrate": 17264.202837369357,
+            "Is estimated": "True",
+            "Sharetime": 710.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151836608256": {
+            "User": "ahmd",
+            "Hashrate": 48330.8789596983,
+            "Is estimated": "True",
+            "Sharetime": 309.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151349831424": {
+            "User": "ahmd",
+            "Hashrate": 35782.036991165056,
+            "Is estimated": "True",
+            "Sharetime": 704.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152021247744": {
+            "User": "ahmd",
+            "Hashrate": 2394187.102633969,
+            "Is estimated": "True",
+            "Sharetime": 2.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153775322880": {
+            "User": "ahmd",
+            "Hashrate": 120544.52272435924,
+            "Is estimated": "True",
+            "Sharetime": 666.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150594488064": {
+            "User": "ahmd",
+            "Hashrate": 8207.34586720386,
+            "Is estimated": "True",
+            "Sharetime": 959.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150913410816": {
+            "User": "ahmd",
+            "Hashrate": 122654.06241574445,
+            "Is estimated": "True",
+            "Sharetime": 603.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153590683392": {
+            "User": "ahmd",
+            "Hashrate": 15475.474707159092,
+            "Is estimated": "True",
+            "Sharetime": 213.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150938588928": {
+            "User": "ahmd",
+            "Hashrate": 42609.08042450514,
+            "Is estimated": "True",
+            "Sharetime": 897.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152331777792": {
+            "User": "ahmd",
+            "Hashrate": 81632.54312763445,
+            "Is estimated": "True",
+            "Sharetime": 607.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153162655488": {
+            "User": "ahmd",
+            "Hashrate": 354821.2052360184,
             "Is estimated": "True",
             "Sharetime": 313.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140153666217728": {
+        "140153515149056": {
             "User": "ahmd",
-            "Hashrate": 5636.91165964961,
+            "Hashrate": 195718.1051796702,
             "Is estimated": "True",
-            "Sharetime": 609.0,
+            "Sharetime": 355.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140154480080640": {
+        "140153288546048": {
             "User": "ahmd",
-            "Hashrate": 5136.443124974582,
+            "Hashrate": 76490.47244794208,
             "Is estimated": "True",
-            "Sharetime": 804.0,
+            "Sharetime": 787.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140153926391552": {
+        "140151383402240": {
             "User": "ahmd",
-            "Hashrate": 1724.4928852558282,
+            "Hashrate": 62970.44829805535,
             "Is estimated": "True",
-            "Sharetime": 225.0,
+            "Sharetime": 302.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140153641039616": {
+        "140150905018112": {
             "User": "ahmd",
-            "Hashrate": 9731.889702608316,
+            "Hashrate": 17869.11392962694,
             "Is estimated": "True",
-            "Sharetime": 871.0,
+            "Sharetime": 701.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140153909606144": {
+        "140151509292800": {
             "User": "ahmd",
-            "Hashrate": 2108.4834349371426,
+            "Hashrate": 44891.98286281152,
             "Is estimated": "True",
-            "Sharetime": 611.0,
+            "Sharetime": 629.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140154127750912": {
+        "140152608737024": {
             "User": "ahmd",
-            "Hashrate": 143756.66965891066,
+            "Hashrate": 17563.856904280565,
             "Is estimated": "True",
-            "Sharetime": 686.0,
+            "Sharetime": 775.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140154035496704": {
+        "140151744288512": {
             "User": "ahmd",
-            "Hashrate": 48621.61874172286,
+            "Hashrate": 151112.68778571984,
             "Is estimated": "True",
-            "Sharetime": 358.0,
+            "Sharetime": 361.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140154018711296": {
+        "140152659093248": {
             "User": "ahmd",
-            "Hashrate": 42468.63203924183,
+            "Hashrate": 30980.31065749165,
             "Is estimated": "True",
-            "Sharetime": 609.0,
+            "Sharetime": 708.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153792108288": {
+            "User": "ahmd",
+            "Hashrate": 39701.80591433997,
+            "Is estimated": "True",
+            "Sharetime": 308.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150535739136": {
+            "User": "ahmd",
+            "Hashrate": 5956.039963669391,
+            "Is estimated": "True",
+            "Sharetime": 500.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150670022400": {
+            "User": "ahmd",
+            "Hashrate": 2944.5006919576626,
+            "Is estimated": "True",
+            "Sharetime": 802.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151643576064": {
+            "User": "ahmd",
+            "Hashrate": 4230.173888998773,
+            "Is estimated": "True",
+            "Sharetime": 923.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150493775616": {
+            "User": "ahmd",
+            "Hashrate": 67022.49292087407,
+            "Is estimated": "True",
+            "Sharetime": 170.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151928928000": {
+            "User": "ahmd",
+            "Hashrate": 150074.04822306635,
+            "Is estimated": "True",
+            "Sharetime": 203.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151786252032": {
+            "User": "ahmd",
+            "Hashrate": 19730.731981473396,
+            "Is estimated": "True",
+            "Sharetime": 905.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151920535296": {
+            "User": "ahmd",
+            "Hashrate": 45179.19859230749,
+            "Is estimated": "True",
+            "Sharetime": 766.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140153296938752": {
+            "User": "ahmd",
+            "Hashrate": 113836.47798742137,
+            "Is estimated": "True",
+            "Sharetime": 318.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152877303552": {
+            "User": "ahmd",
+            "Hashrate": 50288.928461598975,
+            "Is estimated": "True",
+            "Sharetime": 508.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151014123264": {
+            "User": "ahmd",
+            "Hashrate": 39898.482892889886,
+            "Is estimated": "True",
+            "Sharetime": 627.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152835340032": {
+            "User": "ahmd",
+            "Hashrate": 9490.958632648006,
+            "Is estimated": "True",
+            "Sharetime": 880.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150611273472": {
+            "User": "ahmd",
+            "Hashrate": 14297.509937836914,
+            "Is estimated": "True",
+            "Sharetime": 308.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151828215552": {
+            "User": "ahmd",
+            "Hashrate": 3684.522381664114,
+            "Is estimated": "True",
+            "Sharetime": 886.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152415704832": {
+            "User": "ahmd",
+            "Hashrate": 598035.6124453456,
+            "Is estimated": "True",
+            "Sharetime": 43.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140154001925888": {
+            "User": "ahmd",
+            "Hashrate": 123397.30915144917,
+            "Is estimated": "True",
+            "Sharetime": 503.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150552524544": {
+            "User": "ahmd",
+            "Hashrate": 18383.908072707727,
+            "Is estimated": "True",
+            "Sharetime": 703.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140152625522432": {
+            "User": "ahmd",
+            "Hashrate": 8362.700575234636,
+            "Is estimated": "True",
+            "Sharetime": 600.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140150661629696": {
+            "User": "ahmd",
+            "Hashrate": 46840.30079125447,
+            "Is estimated": "True",
+            "Sharetime": 222.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140151114835712": {
+            "User": "ahmd",
+            "Hashrate": 36921.20611615286,
+            "Is estimated": "True",
+            "Sharetime": 605.0,
             "Diff": 11010,
             "Software": "Unknown"
         }
