@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
-    "Active connections": 9,
-    "Last update": "24/12/2020 13:39 (UTC)",
-    "Pool hashrate": "0.34kH/s",
-    "Duco price": 0.0041,
+    "Active connections": 7,
+    "Last update": "24/12/2020 13:40 (UTC)",
+    "Pool hashrate": "0.48kH/s",
+    "Duco price": 0.004,
     "Registered users": 502,
-    "All-time mined DUCO": 283553.72,
+    "All-time mined DUCO": 283553.74,
     "Current difficulty": 11010,
-    "Mined blocks": 22018614,
-    "Full last block hash": "cd58c77f50659407000c1a2cbd8a307c5417e9cf",
-    "Last block hash": "cd58c77f50...",
+    "Mined blocks": 22018623,
+    "Full last block hash": "f0b55606ab724675ee58550f4f9a1ad482458e80",
+    "Last block hash": "f0b55606ab...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,25 +23,33 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "revox": 1,
-        "lulkas": 1
+        "lulkas": 1,
+        "revox": 2
     },
     "Miners": {
-        "139647961536256": {
-            "User": "revox",
-            "Hashrate": 257820.0,
-            "Is estimated": "False",
-            "Sharetime": 898.0,
-            "Diff": 11010,
-            "Software": "Official Python Miner v1.8"
-        },
         "139647927965440": {
             "User": "lulkas",
-            "Hashrate": 82489.0,
+            "Hashrate": 74001.0,
             "Is estimated": "False",
-            "Sharetime": 347.0,
+            "Sharetime": 328.0,
             "Diff": 11010,
             "Software": "Unknown"
+        },
+        "139647422289664": {
+            "User": "revox",
+            "Hashrate": 137443.0,
+            "Is estimated": "False",
+            "Sharetime": 438.0,
+            "Diff": 11010,
+            "Software": "Official Webminer v1.8"
+        },
+        "139647961536256": {
+            "User": "revox",
+            "Hashrate": 270870.0,
+            "Is estimated": "False",
+            "Sharetime": 755.0,
+            "Diff": 11010,
+            "Software": "Official Python Miner v1.8"
         }
     }
 }
