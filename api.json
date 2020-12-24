@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
-    "Active connections": 4,
-    "Last update": "24/12/2020 13:35 (UTC)",
-    "Pool hashrate": "0.34kH/s",
-    "Duco price": 0.004,
+    "Active connections": 6,
+    "Last update": "24/12/2020 13:36 (UTC)",
+    "Pool hashrate": "1.26kH/s",
+    "Duco price": 0.0041,
     "Registered users": 502,
-    "All-time mined DUCO": 283553.65,
+    "All-time mined DUCO": 283553.67,
     "Current difficulty": 11010,
-    "Mined blocks": 22018578,
-    "Full last block hash": "abc65e291badf9c2387d62ac8147c02f33dc1686",
-    "Last block hash": "abc65e291b...",
+    "Mined blocks": 22018591,
+    "Full last block hash": "226f1a70712e1125d5d5a369e558921887a363e0",
+    "Last block hash": "226f1a7071...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,25 +23,33 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "revox": 1,
-        "lulkas": 1
+        "lulkas": 1,
+        "revox": 2
     },
     "Miners": {
-        "139647961536256": {
-            "User": "revox",
-            "Hashrate": 262240.0,
+        "139647936358144": {
+            "User": "lulkas",
+            "Hashrate": 64507.0,
             "Is estimated": "False",
-            "Sharetime": 994.0,
+            "Sharetime": 93.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "139647413896960": {
+            "User": "revox",
+            "Hashrate": 250060.0,
+            "Is estimated": "False",
+            "Sharetime": 535.0,
             "Diff": 11010,
             "Software": "Official Python Miner v1.8"
         },
-        "139647936358144": {
-            "User": "lulkas",
-            "Hashrate": 74658.0,
+        "139647422289664": {
+            "User": "revox",
+            "Hashrate": 949933.0,
             "Is estimated": "False",
-            "Sharetime": 595.0,
+            "Sharetime": 828.0,
             "Diff": 11010,
-            "Software": "Unknown"
+            "Software": "Official Webminer v1.8"
         }
     }
 }
