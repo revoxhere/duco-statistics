@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
     "Active connections": 2,
-    "Last update": "25/12/2020 14:56 (UTC)",
-    "Pool hashrate": "0.0H/s",
-    "Duco price": 0.0034,
+    "Last update": "25/12/2020 14:57 (UTC)",
+    "Pool hashrate": "415.42kH/s",
+    "Duco price": 0.0035,
     "Registered users": 502,
-    "All-time mined DUCO": 284583.41,
+    "All-time mined DUCO": 284583.42,
     "Current difficulty": 11010,
-    "Mined blocks": 22018906,
-    "Full last block hash": "6069afff0742c796a6081b0d30c1a676ca1fd582",
-    "Last block hash": "6069afff07...",
+    "Mined blocks": 22018914,
+    "Full last block hash": "051e98f8c49201129cda7db5173d3b649fab1ec1",
+    "Last block hash": "051e98f8c4...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,16 +23,25 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "lulkas": 1
+        "lulkas": 1,
+        "revox": 1
     },
     "Miners": {
         "140557682808576": {
             "User": "lulkas",
-            "Hashrate": 0.0,
+            "Hashrate": 83419.0,
             "Is estimated": "False",
-            "Sharetime": 478.0,
+            "Sharetime": 754.0,
             "Diff": 11010,
             "Software": "Unknown"
+        },
+        "140557691463424": {
+            "User": "revox",
+            "Hashrate": 331999.0,
+            "Is estimated": "False",
+            "Sharetime": 92.0,
+            "Diff": 11010,
+            "Software": "Official Webminer v1.8"
         }
     }
 }
