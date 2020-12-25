@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
-    "Active connections": 20,
-    "Last update": "25/12/2020 15:28 (UTC)",
-    "Pool hashrate": "18078.42kH/s",
+    "Active connections": 64,
+    "Last update": "25/12/2020 15:29 (UTC)",
+    "Pool hashrate": "29754.73kH/s",
     "Duco price": 0.0034,
     "Registered users": 503,
-    "All-time mined DUCO": 285435.85,
+    "All-time mined DUCO": 285436.42,
     "Current difficulty": 11010,
-    "Mined blocks": 22019161,
-    "Full last block hash": "3cc68ab339b30969673e6dcc4f9ed9e6eea2a6b2",
-    "Last block hash": "3cc68ab339...",
+    "Mined blocks": 22019194,
+    "Full last block hash": "dc0db1801b5084e51cb5eaeceda2487860800ddb",
+    "Last block hash": "dc0db1801b...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -24,78 +24,422 @@
     ],
     "Active workers": {
         "lulkas": 1,
-        "idenchik": 8
+        "lorenzo10": 51
     },
     "Miners": {
         "140477390264064": {
             "User": "lulkas",
-            "Hashrate": 78165.0,
+            "Hashrate": 79091.0,
             "Is estimated": "False",
-            "Sharetime": 355.0,
+            "Sharetime": 58.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476644525824": {
-            "User": "idenchik",
-            "Hashrate": 212602.36874358662,
+        "140476770416384": {
+            "User": "lorenzo10",
+            "Hashrate": 58036.58116445864,
             "Is estimated": "True",
-            "Sharetime": 601.0,
+            "Sharetime": 580.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476711667456": {
-            "User": "idenchik",
-            "Hashrate": 924400.2778223007,
+        "140476745238272": {
+            "User": "lorenzo10",
+            "Hashrate": 165422.48163875018,
+            "Is estimated": "True",
+            "Sharetime": 985.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476762023680": {
+            "User": "lorenzo10",
+            "Hashrate": 9155331.516802907,
+            "Is estimated": "True",
+            "Sharetime": 20.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476753630976": {
+            "User": "lorenzo10",
+            "Hashrate": 337064.97176825523,
+            "Is estimated": "True",
+            "Sharetime": 457.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476736845568": {
+            "User": "lorenzo10",
+            "Hashrate": 1322260.4533370459,
+            "Is estimated": "True",
+            "Sharetime": 137.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476728452864": {
+            "User": "lorenzo10",
+            "Hashrate": 48246.201450145476,
+            "Is estimated": "True",
+            "Sharetime": 472.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476652918528": {
+            "User": "lorenzo10",
+            "Hashrate": 433422.5233407795,
+            "Is estimated": "True",
+            "Sharetime": 111.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476686489344": {
+            "User": "lorenzo10",
+            "Hashrate": 311220.96322435804,
+            "Is estimated": "True",
+            "Sharetime": 549.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476627740416": {
+            "User": "lorenzo10",
+            "Hashrate": 509389.64577656676,
+            "Is estimated": "True",
+            "Sharetime": 100.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476694882048": {
+            "User": "lorenzo10",
+            "Hashrate": 339796.35737845977,
+            "Is estimated": "True",
+            "Sharetime": 209.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476610955008": {
+            "User": "lorenzo10",
+            "Hashrate": 332933.5664221838,
+            "Is estimated": "True",
+            "Sharetime": 558.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476619347712": {
+            "User": "lorenzo10",
+            "Hashrate": 234305.64288874916,
+            "Is estimated": "True",
+            "Sharetime": 156.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476602562304": {
+            "User": "lorenzo10",
+            "Hashrate": 199511.8425973573,
+            "Is estimated": "True",
+            "Sharetime": 323.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476594169600": {
+            "User": "lorenzo10",
+            "Hashrate": 278349.3647614983,
+            "Is estimated": "True",
+            "Sharetime": 83.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476585776896": {
+            "User": "lorenzo10",
+            "Hashrate": 644669.0691746506,
+            "Is estimated": "True",
+            "Sharetime": 93.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476577384192": {
+            "User": "lorenzo10",
+            "Hashrate": 425076.5840112768,
+            "Is estimated": "True",
+            "Sharetime": 279.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476560598784": {
+            "User": "lorenzo10",
+            "Hashrate": 61997.11492226319,
             "Is estimated": "True",
             "Sharetime": 34.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476678096640": {
-            "User": "idenchik",
-            "Hashrate": 238142.09304672517,
+        "140476552206080": {
+            "User": "lorenzo10",
+            "Hashrate": 8265175.597941265,
             "Is estimated": "True",
-            "Sharetime": 468.0,
+            "Sharetime": 24.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476636133120": {
-            "User": "idenchik",
-            "Hashrate": 218084.89674995074,
+        "140476568991488": {
+            "User": "lorenzo10",
+            "Hashrate": 196715.59579268118,
             "Is estimated": "True",
-            "Sharetime": 802.0,
+            "Sharetime": 62.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476703274752": {
-            "User": "idenchik",
-            "Hashrate": 15777394.28802099,
+        "140476535420672": {
+            "User": "lorenzo10",
+            "Hashrate": 191271.31397289308,
             "Is estimated": "True",
-            "Sharetime": 9.0,
+            "Sharetime": 953.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476720060160": {
-            "User": "idenchik",
-            "Hashrate": 130249.86144529913,
+        "140476527027968": {
+            "User": "lorenzo10",
+            "Hashrate": 48158.928475337416,
             "Is estimated": "True",
-            "Sharetime": 667.0,
+            "Sharetime": 557.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476661311232": {
-            "User": "idenchik",
-            "Hashrate": 336080.83560399635,
+        "140476518635264": {
+            "User": "lorenzo10",
+            "Hashrate": 147853.85719726933,
             "Is estimated": "True",
-            "Sharetime": 504.0,
+            "Sharetime": 465.0,
             "Diff": 11010,
             "Software": "Unknown"
         },
-        "140476669703936": {
-            "User": "idenchik",
-            "Hashrate": 163300.1890234845,
+        "140476543813376": {
+            "User": "lorenzo10",
+            "Hashrate": 180620.6760155183,
             "Is estimated": "True",
-            "Sharetime": 801.0,
+            "Sharetime": 969.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476501849856": {
+            "User": "lorenzo10",
+            "Hashrate": 44799.14429429637,
+            "Is estimated": "True",
+            "Sharetime": 591.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476510242560": {
+            "User": "lorenzo10",
+            "Hashrate": 319869.29842050467,
+            "Is estimated": "True",
+            "Sharetime": 410.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476485064448": {
+            "User": "lorenzo10",
+            "Hashrate": 50044.501086139244,
+            "Is estimated": "True",
+            "Sharetime": 697.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476493457152": {
+            "User": "lorenzo10",
+            "Hashrate": 172592.57519287587,
+            "Is estimated": "True",
+            "Sharetime": 696.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476476671744": {
+            "User": "lorenzo10",
+            "Hashrate": 208078.81130048144,
+            "Is estimated": "True",
+            "Sharetime": 306.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476468279040": {
+            "User": "lorenzo10",
+            "Hashrate": 223419.26919583595,
+            "Is estimated": "True",
+            "Sharetime": 65.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476459886336": {
+            "User": "lorenzo10",
+            "Hashrate": 203604.7584957944,
+            "Is estimated": "True",
+            "Sharetime": 982.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476443100928": {
+            "User": "lorenzo10",
+            "Hashrate": 53033.2878509505,
+            "Is estimated": "True",
+            "Sharetime": 657.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476434708224": {
+            "User": "lorenzo10",
+            "Hashrate": 299644.36939530005,
+            "Is estimated": "True",
+            "Sharetime": 142.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476426315520": {
+            "User": "lorenzo10",
+            "Hashrate": 170259.7875191934,
+            "Is estimated": "True",
+            "Sharetime": 921.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476417922816": {
+            "User": "lorenzo10",
+            "Hashrate": 250542.22338947072,
+            "Is estimated": "True",
+            "Sharetime": 166.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476392744704": {
+            "User": "lorenzo10",
+            "Hashrate": 171718.72737564007,
+            "Is estimated": "True",
+            "Sharetime": 966.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476384352000": {
+            "User": "lorenzo10",
+            "Hashrate": 186655.50459358093,
+            "Is estimated": "True",
+            "Sharetime": 843.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476367566592": {
+            "User": "lorenzo10",
+            "Hashrate": 367278.2319103845,
+            "Is estimated": "True",
+            "Sharetime": 510.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476325603072": {
+            "User": "lorenzo10",
+            "Hashrate": 72233.20960026326,
+            "Is estimated": "True",
+            "Sharetime": 817.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476333995776": {
+            "User": "lorenzo10",
+            "Hashrate": 52315.0056476609,
+            "Is estimated": "True",
+            "Sharetime": 509.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476342388480": {
+            "User": "lorenzo10",
+            "Hashrate": 181186.10121334917,
+            "Is estimated": "True",
+            "Sharetime": 936.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476317210368": {
+            "User": "lorenzo10",
+            "Hashrate": 56649.583229549564,
+            "Is estimated": "True",
+            "Sharetime": 722.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476401137408": {
+            "User": "lorenzo10",
+            "Hashrate": 100158.3164334649,
+            "Is estimated": "True",
+            "Sharetime": 829.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476300424960": {
+            "User": "lorenzo10",
+            "Hashrate": 270751.3230734883,
+            "Is estimated": "True",
+            "Sharetime": 179.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476308817664": {
+            "User": "lorenzo10",
+            "Hashrate": 42937.434565157455,
+            "Is estimated": "True",
+            "Sharetime": 537.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476292032256": {
+            "User": "lorenzo10",
+            "Hashrate": 47197.69692184746,
+            "Is estimated": "True",
+            "Sharetime": 566.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476283639552": {
+            "User": "lorenzo10",
+            "Hashrate": 1748043.2374165345,
+            "Is estimated": "True",
+            "Sharetime": 91.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476275246848": {
+            "User": "lorenzo10",
+            "Hashrate": 87076.4260110517,
+            "Is estimated": "True",
+            "Sharetime": 655.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476258461440": {
+            "User": "lorenzo10",
+            "Hashrate": 188986.12814493768,
+            "Is estimated": "True",
+            "Sharetime": 491.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476266854144": {
+            "User": "lorenzo10",
+            "Hashrate": 37632.19657860893,
+            "Is estimated": "True",
+            "Sharetime": 702.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476711667456": {
+            "User": "lorenzo10",
+            "Hashrate": 67767.90607559957,
+            "Is estimated": "True",
+            "Sharetime": 706.0,
+            "Diff": 11010,
+            "Software": "Unknown"
+        },
+        "140476250068736": {
+            "User": "lorenzo10",
+            "Hashrate": 110271.6538683841,
+            "Is estimated": "True",
+            "Sharetime": 66.0,
             "Diff": 11010,
             "Software": "Unknown"
         }
