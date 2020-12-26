@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
-    "Active connections": 50,
-    "Last update": "26/12/2020 12:47 (UTC)",
-    "Pool hashrate": "6105.24kH/s",
-    "Duco price": 0.0035,
+    "Active connections": 51,
+    "Last update": "26/12/2020 12:48 (UTC)",
+    "Pool hashrate": "6374.49kH/s",
+    "Duco price": 0.0036,
     "Registered users": 508,
-    "All-time mined DUCO": 286273.51,
+    "All-time mined DUCO": 286273.52,
     "Current difficulty": 11013,
-    "Mined blocks": 22025846,
-    "Full last block hash": "6047c62c71e552b2e416a59d155df767df6f865e",
-    "Last block hash": "6047c62c71...",
+    "Mined blocks": 22025876,
+    "Full last block hash": "aebff46e8915ad436237a3fd556c307165a506a2",
+    "Last block hash": "aebff46e89...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -24,7 +24,7 @@
     ],
     "Active workers": {
         "revox": 1,
-        "Coinware01": 18,
+        "Coinware01": 19,
         "drn": 1
     },
     "Miners": {
@@ -220,11 +220,21 @@
         },
         "Process-116": {
             "User": "Coinware01",
-            "Hashrate": 299921.0,
+            "Hashrate": 282597.0,
             "Is estimated": "False",
-            "Sharetime": 39.0,
-            "Accepted": 148,
-            "Rejected": 17,
+            "Sharetime": 549.0,
+            "Accepted": 168,
+            "Rejected": 20,
+            "Diff": 11013,
+            "Software": "Unknown"
+        },
+        "Process-122": {
+            "User": "Coinware01",
+            "Hashrate": 286574.0,
+            "Is estimated": "False",
+            "Sharetime": 602.0,
+            "Accepted": 8,
+            "Rejected": 0,
             "Diff": 11013,
             "Software": "Unknown"
         }
