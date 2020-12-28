@@ -1,21 +1,21 @@
 {
     "Server version": 1.7,
-    "Active connections": 39,
-    "Last update": "28/12/2020 18:38 (UTC)",
-    "Pool hashrate": "159.15 kH/s",
+    "Active connections": 44,
+    "Last update": "28/12/2020 18:39 (UTC)",
+    "Pool hashrate": "19043.78 kH/s",
     "Duco price": 0.0034,
     "Registered users": 510,
-    "All-time mined DUCO": 286385.64,
+    "All-time mined DUCO": 286385.7,
     "Current difficulty": 11026,
-    "Mined blocks": 22050796,
-    "Full last block hash": "e1a26b96cae045698ff66abf1b53267e38ee7bbf",
-    "Last block hash": "e1a26b96ca...",
+    "Mined blocks": 22050801,
+    "Full last block hash": "fc11902615fb66150c884817c7e8c7b9d14360a2",
+    "Last block hash": "fc11902615...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
         "19077.239 DUCO - ducowrapper",
         "16450.7118 DUCO - PHR9",
-        "11431.6812 DUCO - drn",
+        "11431.6826 DUCO - drn",
         "7862.3849 DUCO - baibaide",
         "7502.7521 DUCO - egiptsky",
         "7131.2107 DUCO - Gam3t3chElectronics",
@@ -23,27 +23,390 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "wossky": 2
+        "wossky": 3,
+        "TOG": 31,
+        "drn": 3,
+        "stanzwerck": 1
     },
     "Miners": {
         "Process-5": {
             "User": "wossky",
-            "Hashrate": 135231.0,
+            "Hashrate": 138630.0,
             "Is estimated": "False",
-            "Sharetime": 613.0,
-            "Accepted": 1,
-            "Rejected": 0,
+            "Sharetime": 699.0,
+            "Accepted": 14,
+            "Rejected": 1,
             "Diff": 11026,
             "Software": "Unknown"
         },
         "Process-32": {
             "User": "wossky",
-            "Hashrate": 23917.0,
+            "Hashrate": 134067.0,
             "Is estimated": "False",
-            "Sharetime": 612.0,
-            "Accepted": 0,
+            "Sharetime": 113.0,
+            "Accepted": 14,
+            "Rejected": 1,
+            "Diff": 11026,
+            "Software": "Unknown"
+        },
+        "Process-13": {
+            "User": "wossky",
+            "Hashrate": 260715.0,
+            "Is estimated": "False",
+            "Sharetime": 519.0,
+            "Accepted": 7,
             "Rejected": 0,
             "Diff": 11026,
+            "Software": "Unknown"
+        },
+        "Process-19": {
+            "User": "TOG",
+            "Hashrate": 226729.54453849257,
+            "Is estimated": "True",
+            "Sharetime": 827.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-10": {
+            "User": "TOG",
+            "Hashrate": 74024.43280977313,
+            "Is estimated": "True",
+            "Sharetime": 955.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-4": {
+            "User": "TOG",
+            "Hashrate": 461583.75634517765,
+            "Is estimated": "True",
+            "Sharetime": 394.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-11": {
+            "User": "TOG",
+            "Hashrate": 41192.3890063425,
+            "Is estimated": "True",
+            "Sharetime": 946.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-20": {
+            "User": "TOG",
+            "Hashrate": 525433.3333333334,
+            "Is estimated": "True",
+            "Sharetime": 120.0,
+            "Accepted": 1,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-26": {
+            "User": "TOG",
+            "Hashrate": 206248.0211081794,
+            "Is estimated": "True",
+            "Sharetime": 758.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-38": {
+            "User": "TOG",
+            "Hashrate": 11987.27465535525,
+            "Is estimated": "True",
+            "Sharetime": 943.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-7": {
+            "User": "TOG",
+            "Hashrate": 486956.52173913043,
+            "Is estimated": "True",
+            "Sharetime": 23.0,
+            "Accepted": 1,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-35": {
+            "User": "TOG",
+            "Hashrate": 130726.20283835239,
+            "Is estimated": "True",
+            "Sharetime": 963.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-16": {
+            "User": "TOG",
+            "Hashrate": 184292.4281984334,
+            "Is estimated": "True",
+            "Sharetime": 383.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-37": {
+            "User": "TOG",
+            "Hashrate": 98191.09663409338,
+            "Is estimated": "True",
+            "Sharetime": 614.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-17": {
+            "User": "TOG",
+            "Hashrate": 15069.219440353463,
+            "Is estimated": "True",
+            "Sharetime": 679.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-8": {
+            "User": "TOG",
+            "Hashrate": 54578.35497835498,
+            "Is estimated": "True",
+            "Sharetime": 770.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-33": {
+            "User": "TOG",
+            "Hashrate": 1175567.5675675676,
+            "Is estimated": "True",
+            "Sharetime": 111.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-14": {
+            "User": "TOG",
+            "Hashrate": 97838.08437856329,
+            "Is estimated": "True",
+            "Sharetime": 877.0,
+            "Accepted": 1,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-2": {
+            "User": "drn",
+            "Hashrate": 724553.8461538461,
+            "Is estimated": "True",
+            "Sharetime": 65.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-30": {
+            "User": "TOG",
+            "Hashrate": 266216.99346405227,
+            "Is estimated": "True",
+            "Sharetime": 255.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-22": {
+            "User": "TOG",
+            "Hashrate": 334205.9336823735,
+            "Is estimated": "True",
+            "Sharetime": 382.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-18": {
+            "User": "TOG",
+            "Hashrate": 156639.13224864413,
+            "Is estimated": "True",
+            "Sharetime": 799.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-28": {
+            "User": "TOG",
+            "Hashrate": 102494.08489909534,
+            "Is estimated": "True",
+            "Sharetime": 479.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-6": {
+            "User": "TOG",
+            "Hashrate": 1842836.879432624,
+            "Is estimated": "True",
+            "Sharetime": 47.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-36": {
+            "User": "TOG",
+            "Hashrate": 909906.1032863851,
+            "Is estimated": "True",
+            "Sharetime": 142.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-12": {
+            "User": "TOG",
+            "Hashrate": 128540.75546719682,
+            "Is estimated": "True",
+            "Sharetime": 503.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-3": {
+            "User": "TOG",
+            "Hashrate": 257635.99182004092,
+            "Is estimated": "True",
+            "Sharetime": 326.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-21": {
+            "User": "stanzwerck",
+            "Hashrate": 149634.27800269905,
+            "Is estimated": "True",
+            "Sharetime": 988.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-43": {
+            "User": "drn",
+            "Hashrate": 15619.627749576988,
+            "Is estimated": "True",
+            "Sharetime": 985.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-27": {
+            "User": "TOG",
+            "Hashrate": 2814245.614035088,
+            "Is estimated": "True",
+            "Sharetime": 57.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-23": {
+            "User": "TOG",
+            "Hashrate": 198626.11516626115,
+            "Is estimated": "True",
+            "Sharetime": 822.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-9": {
+            "User": "TOG",
+            "Hashrate": 250228.59875657578,
+            "Is estimated": "True",
+            "Sharetime": 697.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-34": {
+            "User": "TOG",
+            "Hashrate": 3916571.428571429,
+            "Is estimated": "True",
+            "Sharetime": 42.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-29": {
+            "User": "TOG",
+            "Hashrate": 194769.58002270147,
+            "Is estimated": "True",
+            "Sharetime": 881.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-25": {
+            "User": "TOG",
+            "Hashrate": 233899.78213507624,
+            "Is estimated": "True",
+            "Sharetime": 765.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-15": {
+            "User": "TOG",
+            "Hashrate": 1897292.9292929294,
+            "Is estimated": "True",
+            "Sharetime": 99.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-41": {
+            "User": "drn",
+            "Hashrate": 129080.10335917312,
+            "Is estimated": "True",
+            "Sharetime": 258.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-39": {
+            "User": "TOG",
+            "Hashrate": 196955.89743589744,
+            "Is estimated": "True",
+            "Sharetime": 975.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
             "Software": "Unknown"
         }
     }
