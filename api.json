@@ -1,15 +1,15 @@
 {
     "Server version": 1.7,
-    "Active connections": 0,
-    "Last update": "28/12/2020 14:17 (UTC)",
-    "Pool hashrate": "0 H/s",
-    "Duco price": 0.0035,
+    "Active connections": 40,
+    "Last update": "28/12/2020 14:18 (UTC)",
+    "Pool hashrate": "37.46 kH/s",
+    "Duco price": 0.0034,
     "Registered users": 508,
     "All-time mined DUCO": 286335.63,
     "Current difficulty": 11024,
-    "Mined blocks": 22047898,
-    "Full last block hash": "00f1f45ef142795445bee1f256e0961c2df7cbbb",
-    "Last block hash": "00f1f45ef1...",
+    "Mined blocks": 22047899,
+    "Full last block hash": "32391c50e46315abf6de3865133d99a9335f930f",
+    "Last block hash": "32391c50e4...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -22,6 +22,29 @@
         "5075.4027 DUCO - noz",
         "4796.6215 DUCO - croceny"
     ],
-    "Active workers": {},
-    "Miners": {}
+    "Active workers": {
+        "TOG": 2
+    },
+    "Miners": {
+        "Process-12": {
+            "User": "TOG",
+            "Hashrate": 11402.078337330135,
+            "Is estimated": "True",
+            "Sharetime": 417.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "Process-10": {
+            "User": "TOG",
+            "Hashrate": 26061.366806136677,
+            "Is estimated": "True",
+            "Sharetime": 478.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        }
+    }
 }
