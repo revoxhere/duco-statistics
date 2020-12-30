@@ -1,15 +1,15 @@
 {
     "Server version": 1.8,
-    "Active connections": 95,
-    "Last update": "30/12/2020 12:56 (UTC)",
-    "Pool hashrate": "11.12 MH/s",
-    "Duco price": 0.004643,
+    "Active connections": 71,
+    "Last update": "30/12/2020 12:57 (UTC)",
+    "Pool hashrate": "16.23 MH/s",
+    "Duco price": 0.004373,
     "Registered users": 513,
-    "All-time mined DUCO": 286620.96,
+    "All-time mined DUCO": 286621.0,
     "Current difficulty": 11035,
-    "Mined blocks": 22068437,
-    "Full last block hash": "98d15ce28f3c36c96d4a6100fdb94930dab3ca64",
-    "Last block hash": "98d15ce28f...",
+    "Mined blocks": 22068447,
+    "Full last block hash": "5ccefe5071eabc27a2e559ac0165582535a702de",
+    "Last block hash": "5ccefe5071...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,126 +23,234 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "revox": 1,
-        "TOG": 1,
-        "lorenzo10": 34
+        "lorenzo10": 63
     },
     "Miners": {
-        "Process-13": {
-            "User": "revox",
-            "Hashrate": 425530.0,
-            "Is estimated": "False",
-            "Sharetime": 265.0,
-            "Accepted": 5,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-7": {
-            "User": "TOG",
-            "Hashrate": 14825.30120481928,
-            "Is estimated": "True",
-            "Sharetime": 664.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "Process-15": {
+        "Process-4": {
             "User": "lorenzo10",
-            "Hashrate": 370384.7215495107,
+            "Hashrate": 398299.94131386717,
             "Is estimated": "True",
-            "Sharetime": 174.0,
-            "Accepted": 3,
-            "Rejected": 2,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-17": {
-            "User": "lorenzo10",
-            "Hashrate": 192593.8130741031,
-            "Is estimated": "True",
-            "Sharetime": 110.0,
-            "Accepted": 2,
+            "Sharetime": 271.0,
+            "Accepted": 7,
             "Rejected": 1,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-16": {
+        "Process-3": {
             "User": "lorenzo10",
-            "Hashrate": 386086.0688821878,
+            "Hashrate": 149375.95254767887,
             "Is estimated": "True",
-            "Sharetime": 435.0,
+            "Sharetime": 737.0,
+            "Accepted": 8,
+            "Rejected": 2,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-5": {
+            "User": "lorenzo10",
+            "Hashrate": 125604.89352061623,
+            "Is estimated": "True",
+            "Sharetime": 960.0,
+            "Accepted": 6,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-6": {
+            "User": "lorenzo10",
+            "Hashrate": 353252.95346292836,
+            "Is estimated": "True",
+            "Sharetime": 123.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-7": {
+            "User": "lorenzo10",
+            "Hashrate": 324841.99410590646,
+            "Is estimated": "True",
+            "Sharetime": 605.0,
+            "Accepted": 4,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-8": {
+            "User": "lorenzo10",
+            "Hashrate": 320581.69892333914,
+            "Is estimated": "True",
+            "Sharetime": 147.0,
             "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-18": {
+        "Process-9": {
             "User": "lorenzo10",
-            "Hashrate": 332837.5845127358,
+            "Hashrate": 372011.56613611034,
             "Is estimated": "True",
-            "Sharetime": 102.0,
+            "Sharetime": 359.0,
+            "Accepted": 8,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-11": {
+            "User": "lorenzo10",
+            "Hashrate": 94260.92543446418,
+            "Is estimated": "True",
+            "Sharetime": 189.0,
+            "Accepted": 8,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-10": {
+            "User": "lorenzo10",
+            "Hashrate": 267198.7947159404,
+            "Is estimated": "True",
+            "Sharetime": 323.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-12": {
+            "User": "lorenzo10",
+            "Hashrate": 387997.7136672425,
+            "Is estimated": "True",
+            "Sharetime": 283.0,
+            "Accepted": 5,
+            "Rejected": 2,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-13": {
+            "User": "lorenzo10",
+            "Hashrate": 340605.7155230141,
+            "Is estimated": "True",
+            "Sharetime": 113.0,
+            "Accepted": 7,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-14": {
+            "User": "lorenzo10",
+            "Hashrate": 343837.7888536475,
+            "Is estimated": "True",
+            "Sharetime": 344.0,
             "Accepted": 3,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-21": {
+        "Process-15": {
             "User": "lorenzo10",
-            "Hashrate": 299042.71007997135,
+            "Hashrate": 75370.19338773117,
             "Is estimated": "True",
-            "Sharetime": 471.0,
-            "Accepted": 1,
-            "Rejected": 1,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-22": {
-            "User": "lorenzo10",
-            "Hashrate": 147423.57489226735,
-            "Is estimated": "True",
-            "Sharetime": 376.0,
-            "Accepted": 2,
+            "Sharetime": 476.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-19": {
             "User": "lorenzo10",
-            "Hashrate": 273208.6219172762,
+            "Hashrate": 293227.3790452313,
             "Is estimated": "True",
-            "Sharetime": 70.0,
-            "Accepted": 2,
+            "Sharetime": 407.0,
+            "Accepted": 3,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-16": {
+            "User": "lorenzo10",
+            "Hashrate": 263511.88568523654,
+            "Is estimated": "True",
+            "Sharetime": 82.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-20": {
+        "Process-22": {
             "User": "lorenzo10",
-            "Hashrate": 355151.92109427846,
+            "Hashrate": 173797.18790248636,
             "Is estimated": "True",
-            "Sharetime": 552.0,
-            "Accepted": 2,
+            "Sharetime": 635.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-21": {
+            "User": "lorenzo10",
+            "Hashrate": 232177.76462646681,
+            "Is estimated": "True",
+            "Sharetime": 294.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-24": {
+            "User": "lorenzo10",
+            "Hashrate": 169930.0357827055,
+            "Is estimated": "True",
+            "Sharetime": 798.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-18": {
+            "User": "lorenzo10",
+            "Hashrate": 358474.67149977345,
+            "Is estimated": "True",
+            "Sharetime": 250.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-25": {
             "User": "lorenzo10",
-            "Hashrate": 409629.27377839404,
+            "Hashrate": 385670.8473409453,
             "Is estimated": "True",
-            "Sharetime": 332.0,
-            "Accepted": 2,
+            "Sharetime": 491.0,
+            "Accepted": 3,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-26": {
+            "User": "lorenzo10",
+            "Hashrate": 423648.9079482051,
+            "Is estimated": "True",
+            "Sharetime": 379.0,
+            "Accepted": 3,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-23": {
+        "Process-27": {
             "User": "lorenzo10",
-            "Hashrate": 406888.12112973875,
+            "Hashrate": 130649.43406020562,
             "Is estimated": "True",
-            "Sharetime": 384.0,
+            "Sharetime": 515.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-30": {
+            "User": "lorenzo10",
+            "Hashrate": 355736.5154102807,
+            "Is estimated": "True",
+            "Sharetime": 286.0,
             "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
@@ -150,99 +258,79 @@
         },
         "Process-29": {
             "User": "lorenzo10",
-            "Hashrate": 289276.6938678462,
+            "Hashrate": 368224.31020914315,
             "Is estimated": "True",
-            "Sharetime": 202.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-24": {
-            "User": "lorenzo10",
-            "Hashrate": 376597.463710756,
-            "Is estimated": "True",
-            "Sharetime": 332.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-26": {
-            "User": "lorenzo10",
-            "Hashrate": 339356.39984960813,
-            "Is estimated": "True",
-            "Sharetime": 188.0,
+            "Sharetime": 456.0,
             "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-32": {
+            "User": "lorenzo10",
+            "Hashrate": 168046.38802826387,
+            "Is estimated": "True",
+            "Sharetime": 444.0,
+            "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-31": {
             "User": "lorenzo10",
-            "Hashrate": 772104.8677109083,
+            "Hashrate": 638967.6483914816,
             "Is estimated": "True",
-            "Sharetime": 158.0,
+            "Sharetime": 125.0,
             "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-28": {
-            "User": "lorenzo10",
-            "Hashrate": 397548.28614595183,
-            "Is estimated": "True",
-            "Sharetime": 311.0,
-            "Accepted": 1,
-            "Rejected": 2,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-30": {
-            "User": "lorenzo10",
-            "Hashrate": 243682.41984219122,
-            "Is estimated": "True",
-            "Sharetime": 338.0,
-            "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-33": {
             "User": "lorenzo10",
-            "Hashrate": 118691.0489525002,
+            "Hashrate": 360290.1996321863,
             "Is estimated": "True",
-            "Sharetime": 393.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-32": {
-            "User": "lorenzo10",
-            "Hashrate": 233346.90084707362,
-            "Is estimated": "True",
-            "Sharetime": 177.0,
-            "Accepted": 2,
+            "Sharetime": 425.0,
+            "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-36": {
+        "Process-34": {
             "User": "lorenzo10",
-            "Hashrate": 360445.3913563227,
+            "Hashrate": 221210.31604562319,
             "Is estimated": "True",
-            "Sharetime": 235.0,
-            "Accepted": 0,
+            "Sharetime": 197.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-37": {
+            "User": "lorenzo10",
+            "Hashrate": 144837.07023685492,
+            "Is estimated": "True",
+            "Sharetime": 628.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-38": {
             "User": "lorenzo10",
-            "Hashrate": 296449.65005999245,
+            "Hashrate": 155411.64770888377,
             "Is estimated": "True",
-            "Sharetime": 233.0,
+            "Sharetime": 308.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-39": {
+            "User": "lorenzo10",
+            "Hashrate": 405002.0451643913,
+            "Is estimated": "True",
+            "Sharetime": 329.0,
             "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
@@ -250,79 +338,49 @@
         },
         "Process-40": {
             "User": "lorenzo10",
-            "Hashrate": 258767.18018426222,
-            "Is estimated": "True",
-            "Sharetime": 480.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-34": {
-            "User": "lorenzo10",
-            "Hashrate": 376769.0016324743,
-            "Is estimated": "True",
-            "Sharetime": 209.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-39": {
-            "User": "lorenzo10",
-            "Hashrate": 209679.97068411327,
-            "Is estimated": "True",
-            "Sharetime": 617.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-41": {
-            "User": "lorenzo10",
-            "Hashrate": 248960.43580343534,
-            "Is estimated": "True",
-            "Sharetime": 352.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-43": {
-            "User": "lorenzo10",
-            "Hashrate": 194243.28171151193,
-            "Is estimated": "True",
-            "Sharetime": 453.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-44": {
-            "User": "lorenzo10",
-            "Hashrate": 191488.6484614733,
+            "Hashrate": 404203.5504179238,
             "Is estimated": "True",
             "Sharetime": 492.0,
-            "Accepted": 0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-45": {
             "User": "lorenzo10",
-            "Hashrate": 321058.77199668,
+            "Hashrate": 126733.2765278334,
             "Is estimated": "True",
-            "Sharetime": 541.0,
+            "Sharetime": 586.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-44": {
+            "User": "lorenzo10",
+            "Hashrate": 305523.3348436792,
+            "Is estimated": "True",
+            "Sharetime": 80.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-46": {
+            "User": "lorenzo10",
+            "Hashrate": 359407.03251233214,
+            "Is estimated": "True",
+            "Sharetime": 212.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-49": {
+        "Process-28": {
             "User": "lorenzo10",
-            "Hashrate": 277437.1533612843,
+            "Hashrate": 260931.79455742423,
             "Is estimated": "True",
-            "Sharetime": 79.0,
+            "Sharetime": 136.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
@@ -330,19 +388,149 @@
         },
         "Process-50": {
             "User": "lorenzo10",
-            "Hashrate": 300926.80314701155,
+            "Hashrate": 374134.3995845224,
             "Is estimated": "True",
-            "Sharetime": 99.0,
+            "Sharetime": 171.0,
             "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-49": {
+            "User": "lorenzo10",
+            "Hashrate": 173936.5379401077,
+            "Is estimated": "True",
+            "Sharetime": 757.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-43": {
+            "User": "lorenzo10",
+            "Hashrate": 178071.94971831556,
+            "Is estimated": "True",
+            "Sharetime": 459.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-55": {
+            "User": "lorenzo10",
+            "Hashrate": 129193.97393677793,
+            "Is estimated": "True",
+            "Sharetime": 627.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-56": {
+            "User": "lorenzo10",
+            "Hashrate": 421350.7159233885,
+            "Is estimated": "True",
+            "Sharetime": 233.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-59": {
+            "User": "lorenzo10",
+            "Hashrate": 113559.53328846286,
+            "Is estimated": "True",
+            "Sharetime": 618.0,
+            "Accepted": 1,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
         "Process-48": {
             "User": "lorenzo10",
-            "Hashrate": 224456.61874751138,
+            "Hashrate": 429394.33763816074,
+            "Is estimated": "True",
+            "Sharetime": 442.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-51": {
+            "User": "lorenzo10",
+            "Hashrate": 418999.8577635443,
+            "Is estimated": "True",
+            "Sharetime": 309.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-63": {
+            "User": "lorenzo10",
+            "Hashrate": 372095.21766339114,
+            "Is estimated": "True",
+            "Sharetime": 509.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-53": {
+            "User": "lorenzo10",
+            "Hashrate": 403769.61496596516,
+            "Is estimated": "True",
+            "Sharetime": 348.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-66": {
+            "User": "lorenzo10",
+            "Hashrate": 81323.44188352233,
+            "Is estimated": "True",
+            "Sharetime": 574.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-52": {
+            "User": "lorenzo10",
+            "Hashrate": 175768.56009116996,
             "Is estimated": "True",
             "Sharetime": 66.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-54": {
+            "User": "lorenzo10",
+            "Hashrate": 85689.40231238188,
+            "Is estimated": "True",
+            "Sharetime": 642.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-58": {
+            "User": "lorenzo10",
+            "Hashrate": 422263.5915751403,
+            "Is estimated": "True",
+            "Sharetime": 442.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-65": {
+            "User": "lorenzo10",
+            "Hashrate": 151176.35391649744,
+            "Is estimated": "True",
+            "Sharetime": 779.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
@@ -350,19 +538,109 @@
         },
         "Process-47": {
             "User": "lorenzo10",
-            "Hashrate": 379068.26394951757,
+            "Hashrate": 115569.30335929609,
             "Is estimated": "True",
-            "Sharetime": 328.0,
+            "Sharetime": 716.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-57": {
+            "User": "lorenzo10",
+            "Hashrate": 111272.98413345391,
+            "Is estimated": "True",
+            "Sharetime": 916.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
             "Software": "Unknown"
         },
-        "Process-46": {
+        "Process-64": {
             "User": "lorenzo10",
-            "Hashrate": 197621.13511610255,
+            "Hashrate": 132076.5850728654,
             "Is estimated": "True",
-            "Sharetime": 323.0,
+            "Sharetime": 602.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-61": {
+            "User": "lorenzo10",
+            "Hashrate": 379074.02067800803,
+            "Is estimated": "True",
+            "Sharetime": 220.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-68": {
+            "User": "lorenzo10",
+            "Hashrate": 266538.2872677843,
+            "Is estimated": "True",
+            "Sharetime": 144.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-70": {
+            "User": "lorenzo10",
+            "Hashrate": 95782.96646715314,
+            "Is estimated": "True",
+            "Sharetime": 143.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-62": {
+            "User": "lorenzo10",
+            "Hashrate": 393221.6514533329,
+            "Is estimated": "True",
+            "Sharetime": 433.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-72": {
+            "User": "lorenzo10",
+            "Hashrate": 214459.39651648758,
+            "Is estimated": "True",
+            "Sharetime": 572.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-73": {
+            "User": "lorenzo10",
+            "Hashrate": 121679.83759619536,
+            "Is estimated": "True",
+            "Sharetime": 635.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-69": {
+            "User": "lorenzo10",
+            "Hashrate": 102014.5328835859,
+            "Is estimated": "True",
+            "Sharetime": 675.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11035,
+            "Software": "Unknown"
+        },
+        "Process-41": {
+            "User": "lorenzo10",
+            "Hashrate": 241954.2625327956,
+            "Is estimated": "True",
+            "Sharetime": 749.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
@@ -370,19 +648,9 @@
         },
         "Process-42": {
             "User": "lorenzo10",
-            "Hashrate": 345675.163002158,
+            "Hashrate": 160435.22126566982,
             "Is estimated": "True",
-            "Sharetime": 236.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11035,
-            "Software": "Unknown"
-        },
-        "Process-37": {
-            "User": "lorenzo10",
-            "Hashrate": 556763.5445659913,
-            "Is estimated": "True",
-            "Sharetime": 70.0,
+            "Sharetime": 750.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11035,
