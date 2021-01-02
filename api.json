@@ -1,15 +1,15 @@
 {
     "Server version": 1.8,
-    "Active connections": 8215,
-    "Last update": "02/01/2021 09:47 (UTC)",
-    "Pool hashrate": "10.06 MH/s",
-    "Duco price": 0.005457,
+    "Active connections": 422,
+    "Last update": "02/01/2021 09:49 (UTC)",
+    "Pool hashrate": "6.03 MH/s",
+    "Duco price": 0.005623,
     "Registered users": 521,
-    "All-time mined DUCO": 286846.03,
+    "All-time mined DUCO": 286846.36,
     "Current difficulty": 11048,
-    "Mined blocks": 22095645,
-    "Full last block hash": "5ab4b6a662c8b2a334801ac667df0e94319d7c0b",
-    "Last block hash": "5ab4b6a662...",
+    "Mined blocks": 22095722,
+    "Full last block hash": "f5829160c69037a71cd934d9529d45cbad91d84c",
+    "Last block hash": "f5829160c6...",
     "Top 10 richest miners": [
         "85201.2941 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -23,303 +23,179 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
-        "droghi": 2,
-        "connorhess": 7,
-        "koksmet": 1,
-        "MagicForces": 2,
-        "Abranix": 1,
-        "travelmode": 16
+        "travelmode": 16,
+        "MagicForces": 1
     },
     "Miners": {
-        "Process-16": {
-            "User": "droghi",
-            "Hashrate": 36460.0,
-            "Is estimated": "False",
-            "Sharetime": 278.0,
-            "Accepted": 76,
-            "Rejected": 7,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-105": {
-            "User": "connorhess",
-            "Hashrate": 117480.0,
-            "Is estimated": "False",
-            "Sharetime": 553.0,
-            "Accepted": 323,
-            "Rejected": 18,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-264": {
-            "User": "connorhess",
-            "Hashrate": 118410.0,
-            "Is estimated": "False",
-            "Sharetime": 522.0,
-            "Accepted": 325,
-            "Rejected": 27,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-288": {
-            "User": "connorhess",
-            "Hashrate": 113600.0,
-            "Is estimated": "False",
-            "Sharetime": 826.0,
-            "Accepted": 320,
-            "Rejected": 20,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-1685": {
-            "User": "koksmet",
-            "Hashrate": 506204.52121943125,
-            "Is estimated": "True",
-            "Sharetime": 347.0,
-            "Accepted": 50,
-            "Rejected": 8,
-            "Diff": 11048,
-            "Software": "Unknown"
-        },
-        "Process-72": {
-            "User": "MagicForces",
-            "Hashrate": 87367.23163841809,
-            "Is estimated": "True",
-            "Sharetime": 531.0,
-            "Accepted": 25,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "Process-278": {
-            "User": "MagicForces",
-            "Hashrate": 66164.12490922296,
-            "Is estimated": "True",
-            "Sharetime": 459.0,
-            "Accepted": 21,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "Process-5469": {
-            "User": "Abranix",
-            "Hashrate": 235240.0,
-            "Is estimated": "False",
-            "Sharetime": 169.0,
-            "Accepted": 497,
-            "Rejected": 49,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-36123": {
-            "User": "droghi",
-            "Hashrate": 29810.0,
-            "Is estimated": "False",
-            "Sharetime": 580.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-40431": {
-            "User": "connorhess",
-            "Hashrate": 182080.0,
-            "Is estimated": "False",
-            "Sharetime": 710.0,
-            "Accepted": 110,
-            "Rejected": 8,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-41204": {
-            "User": "connorhess",
-            "Hashrate": 192070.0,
-            "Is estimated": "False",
-            "Sharetime": 154.0,
-            "Accepted": 103,
-            "Rejected": 11,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-41322": {
-            "User": "connorhess",
-            "Hashrate": 183830.0,
-            "Is estimated": "False",
-            "Sharetime": 857.0,
-            "Accepted": 109,
-            "Rejected": 7,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-41585": {
-            "User": "connorhess",
-            "Hashrate": 178030.0,
-            "Is estimated": "False",
-            "Sharetime": 948.0,
-            "Accepted": 95,
-            "Rejected": 13,
-            "Diff": 11048,
-            "Software": "Official Python Miner v1.8"
-        },
-        "Process-51429": {
+        "Process-17": {
             "User": "travelmode",
-            "Hashrate": 553085.0,
+            "Hashrate": 123439.0,
             "Is estimated": "False",
-            "Sharetime": 410.0,
-            "Accepted": 75,
+            "Sharetime": 217.0,
+            "Accepted": 52,
             "Rejected": 1,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51413": {
+        "Process-22": {
             "User": "travelmode",
-            "Hashrate": 517712.0,
+            "Hashrate": 22618.0,
             "Is estimated": "False",
-            "Sharetime": 465.0,
-            "Accepted": 72,
-            "Rejected": 2,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51414": {
-            "User": "travelmode",
-            "Hashrate": 529539.0,
-            "Is estimated": "False",
-            "Sharetime": 317.0,
-            "Accepted": 71,
-            "Rejected": 4,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51418": {
-            "User": "travelmode",
-            "Hashrate": 363119.0,
-            "Is estimated": "False",
-            "Sharetime": 457.0,
-            "Accepted": 76,
+            "Sharetime": 174.0,
+            "Accepted": 49,
             "Rejected": 3,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51434": {
+        "Process-32": {
             "User": "travelmode",
-            "Hashrate": 339704.0,
+            "Hashrate": 1068898.0,
             "Is estimated": "False",
-            "Sharetime": 83.0,
-            "Accepted": 70,
+            "Sharetime": 551.0,
+            "Accepted": 54,
+            "Rejected": 1,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-47": {
+            "User": "travelmode",
+            "Hashrate": 191744.0,
+            "Is estimated": "False",
+            "Sharetime": 297.0,
+            "Accepted": 46,
+            "Rejected": 7,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-39": {
+            "User": "travelmode",
+            "Hashrate": 658314.0,
+            "Is estimated": "False",
+            "Sharetime": 511.0,
+            "Accepted": 58,
+            "Rejected": 0,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-53": {
+            "User": "travelmode",
+            "Hashrate": 375360.0,
+            "Is estimated": "False",
+            "Sharetime": 655.0,
+            "Accepted": 51,
+            "Rejected": 1,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-62": {
+            "User": "travelmode",
+            "Hashrate": 567844.0,
+            "Is estimated": "False",
+            "Sharetime": 915.0,
+            "Accepted": 49,
+            "Rejected": 2,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-85": {
+            "User": "travelmode",
+            "Hashrate": 228079.0,
+            "Is estimated": "False",
+            "Sharetime": 315.0,
+            "Accepted": 45,
+            "Rejected": 5,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-94": {
+            "User": "travelmode",
+            "Hashrate": 183607.0,
+            "Is estimated": "False",
+            "Sharetime": 201.0,
+            "Accepted": 51,
+            "Rejected": 2,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-106": {
+            "User": "travelmode",
+            "Hashrate": 460603.0,
+            "Is estimated": "False",
+            "Sharetime": 823.0,
+            "Accepted": 51,
+            "Rejected": 3,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-112": {
+            "User": "travelmode",
+            "Hashrate": 12769.0,
+            "Is estimated": "False",
+            "Sharetime": 171.0,
+            "Accepted": 46,
+            "Rejected": 3,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-123": {
+            "User": "travelmode",
+            "Hashrate": 323035.0,
+            "Is estimated": "False",
+            "Sharetime": 674.0,
+            "Accepted": 47,
+            "Rejected": 1,
+            "Diff": 11048,
+            "Software": "nonceMiner_v1.0"
+        },
+        "Process-170": {
+            "User": "travelmode",
+            "Hashrate": 457858.0,
+            "Is estimated": "False",
+            "Sharetime": 751.0,
+            "Accepted": 43,
             "Rejected": 4,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51482": {
+        "Process-169": {
             "User": "travelmode",
-            "Hashrate": 664598.0,
+            "Hashrate": 329690.0,
             "Is estimated": "False",
-            "Sharetime": 341.0,
-            "Accepted": 75,
+            "Sharetime": 721.0,
+            "Accepted": 47,
             "Rejected": 2,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51471": {
+        "Process-162": {
             "User": "travelmode",
-            "Hashrate": 702981.0,
+            "Hashrate": 526984.0,
             "Is estimated": "False",
-            "Sharetime": 900.0,
-            "Accepted": 72,
-            "Rejected": 4,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51475": {
-            "User": "travelmode",
-            "Hashrate": 408304.0,
-            "Is estimated": "False",
-            "Sharetime": 164.0,
-            "Accepted": 66,
-            "Rejected": 5,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51495": {
-            "User": "travelmode",
-            "Hashrate": 429615.0,
-            "Is estimated": "False",
-            "Sharetime": 449.0,
-            "Accepted": 67,
-            "Rejected": 5,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51464": {
-            "User": "travelmode",
-            "Hashrate": 1041038.0,
-            "Is estimated": "False",
-            "Sharetime": 479.0,
-            "Accepted": 72,
-            "Rejected": 5,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51544": {
-            "User": "travelmode",
-            "Hashrate": 294802.0,
-            "Is estimated": "False",
-            "Sharetime": 239.0,
-            "Accepted": 71,
+            "Sharetime": 507.0,
+            "Accepted": 44,
             "Rejected": 2,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51545": {
+        "Process-174": {
             "User": "travelmode",
-            "Hashrate": 296102.0,
+            "Hashrate": 531517.0,
             "Is estimated": "False",
-            "Sharetime": 261.0,
-            "Accepted": 67,
-            "Rejected": 4,
+            "Sharetime": 106.0,
+            "Accepted": 44,
+            "Rejected": 3,
             "Diff": 11048,
             "Software": "nonceMiner_v1.0"
         },
-        "Process-51639": {
-            "User": "travelmode",
-            "Hashrate": 551635.0,
-            "Is estimated": "False",
-            "Sharetime": 310.0,
-            "Accepted": 66,
-            "Rejected": 2,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51629": {
-            "User": "travelmode",
-            "Hashrate": 587548.0,
-            "Is estimated": "False",
-            "Sharetime": 493.0,
-            "Accepted": 62,
-            "Rejected": 5,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51772": {
-            "User": "travelmode",
-            "Hashrate": 487450.0,
-            "Is estimated": "False",
-            "Sharetime": 453.0,
-            "Accepted": 60,
-            "Rejected": 8,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
-        },
-        "Process-51771": {
-            "User": "travelmode",
-            "Hashrate": 452207.0,
-            "Is estimated": "False",
-            "Sharetime": 189.0,
-            "Accepted": 63,
-            "Rejected": 2,
-            "Diff": 11048,
-            "Software": "nonceMiner_v1.0"
+        "Process-1577": {
+            "User": "MagicForces",
+            "Hashrate": 25411.411411411416,
+            "Is estimated": "True",
+            "Sharetime": 666.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
         }
     }
 }
