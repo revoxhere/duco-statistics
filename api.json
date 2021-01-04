@@ -1,15 +1,15 @@
 {
     "Server version": 1.8,
-    "Active connections": 770,
-    "Last update": "04/01/2021 17:32 (UTC)",
-    "Pool hashrate": "0 H/s",
-    "Duco price": 0.006356,
+    "Active connections": 790,
+    "Last update": "04/01/2021 17:33 (UTC)",
+    "Pool hashrate": "208.17 kH/s",
+    "Duco price": 0.00668,
     "Registered users": 527,
     "All-time mined DUCO": 284770.31,
     "Current difficulty": 11073,
-    "Mined blocks": 22144053,
-    "Full last block hash": "6b03fce11f1d6ccaecc0303b79319f5f9e18712a",
-    "Last block hash": "6b03fce11f...",
+    "Mined blocks": 22144073,
+    "Full last block hash": "118da675ee041a364deec3091ce67aa3665eb936",
+    "Last block hash": "118da675ee...",
     "Top 10 richest miners": [
         "85238.8291 DUCO - rock6064",
         "21203.2225 DUCO - sabartheman",
@@ -22,6 +22,39 @@
         "5075.4027 DUCO - noz",
         "4924.7009 DUCO - ducowrapper"
     ],
-    "Active workers": {},
-    "Miners": {}
+    "Active workers": {
+        "lonerzo": 3
+    },
+    "Miners": {
+        "140056003348224": {
+            "User": "lonerzo",
+            "Hashrate": 49328.0,
+            "Is estimated": "False",
+            "Sharetime": 827.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11073,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140059276502784": {
+            "User": "lonerzo",
+            "Hashrate": 20721.0,
+            "Is estimated": "False",
+            "Sharetime": 748.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11073,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140061366286080": {
+            "User": "lonerzo",
+            "Hashrate": 19287.0,
+            "Is estimated": "False",
+            "Sharetime": 339.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11073,
+            "Software": "nonceMiner_v1.0"
+        }
+    }
 }
