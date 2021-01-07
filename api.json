@@ -1,20 +1,20 @@
 {
     "Server version": 1.8,
-    "Active connections": 167,
-    "Last update": "07/01/2021 08:30 (UTC)",
-    "Pool hashrate": "39.86 MH/s",
-    "Duco price": 0.006413,
+    "Active connections": 150,
+    "Last update": "07/01/2021 08:31 (UTC)",
+    "Pool hashrate": "64.14 MH/s",
+    "Duco price": 0.006039,
     "Registered users": 534,
-    "All-time mined DUCO": 285262.15,
+    "All-time mined DUCO": 285262.23,
     "Current difficulty": 11120,
-    "Mined blocks": 22238508,
-    "Full last block hash": "9b74232a530265778d88bfc3ca4fc000bf86d64b",
-    "Last block hash": "9b74232a53...",
+    "Mined blocks": 22238571,
+    "Full last block hash": "3c5c5f03c6d06b13f32043275353fa8d320bc6f3",
+    "Last block hash": "3c5c5f03c6...",
     "Top 10 richest miners": [
-        "85431.3316 DUCO - xmrRohan",
+        "85431.333 DUCO - xmrRohan",
         "21203.2225 DUCO - sabartheman",
         "16450.7118 DUCO - PHR9",
-        "14632.1385 DUCO - travelmode",
+        "14632.1518 DUCO - travelmode",
         "11432.697 DUCO - drn",
         "7862.3849 DUCO - baibaide",
         "7502.7521 DUCO - egiptsky",
@@ -23,658 +23,802 @@
         "4796.6215 DUCO - croceny"
     ],
     "Active workers": {
+        "TOG": 20,
         "naimulh": 84,
-        "TOG": 12,
-        "travelmode": 13,
-        "xmrRohan": 2,
-        "ElGrifo": 2
+        "travelmode": 12,
+        "Yaroslav2009": 1,
+        "AndroidLeo": 1,
+        "Raven": 1,
+        "MagicForces": 1,
+        "wossky": 1,
+        "stanzwerck": 1
     },
     "Miners": {
-        "139699355830016": {
-            "User": "naimulh",
-            "Hashrate": 86086.0,
-            "Is estimated": "False",
-            "Sharetime": 183.0,
-            "Accepted": 6,
-            "Rejected": 3,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
         "139700614440704": {
             "User": "TOG",
-            "Hashrate": 2215770.114942529,
+            "Hashrate": 234080.0,
             "Is estimated": "True",
-            "Sharetime": 58.0,
+            "Sharetime": 50.0,
             "Accepted": 1,
-            "Rejected": 0,
+            "Rejected": 3,
             "Diff": 1500,
             "Software": "Unknown"
         },
-        "139699523684096": {
-            "User": "naimulh",
-            "Hashrate": 425071.0,
-            "Is estimated": "False",
-            "Sharetime": 339.0,
-            "Accepted": 10,
-            "Rejected": 2,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698919409408": {
-            "User": "naimulh",
-            "Hashrate": 80395.0,
-            "Is estimated": "False",
-            "Sharetime": 393.0,
-            "Accepted": 11,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698869053184": {
-            "User": "naimulh",
-            "Hashrate": 65651.0,
-            "Is estimated": "False",
-            "Sharetime": 358.0,
-            "Accepted": 7,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699800643328": {
-            "User": "naimulh",
-            "Hashrate": 501183.0,
-            "Is estimated": "False",
-            "Sharetime": 37.0,
-            "Accepted": 7,
-            "Rejected": 3,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700606048000": {
-            "User": "naimulh",
-            "Hashrate": 718631.0,
-            "Is estimated": "False",
-            "Sharetime": 404.0,
-            "Accepted": 11,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698608879360": {
-            "User": "travelmode",
-            "Hashrate": 189381.0,
-            "Is estimated": "False",
-            "Sharetime": 273.0,
-            "Accepted": 8,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699263510272": {
-            "User": "naimulh",
-            "Hashrate": 142965.0,
-            "Is estimated": "False",
-            "Sharetime": 549.0,
-            "Accepted": 7,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698558523136": {
-            "User": "naimulh",
-            "Hashrate": 124931.0,
-            "Is estimated": "False",
-            "Sharetime": 188.0,
-            "Accepted": 9,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698524952320": {
-            "User": "naimulh",
-            "Hashrate": 79464.0,
-            "Is estimated": "False",
-            "Sharetime": 504.0,
-            "Accepted": 7,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699104048896": {
-            "User": "naimulh",
-            "Hashrate": 193169.0,
-            "Is estimated": "False",
-            "Sharetime": 359.0,
-            "Accepted": 8,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698667628288": {
-            "User": "naimulh",
-            "Hashrate": 132549.0,
-            "Is estimated": "False",
-            "Sharetime": 503.0,
-            "Accepted": 9,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699792250624": {
-            "User": "naimulh",
-            "Hashrate": 180461.0,
-            "Is estimated": "False",
-            "Sharetime": 478.0,
-            "Accepted": 6,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699422971648": {
-            "User": "naimulh",
-            "Hashrate": 12890.0,
-            "Is estimated": "False",
-            "Sharetime": 110.0,
-            "Accepted": 12,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
         "139698399061760": {
             "User": "naimulh",
-            "Hashrate": 328614.0,
+            "Hashrate": 342359.0,
             "Is estimated": "False",
-            "Sharetime": 386.0,
-            "Accepted": 5,
+            "Sharetime": 394.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139700035639040": {
             "User": "TOG",
-            "Hashrate": 378702.10409745295,
+            "Hashrate": 82648.81749219098,
             "Is estimated": "True",
-            "Sharetime": 301.0,
-            "Accepted": 0,
+            "Sharetime": 747.0,
+            "Accepted": 2,
             "Rejected": 0,
             "Diff": 1500,
             "Software": "Unknown"
-        },
-        "139699515291392": {
-            "User": "naimulh",
-            "Hashrate": 611176.0,
-            "Is estimated": "False",
-            "Sharetime": 424.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699255117568": {
-            "User": "naimulh",
-            "Hashrate": 193536.0,
-            "Is estimated": "False",
-            "Sharetime": 417.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699246724864": {
-            "User": "naimulh",
-            "Hashrate": 107399.0,
-            "Is estimated": "False",
-            "Sharetime": 213.0,
-            "Accepted": 8,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699498505984": {
-            "User": "naimulh",
-            "Hashrate": 190160.0,
-            "Is estimated": "False",
-            "Sharetime": 390.0,
-            "Accepted": 5,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
         },
         "139698122102528": {
             "User": "naimulh",
-            "Hashrate": 123891.0,
+            "Hashrate": 137973.0,
             "Is estimated": "False",
-            "Sharetime": 139.0,
-            "Accepted": 8,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698902624000": {
-            "User": "naimulh",
-            "Hashrate": 379588.0,
-            "Is estimated": "False",
-            "Sharetime": 427.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698541737728": {
-            "User": "travelmode",
-            "Hashrate": 212817.0,
-            "Is estimated": "False",
-            "Sharetime": 485.0,
-            "Accepted": 6,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699070478080": {
-            "User": "naimulh",
-            "Hashrate": 372476.0,
-            "Is estimated": "False",
-            "Sharetime": 388.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699809036032": {
-            "User": "TOG",
-            "Hashrate": 62337.34939759036,
-            "Is estimated": "True",
-            "Sharetime": 664.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699683145472": {
-            "User": "naimulh",
-            "Hashrate": 16164.0,
-            "Is estimated": "False",
-            "Sharetime": 281.0,
-            "Accepted": 5,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698634057472": {
-            "User": "naimulh",
-            "Hashrate": 368738.0,
-            "Is estimated": "False",
-            "Sharetime": 407.0,
-            "Accepted": 6,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698734769920": {
-            "User": "TOG",
-            "Hashrate": 90034.65346534654,
-            "Is estimated": "True",
-            "Sharetime": 808.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139698172458752": {
-            "User": "naimulh",
-            "Hashrate": 67321.0,
-            "Is estimated": "False",
-            "Sharetime": 247.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698877445888": {
-            "User": "naimulh",
-            "Hashrate": 171484.0,
-            "Is estimated": "False",
-            "Sharetime": 274.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700186642176": {
-            "User": "naimulh",
-            "Hashrate": 53713.0,
-            "Is estimated": "False",
-            "Sharetime": 226.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699993675520": {
-            "User": "naimulh",
-            "Hashrate": 23868.0,
-            "Is estimated": "False",
-            "Sharetime": 214.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698516559616": {
-            "User": "naimulh",
-            "Hashrate": 262396.0,
-            "Is estimated": "False",
-            "Sharetime": 633.0,
-            "Accepted": 5,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698852267776": {
-            "User": "travelmode",
-            "Hashrate": 122858.0,
-            "Is estimated": "False",
-            "Sharetime": 377.0,
-            "Accepted": 3,
-            "Rejected": 0,
+            "Sharetime": 449.0,
+            "Accepted": 25,
+            "Rejected": 3,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139699842606848": {
             "User": "TOG",
-            "Hashrate": 66486.27450980392,
+            "Hashrate": 12376615.384615384,
             "Is estimated": "True",
-            "Sharetime": 680.0,
-            "Accepted": 0,
+            "Sharetime": 13.0,
+            "Accepted": 1,
             "Rejected": 0,
             "Diff": 1500,
             "Software": "Unknown"
         },
         "139698994943744": {
             "User": "naimulh",
-            "Hashrate": 194247.0,
+            "Hashrate": 103070.0,
             "Is estimated": "False",
-            "Sharetime": 573.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699532076800": {
-            "User": "naimulh",
-            "Hashrate": 143902.0,
-            "Is estimated": "False",
-            "Sharetime": 477.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699943319296": {
-            "User": "naimulh",
-            "Hashrate": 293446.0,
-            "Is estimated": "False",
-            "Sharetime": 57.0,
-            "Accepted": 2,
-            "Rejected": 2,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699464935168": {
-            "User": "naimulh",
-            "Hashrate": 6673.0,
-            "Is estimated": "False",
-            "Sharetime": 171.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699095656192": {
-            "User": "naimulh",
-            "Hashrate": 145906.0,
-            "Is estimated": "False",
-            "Sharetime": 615.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700136285952": {
-            "User": "naimulh",
-            "Hashrate": 1322.0,
-            "Is estimated": "False",
-            "Sharetime": 152.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698776733440": {
-            "User": "naimulh",
-            "Hashrate": 351077.0,
-            "Is estimated": "False",
-            "Sharetime": 237.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699322259200": {
-            "User": "naimulh",
-            "Hashrate": 131700.0,
-            "Is estimated": "False",
-            "Sharetime": 388.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700631226112": {
-            "User": "naimulh",
-            "Hashrate": 240249.0,
-            "Is estimated": "False",
-            "Sharetime": 278.0,
-            "Accepted": 5,
-            "Rejected": 1,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699590825728": {
-            "User": "naimulh",
-            "Hashrate": 108956.0,
-            "Is estimated": "False",
-            "Sharetime": 375.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699657967360": {
-            "User": "TOG",
-            "Hashrate": 3408.6956521739125,
-            "Is estimated": "True",
-            "Sharetime": 805.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699674752768": {
-            "User": "naimulh",
-            "Hashrate": 172929.0,
-            "Is estimated": "False",
-            "Sharetime": 245.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699305473792": {
-            "User": "travelmode",
-            "Hashrate": 391213.0,
-            "Is estimated": "False",
-            "Sharetime": 343.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699934926592": {
-            "User": "naimulh",
-            "Hashrate": 154038.0,
-            "Is estimated": "False",
-            "Sharetime": 288.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698415847168": {
-            "User": "naimulh",
-            "Hashrate": 1340379.0,
-            "Is estimated": "False",
-            "Sharetime": 426.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699582433024": {
-            "User": "travelmode",
-            "Hashrate": 160003.0,
-            "Is estimated": "False",
-            "Sharetime": 389.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698726377216": {
-            "User": "naimulh",
-            "Hashrate": 32767.0,
-            "Is estimated": "False",
-            "Sharetime": 192.0,
-            "Accepted": 3,
+            "Sharetime": 531.0,
+            "Accepted": 18,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139698952980224": {
             "User": "TOG",
-            "Hashrate": 284821.02908277407,
+            "Hashrate": 404534.88372093026,
             "Is estimated": "True",
-            "Sharetime": 596.0,
+            "Sharetime": 344.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699607611136": {
+            "User": "TOG",
+            "Hashrate": 59156.19967793881,
+            "Is estimated": "True",
+            "Sharetime": 207.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139698315134720": {
+            "User": "TOG",
+            "Hashrate": 2092198.5815602837,
+            "Is estimated": "True",
+            "Sharetime": 47.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139700178249472": {
+            "User": "naimulh",
+            "Hashrate": 166104.0,
+            "Is estimated": "False",
+            "Sharetime": 383.0,
+            "Accepted": 18,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698986551040": {
+            "User": "travelmode",
+            "Hashrate": 324003.0,
+            "Is estimated": "False",
+            "Sharetime": 432.0,
+            "Accepted": 17,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699389400832": {
+            "User": "TOG",
+            "Hashrate": 43220.489977728284,
+            "Is estimated": "True",
+            "Sharetime": 898.0,
+            "Accepted": 3,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699708323584": {
+            "User": "TOG",
+            "Hashrate": 1230174.0976645437,
+            "Is estimated": "True",
+            "Sharetime": 157.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699624396544": {
+            "User": "TOG",
+            "Hashrate": 28158.024691358023,
+            "Is estimated": "True",
+            "Sharetime": 135.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699078870784": {
+            "User": "TOG",
+            "Hashrate": 274190.9547738693,
+            "Is estimated": "True",
+            "Sharetime": 597.0,
+            "Accepted": 1,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699758679808": {
+            "User": "TOG",
+            "Hashrate": 468553.53535353544,
+            "Is estimated": "True",
+            "Sharetime": 330.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699053692672": {
+            "User": "Yaroslav2009",
+            "Hashrate": 1973497.0760233917,
+            "Is estimated": "True",
+            "Sharetime": 57.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 1500,
             "Software": "Unknown"
         },
-        "139699825821440": {
+        "139699582433024": {
             "User": "travelmode",
-            "Hashrate": 199782.0,
+            "Hashrate": 18273.0,
             "Is estimated": "False",
-            "Sharetime": 394.0,
-            "Accepted": 2,
+            "Sharetime": 188.0,
+            "Accepted": 11,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699406186240": {
-            "User": "travelmode",
-            "Hashrate": 901519.0,
-            "Is estimated": "False",
-            "Sharetime": 364.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699120834304": {
+        "139700153071360": {
             "User": "naimulh",
-            "Hashrate": 252575.0,
+            "Hashrate": 65506.0,
             "Is estimated": "False",
-            "Sharetime": 557.0,
-            "Accepted": 3,
+            "Sharetime": 383.0,
+            "Accepted": 7,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699725108992": {
+            "User": "TOG",
+            "Hashrate": 57281.00113765643,
+            "Is estimated": "True",
+            "Sharetime": 586.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699414578944": {
+            "User": "TOG",
+            "Hashrate": 229686.2745098039,
+            "Is estimated": "True",
+            "Sharetime": 68.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139698717984512": {
+            "User": "TOG",
+            "Hashrate": 66057.78717406624,
+            "Is estimated": "True",
+            "Sharetime": 946.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699515291392": {
+            "User": "naimulh",
+            "Hashrate": 513825.0,
+            "Is estimated": "False",
+            "Sharetime": 666.0,
+            "Accepted": 10,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699187975936": {
+            "User": "TOG",
+            "Hashrate": 2157886.79245283,
+            "Is estimated": "True",
+            "Sharetime": 53.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699196368640": {
+            "User": "naimulh",
+            "Hashrate": 191762.0,
+            "Is estimated": "False",
+            "Sharetime": 450.0,
+            "Accepted": 11,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699129227008": {
+            "User": "TOG",
+            "Hashrate": 38529.96532937098,
+            "Is estimated": "True",
+            "Sharetime": 673.0,
+            "Accepted": 1,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699632789248": {
+            "User": "TOG",
+            "Hashrate": 113408.85684860966,
+            "Is estimated": "True",
+            "Sharetime": 971.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699951712000": {
+            "User": "naimulh",
+            "Hashrate": 66868.0,
+            "Is estimated": "False",
+            "Sharetime": 296.0,
+            "Accepted": 11,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698726377216": {
+            "User": "naimulh",
+            "Hashrate": 417753.0,
+            "Is estimated": "False",
+            "Sharetime": 251.0,
+            "Accepted": 11,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698877445888": {
+            "User": "naimulh",
+            "Hashrate": 107301.0,
+            "Is estimated": "False",
+            "Sharetime": 366.0,
+            "Accepted": 12,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699213154048": {
+            "User": "TOG",
+            "Hashrate": 2705.767350928641,
+            "Is estimated": "True",
+            "Sharetime": 341.0,
+            "Accepted": 0,
+            "Rejected": 1,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699960104704": {
+            "User": "naimulh",
+            "Hashrate": 61222.0,
+            "Is estimated": "False",
+            "Sharetime": 106.0,
+            "Accepted": 7,
+            "Rejected": 2,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699473327872": {
+            "User": "naimulh",
+            "Hashrate": 787878.0,
+            "Is estimated": "False",
+            "Sharetime": 877.0,
+            "Accepted": 9,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699683145472": {
+            "User": "naimulh",
+            "Hashrate": 645691.0,
+            "Is estimated": "False",
+            "Sharetime": 414.0,
+            "Accepted": 9,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698759948032": {
+            "User": "naimulh",
+            "Hashrate": 210222.0,
+            "Is estimated": "False",
+            "Sharetime": 416.0,
+            "Accepted": 7,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699783857920": {
+            "User": "naimulh",
+            "Hashrate": 152627.0,
+            "Is estimated": "False",
+            "Sharetime": 510.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139699817428736": {
             "User": "naimulh",
-            "Hashrate": 72872.0,
+            "Hashrate": 83736.0,
             "Is estimated": "False",
-            "Sharetime": 385.0,
-            "Accepted": 1,
+            "Sharetime": 570.0,
+            "Accepted": 9,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139700144678656": {
+        "139700018853632": {
             "User": "naimulh",
-            "Hashrate": 53070.0,
+            "Hashrate": 173707.0,
             "Is estimated": "False",
-            "Sharetime": 345.0,
-            "Accepted": 1,
+            "Sharetime": 560.0,
+            "Accepted": 10,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698676020992": {
-            "User": "naimulh",
-            "Hashrate": 20568.0,
+        "139699834214144": {
+            "User": "AndroidLeo",
+            "Hashrate": 168290.0,
             "Is estimated": "False",
-            "Sharetime": 279.0,
+            "Sharetime": 268.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "Official Python Miner v1.8"
+        },
+        "139698348705536": {
+            "User": "Raven",
+            "Hashrate": 486277.37226277374,
+            "Is estimated": "True",
+            "Sharetime": 411.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699716716288": {
+            "User": "naimulh",
+            "Hashrate": 39088.0,
+            "Is estimated": "False",
+            "Sharetime": 214.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699641181952": {
+            "User": "TOG",
+            "Hashrate": 49585.585585585584,
+            "Is estimated": "True",
+            "Sharetime": 333.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699330651904": {
+            "User": "naimulh",
+            "Hashrate": 85657.0,
+            "Is estimated": "False",
+            "Sharetime": 263.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699322259200": {
+            "User": "naimulh",
+            "Hashrate": 728.0,
+            "Is estimated": "False",
+            "Sharetime": 102.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699439757056": {
+            "User": "travelmode",
+            "Hashrate": 276187.0,
+            "Is estimated": "False",
+            "Sharetime": 419.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699297081088": {
+            "User": "naimulh",
+            "Hashrate": 126385.0,
+            "Is estimated": "False",
+            "Sharetime": 154.0,
+            "Accepted": 10,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699431364352": {
+            "User": "naimulh",
+            "Hashrate": 117405.0,
+            "Is estimated": "False",
+            "Sharetime": 340.0,
+            "Accepted": 7,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699918141184": {
+            "User": "naimulh",
+            "Hashrate": 691860.0,
+            "Is estimated": "False",
+            "Sharetime": 88.0,
+            "Accepted": 4,
+            "Rejected": 2,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699892963072": {
+            "User": "naimulh",
+            "Hashrate": 75868.0,
+            "Is estimated": "False",
+            "Sharetime": 435.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699968497408": {
+            "User": "MagicForces",
+            "Hashrate": 210549.52627045647,
+            "Is estimated": "True",
+            "Sharetime": 387.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699884570368": {
+            "User": "naimulh",
+            "Hashrate": 387456.0,
+            "Is estimated": "False",
+            "Sharetime": 673.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699540469504": {
+            "User": "naimulh",
+            "Hashrate": 23890.0,
+            "Is estimated": "False",
+            "Sharetime": 175.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700136285952": {
+            "User": "naimulh",
+            "Hashrate": 244508.0,
+            "Is estimated": "False",
+            "Sharetime": 334.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699901355776": {
+            "User": "naimulh",
+            "Hashrate": 141125.0,
+            "Is estimated": "False",
+            "Sharetime": 324.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699347437312": {
+            "User": "naimulh",
+            "Hashrate": 3031.0,
+            "Is estimated": "False",
+            "Sharetime": 148.0,
+            "Accepted": 7,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698911016704": {
+            "User": "travelmode",
+            "Hashrate": 57406.0,
+            "Is estimated": "False",
+            "Sharetime": 201.0,
             "Accepted": 3,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139700169856768": {
-            "User": "travelmode",
-            "Hashrate": 59948.0,
-            "Is estimated": "False",
-            "Sharetime": 229.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699490113280": {
+        "139699372615424": {
             "User": "naimulh",
-            "Hashrate": 22625.0,
+            "Hashrate": 54945.0,
             "Is estimated": "False",
-            "Sharetime": 183.0,
-            "Accepted": 2,
+            "Sharetime": 422.0,
+            "Accepted": 3,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698617272064": {
+        "139699733501696": {
             "User": "travelmode",
-            "Hashrate": 119507.0,
+            "Hashrate": 300182.0,
             "Is estimated": "False",
-            "Sharetime": 365.0,
-            "Accepted": 1,
+            "Sharetime": 367.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699171190528": {
+        "139700010460928": {
             "User": "naimulh",
-            "Hashrate": 62639.0,
+            "Hashrate": 413448.0,
             "Is estimated": "False",
-            "Sharetime": 217.0,
-            "Accepted": 1,
+            "Sharetime": 376.0,
+            "Accepted": 3,
+            "Rejected": 1,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699599218432": {
+            "User": "naimulh",
+            "Hashrate": 102694.0,
+            "Is estimated": "False",
+            "Sharetime": 406.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699028514560": {
+            "User": "naimulh",
+            "Hashrate": 269662.0,
+            "Is estimated": "False",
+            "Sharetime": 181.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699162797824": {
+            "User": "naimulh",
+            "Hashrate": 462333.0,
+            "Is estimated": "False",
+            "Sharetime": 253.0,
+            "Accepted": 6,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139699339044608": {
             "User": "naimulh",
-            "Hashrate": 57189.0,
+            "Hashrate": 2594.0,
             "Is estimated": "False",
-            "Sharetime": 125.0,
+            "Sharetime": 149.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699792250624": {
+            "User": "naimulh",
+            "Hashrate": 30713.0,
+            "Is estimated": "False",
+            "Sharetime": 184.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699943319296": {
+            "User": "naimulh",
+            "Hashrate": 308359.0,
+            "Is estimated": "False",
+            "Sharetime": 228.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700161464064": {
+            "User": "wossky",
+            "Hashrate": 9306.878306878307,
+            "Is estimated": "True",
+            "Sharetime": 252.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139698650842880": {
+            "User": "naimulh",
+            "Hashrate": 86544.0,
+            "Is estimated": "False",
+            "Sharetime": 294.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698869053184": {
+            "User": "naimulh",
+            "Hashrate": 1261040.0,
+            "Is estimated": "False",
+            "Sharetime": 492.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699095656192": {
+            "User": "naimulh",
+            "Hashrate": 307394.0,
+            "Is estimated": "False",
+            "Sharetime": 367.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699448149760": {
+            "User": "naimulh",
+            "Hashrate": 64944.0,
+            "Is estimated": "False",
+            "Sharetime": 319.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699616003840": {
+            "User": "naimulh",
+            "Hashrate": 109801.0,
+            "Is estimated": "False",
+            "Sharetime": 383.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698969765632": {
+            "User": "naimulh",
+            "Hashrate": 413523.0,
+            "Is estimated": "False",
+            "Sharetime": 211.0,
+            "Accepted": 2,
+            "Rejected": 1,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698961372928": {
+            "User": "naimulh",
+            "Hashrate": 135952.0,
+            "Is estimated": "False",
+            "Sharetime": 495.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698919409408": {
+            "User": "naimulh",
+            "Hashrate": 196336.0,
+            "Is estimated": "False",
+            "Sharetime": 677.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699657967360": {
+            "User": "naimulh",
+            "Hashrate": 68657.0,
+            "Is estimated": "False",
+            "Sharetime": 345.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699364222720": {
+            "User": "naimulh",
+            "Hashrate": 1553772.0,
+            "Is estimated": "False",
+            "Sharetime": 302.0,
+            "Accepted": 0,
+            "Rejected": 2,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700631226112": {
+            "User": "naimulh",
+            "Hashrate": 207776.0,
+            "Is estimated": "False",
+            "Sharetime": 339.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699767072512": {
+            "User": "naimulh",
+            "Hashrate": 218854.0,
+            "Is estimated": "False",
+            "Sharetime": 452.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700186642176": {
+            "User": "travelmode",
+            "Hashrate": 28918.0,
+            "Is estimated": "False",
+            "Sharetime": 185.0,
             "Accepted": 2,
             "Rejected": 0,
             "Diff": 11120,
@@ -682,419 +826,179 @@
         },
         "139699087263488": {
             "User": "naimulh",
-            "Hashrate": 117443.0,
+            "Hashrate": 156387.0,
             "Is estimated": "False",
-            "Sharetime": 283.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699976890112": {
-            "User": "naimulh",
-            "Hashrate": 228441.0,
-            "Is estimated": "False",
-            "Sharetime": 386.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700648011520": {
-            "User": "naimulh",
-            "Hashrate": 15227.0,
-            "Is estimated": "False",
-            "Sharetime": 146.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699162797824": {
-            "User": "naimulh",
-            "Hashrate": 258368.0,
-            "Is estimated": "False",
-            "Sharetime": 486.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700052424448": {
-            "User": "xmrRohan",
-            "Hashrate": 49101.11821850724,
-            "Is estimated": "True",
-            "Sharetime": 451.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "Unknown"
-        },
-        "139699616003840": {
-            "User": "naimulh",
-            "Hashrate": 147160.0,
-            "Is estimated": "False",
-            "Sharetime": 357.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699767072512": {
-            "User": "naimulh",
-            "Hashrate": 426435.0,
-            "Is estimated": "False",
-            "Sharetime": 758.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139698944587520": {
-            "User": "TOG",
-            "Hashrate": 618165.0165016502,
-            "Is estimated": "True",
-            "Sharetime": 202.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699607611136": {
-            "User": "TOG",
-            "Hashrate": 154808.8888888889,
-            "Is estimated": "True",
-            "Sharetime": 675.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699557254912": {
-            "User": "naimulh",
-            "Hashrate": 97378.0,
-            "Is estimated": "False",
-            "Sharetime": 505.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699884570368": {
-            "User": "naimulh",
-            "Hashrate": 724034.0,
-            "Is estimated": "False",
-            "Sharetime": 385.0,
+            "Sharetime": 300.0,
             "Accepted": 3,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699137619712": {
-            "User": "naimulh",
-            "Hashrate": 72664.0,
+        "139698835482368": {
+            "User": "travelmode",
+            "Hashrate": 1561825.0,
             "Is estimated": "False",
-            "Sharetime": 184.0,
+            "Sharetime": 467.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698306742016": {
-            "User": "xmrRohan",
-            "Hashrate": 223419.13651666333,
-            "Is estimated": "True",
-            "Sharetime": 827.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "Unknown"
-        },
-        "139699775465216": {
+        "139699229939456": {
             "User": "naimulh",
-            "Hashrate": 359799.0,
+            "Hashrate": 121148.0,
             "Is estimated": "False",
-            "Sharetime": 216.0,
-            "Accepted": 1,
-            "Rejected": 1,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699381008128": {
-            "User": "naimulh",
-            "Hashrate": 386856.0,
-            "Is estimated": "False",
-            "Sharetime": 421.0,
+            "Sharetime": 450.0,
             "Accepted": 1,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698315134720": {
-            "User": "TOG",
-            "Hashrate": 124812.5,
-            "Is estimated": "True",
-            "Sharetime": 448.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139698810304256": {
+        "139698751555328": {
             "User": "naimulh",
-            "Hashrate": 1993701.0,
+            "Hashrate": 914119.0,
             "Is estimated": "False",
-            "Sharetime": 437.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139700153071360": {
-            "User": "naimulh",
-            "Hashrate": 598096.0,
-            "Is estimated": "False",
-            "Sharetime": 510.0,
+            "Sharetime": 299.0,
             "Accepted": 2,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699146012416": {
-            "User": "TOG",
-            "Hashrate": 473748.7922705314,
-            "Is estimated": "True",
-            "Sharetime": 414.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699364222720": {
+        "139699809036032": {
             "User": "naimulh",
-            "Hashrate": 35711.0,
+            "Hashrate": 142374.0,
             "Is estimated": "False",
-            "Sharetime": 206.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699112441600": {
-            "User": "naimulh",
-            "Hashrate": 1764590.0,
-            "Is estimated": "False",
-            "Sharetime": 446.0,
+            "Sharetime": 476.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699699930880": {
+        "139699313866496": {
             "User": "naimulh",
-            "Hashrate": 890964.0,
+            "Hashrate": 28226.0,
             "Is estimated": "False",
-            "Sharetime": 470.0,
-            "Accepted": 0,
+            "Sharetime": 137.0,
+            "Accepted": 2,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699918141184": {
+        "139699246724864": {
             "User": "naimulh",
-            "Hashrate": 276936.0,
+            "Hashrate": 55989.0,
             "Is estimated": "False",
-            "Sharetime": 616.0,
-            "Accepted": 0,
+            "Sharetime": 53.0,
+            "Accepted": 3,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139700639618816": {
+        "139698885838592": {
             "User": "naimulh",
-            "Hashrate": 167426.0,
+            "Hashrate": 401487.0,
             "Is estimated": "False",
-            "Sharetime": 303.0,
-            "Accepted": 1,
+            "Sharetime": 503.0,
+            "Accepted": 2,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
         "139699456542464": {
             "User": "naimulh",
-            "Hashrate": 870460.0,
+            "Hashrate": 28739.0,
             "Is estimated": "False",
-            "Sharetime": 340.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699951712000": {
-            "User": "naimulh",
-            "Hashrate": 494049.0,
-            "Is estimated": "False",
-            "Sharetime": 301.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699867784960": {
-            "User": "naimulh",
-            "Hashrate": 1505098.0,
-            "Is estimated": "False",
-            "Sharetime": 355.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699448149760": {
-            "User": "naimulh",
-            "Hashrate": 318023.0,
-            "Is estimated": "False",
-            "Sharetime": 246.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699280295680": {
-            "User": "travelmode",
-            "Hashrate": 177524.0,
-            "Is estimated": "False",
-            "Sharetime": 245.0,
+            "Sharetime": 196.0,
             "Accepted": 1,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139700010460928": {
+        "139699137619712": {
             "User": "naimulh",
-            "Hashrate": 1360864.0,
+            "Hashrate": 275540.0,
             "Is estimated": "False",
-            "Sharetime": 467.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699750287104": {
-            "User": "naimulh",
-            "Hashrate": 238715.0,
-            "Is estimated": "False",
-            "Sharetime": 285.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699985282816": {
-            "User": "naimulh",
-            "Hashrate": 1504304.0,
-            "Is estimated": "False",
-            "Sharetime": 343.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699641181952": {
-            "User": "naimulh",
-            "Hashrate": 274568.0,
-            "Is estimated": "False",
-            "Sharetime": 370.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699901355776": {
-            "User": "naimulh",
-            "Hashrate": 1202713.0,
-            "Is estimated": "False",
-            "Sharetime": 267.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699733501696": {
-            "User": "naimulh",
-            "Hashrate": 274760.0,
-            "Is estimated": "False",
-            "Sharetime": 335.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699221546752": {
-            "User": "travelmode",
-            "Hashrate": 891131.0,
-            "Is estimated": "False",
-            "Sharetime": 218.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699960104704": {
-            "User": "naimulh",
-            "Hashrate": 621728.0,
-            "Is estimated": "False",
-            "Sharetime": 467.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11120,
-            "Software": "nonceMiner_v1.0"
-        },
-        "139699347437312": {
-            "User": "naimulh",
-            "Hashrate": 97395.0,
-            "Is estimated": "False",
-            "Sharetime": 22.0,
+            "Sharetime": 560.0,
             "Accepted": 2,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139700178249472": {
+        "139699523684096": {
             "User": "naimulh",
-            "Hashrate": 14728.0,
+            "Hashrate": 3710.0,
             "Is estimated": "False",
-            "Sharetime": 278.0,
+            "Sharetime": 286.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699003336448": {
-            "User": "ElGrifo",
-            "Hashrate": 7945.205479452055,
-            "Is estimated": "True",
-            "Sharetime": 73.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 300,
-            "Software": "Unknown"
-        },
-        "139699540469504": {
-            "User": "TOG",
-            "Hashrate": 687242.4242424242,
-            "Is estimated": "True",
-            "Sharetime": 176.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "139699481720576": {
-            "User": "travelmode",
-            "Hashrate": 394364.0,
+        "139700044031744": {
+            "User": "naimulh",
+            "Hashrate": 956092.0,
             "Is estimated": "False",
-            "Sharetime": 292.0,
+            "Sharetime": 443.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699934926592": {
+            "User": "naimulh",
+            "Hashrate": 1946172.0,
+            "Is estimated": "False",
+            "Sharetime": 364.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698818696960": {
+            "User": "travelmode",
+            "Hashrate": 240932.0,
+            "Is estimated": "False",
+            "Sharetime": 188.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699859392256": {
+            "User": "naimulh",
+            "Hashrate": 261745.0,
+            "Is estimated": "False",
+            "Sharetime": 338.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699532076800": {
+            "User": "naimulh",
+            "Hashrate": 703541.0,
+            "Is estimated": "False",
+            "Sharetime": 171.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699741894400": {
+            "User": "naimulh",
+            "Hashrate": 61948.0,
+            "Is estimated": "False",
+            "Sharetime": 202.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699154405120": {
+            "User": "naimulh",
+            "Hashrate": 1794373.0,
+            "Is estimated": "False",
+            "Sharetime": 517.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
@@ -1102,63 +1006,253 @@
         },
         "139699397793536": {
             "User": "naimulh",
-            "Hashrate": 37225.0,
+            "Hashrate": 1507218.0,
             "Is estimated": "False",
-            "Sharetime": 210.0,
+            "Sharetime": 367.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698986551040": {
+        "139699867784960": {
+            "User": "naimulh",
+            "Hashrate": 152726.0,
+            "Is estimated": "False",
+            "Sharetime": 424.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700606048000": {
+            "User": "naimulh",
+            "Hashrate": 2285962.0,
+            "Is estimated": "False",
+            "Sharetime": 466.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700027246336": {
+            "User": "naimulh",
+            "Hashrate": 692875.0,
+            "Is estimated": "False",
+            "Sharetime": 438.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699271902976": {
+            "User": "naimulh",
+            "Hashrate": 497950.0,
+            "Is estimated": "False",
+            "Sharetime": 271.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699506898688": {
+            "User": "naimulh",
+            "Hashrate": 388467.0,
+            "Is estimated": "False",
+            "Sharetime": 551.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699649574656": {
+            "User": "naimulh",
+            "Hashrate": 2280046.0,
+            "Is estimated": "False",
+            "Sharetime": 440.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700002068224": {
+            "User": "naimulh",
+            "Hashrate": 1537654.0,
+            "Is estimated": "False",
+            "Sharetime": 406.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699775465216": {
+            "User": "naimulh",
+            "Hashrate": 185492.0,
+            "Is estimated": "False",
+            "Sharetime": 201.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700639618816": {
+            "User": "TOG",
+            "Hashrate": 17486.16600790514,
+            "Is estimated": "True",
+            "Sharetime": 253.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
+        },
+        "139699557254912": {
+            "User": "naimulh",
+            "Hashrate": 1848125.0,
+            "Is estimated": "False",
+            "Sharetime": 454.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699104048896": {
+            "User": "naimulh",
+            "Hashrate": 269934.0,
+            "Is estimated": "False",
+            "Sharetime": 207.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139698776733440": {
             "User": "travelmode",
-            "Hashrate": 156284.0,
+            "Hashrate": 1419408.0,
+            "Is estimated": "False",
+            "Sharetime": 288.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699985282816": {
+            "User": "naimulh",
+            "Hashrate": 647844.0,
+            "Is estimated": "False",
+            "Sharetime": 269.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699112441600": {
+            "User": "naimulh",
+            "Hashrate": 61687.0,
+            "Is estimated": "False",
+            "Sharetime": 262.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699011729152": {
+            "User": "naimulh",
+            "Hashrate": 353158.0,
+            "Is estimated": "False",
+            "Sharetime": 445.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699355830016": {
+            "User": "travelmode",
+            "Hashrate": 324072.0,
+            "Is estimated": "False",
+            "Sharetime": 280.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139700648011520": {
+            "User": "travelmode",
+            "Hashrate": 219377.0,
             "Is estimated": "False",
             "Sharetime": 223.0,
-            "Accepted": 0,
+            "Accepted": 1,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699473327872": {
+        "139699255117568": {
             "User": "naimulh",
-            "Hashrate": 758715.0,
+            "Hashrate": 523228.0,
             "Is estimated": "False",
-            "Sharetime": 313.0,
+            "Sharetime": 140.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139698969765632": {
+        "139698978158336": {
             "User": "naimulh",
-            "Hashrate": 414390.0,
+            "Hashrate": 961631.0,
             "Is estimated": "False",
-            "Sharetime": 321.0,
+            "Sharetime": 467.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699574040320": {
+        "139699045299968": {
             "User": "naimulh",
-            "Hashrate": 1834488.0,
+            "Hashrate": 99789.0,
             "Is estimated": "False",
-            "Sharetime": 435.0,
+            "Sharetime": 172.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699020121856": {
+            "User": "travelmode",
+            "Hashrate": 608985.0,
+            "Is estimated": "False",
+            "Sharetime": 381.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139699062085376": {
+            "User": "stanzwerck",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 841.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "ESP Miner v1.8"
+        },
+        "139699406186240": {
+            "User": "naimulh",
+            "Hashrate": 1167019.0,
+            "Is estimated": "False",
+            "Sharetime": 44.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 11120,
             "Software": "nonceMiner_v1.0"
         },
-        "139699599218432": {
-            "User": "ElGrifo",
-            "Hashrate": 1000.0,
-            "Is estimated": "True",
-            "Sharetime": 0.0,
+        "139699288688384": {
+            "User": "naimulh",
+            "Hashrate": 435734.0,
+            "Is estimated": "False",
+            "Sharetime": 436.0,
             "Accepted": 0,
             "Rejected": 0,
-            "Diff": 300,
-            "Software": "Unknown"
+            "Diff": 11120,
+            "Software": "nonceMiner_v1.0"
         }
     }
 }
