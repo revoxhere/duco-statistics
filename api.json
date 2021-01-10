@@ -1,21 +1,21 @@
 {
     "Server version": 1.9,
-    "Active connections": 69,
-    "Last update": "10/01/2021 16:22 (UTC)",
-    "Pool hashrate": "26.59 MH/s",
-    "Duco price": 0.00336,
+    "Active connections": 52,
+    "Last update": "10/01/2021 16:23 (UTC)",
+    "Pool hashrate": "10.28 MH/s",
+    "Duco price": 0.003394,
     "Registered users": 546,
-    "All-time mined DUCO": 315693.12,
+    "All-time mined DUCO": 315693.51,
     "Current difficulty": 11173,
-    "Mined blocks": 22344137,
-    "Full last block hash": "67a99f465d12203b6d54c65d8953248b0734fd4b",
-    "Last block hash": "67a99f465d...",
+    "Mined blocks": 22344181,
+    "Full last block hash": "a9e221934926e043ac4d28651cacff1ea8e74c5d",
+    "Last block hash": "a9e2219349...",
     "Top 10 richest miners": [
-        "84707.4797 DUCO - xmrRohan",
+        "84707.5684 DUCO - xmrRohan",
         "31816.1281 DUCO - aarican",
         "21203.2225 DUCO - sabartheman",
         "16470.6515 DUCO - PHR9",
-        "15208.4919 DUCO - travelmode",
+        "15208.6659 DUCO - travelmode",
         "11432.697 DUCO - drn",
         "7862.3849 DUCO - baibaide",
         "7502.7521 DUCO - egiptsky",
@@ -23,506 +23,443 @@
         "5075.4027 DUCO - noz"
     ],
     "Active workers": {
-        "xmrRohan": 7,
+        "parker": 1,
         "Danitronium": 10,
-        "Raven": 1,
-        "parker": 6,
-        "stanzwerck": 3,
-        "MagicForces": 2,
-        "wossky": 1,
         "travelmode": 8,
-        "httsmvkcom": 11
+        "xmrRohan": 7,
+        "httsmvkcom": 16,
+        "Raven": 1
     },
     "Miners": {
-        "140530113570560": {
-            "User": "xmrRohan",
-            "Hashrate": 1029417.7222345221,
-            "Is estimated": "True",
-            "Sharetime": 171.0,
-            "Accepted": 376,
-            "Rejected": 28,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140530088392448": {
-            "User": "Danitronium",
-            "Hashrate": 130977.0,
-            "Is estimated": "False",
-            "Sharetime": 328.0,
-            "Accepted": 144,
-            "Rejected": 15,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529778026240": {
-            "User": "xmrRohan",
-            "Hashrate": 124627.65165651342,
-            "Is estimated": "True",
-            "Sharetime": 383.0,
-            "Accepted": 349,
-            "Rejected": 27,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140529643808512": {
-            "User": "Danitronium",
-            "Hashrate": 125008.0,
-            "Is estimated": "False",
-            "Sharetime": 198.0,
-            "Accepted": 141,
-            "Rejected": 20,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529752848128": {
-            "User": "xmrRohan",
-            "Hashrate": 139987.97341012396,
-            "Is estimated": "True",
-            "Sharetime": 654.0,
-            "Accepted": 364,
-            "Rejected": 15,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140530096785152": {
-            "User": "Danitronium",
-            "Hashrate": 131959.0,
-            "Is estimated": "False",
-            "Sharetime": 652.0,
-            "Accepted": 151,
-            "Rejected": 12,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529627023104": {
-            "User": "Danitronium",
-            "Hashrate": 124971.0,
-            "Is estimated": "False",
-            "Sharetime": 887.0,
-            "Accepted": 147,
-            "Rejected": 11,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140530079999744": {
-            "User": "Danitronium",
-            "Hashrate": 125988.0,
-            "Is estimated": "False",
-            "Sharetime": 582.0,
-            "Accepted": 137,
-            "Rejected": 17,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529601844992": {
-            "User": "Danitronium",
-            "Hashrate": 123318.0,
-            "Is estimated": "False",
-            "Sharetime": 124.0,
-            "Accepted": 140,
-            "Rejected": 16,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529769633536": {
-            "User": "Raven",
-            "Hashrate": 107238.09523809524,
-            "Is estimated": "True",
-            "Sharetime": 147.0,
-            "Accepted": 20,
-            "Rejected": 10,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140529467561728": {
+        "140544764266240": {
             "User": "parker",
-            "Hashrate": 185187.5,
-            "Is estimated": "True",
-            "Sharetime": 128.0,
-            "Accepted": 8,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140529350063872": {
-            "User": "parker",
-            "Hashrate": 666553.1914893617,
-            "Is estimated": "True",
-            "Sharetime": 235.0,
-            "Accepted": 11,
-            "Rejected": 3,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140529341671168": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
+            "Hashrate": 429018.0,
             "Is estimated": "False",
-            "Sharetime": 317.0,
-            "Accepted": 15,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529652201216": {
-            "User": "Danitronium",
-            "Hashrate": 126154.0,
-            "Is estimated": "False",
-            "Sharetime": 32.0,
-            "Accepted": 134,
-            "Rejected": 9,
+            "Sharetime": 373.0,
+            "Accepted": 22,
+            "Rejected": 2,
             "Diff": 11173,
             "Software": "Official Python Miner v1.9"
         },
-        "140529610237696": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
+        "140544273540864": {
+            "User": "Danitronium",
+            "Hashrate": 126904.0,
             "Is estimated": "False",
-            "Sharetime": 783.0,
+            "Sharetime": 533.0,
             "Accepted": 4,
-            "Rejected": 6,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529593452288": {
-            "User": "MagicForces",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 603.0,
-            "Accepted": 9,
-            "Rejected": 4,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529375241984": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 281.0,
-            "Accepted": 19,
-            "Rejected": 3,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529408812800": {
-            "User": "parker",
-            "Hashrate": 308678.36257309944,
-            "Is estimated": "True",
-            "Sharetime": 57.0,
-            "Accepted": 11,
-            "Rejected": 3,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140529358456576": {
-            "User": "MagicForces",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 15.0,
-            "Accepted": 9,
-            "Rejected": 4,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529534703360": {
-            "User": "wossky",
-            "Hashrate": 87671.88665175243,
-            "Is estimated": "True",
-            "Sharetime": 894.0,
-            "Accepted": 9,
-            "Rejected": 2,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140529291314944": {
-            "User": "xmrRohan",
-            "Hashrate": 127183.77086231632,
-            "Is estimated": "True",
-            "Sharetime": 824.0,
-            "Accepted": 217,
-            "Rejected": 11,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140530071607040": {
-            "User": "xmrRohan",
-            "Hashrate": 3736512.62468053,
-            "Is estimated": "True",
-            "Sharetime": 36.0,
-            "Accepted": 201,
-            "Rejected": 16,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140529299707648": {
-            "User": "xmrRohan",
-            "Hashrate": 1026144.737448774,
-            "Is estimated": "True",
-            "Sharetime": 165.0,
-            "Accepted": 215,
-            "Rejected": 11,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140529492739840": {
-            "User": "Danitronium",
-            "Hashrate": 131368.0,
-            "Is estimated": "False",
-            "Sharetime": 252.0,
-            "Accepted": 56,
-            "Rejected": 7,
+            "Rejected": 0,
             "Diff": 11173,
             "Software": "Official Python Miner v1.9"
         },
-        "140529559881472": {
-            "User": "Danitronium",
-            "Hashrate": 125715.0,
+        "140544265148160": {
+            "User": "travelmode",
+            "Hashrate": 858797.0,
             "Is estimated": "False",
-            "Sharetime": 37.0,
-            "Accepted": 60,
+            "Sharetime": 497.0,
+            "Accepted": 35,
             "Rejected": 2,
             "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529173817088": {
-            "User": "Danitronium",
-            "Hashrate": 124009.0,
-            "Is estimated": "False",
-            "Sharetime": 961.0,
-            "Accepted": 57,
-            "Rejected": 3,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529190602496": {
-            "User": "parker",
-            "Hashrate": 361748.8519978204,
-            "Is estimated": "True",
-            "Sharetime": 522.0,
-            "Accepted": 31,
-            "Rejected": 2,
-            "Diff": 11173,
-            "Software": "Unknown"
-        },
-        "140529324885760": {
-            "User": "parker",
-            "Hashrate": 425954.0,
-            "Is estimated": "False",
-            "Sharetime": 165.0,
-            "Accepted": 132,
-            "Rejected": 13,
-            "Diff": 11173,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140529433990912": {
-            "User": "travelmode",
-            "Hashrate": 429424.0,
-            "Is estimated": "False",
-            "Sharetime": 217.0,
-            "Accepted": 40,
-            "Rejected": 0,
-            "Diff": 11173,
             "Software": "nonceMiner_v1.0"
         },
-        "140529618630400": {
+        "140544139323136": {
             "User": "travelmode",
-            "Hashrate": 292296.0,
+            "Hashrate": 831750.0,
             "Is estimated": "False",
-            "Sharetime": 194.0,
-            "Accepted": 33,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140529543096064": {
-            "User": "travelmode",
-            "Hashrate": 488383.0,
-            "Is estimated": "False",
-            "Sharetime": 395.0,
-            "Accepted": 36,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140529501132544": {
-            "User": "travelmode",
-            "Hashrate": 304638.0,
-            "Is estimated": "False",
-            "Sharetime": 184.0,
-            "Accepted": 37,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140528922035968": {
-            "User": "travelmode",
-            "Hashrate": 617172.0,
-            "Is estimated": "False",
-            "Sharetime": 406.0,
-            "Accepted": 31,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140529585059584": {
-            "User": "travelmode",
-            "Hashrate": 105306.0,
-            "Is estimated": "False",
-            "Sharetime": 216.0,
+            "Sharetime": 917.0,
             "Accepted": 32,
             "Rejected": 0,
             "Diff": 11173,
             "Software": "nonceMiner_v1.0"
         },
-        "140529786418944": {
+        "140544097359616": {
             "User": "travelmode",
-            "Hashrate": 650921.0,
+            "Hashrate": 989799.0,
             "Is estimated": "False",
-            "Sharetime": 515.0,
-            "Accepted": 28,
+            "Sharetime": 595.0,
+            "Accepted": 36,
             "Rejected": 0,
             "Diff": 11173,
             "Software": "nonceMiner_v1.0"
         },
-        "140530105177856": {
+        "140544114145024": {
             "User": "travelmode",
-            "Hashrate": 61074.0,
+            "Hashrate": 665612.0,
             "Is estimated": "False",
-            "Sharetime": 163.0,
-            "Accepted": 31,
+            "Sharetime": 243.0,
+            "Accepted": 37,
             "Rejected": 0,
             "Diff": 11173,
             "Software": "nonceMiner_v1.0"
         },
-        "140529098282752": {
+        "140544080574208": {
+            "User": "travelmode",
+            "Hashrate": 423340.0,
+            "Is estimated": "False",
+            "Sharetime": 271.0,
+            "Accepted": 35,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140544072181504": {
+            "User": "travelmode",
+            "Hashrate": 675155.0,
+            "Is estimated": "False",
+            "Sharetime": 560.0,
+            "Accepted": 32,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140544122537728": {
+            "User": "Danitronium",
+            "Hashrate": 124872.0,
+            "Is estimated": "False",
+            "Sharetime": 411.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544088966912": {
+            "User": "travelmode",
+            "Hashrate": 314116.0,
+            "Is estimated": "False",
+            "Sharetime": 198.0,
+            "Accepted": 33,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140544281933568": {
+            "User": "Danitronium",
+            "Hashrate": 132131.0,
+            "Is estimated": "False",
+            "Sharetime": 368.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544038610688": {
+            "User": "travelmode",
+            "Hashrate": 975493.0,
+            "Is estimated": "False",
+            "Sharetime": 362.0,
+            "Accepted": 32,
+            "Rejected": 1,
+            "Diff": 11173,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140544231577344": {
+            "User": "Danitronium",
+            "Hashrate": 124985.0,
+            "Is estimated": "False",
+            "Sharetime": 40.0,
+            "Accepted": 4,
+            "Rejected": 1,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544781158144": {
+            "User": "Danitronium",
+            "Hashrate": 123330.0,
+            "Is estimated": "False",
+            "Sharetime": 31.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140543988254464": {
+            "User": "xmrRohan",
+            "Hashrate": 142733.13374839223,
+            "Is estimated": "True",
+            "Sharetime": 890.0,
+            "Accepted": 14,
+            "Rejected": 1,
+            "Diff": 11173,
+            "Software": "Unknown"
+        },
+        "140544256755456": {
+            "User": "Danitronium",
+            "Hashrate": 133555.0,
+            "Is estimated": "False",
+            "Sharetime": 770.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544239970048": {
+            "User": "Danitronium",
+            "Hashrate": 126154.0,
+            "Is estimated": "False",
+            "Sharetime": 199.0,
+            "Accepted": 8,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544248362752": {
+            "User": "Danitronium",
+            "Hashrate": 131292.0,
+            "Is estimated": "False",
+            "Sharetime": 165.0,
+            "Accepted": 2,
+            "Rejected": 1,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140543929505536": {
+            "User": "xmrRohan",
+            "Hashrate": 139069.62183770043,
+            "Is estimated": "True",
+            "Sharetime": 651.0,
+            "Accepted": 10,
+            "Rejected": 3,
+            "Diff": 11173,
+            "Software": "Unknown"
+        },
+        "140544772765440": {
+            "User": "Danitronium",
+            "Hashrate": 125712.0,
+            "Is estimated": "False",
+            "Sharetime": 939.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544047003392": {
             "User": "httsmvkcom",
-            "Hashrate": 62506.0,
+            "Hashrate": 50689.0,
             "Is estimated": "False",
-            "Sharetime": 423.0,
+            "Sharetime": 789.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543963076352": {
+            "User": "httsmvkcom",
+            "Hashrate": 59990.0,
+            "Is estimated": "False",
+            "Sharetime": 701.0,
             "Accepted": 1,
             "Rejected": 1,
             "Diff": 11173,
             "Software": "ESP Miner v1.8"
         },
-        "140529568274176": {
+        "140543954683648": {
             "User": "xmrRohan",
-            "Hashrate": 110512.91513854764,
+            "Hashrate": 102166.01784938626,
             "Is estimated": "True",
-            "Sharetime": 949.0,
-            "Accepted": 7,
+            "Sharetime": 545.0,
+            "Accepted": 11,
             "Rejected": 0,
             "Diff": 11173,
             "Software": "Unknown"
         },
-        "140529526310656": {
-            "User": "httsmvkcom",
-            "Hashrate": 47408.0,
-            "Is estimated": "False",
-            "Sharetime": 82.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529736062720": {
-            "User": "httsmvkcom",
-            "Hashrate": 40702.0,
-            "Is estimated": "False",
-            "Sharetime": 405.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529450776320": {
-            "User": "parker",
-            "Hashrate": 718259.0,
-            "Is estimated": "False",
-            "Sharetime": 119.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "Official Webminer v1.8"
-        },
-        "140529257744128": {
-            "User": "httsmvkcom",
-            "Hashrate": 61569.0,
-            "Is estimated": "False",
-            "Sharetime": 298.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529744455424": {
-            "User": "httsmvkcom",
-            "Hashrate": 132769.0,
-            "Is estimated": "False",
-            "Sharetime": 420.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529266136832": {
-            "User": "httsmvkcom",
-            "Hashrate": 93564.0,
-            "Is estimated": "False",
-            "Sharetime": 58.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529442383616": {
-            "User": "httsmvkcom",
-            "Hashrate": 64152.0,
-            "Is estimated": "False",
-            "Sharetime": 676.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529047926528": {
-            "User": "httsmvkcom",
-            "Hashrate": 121892.0,
-            "Is estimated": "False",
-            "Sharetime": 121.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529123460864": {
-            "User": "httsmvkcom",
-            "Hashrate": 63610.0,
-            "Is estimated": "False",
-            "Sharetime": 914.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11173,
-            "Software": "ESP Miner v1.8"
-        },
-        "140529106675456": {
-            "User": "httsmvkcom",
-            "Hashrate": 23299.0,
-            "Is estimated": "False",
-            "Sharetime": 181.0,
-            "Accepted": 1,
+        "140543971469056": {
+            "User": "xmrRohan",
+            "Hashrate": 141135.027668955,
+            "Is estimated": "True",
+            "Sharetime": 661.0,
+            "Accepted": 13,
             "Rejected": 1,
             "Diff": 11173,
-            "Software": "ESP Miner v1.8"
+            "Software": "Unknown"
         },
-        "140529509525248": {
-            "User": "httsmvkcom",
-            "Hashrate": 72812.0,
+        "140543904327424": {
+            "User": "xmrRohan",
+            "Hashrate": 90235.3294144968,
+            "Is estimated": "True",
+            "Sharetime": 301.0,
+            "Accepted": 10,
+            "Rejected": 3,
+            "Diff": 11173,
+            "Software": "Unknown"
+        },
+        "140543912720128": {
+            "User": "xmrRohan",
+            "Hashrate": 30972.529738329467,
+            "Is estimated": "True",
+            "Sharetime": 107.0,
+            "Accepted": 8,
+            "Rejected": 5,
+            "Diff": 11173,
+            "Software": "Unknown"
+        },
+        "140544105752320": {
+            "User": "Danitronium",
+            "Hashrate": 122555.0,
             "Is estimated": "False",
-            "Sharetime": 820.0,
+            "Sharetime": 229.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140544130930432": {
+            "User": "httsmvkcom",
+            "Hashrate": 53608.0,
+            "Is estimated": "False",
+            "Sharetime": 810.0,
             "Accepted": 1,
             "Rejected": 0,
             "Diff": 11173,
             "Software": "ESP Miner v1.8"
+        },
+        "140544147715840": {
+            "User": "httsmvkcom",
+            "Hashrate": 45834.0,
+            "Is estimated": "False",
+            "Sharetime": 608.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543979861760": {
+            "User": "httsmvkcom",
+            "Hashrate": 63323.0,
+            "Is estimated": "False",
+            "Sharetime": 364.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543921112832": {
+            "User": "xmrRohan",
+            "Hashrate": 116076.34947029257,
+            "Is estimated": "True",
+            "Sharetime": 304.0,
+            "Accepted": 11,
+            "Rejected": 2,
+            "Diff": 11173,
+            "Software": "Unknown"
+        },
+        "140544055396096": {
+            "User": "httsmvkcom",
+            "Hashrate": 41358.0,
+            "Is estimated": "False",
+            "Sharetime": 71.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140544005039872": {
+            "User": "httsmvkcom",
+            "Hashrate": 70479.0,
+            "Is estimated": "False",
+            "Sharetime": 568.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543879149312": {
+            "User": "httsmvkcom",
+            "Hashrate": 90871.0,
+            "Is estimated": "False",
+            "Sharetime": 506.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543996647168": {
+            "User": "httsmvkcom",
+            "Hashrate": 81898.0,
+            "Is estimated": "False",
+            "Sharetime": 803.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140544063788800": {
+            "User": "httsmvkcom",
+            "Hashrate": 86296.0,
+            "Is estimated": "False",
+            "Sharetime": 245.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140544030217984": {
+            "User": "httsmvkcom",
+            "Hashrate": 60121.0,
+            "Is estimated": "False",
+            "Sharetime": 584.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543862363904": {
+            "User": "httsmvkcom",
+            "Hashrate": 40079.0,
+            "Is estimated": "False",
+            "Sharetime": 307.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140544013432576": {
+            "User": "httsmvkcom",
+            "Hashrate": 92122.0,
+            "Is estimated": "False",
+            "Sharetime": 107.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543937898240": {
+            "User": "httsmvkcom",
+            "Hashrate": 63708.0,
+            "Is estimated": "False",
+            "Sharetime": 906.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543946290944": {
+            "User": "httsmvkcom",
+            "Hashrate": 55001.0,
+            "Is estimated": "False",
+            "Sharetime": 113.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140544021825280": {
+            "User": "httsmvkcom",
+            "Hashrate": 49151.0,
+            "Is estimated": "False",
+            "Sharetime": 301.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 11173,
+            "Software": "ESP Miner v1.8"
+        },
+        "140543870756608": {
+            "User": "Raven",
+            "Hashrate": 778448.9795918368,
+            "Is estimated": "True",
+            "Sharetime": 49.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 1500,
+            "Software": "Unknown"
         }
     }
 }
