@@ -1,21 +1,21 @@
 {
     "Server version": 1.9,
-    "Active connections": 954,
-    "Last update": "10/01/2021 10:07 (UTC)",
-    "Pool hashrate": "72.39 MH/s",
-    "Duco price": 0.003428,
+    "Active connections": 17,
+    "Last update": "10/01/2021 10:36 (UTC)",
+    "Pool hashrate": "5.56 MH/s",
+    "Duco price": 0.003394,
     "Registered users": 543,
-    "All-time mined DUCO": 315622.65,
-    "Current difficulty": 11169,
-    "Mined blocks": 22337573,
-    "Full last block hash": "4816e15d10d88829a8553c14501db52801d2c4ba",
-    "Last block hash": "4816e15d10...",
+    "All-time mined DUCO": 315629.16,
+    "Current difficulty": 11170,
+    "Mined blocks": 22338027,
+    "Full last block hash": "248b34cae00067c3c4c97c29b4d8fa3336a04e04",
+    "Last block hash": "248b34cae0...",
     "Top 10 richest miners": [
-        "84693.2304 DUCO - xmrRohan",
+        "84694.3103 DUCO - xmrRohan",
         "31816.1281 DUCO - aarican",
         "21203.2225 DUCO - sabartheman",
-        "16468.4549 DUCO - PHR9",
-        "15172.5763 DUCO - travelmode",
+        "16469.0276 DUCO - PHR9",
+        "15176.7772 DUCO - travelmode",
         "11432.697 DUCO - drn",
         "7862.3849 DUCO - baibaide",
         "7502.7521 DUCO - egiptsky",
@@ -23,947 +23,151 @@
         "5075.4027 DUCO - noz"
     ],
     "Active workers": {
-        "stanzwerck": 5,
-        "wossky": 1,
-        "MagicForces": 2,
-        "Raven": 1,
-        "parker": 3,
         "travelmode": 8,
-        "xmrRohan": 4,
-        "PHR9": 66,
-        "acikaa87x": 1,
-        "zmurk": 2
+        "zmurk": 2,
+        "xmrRohan": 3,
+        "acikaa87x": 1
     },
     "Miners": {
-        "140079418832640": {
-            "User": "stanzwerck",
-            "Hashrate": 468827.9569892473,
-            "Is estimated": "True",
-            "Sharetime": 124.0,
-            "Accepted": 16,
-            "Rejected": 2,
-            "Diff": 1500,
-            "Software": "ESP"
-        },
-        "140080059348736": {
-            "User": "wossky",
-            "Hashrate": 11993.118279569891,
-            "Is estimated": "True",
-            "Sharetime": 775.0,
-            "Accepted": 14,
-            "Rejected": 2,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140079511086848": {
-            "User": "MagicForces",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 370.0,
-            "Accepted": 15,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140079343298304": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 428.0,
-            "Accepted": 22,
-            "Rejected": 7,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140079351691008": {
-            "User": "stanzwerck",
-            "Hashrate": 220219.5704057279,
-            "Is estimated": "True",
-            "Sharetime": 838.0,
-            "Accepted": 9,
-            "Rejected": 6,
-            "Diff": 1500,
-            "Software": "ESP"
-        },
-        "140079402047232": {
-            "User": "Raven",
-            "Hashrate": 533243.6472346786,
-            "Is estimated": "True",
-            "Sharetime": 223.0,
-            "Accepted": 23,
-            "Rejected": 7,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140079368476416": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 708.0,
-            "Accepted": 13,
-            "Rejected": 3,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140079326512896": {
-            "User": "parker",
-            "Hashrate": 2280800.0,
-            "Is estimated": "True",
-            "Sharetime": 55.0,
-            "Accepted": 12,
-            "Rejected": 5,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140078797772544": {
-            "User": "MagicForces",
-            "Hashrate": 2150.0,
-            "Is estimated": "False",
-            "Sharetime": 75.0,
-            "Accepted": 15,
-            "Rejected": 1,
-            "Diff": 1500,
-            "Software": "ESP Miner v1.8"
-        },
-        "140079276156672": {
-            "User": "parker",
-            "Hashrate": 14150370.37037037,
-            "Is estimated": "True",
-            "Sharetime": 9.0,
-            "Accepted": 15,
-            "Rejected": 3,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140079360083712": {
-            "User": "parker",
-            "Hashrate": 209967.04689480353,
-            "Is estimated": "True",
-            "Sharetime": 526.0,
-            "Accepted": 14,
-            "Rejected": 2,
-            "Diff": 1500,
-            "Software": "Unknown"
-        },
-        "140077958502144": {
+        "139919599056640": {
             "User": "travelmode",
-            "Hashrate": 163805.0,
+            "Hashrate": 741397.0,
             "Is estimated": "False",
-            "Sharetime": 781.0,
-            "Accepted": 97,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140079544657664": {
-            "User": "travelmode",
-            "Hashrate": 12691.0,
-            "Is estimated": "False",
-            "Sharetime": 330.0,
-            "Accepted": 86,
-            "Rejected": 3,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140076405851904": {
-            "User": "travelmode",
-            "Hashrate": 86031.0,
-            "Is estimated": "False",
-            "Sharetime": 703.0,
-            "Accepted": 89,
-            "Rejected": 2,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140077748684544": {
-            "User": "travelmode",
-            "Hashrate": 95725.0,
-            "Is estimated": "False",
-            "Sharetime": 623.0,
-            "Accepted": 90,
-            "Rejected": 2,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140076724774656": {
-            "User": "travelmode",
-            "Hashrate": 139120.0,
-            "Is estimated": "False",
-            "Sharetime": 623.0,
-            "Accepted": 91,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140077589223168": {
-            "User": "travelmode",
-            "Hashrate": 39411.0,
-            "Is estimated": "False",
-            "Sharetime": 772.0,
-            "Accepted": 91,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140076397459200": {
-            "User": "travelmode",
-            "Hashrate": 140920.0,
-            "Is estimated": "False",
-            "Sharetime": 508.0,
-            "Accepted": 80,
-            "Rejected": 4,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140076439422720": {
-            "User": "travelmode",
-            "Hashrate": 22139.0,
-            "Is estimated": "False",
-            "Sharetime": 782.0,
-            "Accepted": 82,
-            "Rejected": 2,
-            "Diff": 11169,
-            "Software": "nonceMiner_v1.0"
-        },
-        "140075868718848": {
-            "User": "xmrRohan",
-            "Hashrate": 214382.05969699172,
-            "Is estimated": "True",
-            "Sharetime": 614.0,
-            "Accepted": 56,
-            "Rejected": 3,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074735703808": {
-            "User": "PHR9",
-            "Hashrate": 33614.411251475925,
-            "Is estimated": "True",
-            "Sharetime": 874.0,
-            "Accepted": 4,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074702132992": {
-            "User": "PHR9",
-            "Hashrate": 999734.7154657567,
-            "Is estimated": "True",
-            "Sharetime": 108.0,
-            "Accepted": 3,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074752489216": {
-            "User": "PHR9",
-            "Hashrate": 157120.99594142043,
-            "Is estimated": "True",
-            "Sharetime": 545.0,
-            "Accepted": 6,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074030716672": {
-            "User": "PHR9",
-            "Hashrate": 886014.5538297197,
-            "Is estimated": "True",
-            "Sharetime": 116.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073443227392": {
-            "User": "PHR9",
-            "Hashrate": 95156.84216122577,
-            "Is estimated": "True",
-            "Sharetime": 709.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073896433408": {
-            "User": "PHR9",
-            "Hashrate": 267584.36919102736,
-            "Is estimated": "True",
-            "Sharetime": 554.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074433566464": {
-            "User": "PHR9",
-            "Hashrate": 90314.62980814342,
-            "Is estimated": "True",
-            "Sharetime": 917.0,
-            "Accepted": 7,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073225017088": {
-            "User": "PHR9",
-            "Hashrate": 941613.439264451,
-            "Is estimated": "True",
-            "Sharetime": 159.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073040377600": {
-            "User": "PHR9",
-            "Hashrate": 207114.493183831,
-            "Is estimated": "True",
-            "Sharetime": 913.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073073948416": {
-            "User": "PHR9",
-            "Hashrate": 833554.5338199744,
-            "Is estimated": "True",
-            "Sharetime": 68.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073552332544": {
-            "User": "PHR9",
-            "Hashrate": 117932.26970740361,
-            "Is estimated": "True",
-            "Sharetime": 884.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073543939840": {
-            "User": "PHR9",
-            "Hashrate": 304598.0528403539,
-            "Is estimated": "True",
-            "Sharetime": 575.0,
-            "Accepted": 3,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073115911936": {
-            "User": "PHR9",
-            "Hashrate": 148646.94965649047,
-            "Is estimated": "True",
-            "Sharetime": 757.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140074106251008": {
-            "User": "PHR9",
-            "Hashrate": 1239613.819791096,
-            "Is estimated": "True",
-            "Sharetime": 77.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072838952704": {
-            "User": "PHR9",
-            "Hashrate": 25588.7777062457,
-            "Is estimated": "True",
-            "Sharetime": 945.0,
-            "Accepted": 6,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073678223104": {
-            "User": "PHR9",
-            "Hashrate": 209246.88650159573,
-            "Is estimated": "True",
-            "Sharetime": 892.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072662705920": {
-            "User": "PHR9",
-            "Hashrate": 1335948.003584253,
-            "Is estimated": "True",
-            "Sharetime": 123.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072830560000": {
-            "User": "PHR9",
-            "Hashrate": 27243561.04694541,
-            "Is estimated": "True",
-            "Sharetime": 3.0,
-            "Accepted": 1,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073107519232": {
-            "User": "PHR9",
-            "Hashrate": 23572.279333762006,
-            "Is estimated": "True",
-            "Sharetime": 990.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072603956992": {
-            "User": "PHR9",
-            "Hashrate": 1202073.7008728215,
-            "Is estimated": "True",
-            "Sharetime": 103.0,
-            "Accepted": 5,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072553600768": {
-            "User": "PHR9",
-            "Hashrate": 310661.7968659148,
-            "Is estimated": "True",
-            "Sharetime": 348.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072268248832": {
-            "User": "acikaa87x",
-            "Hashrate": 73743.0,
-            "Is estimated": "False",
-            "Sharetime": 37.0,
-            "Accepted": 13,
-            "Rejected": 3,
-            "Diff": 11169,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140072587171584": {
-            "User": "PHR9",
-            "Hashrate": 282938.3839375325,
-            "Is estimated": "True",
-            "Sharetime": 706.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140078504027904": {
-            "User": "PHR9",
-            "Hashrate": 140347.57914822493,
-            "Is estimated": "True",
-            "Sharetime": 843.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072142358272": {
-            "User": "PHR9",
-            "Hashrate": 473766.09922390187,
-            "Is estimated": "True",
             "Sharetime": 233.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073065555712": {
-            "User": "PHR9",
-            "Hashrate": 454617.3893474458,
-            "Is estimated": "True",
-            "Sharetime": 259.0,
-            "Accepted": 2,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073627866880": {
-            "User": "PHR9",
-            "Hashrate": 170687.6584758116,
-            "Is estimated": "True",
-            "Sharetime": 765.0,
-            "Accepted": 3,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140073560725248": {
-            "User": "PHR9",
-            "Hashrate": 564376.8043962653,
-            "Is estimated": "True",
-            "Sharetime": 265.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072536815360": {
-            "User": "PHR9",
-            "Hashrate": 36748.080075063255,
-            "Is estimated": "True",
-            "Sharetime": 865.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072570386176": {
-            "User": "PHR9",
-            "Hashrate": 61166.34673444955,
-            "Is estimated": "True",
-            "Sharetime": 641.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072217892608": {
-            "User": "PHR9",
-            "Hashrate": 242497.96003579645,
-            "Is estimated": "True",
-            "Sharetime": 422.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072201107200": {
-            "User": "PHR9",
-            "Hashrate": 653893.5162876789,
-            "Is estimated": "True",
-            "Sharetime": 199.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140077975287552": {
-            "User": "PHR9",
-            "Hashrate": 889074.8965332478,
-            "Is estimated": "True",
-            "Sharetime": 129.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072209499904": {
-            "User": "PHR9",
-            "Hashrate": 449864.33183115965,
-            "Is estimated": "True",
-            "Sharetime": 288.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071663974144": {
-            "User": "stanzwerck",
-            "Hashrate": 143243.0,
-            "Is estimated": "False",
-            "Sharetime": 323.0,
-            "Accepted": 19,
-            "Rejected": 4,
-            "Diff": 11169,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140078050821888": {
-            "User": "PHR9",
-            "Hashrate": 87621.12551501414,
-            "Is estimated": "True",
-            "Sharetime": 228.0,
-            "Accepted": 4,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071781472000": {
-            "User": "PHR9",
-            "Hashrate": 77056.1763983054,
-            "Is estimated": "True",
-            "Sharetime": 737.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071630403328": {
-            "User": "zmurk",
-            "Hashrate": 120319.0,
-            "Is estimated": "False",
-            "Sharetime": 702.0,
             "Accepted": 14,
-            "Rejected": 2,
-            "Diff": 11169,
-            "Software": "Official Python Miner v1.9"
-        },
-        "140078176712448": {
-            "User": "PHR9",
-            "Hashrate": 165961.9824786319,
-            "Is estimated": "True",
-            "Sharetime": 599.0,
-            "Accepted": 2,
             "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
         },
-        "140078277424896": {
-            "User": "PHR9",
-            "Hashrate": 176484.63271063642,
-            "Is estimated": "True",
-            "Sharetime": 408.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071840220928": {
-            "User": "PHR9",
-            "Hashrate": 102871.91135757507,
-            "Is estimated": "True",
-            "Sharetime": 635.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140077177980672": {
-            "User": "PHR9",
-            "Hashrate": 66024.10138828876,
-            "Is estimated": "True",
-            "Sharetime": 690.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140077144409856": {
-            "User": "PHR9",
-            "Hashrate": 98484.56281434633,
-            "Is estimated": "True",
-            "Sharetime": 926.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071857006336": {
-            "User": "PHR9",
-            "Hashrate": 120364.37155737095,
-            "Is estimated": "True",
-            "Sharetime": 898.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140077337442048": {
-            "User": "PHR9",
-            "Hashrate": 157358.2832034992,
-            "Is estimated": "True",
-            "Sharetime": 851.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071823435520": {
-            "User": "PHR9",
-            "Hashrate": 289020.4642508185,
-            "Is estimated": "True",
-            "Sharetime": 460.0,
-            "Accepted": 1,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072545208064": {
-            "User": "PHR9",
-            "Hashrate": 1048814.7659783438,
-            "Is estimated": "True",
-            "Sharetime": 66.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071722723072": {
-            "User": "PHR9",
-            "Hashrate": 99713.03078469407,
-            "Is estimated": "True",
-            "Sharetime": 911.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071815042816": {
-            "User": "PHR9",
-            "Hashrate": 130423.59984094519,
-            "Is estimated": "True",
-            "Sharetime": 927.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072528422656": {
-            "User": "PHR9",
-            "Hashrate": 171086.94628818904,
-            "Is estimated": "True",
-            "Sharetime": 970.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140078252246784": {
-            "User": "PHR9",
-            "Hashrate": 10545.583294654667,
-            "Is estimated": "True",
-            "Sharetime": 989.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140079553050368": {
-            "User": "zmurk",
-            "Hashrate": 100464.0,
+        "139919590663936": {
+            "User": "travelmode",
+            "Hashrate": 634720.0,
             "Is estimated": "False",
-            "Sharetime": 404.0,
-            "Accepted": 9,
+            "Sharetime": 982.0,
+            "Accepted": 12,
             "Rejected": 0,
-            "Diff": 11169,
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139919582271232": {
+            "User": "travelmode",
+            "Hashrate": 760257.0,
+            "Is estimated": "False",
+            "Sharetime": 827.0,
+            "Accepted": 13,
+            "Rejected": 0,
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139919095756544": {
+            "User": "travelmode",
+            "Hashrate": 802753.0,
+            "Is estimated": "False",
+            "Sharetime": 828.0,
+            "Accepted": 9,
+            "Rejected": 2,
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139919087363840": {
+            "User": "travelmode",
+            "Hashrate": 318713.0,
+            "Is estimated": "False",
+            "Sharetime": 469.0,
+            "Accepted": 8,
+            "Rejected": 1,
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
+        },
+        "139919615842048": {
+            "User": "zmurk",
+            "Hashrate": 2005.0,
+            "Is estimated": "False",
+            "Sharetime": 595.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11170,
             "Software": "Official Python Miner v1.9"
         },
-        "140071798257408": {
-            "User": "PHR9",
-            "Hashrate": 185983.9513700162,
-            "Is estimated": "True",
-            "Sharetime": 263.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140076649240320": {
-            "User": "PHR9",
-            "Hashrate": 134776.21591508243,
-            "Is estimated": "True",
-            "Sharetime": 450.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071739508480": {
-            "User": "PHR9",
-            "Hashrate": 2811020.298530371,
-            "Is estimated": "True",
-            "Sharetime": 28.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071680759552": {
-            "User": "PHR9",
-            "Hashrate": 146930.58540006564,
-            "Is estimated": "True",
-            "Sharetime": 384.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140076859057920": {
-            "User": "PHR9",
-            "Hashrate": 1008297.5199212105,
-            "Is estimated": "True",
-            "Sharetime": 80.0,
-            "Accepted": 0,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071672366848": {
-            "User": "PHR9",
-            "Hashrate": 250227.51611975912,
-            "Is estimated": "True",
-            "Sharetime": 541.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140076355495680": {
-            "User": "xmrRohan",
-            "Hashrate": 111368.30246166931,
-            "Is estimated": "True",
-            "Sharetime": 926.0,
-            "Accepted": 8,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140076414244608": {
-            "User": "xmrRohan",
-            "Hashrate": 24288924.70230101,
-            "Is estimated": "True",
-            "Sharetime": 6.0,
+        "139919070578432": {
+            "User": "travelmode",
+            "Hashrate": 936533.0,
+            "Is estimated": "False",
+            "Sharetime": 912.0,
             "Accepted": 9,
             "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
         },
-        "140071865399040": {
-            "User": "PHR9",
-            "Hashrate": 285781.51309936104,
-            "Is estimated": "True",
-            "Sharetime": 414.0,
-            "Accepted": 0,
+        "139919053793024": {
+            "User": "travelmode",
+            "Hashrate": 681574.0,
+            "Is estimated": "False",
+            "Sharetime": 497.0,
+            "Accepted": 9,
             "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
         },
-        "140076993341184": {
-            "User": "PHR9",
-            "Hashrate": 106892.72242402424,
-            "Is estimated": "True",
-            "Sharetime": 764.0,
-            "Accepted": 1,
+        "139919062185728": {
+            "User": "travelmode",
+            "Hashrate": 465338.0,
+            "Is estimated": "False",
+            "Sharetime": 714.0,
+            "Accepted": 9,
             "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "nonceMiner_v1.0"
         },
-        "140076330317568": {
+        "139919045400320": {
             "User": "xmrRohan",
-            "Hashrate": 177796.29930636493,
+            "Hashrate": 3600.9151497065554,
             "Is estimated": "True",
-            "Sharetime": 932.0,
-            "Accepted": 6,
-            "Rejected": 1,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140072184321792": {
-            "User": "PHR9",
-            "Hashrate": 512029.6691736055,
-            "Is estimated": "True",
-            "Sharetime": 384.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140076632454912": {
-            "User": "PHR9",
-            "Hashrate": 165662.23526979267,
-            "Is estimated": "True",
-            "Sharetime": 611.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140080050849536": {
-            "User": "PHR9",
-            "Hashrate": 279831.19799945626,
-            "Is estimated": "True",
-            "Sharetime": 329.0,
+            "Sharetime": 90.0,
             "Accepted": 1,
             "Rejected": 0,
-            "Diff": 11169,
+            "Diff": 11170,
             "Software": "Unknown"
         },
-        "140071731115776": {
-            "User": "PHR9",
-            "Hashrate": 200227.25080590992,
+        "139919020222208": {
+            "User": "xmrRohan",
+            "Hashrate": 70820.37236544618,
             "Is estimated": "True",
-            "Sharetime": 414.0,
+            "Sharetime": 472.0,
             "Accepted": 0,
             "Rejected": 0,
-            "Diff": 11169,
+            "Diff": 11170,
             "Software": "Unknown"
         },
-        "140071806650112": {
-            "User": "PHR9",
-            "Hashrate": 186274.74666511285,
+        "139919003436800": {
+            "User": "xmrRohan",
+            "Hashrate": 48650.60991721848,
             "Is estimated": "True",
-            "Sharetime": 378.0,
-            "Accepted": 1,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140077656364800": {
-            "User": "PHR9",
-            "Hashrate": 197850.15504904097,
-            "Is estimated": "True",
-            "Sharetime": 964.0,
+            "Sharetime": 227.0,
             "Accepted": 0,
             "Rejected": 0,
-            "Diff": 11169,
+            "Diff": 11170,
             "Software": "Unknown"
         },
-        "140077152802560": {
-            "User": "PHR9",
-            "Hashrate": 488239.3883645104,
-            "Is estimated": "True",
-            "Sharetime": 398.0,
+        "139919037007616": {
+            "User": "zmurk",
+            "Hashrate": 1507.0,
+            "Is estimated": "False",
+            "Sharetime": 610.0,
             "Accepted": 0,
             "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "Official Python Miner v1.9"
         },
-        "140077161195264": {
-            "User": "PHR9",
-            "Hashrate": 263930.98934822716,
-            "Is estimated": "True",
-            "Sharetime": 659.0,
+        "139919607449344": {
+            "User": "acikaa87x",
+            "Hashrate": 92769.0,
+            "Is estimated": "False",
+            "Sharetime": 995.0,
             "Accepted": 0,
             "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071647188736": {
-            "User": "PHR9",
-            "Hashrate": 234517.22919843468,
-            "Is estimated": "True",
-            "Sharetime": 641.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
-        },
-        "140071756293888": {
-            "User": "PHR9",
-            "Hashrate": 193588.0828256385,
-            "Is estimated": "True",
-            "Sharetime": 993.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 11169,
-            "Software": "Unknown"
+            "Diff": 11170,
+            "Software": "Official Python Miner v1.9"
         }
     }
 }
