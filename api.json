@@ -1,29 +1,703 @@
 {
     "Server version": 1.9,
-    "Active connections": 0,
-    "Server CPU usage": 25.0,
-    "Last update": "20/01/2021 20:03 (UTC)",
-    "Pool hashrate": "0 H/s",
-    "Duco price": 0.002964,
-    "Duco satoshi price": 8.59,
+    "Active connections": 77,
+    "Server CPU usage": 8.25,
+    "Last update": "20/01/2021 20:04 (UTC)",
+    "Pool hashrate": "18.04 MH/s",
+    "Duco price": 0.003055,
+    "Duco satoshi price": 8.74,
     "Registered users": 595,
-    "All-time mined DUCO": 319971.82,
+    "All-time mined DUCO": 319972.11,
     "Current difficulty": 11300,
-    "Mined blocks": 22599561,
-    "Full last block hash": "b7f84d5b3f3db391ab83ce079bdb1994f87c08ea",
-    "Last block hash": "b7f84d5b3f...",
+    "Mined blocks": 22599641,
+    "Full last block hash": "eb5542aab6a427855496e7051e1a0fdaa50ba427",
+    "Last block hash": "eb5542aab6...",
     "Top 10 richest miners": [
         "86455.9308 DUCO - xmrRohan",
         "31816.1876 DUCO - aarican",
         "21203.2225 DUCO - sabartheman",
         "16471.0186 DUCO - PHR9",
-        "14531.3779 DUCO - travelmode",
+        "14531.4299 DUCO - travelmode",
         "11432.7018 DUCO - drn",
-        "8148.5857 DUCO - MattLancaster",
+        "8148.609 DUCO - MattLancaster",
         "7862.3849 DUCO - baibaide",
         "7502.7521 DUCO - egiptsky",
         "7131.2107 DUCO - Gam3t3chElectronics"
     ],
-    "Active workers": {},
-    "Miners": {}
+    "Active workers": {
+        "revox": 4,
+        "travelmode": 16,
+        "Connor": 1,
+        "koksmet": 2,
+        "TOG": 31,
+        "Raven": 1,
+        "MagicForces": 2,
+        "stanzwerck": 3,
+        "parker": 3,
+        "stevenhodson": 1,
+        "kroko": 1,
+        "MattLancaster": 1
+    },
+    "Miners": {
+        "140627580786432": {
+            "User": "revox",
+            "Hashrate": 1220138.0,
+            "Is estimated": "False",
+            "Sharetime": 142.0,
+            "Accepted": 74,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140627605964544": {
+            "User": "travelmode",
+            "Hashrate": 4824.0,
+            "Is estimated": "False",
+            "Sharetime": 173.0,
+            "Accepted": 45,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627480139520": {
+            "User": "revox",
+            "Hashrate": 688782.0,
+            "Is estimated": "False",
+            "Sharetime": 418.0,
+            "Accepted": 61,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140628113868544": {
+            "User": "travelmode",
+            "Hashrate": 1681146.0,
+            "Is estimated": "False",
+            "Sharetime": 104.0,
+            "Accepted": 46,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627614357248": {
+            "User": "travelmode",
+            "Hashrate": 175266.0,
+            "Is estimated": "False",
+            "Sharetime": 623.0,
+            "Accepted": 46,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627622749952": {
+            "User": "Connor",
+            "Hashrate": 252589.0,
+            "Is estimated": "False",
+            "Sharetime": 899.0,
+            "Accepted": 28,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140627446568704": {
+            "User": "travelmode",
+            "Hashrate": 1549686.0,
+            "Is estimated": "False",
+            "Sharetime": 166.0,
+            "Accepted": 58,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627496924928": {
+            "User": "revox",
+            "Hashrate": 219224.0,
+            "Is estimated": "False",
+            "Sharetime": 104.0,
+            "Accepted": 64,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140627488532224": {
+            "User": "travelmode",
+            "Hashrate": 360377.0,
+            "Is estimated": "False",
+            "Sharetime": 334.0,
+            "Accepted": 39,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627631142656": {
+            "User": "travelmode",
+            "Hashrate": 419403.0,
+            "Is estimated": "False",
+            "Sharetime": 376.0,
+            "Accepted": 38,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627463354112": {
+            "User": "travelmode",
+            "Hashrate": 1797892.0,
+            "Is estimated": "False",
+            "Sharetime": 351.0,
+            "Accepted": 48,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627589179136": {
+            "User": "revox",
+            "Hashrate": 13765.0,
+            "Is estimated": "False",
+            "Sharetime": 105.0,
+            "Accepted": 52,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.0"
+        },
+        "140627421390592": {
+            "User": "travelmode",
+            "Hashrate": 116079.0,
+            "Is estimated": "False",
+            "Sharetime": 344.0,
+            "Accepted": 43,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627387819776": {
+            "User": "travelmode",
+            "Hashrate": 86046.0,
+            "Is estimated": "False",
+            "Sharetime": 437.0,
+            "Accepted": 37,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627412997888": {
+            "User": "travelmode",
+            "Hashrate": 361276.0,
+            "Is estimated": "False",
+            "Sharetime": 341.0,
+            "Accepted": 32,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627379427072": {
+            "User": "travelmode",
+            "Hashrate": 301229.0,
+            "Is estimated": "False",
+            "Sharetime": 523.0,
+            "Accepted": 28,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627371034368": {
+            "User": "travelmode",
+            "Hashrate": 1398803.0,
+            "Is estimated": "False",
+            "Sharetime": 95.0,
+            "Accepted": 69,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627303892736": {
+            "User": "travelmode",
+            "Hashrate": 2401584.0,
+            "Is estimated": "False",
+            "Sharetime": 372.0,
+            "Accepted": 53,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627295500032": {
+            "User": "travelmode",
+            "Hashrate": 296365.0,
+            "Is estimated": "False",
+            "Sharetime": 399.0,
+            "Accepted": 30,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627312285440": {
+            "User": "travelmode",
+            "Hashrate": 1182812.0,
+            "Is estimated": "False",
+            "Sharetime": 251.0,
+            "Accepted": 42,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140628122261248": {
+            "User": "koksmet",
+            "Hashrate": 10658.36309230974,
+            "Is estimated": "True",
+            "Sharetime": 1529.0,
+            "Accepted": 1,
+            "Rejected": 4,
+            "Diff": 11300,
+            "Software": "Unknown"
+        },
+        "140627597571840": {
+            "User": "TOG",
+            "Hashrate": 1480.3451581975073,
+            "Is estimated": "True",
+            "Sharetime": 894.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627404605184": {
+            "User": "Raven",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 414.0,
+            "Accepted": 22,
+            "Rejected": 2,
+            "Diff": 3500,
+            "Software": "ESP Miner v1.8"
+        },
+        "140627362641664": {
+            "User": "MagicForces",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 1880.0,
+            "Accepted": 29,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "ESP Miner v1.8"
+        },
+        "140627337463552": {
+            "User": "TOG",
+            "Hashrate": 1459.5238095238094,
+            "Is estimated": "True",
+            "Sharetime": 720.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627471746816": {
+            "User": "TOG",
+            "Hashrate": 1204.4981257809245,
+            "Is estimated": "True",
+            "Sharetime": 343.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627345856256": {
+            "User": "TOG",
+            "Hashrate": 1564.172335600907,
+            "Is estimated": "True",
+            "Sharetime": 1260.0,
+            "Accepted": 9,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627396212480": {
+            "User": "TOG",
+            "Hashrate": 1487.1985157699444,
+            "Is estimated": "True",
+            "Sharetime": 770.0,
+            "Accepted": 23,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627219965696": {
+            "User": "stanzwerck",
+            "Hashrate": 185269.0,
+            "Is estimated": "False",
+            "Sharetime": 974.0,
+            "Accepted": 10,
+            "Rejected": 6,
+            "Diff": 11300,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140627169609472": {
+            "User": "koksmet",
+            "Hashrate": 11531.892059045558,
+            "Is estimated": "True",
+            "Sharetime": 8757.0,
+            "Accepted": 2,
+            "Rejected": 3,
+            "Diff": 11300,
+            "Software": "Unknown"
+        },
+        "140627354248960": {
+            "User": "TOG",
+            "Hashrate": 1518.7470336971999,
+            "Is estimated": "True",
+            "Sharetime": 903.0,
+            "Accepted": 14,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627245143808": {
+            "User": "TOG",
+            "Hashrate": 1500.0767224182907,
+            "Is estimated": "True",
+            "Sharetime": 931.0,
+            "Accepted": 37,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627287107328": {
+            "User": "parker",
+            "Hashrate": 806.9374714742125,
+            "Is estimated": "True",
+            "Sharetime": 626.0,
+            "Accepted": 8,
+            "Rejected": 1,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627320678144": {
+            "User": "TOG",
+            "Hashrate": 1288.0895826263998,
+            "Is estimated": "True",
+            "Sharetime": 421.0,
+            "Accepted": 11,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627270321920": {
+            "User": "TOG",
+            "Hashrate": 1323.097463284379,
+            "Is estimated": "True",
+            "Sharetime": 428.0,
+            "Accepted": 13,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627429783296": {
+            "User": "TOG",
+            "Hashrate": 1480.592236894758,
+            "Is estimated": "True",
+            "Sharetime": 714.0,
+            "Accepted": 27,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627203180288": {
+            "User": "TOG",
+            "Hashrate": 1544.509828471266,
+            "Is estimated": "True",
+            "Sharetime": 1141.0,
+            "Accepted": 19,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627211572992": {
+            "User": "stevenhodson",
+            "Hashrate": 132630.0,
+            "Is estimated": "False",
+            "Sharetime": 4064.0,
+            "Accepted": 5,
+            "Rejected": 4,
+            "Diff": 11300,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140627161216768": {
+            "User": "TOG",
+            "Hashrate": 1384.475989127152,
+            "Is estimated": "True",
+            "Sharetime": 473.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627329070848": {
+            "User": "TOG",
+            "Hashrate": 1516.557350823868,
+            "Is estimated": "True",
+            "Sharetime": 893.0,
+            "Accepted": 20,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627127645952": {
+            "User": "TOG",
+            "Hashrate": 1075.892857142857,
+            "Is estimated": "True",
+            "Sharetime": 256.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627236751104": {
+            "User": "travelmode",
+            "Hashrate": 1548986.0,
+            "Is estimated": "False",
+            "Sharetime": 371.0,
+            "Accepted": 16,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "nonceMiner_v1.1"
+        },
+        "140627144431360": {
+            "User": "TOG",
+            "Hashrate": 1527.2288429627395,
+            "Is estimated": "True",
+            "Sharetime": 947.0,
+            "Accepted": 14,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627278714624": {
+            "User": "TOG",
+            "Hashrate": 1525.7792879302704,
+            "Is estimated": "True",
+            "Sharetime": 967.0,
+            "Accepted": 16,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627253536512": {
+            "User": "TOG",
+            "Hashrate": 1553.5140101056502,
+            "Is estimated": "True",
+            "Sharetime": 1244.0,
+            "Accepted": 8,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627110860544": {
+            "User": "TOG",
+            "Hashrate": 1186.6927592954992,
+            "Is estimated": "True",
+            "Sharetime": 365.0,
+            "Accepted": 12,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627068897024": {
+            "User": "TOG",
+            "Hashrate": 1536.2394957983192,
+            "Is estimated": "True",
+            "Sharetime": 1088.0,
+            "Accepted": 12,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627152824064": {
+            "User": "TOG",
+            "Hashrate": 1507.576738764409,
+            "Is estimated": "True",
+            "Sharetime": 1103.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627085682432": {
+            "User": "TOG",
+            "Hashrate": 821.6216216216217,
+            "Is estimated": "True",
+            "Sharetime": 185.0,
+            "Accepted": 16,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627060504320": {
+            "User": "TOG",
+            "Hashrate": 1538.678712591756,
+            "Is estimated": "True",
+            "Sharetime": 1012.0,
+            "Accepted": 8,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627102467840": {
+            "User": "TOG",
+            "Hashrate": 1282.642089093702,
+            "Is estimated": "True",
+            "Sharetime": 372.0,
+            "Accepted": 19,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627119253248": {
+            "User": "stanzwerck",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 8772.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "ESP Miner v1.8"
+        },
+        "140627077289728": {
+            "User": "stanzwerck",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 552.0,
+            "Accepted": 2,
+            "Rejected": 1,
+            "Diff": 3500,
+            "Software": "ESP Miner v1.8"
+        },
+        "140627094075136": {
+            "User": "TOG",
+            "Hashrate": 1500.9342619330728,
+            "Is estimated": "True",
+            "Sharetime": 841.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627186394880": {
+            "User": "TOG",
+            "Hashrate": 1371.4285714285713,
+            "Is estimated": "True",
+            "Sharetime": 490.0,
+            "Accepted": 9,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627043718912": {
+            "User": "TOG",
+            "Hashrate": 1516.1817587446876,
+            "Is estimated": "True",
+            "Sharetime": 874.0,
+            "Accepted": 12,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627010148096": {
+            "User": "TOG",
+            "Hashrate": 1502.952913008779,
+            "Is estimated": "True",
+            "Sharetime": 895.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140626976577280": {
+            "User": "kroko",
+            "Hashrate": 127.62,
+            "Is estimated": "False",
+            "Sharetime": 484.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 400,
+            "Software": "Official AVR Miner v1.9"
+        },
+        "140626993362688": {
+            "User": "TOG",
+            "Hashrate": 1386.7871259175608,
+            "Is estimated": "True",
+            "Sharetime": 506.0,
+            "Accepted": 6,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627136038656": {
+            "User": "parker",
+            "Hashrate": 819.7688714039834,
+            "Is estimated": "True",
+            "Sharetime": 1162.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140626951399168": {
+            "User": "TOG",
+            "Hashrate": 1499.099099099099,
+            "Is estimated": "True",
+            "Sharetime": 1110.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627454961408": {
+            "User": "MagicForces",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 1052.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "ESP Miner v1.8"
+        },
+        "140627026933504": {
+            "User": "parker",
+            "Hashrate": 334990.0,
+            "Is estimated": "False",
+            "Sharetime": 1726.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140627261929216": {
+            "User": "TOG",
+            "Hashrate": 1550.6028498355863,
+            "Is estimated": "True",
+            "Sharetime": 1173.0,
+            "Accepted": 4,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        },
+        "140627178002176": {
+            "User": "MattLancaster",
+            "Hashrate": 211097.0,
+            "Is estimated": "False",
+            "Sharetime": 1187.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 11300,
+            "Software": "Official Python Miner v1.9"
+        },
+        "140627018540800": {
+            "User": "TOG",
+            "Hashrate": 1443.4745582286566,
+            "Is estimated": "True",
+            "Sharetime": 671.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 3500,
+            "Software": "Unknown"
+        }
+    }
 }
