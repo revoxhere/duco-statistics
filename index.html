@@ -106,7 +106,7 @@
 			   <div class="col-sm-3"></div>
 			   <form class="form-horizontal col-sm-6">
 			      <div class="input-group">
-			         <input type="text" class="form-control" id="myText" name="search" placeholder="Search hash, username, date, time...">
+			         <input type="text" class="form-control" id="myText" name="search" placeholder="Search transaction hash...">
 			         <div class="input-group-btn"><button type="submit" class="btn btn-warning"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/></svg></button>
 			         </div>
 			      </div>
@@ -116,8 +116,9 @@
 			<br>
 			<h4 align="center" id="p2"></h4>
 			<div class="container w-75">
-				<p align="center" id="p1">Results will show up here<br>Note that this is an early version of the explorer<br>and it doesn't support the new transaction system and other upcoming features yet.<br>It will be improved soon.</p>
+				<p align="left" style="margin-left:25%;" id="p1">Results will show up here<br>Note that this is an early version of the explorer<br>and it doesn't support the new transaction system and other upcoming features yet.<br>It will be improved soon.</p>
 			</div>
+            <h5 align="center" id="p3"></h5>
 		</div>
 
 
@@ -200,14 +201,26 @@
 			if(hashToBeFound != null) {
 				document.getElementById("p2").innerHTML = "Showing results for: " + hashToBeFound;
 			}
-			jQuery.get('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/BigBlocksArchive_17-05-2020_to_11-12-2020.json', function(data) {
-	   			data = data.split("\n");
-	   			var found = data.filter(element => element.includes(hashToBeFound));
-	   			found = found.toString().replaceAll(",", "<hr>")
-	   			if(hashToBeFound != "" && found != "") {
-	   				document.getElementById("p1").innerHTML = found;
-
-	   			}
+            $.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/transactions.json', function(data) {
+                last = []
+                for(hash in data) {
+                    last.push(hash)
+                }
+                console.log(last)
+                document.getElementById("p3").innerHTML = "Last transactions:\n" +
+                                "<a href='/?search="+last[0]+"'>"+last[0]+"</a>\n" +
+                                "<a href='/?search="+last[1]+"'>"+last[1]+"</a>\n" +
+                                "<a href='/?search="+last[2]+"'>"+last[2]+"</a>\n" +
+                                "<a href='/?search="+last[3]+"'>"+last[3]+"</a>\n" +
+                                "<a href='/?search="+last[4]+"'>"+last[4]+"</a>\n";
+            });
+			$.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/transactions.json', function(data) {
+	   			var found = data[hashToBeFound]
+	   			if(hashToBeFound != "" && found != "" && found != undefined) {
+	   				document.getElementById("p1").innerHTML = "<li>Timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li><li>Sender: <b>" + found["Sender"] + "</b></li><li>Recipient: <b>" + found["Recipient"] + "</b></li><li>Transfered amount: <b>" + found["Amount"].toFixed(2) + " DUCO</b></li>";
+	   			} else {
+                    document.getElementById("p1").innerHTML = "Nothing was found";
+                }
 			});
 		</script>
 </html>
