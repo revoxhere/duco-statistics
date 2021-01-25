@@ -206,13 +206,12 @@
                 for(hash in data) {
                     last.push(hash)
                 }
-                console.log(last)
                 document.getElementById("p3").innerHTML = "Last transactions:<br>" +
-                                "<a href='?search="+last[0]+"'>"+last[0]+"</a><br>" +
-                                "<a href='?search="+last[1]+"'>"+last[1]+"</a><br>" +
-                                "<a href='?search="+last[2]+"'>"+last[2]+"</a><br>" +
-                                "<a href='?search="+last[3]+"'>"+last[3]+"</a><br>" +
-                                "<a href='?search="+last[4]+"'>"+last[4]+"</a>";
+                                "<a href='?search="+last[last.length - 1]+"'>"+last[last.length - 1]+"</a><br>" +
+                                "<a href='?search="+last[last.length - 2]+"'>"+last[last.length - 2]+"</a><br>" +
+                                "<a href='?search="+last[last.length - 3]+"'>"+last[last.length - 3]+"</a><br>" +
+                                "<a href='?search="+last[last.length - 4]+"'>"+last[last.length - 4]+"</a><br>" +
+                                "<a href='?search="+last[last.length - 5]+"'>"+last[last.length - 5]+"</a>";
 	   			var found = data[hashToBeFound]
 	   			if(hashToBeFound != "" && found != "" && found != undefined) {
 	   				document.getElementById("p1").innerHTML = "<li>Timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li><li>Sender: <b>" + found["Sender"] + "</b></li><li>Recipient: <b>" + found["Recipient"] + "</b></li><li>Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b></li>";
