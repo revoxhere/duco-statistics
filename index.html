@@ -114,11 +114,11 @@
 			</div>
 
 			<br>
-			<h4 align="center" id="p2"></h4>
+			<h4 align="center" id="p2" style="word-wrap: break-word;"></h4>
 			<div class="container w-75">
-				<p align="left" style="margin-left:25%;" id="p1">Results will show up here<br>Note that this is an early version of the explorer<br>and it doesn't support the new transaction system and other upcoming features yet.<br>It will be improved soon.</p>
+				<p align="left" style="margin-left:25%;word-wrap: break-word;" id="p1">Results will show up here<br>Note that this is an early version of the explorer<br>and it doesn't support the new transaction system and other upcoming features yet.<br>It will be improved soon.</p>
 			</div>
-            <h5 align="center" id="p3"></h5>
+            <h5 align="center" style="word-wrap: break-word;" id="p3"></h5>
 		</div>
 
 
@@ -199,7 +199,7 @@
 			var url = new URL(url_string);
 			var hashToBeFound = url.searchParams.get("search");
 			if(hashToBeFound != null) {
-				document.getElementById("p2").innerHTML = "Showing results for: " + hashToBeFound;
+				document.getElementById("p2").innerHTML = "Showing results for transaction:<br>" + hashToBeFound;
 			}
             $.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/transactions.json', function(data) {
                 last = []
@@ -207,17 +207,15 @@
                     last.push(hash)
                 }
                 console.log(last)
-                document.getElementById("p3").innerHTML = "Last transactions:\n" +
-                                "<a href='/?search="+last[0]+"'>"+last[0]+"</a>\n" +
-                                "<a href='/?search="+last[1]+"'>"+last[1]+"</a>\n" +
-                                "<a href='/?search="+last[2]+"'>"+last[2]+"</a>\n" +
-                                "<a href='/?search="+last[3]+"'>"+last[3]+"</a>\n" +
-                                "<a href='/?search="+last[4]+"'>"+last[4]+"</a>\n";
-            });
-			$.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/transactions.json', function(data) {
+                document.getElementById("p3").innerHTML = "Last transactions:<br>" +
+                                "<a href='?search="+last[0]+"'>"+last[0]+"</a><br>" +
+                                "<a href='?search="+last[1]+"'>"+last[1]+"</a><br>" +
+                                "<a href='?search="+last[2]+"'>"+last[2]+"</a><br>" +
+                                "<a href='?search="+last[3]+"'>"+last[3]+"</a><br>" +
+                                "<a href='?search="+last[4]+"'>"+last[4]+"</a>";
 	   			var found = data[hashToBeFound]
 	   			if(hashToBeFound != "" && found != "" && found != undefined) {
-	   				document.getElementById("p1").innerHTML = "<li>Timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li><li>Sender: <b>" + found["Sender"] + "</b></li><li>Recipient: <b>" + found["Recipient"] + "</b></li><li>Transfered amount: <b>" + found["Amount"].toFixed(2) + " DUCO</b></li>";
+	   				document.getElementById("p1").innerHTML = "<li>Timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li><li>Sender: <b>" + found["Sender"] + "</b></li><li>Recipient: <b>" + found["Recipient"] + "</b></li><li>Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b></li>";
 	   			} else {
                     document.getElementById("p1").innerHTML = "Nothing was found";
                 }
