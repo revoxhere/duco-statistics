@@ -42,7 +42,7 @@
             }
         </style>
         <script>
-            $.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/api.json', function(data) {
+            $.getJSON('https://thingproxy.freeboard.io/fetch/http://51.15.127.80/api.json', function(data) {
                 var price = `<h5>${data["Duco price"]} USD</h5>`
                 var users = `<h5>${data["Registered users"]}</h5>`
                 var hash = `<h5>${data["Last block hash"]}</h5>`
