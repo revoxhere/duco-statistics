@@ -201,7 +201,7 @@
 			if(hashToBeFound != null) {
 				document.getElementById("p2").innerHTML = "Showing results for transaction:<br>" + hashToBeFound;
 			}
-            $.getJSON('http://51.15.127.80/transactions.json', function(data) {
+            $.getJSON('https://raw.githubusercontent.com/revoxhere/duco-statistics/master/transactions.json', function(data) {
                 last = []
                 for(hash in data) {
                     last.push(hash)
