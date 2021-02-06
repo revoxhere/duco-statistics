@@ -1,11 +1,11 @@
 {
     "Server version": 1.9,
-    "Active connections": 131,
+    "Active connections": 162,
     "Server CPU usage": 9.4,
-    "Last update": "06/02/2021 13:59 (UTC)",
-    "Pool hashrate": "18.76 kH/s",
-    "Duco price": 0.002633,
-    "Duco satoshi price": 6.3,
+    "Last update": "06/02/2021 14:00 (UTC)",
+    "Pool hashrate": "24.8 MH/s",
+    "Duco price": 0.002556,
+    "Duco satoshi price": 6.24,
     "Registered users": 659,
     "All-time mined DUCO": 365612.67,
     "Current difficulty": 65933,
@@ -25,31 +25,31 @@
         "7862.3849 DUCO - baibaide"
     ],
     "Active workers": {
-        "mateo": 1,
-        "stanzwerck": 1
+        "travelmode": 1,
+        "Putra": 1
     },
     "Miners": {
-        "140384453764864": {
-            "User": "mateo",
-            "Hashrate": 2480.0,
-            "Is estimated": "True",
-            "Sharetime": 175.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 5,
-            "Software": "AVR",
-            "Last share timestamp": "06/02/2021 13:59:09"
-        },
-        "140383824377600": {
-            "User": "stanzwerck",
-            "Hashrate": 2150.0,
+        "140383815984896": {
+            "User": "travelmode",
+            "Hashrate": 12936645.0,
             "Is estimated": "False",
-            "Sharetime": 82.0,
+            "Sharetime": 330.0,
             "Accepted": 0,
             "Rejected": 0,
             "Diff": 75,
-            "Software": "ESP Miner v1.8",
-            "Last share timestamp": "06/02/2021 13:59:22"
+            "Software": "ESP32 Multithreaded nonceMiner",
+            "Last share timestamp": "06/02/2021 14:00:21"
+        },
+        "140383018678016": {
+            "User": "Putra",
+            "Hashrate": 4093620.0,
+            "Is estimated": "False",
+            "Sharetime": 1362.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 65933,
+            "Software": "nonceMiner_v1.2.1",
+            "Last share timestamp": "06/02/2021 14:00:31"
         }
     }
 }
