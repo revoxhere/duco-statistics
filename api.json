@@ -1,16 +1,16 @@
 {
     "Server version": 2.0,
-    "Active connections": 0,
-    "Server CPU usage": 25.0,
-    "Last update": "12/02/2021 13:27 (UTC)",
-    "Pool hashrate": "0 H/s",
+    "Active connections": 1,
+    "Server CPU usage": 16.15,
+    "Last update": "12/02/2021 13:28 (UTC)",
+    "Pool hashrate": "7.38 kH/s",
     "Duco price": 0.00525,
     "Registered users": 707,
-    "All-time mined DUCO": 447580.66,
+    "All-time mined DUCO": 447580.86,
     "Current difficulty": 93001,
-    "Mined blocks": 186000223,
-    "Full last block hash": "1da22a8db25e87c84b977ec9746dba7ad489b527",
-    "Last block hash": "1da22a8db2...",
+    "Mined blocks": 186000973,
+    "Full last block hash": "a4709f4a22723004d54b2f28966b7d6d375ae83d",
+    "Last block hash": "a4709f4a22...",
     "Top 10 richest miners": [
         "72842.387 DUCO - xmrRohan",
         "31816.1876 DUCO - aarican",
@@ -23,6 +23,20 @@
         "10090.0 DUCO - PornHub",
         "8244.6541 DUCO - MattLancaster"
     ],
-    "Active workers": {},
-    "Miners": {}
+    "Active workers": {
+        "raaskler": 1
+    },
+    "Miners": {
+        "140104358151936": {
+            "User": "raaskler",
+            "Hashrate": 7380.95,
+            "Is estimated": "False",
+            "Sharetime": 0.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP32 Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:28:31"
+        }
+    }
 }
