@@ -1,18 +1,18 @@
 {
     "Server version": 2.0,
-    "Active connections": 49,
-    "Server CPU usage": 1.25,
-    "Last update": "12/02/2021 13:45 (UTC)",
-    "Pool hashrate": "987.66 kH/s",
+    "Active connections": 52,
+    "Server CPU usage": 5.1,
+    "Last update": "12/02/2021 13:47 (UTC)",
+    "Pool hashrate": "13.22 MH/s",
     "Duco price": 0.004944,
     "Registered users": 707,
-    "All-time mined DUCO": 447584.13,
-    "Current difficulty": 93007,
-    "Mined blocks": 186013193,
-    "Full last block hash": "1d5a0c7319864397ad21c1d4143b7fe1fd0f597e",
-    "Last block hash": "1d5a0c7319...",
+    "All-time mined DUCO": 447584.43,
+    "Current difficulty": 93008,
+    "Mined blocks": 186014338,
+    "Full last block hash": "9947e4e8da15ec653fbfb25fa7a81a1ffd8f026d",
+    "Last block hash": "9947e4e8da...",
     "Top 10 richest miners": [
-        "72842.387 DUCO - xmrRohan",
+        "72842.3904 DUCO - xmrRohan",
         "31816.1876 DUCO - aarican",
         "28053.1297 DUCO - NodeSBroker",
         "21203.2225 DUCO - sabartheman",
@@ -26,485 +26,565 @@
     "Active workers": {
         "raaskler": 2,
         "simbanono": 1,
-        "skillertheking": 6,
+        "skillertheking": 7,
         "Punixz": 1,
         "Raven": 1,
         "destux": 3,
-        "UminMiner": 2,
         "Jebo63": 3,
         "Digger": 13,
         "revox": 1,
         "Flamy": 1,
         "Kusemined": 2,
         "MagicForces": 1,
+        "UminMiner": 4,
         "LDarki": 1,
         "wossky": 1,
         "Nickwoehst": 1,
         "adolfzahid": 1,
-        "ThorSc": 1
+        "ThorSc": 1,
+        "Yanis": 1,
+        "mateo": 2,
+        "xmrRohan": 1
     },
     "Miners": {
         "139985650964224": {
             "User": "raaskler",
-            "Hashrate": 5706.0,
-            "Is estimated": "True",
-            "Sharetime": 279.0,
-            "Accepted": 9,
-            "Rejected": 2,
+            "Hashrate": 6135.8,
+            "Is estimated": "False",
+            "Sharetime": 0.0,
+            "Accepted": 55,
+            "Rejected": 7,
             "Diff": 75,
-            "Software": "ESP",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Software": "ESP32 Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985365677824": {
             "User": "simbanono",
-            "Hashrate": 136.87,
+            "Hashrate": 136.73,
             "Is estimated": "False",
-            "Sharetime": 852.0,
-            "Accepted": 8,
+            "Sharetime": 381.0,
+            "Accepted": 55,
             "Rejected": 0,
             "Diff": 3,
             "Software": "Official AVR Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985667749632": {
             "User": "skillertheking",
-            "Hashrate": 2753.16,
+            "Hashrate": 2750.73,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 8,
+            "Sharetime": 1081.0,
+            "Accepted": 49,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985525139200": {
             "User": "Punixz",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 8,
+            "Sharetime": 437.0,
+            "Accepted": 52,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:54"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985491568384": {
             "User": "Raven",
             "Hashrate": 2150.0,
             "Is estimated": "False",
             "Sharetime": 0.0,
-            "Accepted": 6,
+            "Accepted": 50,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:54"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985457997568": {
             "User": "destux",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 3,
+            "Sharetime": 1894.0,
+            "Accepted": 27,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:50"
-        },
-        "139985348892416": {
-            "User": "UminMiner",
-            "Hashrate": 225326.0,
-            "Is estimated": "False",
-            "Sharetime": 4364.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 20000,
-            "Software": "Official Python Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:44"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985533531904": {
             "User": "skillertheking",
-            "Hashrate": 2759.89,
+            "Hashrate": 2727.03,
             "Is estimated": "False",
             "Sharetime": 0.0,
-            "Accepted": 6,
+            "Accepted": 43,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985466390272": {
             "User": "skillertheking",
-            "Hashrate": 2697.14,
+            "Hashrate": 2754.88,
             "Is estimated": "False",
             "Sharetime": 0.0,
-            "Accepted": 6,
+            "Accepted": 46,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985483175680": {
             "User": "Jebo63",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 275.0,
-            "Accepted": 3,
+            "Sharetime": 1698.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:57"
         },
         "139985416034048": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 46.0,
-            "Accepted": 5,
+            "Sharetime": 3435.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985625786112": {
             "User": "skillertheking",
-            "Hashrate": 2754.1,
+            "Hashrate": 2746.93,
             "Is estimated": "False",
-            "Sharetime": 70.0,
-            "Accepted": 6,
+            "Sharetime": 0.0,
+            "Accepted": 50,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985617393408": {
             "User": "revox",
-            "Hashrate": 2782.12,
+            "Hashrate": 2785.56,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 5,
+            "Sharetime": 1371.0,
+            "Accepted": 45,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985642571520": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2400.0,
-            "Accepted": 4,
+            "Sharetime": 2285.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985424426752": {
             "User": "Flamy",
-            "Hashrate": 2745.22,
+            "Hashrate": 2757.72,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 6,
+            "Sharetime": 1338.0,
+            "Accepted": 44,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:54"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139986087155456": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2364.0,
-            "Accepted": 3,
+            "Sharetime": 892.0,
+            "Accepted": 29,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985441212160": {
             "User": "Kusemined",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 523.0,
-            "Accepted": 4,
+            "Sharetime": 3332.0,
+            "Accepted": 29,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985659356928": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 3,
+            "Sharetime": 980.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:57"
         },
         "139985382463232": {
             "User": "MagicForces",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 3,
+            "Sharetime": 2400.0,
+            "Accepted": 29,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985357285120": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2078.0,
-            "Accepted": 2,
+            "Sharetime": 3241.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985323714304": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 463.0,
-            "Accepted": 4,
+            "Sharetime": 2216.0,
+            "Accepted": 28,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:54"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985399248640": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 1797.0,
-            "Accepted": 2,
+            "Sharetime": 1520.0,
+            "Accepted": 25,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985634178816": {
             "User": "UminMiner",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2182.0,
-            "Accepted": 3,
+            "Sharetime": 1788.0,
+            "Accepted": 25,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985449604864": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2160.0,
-            "Accepted": 2,
+            "Sharetime": 299.0,
+            "Accepted": 27,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:50"
-        },
-        "139985499961088": {
-            "User": "Jebo63",
-            "Hashrate": 1491.6,
-            "Is estimated": "False",
-            "Sharetime": 3142.0,
-            "Accepted": 0,
-            "Rejected": 0,
-            "Diff": 75,
-            "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:46"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985516746496": {
             "User": "destux",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 4,
+            "Sharetime": 2751.0,
+            "Accepted": 29,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985508353792": {
             "User": "LDarki",
-            "Hashrate": 1455.76,
+            "Hashrate": 1460.55,
             "Is estimated": "False",
-            "Sharetime": 1862.0,
-            "Accepted": 1,
+            "Sharetime": 2356.0,
+            "Accepted": 21,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:50"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985264965376": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 3580.0,
-            "Accepted": 1,
+            "Sharetime": 0.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985474782976": {
             "User": "wossky",
-            "Hashrate": 2400.0,
+            "Hashrate": 1866.0,
             "Is estimated": "True",
-            "Sharetime": 1529.0,
-            "Accepted": 2,
+            "Sharetime": 3523.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "Unknown miner",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985390855936": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
             "Sharetime": 0.0,
-            "Accepted": 2,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985374070528": {
             "User": "Nickwoehst",
-            "Hashrate": 1500.0,
+            "Hashrate": 1504.73,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 2,
+            "Sharetime": 1686.0,
+            "Accepted": 23,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:57"
         },
         "139985315321600": {
             "User": "Jebo63",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 4382.0,
-            "Accepted": 1,
+            "Sharetime": 1772.0,
+            "Accepted": 28,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985306928896": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 3416.0,
-            "Accepted": 1,
+            "Sharetime": 2378.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:52"
-        },
-        "139985239787264": {
-            "User": "skillertheking",
-            "Hashrate": 30946.0,
-            "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 2,
-            "Rejected": 0,
-            "Diff": 20000,
-            "Software": "Official Python Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985432819456": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2489.0,
-            "Accepted": 1,
+            "Sharetime": 449.0,
+            "Accepted": 22,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985231394560": {
             "User": "adolfzahid",
-            "Hashrate": 1447.04,
+            "Hashrate": 1461.07,
             "Is estimated": "False",
-            "Sharetime": 3567.0,
-            "Accepted": 1,
+            "Sharetime": 2130.0,
+            "Accepted": 25,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:54"
+            "Last share timestamp": "12/02/2021 13:46:58"
         },
         "139985298536192": {
             "User": "destux",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 3,
+            "Sharetime": 2965.0,
+            "Accepted": 27,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985214609152": {
             "User": "ThorSc",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 0.0,
-            "Accepted": 1,
+            "Sharetime": 1934.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:47:00"
         },
         "139985281750784": {
             "User": "Digger",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 707.0,
-            "Accepted": 1,
+            "Sharetime": 44.0,
+            "Accepted": 24,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:52"
+            "Last share timestamp": "12/02/2021 13:46:57"
         },
         "139985290143488": {
             "User": "Kusemined",
             "Hashrate": 2150.0,
             "Is estimated": "False",
-            "Sharetime": 2205.0,
-            "Accepted": 1,
+            "Sharetime": 0.0,
+            "Accepted": 28,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v1.8",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:59"
         },
         "139985248179968": {
             "User": "raaskler",
-            "Hashrate": 1454.55,
+            "Hashrate": 1462.83,
             "Is estimated": "False",
-            "Sharetime": 1812.0,
-            "Accepted": 1,
+            "Sharetime": 1477.0,
+            "Accepted": 26,
             "Rejected": 0,
             "Diff": 75,
             "Software": "ESP Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:53"
+            "Last share timestamp": "12/02/2021 13:46:56"
         },
-        "139985273358080": {
+        "139985206216448": {
             "User": "skillertheking",
-            "Hashrate": 645552.0,
+            "Hashrate": 1483282.0,
             "Is estimated": "False",
-            "Sharetime": 5359.0,
-            "Accepted": 0,
+            "Sharetime": 14739.0,
+            "Accepted": 4,
             "Rejected": 0,
             "Diff": 20000,
             "Software": "Official Python Miner v2.0",
-            "Last share timestamp": "12/02/2021 13:45:51"
+            "Last share timestamp": "12/02/2021 13:46:53"
+        },
+        "139985181038336": {
+            "User": "Jebo63",
+            "Hashrate": 1497.99,
+            "Is estimated": "False",
+            "Sharetime": 769.0,
+            "Accepted": 16,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:58"
+        },
+        "139985223001856": {
+            "User": "skillertheking",
+            "Hashrate": 548924.0,
+            "Is estimated": "False",
+            "Sharetime": 4163.0,
+            "Accepted": 5,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Official Python Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:59"
+        },
+        "139985340499712": {
+            "User": "UminMiner",
+            "Hashrate": 511287.0,
+            "Is estimated": "False",
+            "Sharetime": 11041.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Official Python Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:48"
+        },
+        "139985155860224": {
+            "User": "Yanis",
+            "Hashrate": 1000.0,
+            "Is estimated": "True",
+            "Sharetime": 0.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 3,
+            "Software": "AVR",
+            "Last share timestamp": "12/02/2021 13:46:49"
+        },
+        "139985197823744": {
+            "User": "mateo",
+            "Hashrate": 2850810.0,
+            "Is estimated": "True",
+            "Sharetime": 380.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Unknown miner",
+            "Last share timestamp": "12/02/2021 13:46:57"
+        },
+        "139985239787264": {
+            "User": "skillertheking",
+            "Hashrate": 1642074.0,
+            "Is estimated": "False",
+            "Sharetime": 16376.0,
+            "Accepted": 8,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Official Python Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:50"
+        },
+        "139985164252928": {
+            "User": "mateo",
+            "Hashrate": 1905049.0,
+            "Is estimated": "True",
+            "Sharetime": 723.0,
+            "Accepted": 3,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Unknown miner",
+            "Last share timestamp": "12/02/2021 13:46:59"
+        },
+        "139985172645632": {
+            "User": "xmrRohan",
+            "Hashrate": 582514.0,
+            "Is estimated": "True",
+            "Sharetime": 15214.0,
+            "Accepted": 2,
+            "Rejected": 1,
+            "Diff": 93007,
+            "Software": "Unknown miner",
+            "Last share timestamp": "12/02/2021 13:46:56"
+        },
+        "139985348892416": {
+            "User": "UminMiner",
+            "Hashrate": 1482222.0,
+            "Is estimated": "False",
+            "Sharetime": 33441.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Official Python Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:46:58"
+        },
+        "139985407641344": {
+            "User": "UminMiner",
+            "Hashrate": 1665898.0,
+            "Is estimated": "False",
+            "Sharetime": 38020.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 20000,
+            "Software": "Official Python Miner v2.0",
+            "Last share timestamp": "12/02/2021 13:47:00"
         }
     }
 }
