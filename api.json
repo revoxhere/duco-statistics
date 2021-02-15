@@ -1,28 +1,123 @@
 {
     "Server version": 2.0,
-    "Active connections": 0,
-    "Server CPU usage": 80.0,
-    "Last update": "15/02/2021 08:06 (UTC)",
-    "Pool hashrate": "0 H/s",
-    "Duco price": 0.004844,
+    "Active connections": 233,
+    "Server CPU usage": 79.42,
+    "Last update": "15/02/2021 08:07 (UTC)",
+    "Pool hashrate": "41.5 kH/s",
+    "Duco price": 0.004748,
     "Registered users": 736,
-    "All-time mined DUCO": 456071.3,
+    "All-time mined DUCO": 456071.35,
     "Current difficulty": 100469,
-    "Mined blocks": 200937606,
-    "Full last block hash": "7d18b949115e0ff1d233b70e1a630847d5864d0c",
-    "Last block hash": "7d18b94911...",
+    "Mined blocks": 200937716,
+    "Full last block hash": "d3a17edc37bbcfe7f0c7d0331f65995e7241670d",
+    "Last block hash": "d3a17edc37...",
     "Top 10 richest miners": [
         "70842.5423 DUCO - xmrRohan",
         "31816.1876 DUCO - aarican",
         "30057.9057 DUCO - NodeSBroker",
         "21203.2225 DUCO - sabartheman",
-        "17631.8103 DUCO - TOG",
+        "17631.811 DUCO - TOG",
         "17497.6943 DUCO - travelmode",
         "16471.0186 DUCO - PHR9",
         "11432.702 DUCO - drn",
         "10090.0 DUCO - PornHub",
         "8244.6541 DUCO - MattLancaster"
     ],
-    "Active workers": {},
-    "Miners": {}
+    "Active workers": {
+        "TOG": 4,
+        "wladimir39": 1,
+        "petroleum321": 1,
+        "ThorSc": 1,
+        "skillertheking": 1
+    },
+    "Miners": {
+        "139994181428992": {
+            "User": "TOG",
+            "Hashrate": 117.0,
+            "Is estimated": "True",
+            "Sharetime": 8834.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP",
+            "Last share timestamp": "15/02/2021 08:07:20"
+        },
+        "139994710169344": {
+            "User": "wladimir39",
+            "Hashrate": 1458.94,
+            "Is estimated": "False",
+            "Sharetime": 56989.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP Miner v2.0JOB",
+            "Last share timestamp": "15/02/2021 08:07:23"
+        },
+        "139995666937600": {
+            "User": "TOG",
+            "Hashrate": 5204.17,
+            "Is estimated": "False",
+            "Sharetime": 31879.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP32 CORE2 Miner v2.0JOB",
+            "Last share timestamp": "15/02/2021 08:07:24"
+        },
+        "139994567493376": {
+            "User": "petroleum321",
+            "Hashrate": 6291.34,
+            "Is estimated": "False",
+            "Sharetime": 6796.0,
+            "Accepted": 2,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP32 CORE1 Miner v2.0JOB",
+            "Last share timestamp": "15/02/2021 08:07:35"
+        },
+        "139993929647872": {
+            "User": "TOG",
+            "Hashrate": 117.0,
+            "Is estimated": "True",
+            "Sharetime": 11767.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP",
+            "Last share timestamp": "15/02/2021 08:07:27"
+        },
+        "139994114287360": {
+            "User": "ThorSc",
+            "Hashrate": 2150.0,
+            "Is estimated": "False",
+            "Sharetime": 33487.0,
+            "Accepted": 0,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP Miner v1.8JOB",
+            "Last share timestamp": "15/02/2021 08:07:29"
+        },
+        "139994961950464": {
+            "User": "skillertheking",
+            "Hashrate": 2724.14,
+            "Is estimated": "False",
+            "Sharetime": 7393.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP Miner v2.0JOB",
+            "Last share timestamp": "15/02/2021 08:07:34"
+        },
+        "139995431941888": {
+            "User": "TOG",
+            "Hashrate": 5443.15,
+            "Is estimated": "False",
+            "Sharetime": 31770.0,
+            "Accepted": 1,
+            "Rejected": 0,
+            "Diff": 75,
+            "Software": "ESP32 CORE2 Miner v2.0JOB",
+            "Last share timestamp": "15/02/2021 08:07:34"
+        }
+    }
 }
