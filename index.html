@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />
@@ -50,10 +51,11 @@
                 var hashrate = `<h5>${data["Pool hashrate"]}</h5>`
                 var blocks = `<h5>up to block ${data["Mined blocks"]}</h5>`
                 var difficulty = `<h5>${data["Current difficulty"]}</h5>`
-                var workerszz = "<h5>"
+                var workerszz = "<h6>"
                 $.each(data["Active workers"], function(k, v){
-                    workerszz = workerszz.concat(k+' ('+v+'), ');
+                    workerszz = workerszz.concat(" • " + k + ' (x' + v + ')');
                 });
+                workerszz = workerszz.concat("</h6>");
                 $("#price").html(price);
                 $("#users").html(users);
                 $("#hash").html(hash);
