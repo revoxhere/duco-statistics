@@ -22,24 +22,25 @@
                 background-color: #f1c40f;
                 border-color: #f1c40f;
             }
-            ::-webkit-scrollbar
-            {
+            ::-webkit-scrollbar {
               width: 8px;  /* for vertical scrollbars */
               height: 8px; /* for horizontal scrollbars */
             }
 
-            ::-webkit-scrollbar-track
-            {
+            ::-webkit-scrollbar-track {
               background: rgba(0, 0, 0, 0.1);
             }
 
-            ::-webkit-scrollbar-thumb
-            {
+            ::-webkit-scrollbar-thumb {
               background: #f39c12;
             }
             .statisticsDiv {
               display: inline-block;
-              width: 12em;
+              width: 14em;
+            }
+            .grid-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
             }
         </style>
         <script>
@@ -51,11 +52,11 @@
                 var hashrate = `<h5>${data["Pool hashrate"]}</h5>`
                 var blocks = `<h5>up to block ${data["Mined blocks"]}</h5>`
                 var difficulty = `<h5>${data["Current difficulty"]}</h5>`
-                var workerszz = "<h6>"
+                var workerszz = "<ul align='left' class='grid-list'>"
                 $.each(data["Active workers"], function(k, v){
-                    workerszz = workerszz.concat(" • " + k + ' (x' + v + ')');
+                    workerszz = workerszz.concat("<li> " + k + ' (x' + v + ') </li>');
                 });
-                workerszz = workerszz.concat("</h6>");
+                workerszz = workerszz.concat("</ul>");
                 $("#price").html(price);
                 $("#users").html(users);
                 $("#hash").html(hash);
