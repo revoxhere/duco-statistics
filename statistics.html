@@ -37,10 +37,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
-  		.is-primary { 
+      .is-primary { 
         /* Override Bulmas primary color to Duco-Colored gradient*/
-  			background: linear-gradient(160deg, #e74c3c, #f39c12) !important;
-  		}
+        background: linear-gradient(160deg, #e74c3c, #f39c12) !important;
+      }
       .gradienttext {
         /* Gradient text */
         background: -webkit-linear-gradient(160deg, #EA2027, #EE5A24) !important;
@@ -224,7 +224,7 @@
               Price chart
             </p>
             <div class="panel-block">
-              <img src="http://51.15.127.80/prices.png">
+              <img src="https://cors.bridged.cc/http://51.15.127.80/prices.png">
             </div>
               <p class="pl-5 pr-4 pb-2 has-text-right">
                 <span class="is-info is-size-7">
@@ -269,7 +269,7 @@
               Balance distribution
             </p>
             <div class="panel-block">
-              <img src="http://51.15.127.80/balancechart.png">
+              <img src="https://cors.bridged.cc/http://51.15.127.80/balancechart.png">
             </div>
               <p class="pl-5 pr-4 pb-2 has-text-right">
                 <span class="is-info is-size-7">
@@ -299,11 +299,11 @@
 </html>
 
 <script>
-	let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
-	pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
-	window.addEventListener('load', function() {
-		pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
-	});
+  let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
+  pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
+  window.addEventListener('load', function() {
+    pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
+  });
 
   document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -339,13 +339,10 @@
       document.getElementById("allmined").innerHTML = data["All-time mined DUCO"].toFixed(0) + " ᕲ";
 
       document.getElementById("price").innerHTML = ducoUsdPrice.toFixed(4);
-      
       document.getElementById("serverver").innerHTML = "v" + data["Server version"];
       document.getElementById("connections").innerHTML = data["Active connections"];
       document.getElementById("lastblockhash").innerHTML = data["Last block hash"];
-
       //document.getElementById("serverload").innerHTML = data["Server CPU usage"] + "% (" + data["Server RAM usage"] + "%)";
-
 
       // WORKER LIST
       let workers = "<ul align='left' class='grid-list'>"
