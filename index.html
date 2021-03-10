@@ -212,7 +212,7 @@
                 <i class="fas fa-info-circle"></i>
               </span>
               <span class="subtitle is-size-7">
-                New transactions will appear here after 2 minutes
+                New transactions should appear here after 30 seconds
               </span>
             </p>
           </form>
@@ -394,6 +394,6 @@
   window.setInterval(APIupdate, 5000); // Refresh statistics every 5s 
   window.setTimeout(function(){ // Wait 300ms
     TRANSACTIONSupdate();
-    window.setInterval(TRANSACTIONSupdate, 60000); // Refresh transactions every 1min 
+    window.setInterval(TRANSACTIONSupdate, 5000); // Refresh statistics every 5s  
   }, 300);
 </script>
