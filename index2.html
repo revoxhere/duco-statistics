@@ -125,60 +125,79 @@
         <p class="panel-heading">
           <i class="is-size-5 fa fa-poll"></i>
           Statistics
-          <span class="title is-size-6 gradienttext" id="lastupdate">(last update: 01/01/1970 00:00 (UTC))</span>
+          <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: 01/01/1970 00:00 (UTC))</span>
         </p>
-        <div class="panel-block is-multiline">
-          <div class="columns is-mobile is-multiline">
+        <div class="panel-block">
+          <div class="columns is-multiline">
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-tachometer-alt gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="hashrate"><bold>0.0 H/s</bold></span>
+              <i class="icon is-size-4 fa fa-tachometer-alt" style="color:#27ae60;"></i>
+              <span class="title is-size-4" id="hashrate" style="color:#27ae60;"><bold>0.0 H/s</bold></span>
               <span class="heading is-size-6">Net Hashrate</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-users gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="registeredusers"><bold>0</bold></span>
+              <i class="icon is-size-4 fa fa-users" style="color:#8e44ad;"></i>
+              <span class="title is-size-4" id="registeredusers" style="color:#8e44ad;"><bold>0</bold></span>
               <span class="heading is-size-6">Registered users</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-random gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="difficulty"><bold>0</bold></span>
+              <i class="icon is-size-4 fa fa-random" style="color:#2980b9;"></i>
+              <span class="title is-size-4" id="difficulty" style="color:#2980b9;"><bold>0</bold></span>
               <span class="heading is-size-6">Net difficulty</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-wallet gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="allmined"><bold>0 ᕲ</bold></span>
+              <i class="icon is-size-4 fa fa-wallet" style="color:#e74c3c;"></i>
+              <span class="title is-size-4" id="allmined" style="color:#e74c3c;"><bold>0 ᕲ</bold></span>
               <span class="heading is-size-6">Mined since the start</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-dollar-sign gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="price"><bold>0.0</bold></span>
+              <i class="icon is-size-4 fa fa-dollar-sign" style="color:#f39c12;"></i>
+              <span class="title is-size-4" id="price" style="color:#f39c12;"><bold>0.0</bold></span>
               <span class="heading is-size-6">Estimated DUCO price</span>
             </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-ethernet gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="connections"><bold>0</bold></span>
+            <div class="column level-item is-one-quarter">
+              <i class="icon is-size-4 fa fa-ethernet" style="color:#f368e0;"></i>
+              <span class="title is-size-4" id="connections" style="color:#f368e0;"><bold>0</bold></span>
               <span class="heading is-size-6">Active connections</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-code-branch gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="serverver"><bold>v0.0</bold></span>
+              <i class="icon is-size-4 fa fa-code-branch" style="color:#ff7f50;"></i>
+              <span class="title is-size-4" id="serverver" style="color:#ff7f50;"><bold>v0.0</bold></span>
               <span class="heading is-size-6">Server version</span>
             </div>
             <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-hashtag gradienttext"></i>
-              <span class="title is-size-4 gradienttext" id="lastblockhash"><bold>please wait...</bold></span>
+              <i class="icon is-size-4 fa fa-hashtag" style="color:#2ed573"></i>
+              <span class="title is-size-4" id="lastblockhash" style="color:#2ed573"><bold>please wait...</bold></span>
               <span class="heading is-size-6">Last block hash</span>
             </div>
           </div>
         </div>
-        <p class="pl-5 pr-4 pb-2 pt-1 has-text-right">
-          <span class="is-info is-size-7">
-            <i class="fas fa-info-circle"></i>
-          </span>
-          <span class="subtitle is-size-7">
-            Data for statistics is updated every 5 seconds
-          </span>
-        </p>
+
+        <div class="columns">
+          <div class="column">
+            <p class="pl-3 pt-1 has-text-left">
+              <span class="is-info is-size-7">
+                <i class="fas fa-server"></i>
+              </span>
+              <span class="subtitle is-size-7">
+                <b>Server:</b> CPU:
+                <span id="cpu">0%</span>
+                RAM:
+                <span id="ram">0%</span>
+              </span>
+            </p>
+          </div>
+
+          <div class="column">
+            <p class="pr-4 pt-1 has-text-right">
+              <span class="is-info is-size-7">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <span class="subtitle is-size-7">
+                 Data for statistics is updated every 5 seconds
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="columns is-multiline">
@@ -196,7 +215,7 @@
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </span>
               </p>
-              <button type="submit" class="ml-1 button is-primary">
+              <button type="submit" class="ml-1 button is-success">
                 Search
               </button>
             </div>
@@ -245,7 +264,7 @@
             <p class="panel-heading">
               <i class="is-size-5 fa fa-poll"></i>
               Active workers
-              <span class="title is-size-6 gradienttext" id="allworkers">(0)</span>
+              <span class="title is-size-6 has-text-grey" id="allworkers">(0)</span>
             </p>
             <div class="panel-block">
               <span id="workers" class="subtitle is-size-6">
@@ -350,7 +369,9 @@
       document.getElementById("serverver").innerHTML = "v" + data["Server version"];
       document.getElementById("connections").innerHTML = data["Active connections"];
       document.getElementById("lastblockhash").innerHTML = data["Last block hash"];
-      //document.getElementById("serverload").innerHTML = data["Server CPU usage"] + "% (" + data["Server RAM usage"] + "%)";
+      
+      document.getElementById("cpu").innerHTML = data["Server CPU usage"] + "%"
+      document.getElementById("ram").innerHTML = data["Server RAM usage"] + "%";
 
       // WORKER LIST
       let workers = "<ul align='left' class='grid-list'>"
