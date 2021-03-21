@@ -50,7 +50,7 @@
       }
       .monospace {
         /* Monospace font for TXIDs */
-        font-family: 'Source Code Pro', monospace !important;
+        font-family: 'JetBrains Mono', monospace !important;
       }
       p, span {
         /* Allow word breaks */
@@ -61,6 +61,12 @@
         columns: 3;
         -webkit-columns: 3;
         -moz-columns: 3;
+      }
+      .block1, .block3, .block5, .transaction2, .transaction4 {
+        color: #5f27cd;
+      }
+      .block2, .block4, .transaction1, .transacion3, .transaction5 {
+        color: #0984e3;
       }
     </style>
   </head>
@@ -206,11 +212,11 @@
           <form class="panel">
             <p class="panel-heading">
               <i class="is-size-5 fa fa-search-dollar"></i>
-              Transaction explorer
+              Transaction & block explorer
             </p>
             <div class="panel-block">
               <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Enter transaction hash..." name="search">
+                <input class="input" type="text" placeholder="Enter username, transaction or block hash..." name="search">
                 <span class="icon is-left">
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </span>
@@ -223,15 +229,24 @@
               Nothing found... (yet!)
             </p>
             <p class="subtitle is-size-6 ml-5 pl-5 mr-5 pr-5 pb-1" id="transactionstext2"></p>
-            <p class="subtitle is-size-6 pl-5 pr-5" id="transactionstext3">
-              No last transactions to display
-            </p>
+            <div class="columns">
+              <div class="column">
+                <p class="subtitle is-size-6 pl-5" id="transactionstext3">
+                  No last transactions to display
+                </p>
+              </div>
+              <div class="column">
+                <p class="subtitle is-size-6 pl-5" id="transactionstext4">
+                  No last blocks to display
+                </p>
+              </div>
+            </div>
             <p class="pl-5 pr-4 pb-2 has-text-right">
               <span class="is-info is-size-7">
                 <i class="fas fa-info-circle"></i>
               </span>
               <span class="subtitle is-size-7">
-                New transactions should appear here after 30 seconds
+                New transactions should appear here after 30 seconds, blocks after 2 minutes
               </span>
             </p>
           </form>
@@ -352,7 +367,9 @@
   let url_string = window.location;
   let url = new URL(url_string);
   let hashToBeFound = url.searchParams.get("search");
-  if(hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "Showing info about transaction:<br><strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
+  if(hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "Showing info about:<br><strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
+
+  if(hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
 
   function APIupdate() {
     $.getJSON('https://cors.bridged.cc/http://51.15.127.80/api.json', function(data) {
@@ -390,25 +407,71 @@
     $.getJSON('https://cors.bridged.cc/http://51.15.127.80/transactions.json', function(data) {
       // GET TRANSACTION DATA
       let last = [];
+      let transactionFound = false;
+      let balanceFound = false;
       for(hash in data) last.push(hash);
 
       document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
-        "<a class='gradienttext monospace' href='?search="+last[last.length - 1]+"'>"+last[last.length - 1]+"</a><br>" +
-        "<a class='gradienttext monospace' href='?search="+last[last.length - 2]+"'>"+last[last.length - 2]+"</a><br>" +
-        "<a class='gradienttext monospace' href='?search="+last[last.length - 3]+"'>"+last[last.length - 3]+"</a><br>" +
-        "<a class='gradienttext monospace' href='?search="+last[last.length - 4]+"'>"+last[last.length - 4]+"</a><br>" +
-        "<a class='gradienttext monospace' href='?search="+last[last.length - 5]+"'>"+last[last.length - 5]+"</a>";
+        "<a class='transaction1 monospace' href='?search="+last[last.length - 1]+"'>"+last[last.length - 1].substring(0,20)+"...</a><br>" +
+        "<a class='transaction2 monospace' href='?search="+last[last.length - 2]+"'>"+last[last.length - 2].substring(0,20)+"...</a><br>" +
+        "<a class='transaction3 monospace' href='?search="+last[last.length - 3]+"'>"+last[last.length - 3].substring(0,20)+"...</a><br>" +
+        "<a class='transaction4 monospace' href='?search="+last[last.length - 4]+"'>"+last[last.length - 4].substring(0,20)+"...</a><br>" +
+        "<a class='transaction5 monospace' href='?search="+last[last.length - 5]+"'>"+last[last.length - 5].substring(0,20)+"...</a>";
 
       let found = data[hashToBeFound]
       if(hashToBeFound != "" && found != "" && found != undefined) {
         let amountInUsd = found["Amount"].toFixed(4) * ducoUsdPrice;
+        transactionFound = true;
         document.getElementById("transactionstext2").innerHTML =
           "<ul><li><i class='fas fa-clock'></i>&nbsp;Transaction timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>"
         + "<li><i class='fas fa-user-tie'></i>&nbsp;Sender's username: <b>" + found["Sender"] + "</b></li>"
         + "<li><i class='fas fa-user'></i>&nbsp;Recipient's username: <b>" + found["Recipient"] + "</b></li>" 
         + "<li><i class='fas fa-receipt'></i>&nbsp;Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-      } else if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "No data was found for transaction: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
-    });
+      }
+
+      if(hashToBeFound != "") {
+        $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
+          // GET TRANSACTION DATA
+          let found = data[hashToBeFound]
+
+          if(hashToBeFound != "" && found != "" && found != undefined) {
+            balanceFound = true;
+            let amountInUsd = found.substring(0, found.length - 5) * ducoUsdPrice;
+
+            document.getElementById("transactionstext2").innerHTML =
+              "<ul><li><i class='fas fa-user-tie'></i>&nbsp;Username: <b>" + hashToBeFound + "</b></li>"
+            + "<li><i class='fas fa-receipt'></i>&nbsp;Balance: <b>" + data[hashToBeFound] + "</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+          }
+        });
+      }
+
+      if(hashToBeFound != "") {
+        $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
+          // GET TRANSACTION DATA
+          let last = [];
+          for(hash in data) last.push(hash);
+
+          document.getElementById("transactionstext4").innerHTML = "<strong>Last blocks:</strong><br>" +
+            "<a class='block1 monospace' href='?search="+last[last.length - 1]+"'>"+last[last.length - 1].substring(0,20)+"...</a><br>" +
+            "<a class='block2 monospace' href='?search="+last[last.length - 2]+"'>"+last[last.length - 2].substring(0,20)+"...</a><br>" +
+            "<a class='block3 monospace' href='?search="+last[last.length - 3]+"'>"+last[last.length - 3].substring(0,20)+"...</a><br>" +
+            "<a class='block4 monospace' href='?search="+last[last.length - 4]+"'>"+last[last.length - 4].substring(0,20)+"...</a><br>" +
+            "<a class='block5 monospace' href='?search="+last[last.length - 5]+"'>"+last[last.length - 5].substring(0,20)+"...</a>";
+
+          let found = data[hashToBeFound]
+          if(hashToBeFound != "" && found != "" && found != undefined) {
+            let amountInUsd = found["Amount generated"].toFixed(4) * ducoUsdPrice;
+            document.getElementById("transactionstext2").innerHTML =
+              "<ul><li><i class='fas fa-clock'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>"
+            + "<li><i class='fas fa-user-tie'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>"
+            + "<li><i class='fas fa-receipt'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+          } else if (hashToBeFound != null && transactionFound != true && balanceFound != true) {
+            document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
+            document.getElementById("transactionstext2").innerHTML = "";
+          }
+        });
+      }
+    })
   }
 
   APIupdate();
