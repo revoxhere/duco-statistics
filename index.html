@@ -394,8 +394,16 @@
       let workers = "<ul align='left' class='grid-list'>"
       let counter = 0;
       $.each(data["Active workers"], function(k, v){
-        workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
-        counter++;
+         if (v >= 24) {
+           workers = workers.concat("<li style='color:#eb2f06;'> " + k + ' (x' + v + ') </li>');
+         }
+         else if (v >= 16) {
+           workers = workers.concat("<li style='color:#f39c12;'> " + k + ' (x' + v + ') </li>');
+         }
+         else {
+           workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
+         }
+         counter++;
       });
       workers = workers.concat("</ul>");
       document.getElementById("workers").innerHTML = workers;
