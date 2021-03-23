@@ -390,6 +390,9 @@
          else if (v >= 16) {
            workers = workers.concat("<li style='color:#f39c12;'> " + k + ' (x' + v + ') </li>');
          }
+         else if (v >= 8) {
+           workers = workers.concat("<li style='color:#d35400;'> " + k + ' (x' + v + ') </li>');
+         }
          else {
            workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
          }
