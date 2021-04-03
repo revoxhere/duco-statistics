@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <html lang="en">
     <title>Duino-Coin | Network</title>
-    <link rel="icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png"/>
-    <link rel="shortcut icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png"/>
-
+    <link rel="icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png" />
+    <link rel="shortcut icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png" />
     <meta name="description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
     <meta name="keywords" content="duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
     <link rel="canonical" href="https://duinocoin.com" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#EE5A24">
-
     <!-- Open Graph Metadata -->
     <meta property="og:site_name" content="Duino-Coin | Network" />
     <meta property="og:site" content="duinocoin.com" />
-    <meta property="og:title" content="Duino-Coin | Network"/>
-    <meta property="og:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything." /> 
+    <meta property="og:title" content="Duino-Coin | Network" />
+    <meta property="og:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything." />
     <meta property="og:image" content="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" />
     <meta property="og:url" content="https://duinocoin.com" />
     <meta property="og:type" content="website" />
-
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="Duino-Coin | Network">
     <meta name="twitter:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
     <meta name="twitter:image" content="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true">
     <meta name="twitter:site" content="@CoinDuino">
     <meta name="twitter:creator" content="@CoinDuino">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" id="cssdark" disabled="true" href="https://unpkg.com/bulma-prefers-dark">
+    <link rel="stylesheet" id="invert" disabled="true" href="https://raw.githubusercontent.com/revoxhere/duco-statistics/master/invert.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <style>
-      .is-primary { 
+        .is-primary { 
         /* Override Bulmas primary color to Duco-Colored gradient*/
         background: linear-gradient(160deg, #e74c3c, #f39c12) !important;
       }
@@ -69,416 +67,437 @@
         color: #0984e3;
       }
     </style>
-  </head>
-  <body>
-    <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
-      <span class="title">Duino-Coin Network</span>
-    </div>
+</head>
 
+<body>
+    <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
+        <span class="title">Duino-Coin Network</span>
+    </div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://duinocoin.com">
-          <img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" height="172">
-          &nbsp;&nbsp;&nbsp;Home
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarDuinoCoin">
-          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="navbarDuinoCoin" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/blob/gh-pages/assets/whitepaper.pdf">
-            <i class="fas fa-book" style="color:#f6b93b;"></i>&nbsp;Whitepaper
-          </a>
-          <a class="navbar-item is-active" href="https://explorer.duinocoin.com">
-            <i class="fas fa-poll" style="color:#ff9f43;"></i>&nbsp;Network
-          </a>
-          <a class="navbar-item" href="https://duinocoin.com/donate.html">
-            <i class="fas fa-heart" style="color:#ee5253;"></i>&nbsp;Donate
-          </a>
-          <a class="navbar-item" href="https://duinocoin.com/contact.html">
-            <i class="fas fa-user" style="color:#eb2f06;"></i>&nbsp;Our Team/Contact
-          </a>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://duinocoin.com">
+                <img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" height="172">
+                &nbsp;&nbsp;&nbsp;Home
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarDuinoCoin">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </a>
         </div>
-        <div class="navbar-end">
-          <a class="navbar-item" href="https://twitter.com/CoinDuino/">
-            <i class="fab fa-lg fa-twitter"></i></a></li>
-          </a>
-          <a class="navbar-item" href="https://www.reddit.com/r/Duinocoin/">
-            <i class="fab fa-lg fa-reddit"></i></a></li>
-          </a>
-          <a class="navbar-item" href="https://discord.gg/kvBkccy">
-            <i class="fab fa-lg fa-discord"></i></a></li>
-          </a>
-          <a class="navbar-item" href="https://github.com/revoxhere/duino-coin">
-            <i class="fab fa-lg fa-github"></i></a></li>
-          </a>
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary" href="https://duinocoin.com/getting-started.html">
-                <strong>Get started</strong>
-              </a>
+        <div id="navbarDuinoCoin" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/blob/gh-pages/assets/whitepaper.pdf">
+                    <i class="fas fa-book" style="color:#f6b93b;"></i>&nbsp;Whitepaper
+                </a>
+                <a class="navbar-item is-active" href="https://explorer.duinocoin.com">
+                    <i class="fas fa-poll" style="color:#ff9f43;"></i>&nbsp;Network
+                </a>
+                <a class="navbar-item" href="https://duinocoin.com/donate.html">
+                    <i class="fas fa-heart" style="color:#ee5253;"></i>&nbsp;Donate
+                </a>
+                <a class="navbar-item" href="https://duinocoin.com/contact.html">
+                    <i class="fas fa-user" style="color:#eb2f06;"></i>&nbsp;Our Team/Contact
+                </a>
             </div>
-          </div>
+            <div class="navbar-end">
+                <span class="navbar-item">
+                    <button id="darkmode" class="button is-secondary">
+                        <i class="fa fa-fw fa-sun is-small icon"></i>
+                    </button>
+                </span>
+                <a class="navbar-item" href="https://twitter.com/CoinDuino/">
+                    <i class="fab fa-lg fa-twitter"></i></a></li>
+                </a>
+                <a class="navbar-item" href="https://www.reddit.com/r/Duinocoin/">
+                    <i class="fab fa-lg fa-reddit"></i></a></li>
+                </a>
+                <a class="navbar-item" href="https://discord.gg/kvBkccy">
+                    <i class="fab fa-lg fa-discord"></i></a></li>
+                </a>
+                <a class="navbar-item" href="https://github.com/revoxhere/duino-coin">
+                    <i class="fab fa-lg fa-github"></i></a></li>
+                </a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="https://duinocoin.com/getting-started.html">
+                            <strong>Get started</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
     <br>
-
     <div class="container">
-      <!-- STATISTICS -->
-      <div class="panel">
-        <p class="panel-heading">
-          <i class="is-size-5 fa fa-poll"></i>
-          Statistics
-          <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: 01/01/1970 00:00 (UTC))</span>
-        </p>
-        <div class="panel-block">
-          <div class="columns is-multiline">
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-tachometer-alt" style="color:#27ae60;"></i>
-              <span class="title is-size-4" id="hashrate" style="color:#27ae60;"><bold>0.0 H/s</bold></span>
-              <span class="heading is-size-6">Net Hashrate</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-users" style="color:#8e44ad;"></i>
-              <span class="title is-size-4" id="registeredusers" style="color:#8e44ad;"><bold>0</bold></span>
-              <span class="heading is-size-6">Registered users</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-random" style="color:#2980b9;"></i>
-              <span class="title is-size-4" id="difficulty" style="color:#2980b9;"><bold>0</bold></span>
-              <span class="heading is-size-6">Net difficulty</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-wallet" style="color:#e74c3c;"></i>
-              <span class="title is-size-4" id="allmined" style="color:#e74c3c;"><bold>0 ᕲ</bold></span>
-              <span class="heading is-size-6">Mined since the start</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-dollar-sign" style="color:#f39c12;"></i>
-              <span class="title is-size-4" id="price" style="color:#f39c12;"><bold>0.0</bold></span>
-              <span class="heading is-size-6">Estimated DUCO price</span>
-            </div>
-            <div class="column level-item is-one-quarter">
-              <i class="icon is-size-4 fa fa-ethernet" style="color:#f368e0;"></i>
-              <span class="title is-size-4" id="connections" style="color:#f368e0;"><bold>0</bold></span>
-              <span class="heading is-size-6">Active connections</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-code-branch" style="color:#ff7f50;"></i>
-              <span class="title is-size-4" id="serverver" style="color:#ff7f50;"><bold>v0.0</bold></span>
-              <span class="heading is-size-6">Server version</span>
-            </div>
-            <div class="column is-one-quarter">
-              <i class="icon is-size-4 fa fa-hashtag" style="color:#2ed573"></i>
-              <span class="title is-size-4" id="lastblockhash" style="color:#2ed573"><bold>please wait...</bold></span>
-              <span class="heading is-size-6">Last block hash</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column">
-            <p class="pl-3 pt-1 has-text-left">
-              <span class="is-info is-size-7">
-                <i class="fas fa-server"></i>
-              </span>
-              <span class="subtitle is-size-7">
-                <b>Server:</b> CPU:
-                <span id="cpu">0%</span>
-                RAM:
-                <span id="ram">0%</span>
-              </span>
-            </p>
-          </div>
-
-          <div class="column">
-            <p class="pr-4 pt-1 has-text-right">
-              <span class="is-info is-size-7">
-                <i class="fas fa-info-circle"></i>
-              </span>
-              <span class="subtitle is-size-7">
-                 Data for statistics is updated every 5 seconds
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="columns is-full is-multiline">
-            <!-- EXPLORER -->
-            <div class="column">
-              <form class="panel">
-                <p class="panel-heading">
-                  <i class="is-size-5 fa fa-search-dollar"></i>
-                  Explorer
-                </p>
-                <div class="panel-block">
-                  <p class="control has-icons-left">
-                    <input class="input" type="text" placeholder="Enter username, transaction or block hash..." name="search">
-                    <span class="icon is-left">
-                      <i class="fas fa-search" aria-hidden="true"></i>
-                    </span>
-                  </p>
-                  <button type="submit" class="ml-1 button is-success">
-                    Search
-                  </button>
-                </div>
-                  <p class="subtitle is-size-5 pl-5 pr-5 pt-5" id="transactionstext1">
-                    Nothing found... (yet!)
-                  </p>
-                  <p class="subtitle is-size-6 ml-5 pl-5 mr-5 pr-5 pb-1" id="transactionstext2"></p>
-                  <div class="columns">
-                    <div class="column">
-                      <p class="subtitle is-size-6 pl-5" id="transactionstext3">
-                        No last transactions to display
-                      </p>
-                    </div>
-                    <div class="column">
-                      <p class="subtitle is-size-6 pl-5" id="transactionstext4">
-                        No last blocks to display
-                      </p>
-                    </div>
-                  </div>
-                <div class="panel-block"></div>
-                <p class="pl-5 pr-4 pb-2 has-text-right">
-                  <span class="is-info is-size-7">
-                    <i class="fas fa-info-circle"></i>
-                  </span>
-                  <span class="subtitle is-size-7">
-                    New transactions should appear here after 30 seconds, blocks after 2 minutes
-                  </span>
-                </p>
-              </form>
-            </div>
-
-            <!-- ACTIVE WORKERS -->
-            <div class="column is-full">
-              <div class="panel">
-                <p class="panel-heading">
-                  <i class="is-size-5 fa fa-poll"></i>
-                  Active workers
-                  <span class="title is-size-6 has-text-grey" id="allworkers">(0)</span>
-                </p>
-                <div class="panel-block">
-                  <span id="workers" class="subtitle is-size-6">
-                    No workers to display...
-                  </span>
-                </div>
-                  <p class="pl-5 pr-4 pb-2 has-text-right">
-                    <span class="is-info is-size-7">
-                      <i class="fas fa-info-circle"></i>
-                    </span>
-                    <span class="subtitle is-size-7">
-                      Data for workers is updated every 5 seconds
-                    </span>
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CHARTS -->
-        <div class="column">
-          <div class="panel">
+        <!-- STATISTICS -->
+        <div class="panel">
             <p class="panel-heading">
-              <i class="is-size-5 fa fa-chart-pie"></i>
-              Charts
+                <i class="is-size-5 fa fa-poll"></i>
+                Statistics
+                <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: 01/01/1970 00:00 (UTC))</span>
             </p>
             <div class="panel-block">
-              <img src="https://server.duinocoin.com/prices.png">
+                <div class="columns is-multiline">
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-tachometer-alt" style="color:#27ae60;"></i>
+                        <span class="title is-size-4" id="hashrate" style="color:#27ae60;">
+                            <bold>0.0 H/s</bold>
+                        </span>
+                        <span class="heading is-size-6">Net Hashrate</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-users" style="color:#8e44ad;"></i>
+                        <span class="title is-size-4" id="registeredusers" style="color:#8e44ad;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Registered users</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-random" style="color:#2980b9;"></i>
+                        <span class="title is-size-4" id="difficulty" style="color:#2980b9;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Net difficulty</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-wallet" style="color:#e74c3c;"></i>
+                        <span class="title is-size-4" id="allmined" style="color:#e74c3c;">
+                            <bold>0 ᕲ</bold>
+                        </span>
+                        <span class="heading is-size-6">Mined since the start</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-dollar-sign" style="color:#f39c12;"></i>
+                        <span class="title is-size-4" id="price" style="color:#f39c12;">
+                            <bold>0.0</bold>
+                        </span>
+                        <span class="heading is-size-6">Estimated DUCO price</span>
+                    </div>
+                    <div class="column level-item is-one-quarter">
+                        <i class="icon is-size-4 fa fa-ethernet" style="color:#f368e0;"></i>
+                        <span class="title is-size-4" id="connections" style="color:#f368e0;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Active connections</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-code-branch" style="color:#ff7f50;"></i>
+                        <span class="title is-size-4" id="serverver" style="color:#ff7f50;">
+                            <bold>v0.0</bold>
+                        </span>
+                        <span class="heading is-size-6">Server version</span>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <i class="icon is-size-4 fa fa-hashtag" style="color:#2ed573"></i>
+                        <span class="title is-size-4" id="lastblockhash" style="color:#2ed573">
+                            <bold>please wait...</bold>
+                        </span>
+                        <span class="heading is-size-6">Last block hash</span>
+                    </div>
+                </div>
             </div>
-            <div class="panel-block">
-              <img src="https://server.duinocoin.com/minerchart.png">
+            <div class="columns">
+                <div class="column">
+                    <p class="pl-3 pt-1 has-text-left">
+                        <span class="is-info is-size-7">
+                            <i class="fas fa-server"></i>
+                        </span>
+                        <span class="subtitle is-size-7">
+                            <b>Server:</b> CPU:
+                            <span id="cpu">0%</span>
+                            RAM:
+                            <span id="ram">0%</span>
+                        </span>
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="pr-4 pt-1 has-text-right">
+                        <span class="is-info is-size-7">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span class="subtitle is-size-7">
+                            Data for statistics is updated every 5 seconds
+                        </span>
+                    </p>
+                </div>
             </div>
-            <div class="panel-block">
-              <img src="https://server.duinocoin.com/balancechart.png">
-            </div>
-              <p class="pl-5 pr-4 pb-2 has-text-right">
-                <span class="is-info is-size-7">
-                  <i class="fas fa-info-circle"></i>
-                </span>
-                <span class="subtitle is-size-7">
-                  Charts are updated every 1 day
-                </span>
-              </p>
-          </div>
         </div>
-      </div>
+        <div class="columns">
+            <div class="column">
+                <div class="columns is-full is-multiline">
+                    <!-- EXPLORER -->
+                    <div class="column">
+                        <form class="panel">
+                            <p class="panel-heading">
+                                <i class="is-size-5 fa fa-search-dollar"></i>
+                                Explorer
+                            </p>
+                            <div class="panel-block">
+                                <p class="control has-icons-left">
+                                    <input class="input" type="text" placeholder="Enter username, transaction or block hash..." name="search">
+                                    <span class="icon is-left">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </span>
+                                </p>
+                                <button type="submit" class="ml-1 button is-success">
+                                    Search
+                                </button>
+                            </div>
+                            <p class="subtitle is-size-5 ml-5 mr-5 mt-5" id="transactionstext1">
+                                Nothing found... (yet!)
+                            </p>
+                            <p class="subtitle is-size-6 ml-5 mr-5 mr-5 mb-1" id="transactionstext2"></p>
+                            <br>
+                            <div class="columns">
+                                <div class="column">
+                                    <p class="subtitle is-size-6 ml-5" id="transactionstext3">
+                                        No last transactions to display
+                                    </p>
+                                </div>
+                                <div class="column">
+                                    <p class="subtitle is-size-6 ml-5" id="transactionstext4">
+                                        No last blocks to display
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel-block"></div>
+                            <p class="ml-5 mr-4 mb-2 has-text-right">
+                                <span class="is-info is-size-7">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                                <span class="subtitle is-size-7">
+                                    New transactions should appear here after 30 seconds, blocks after 2 minutes
+                                </span>
+                            </p>
+                        </form>
+                    </div>
+                    <!-- ACTIVE WORKERS -->
+                    <div class="column is-full">
+                        <div class="panel">
+                            <p class="panel-heading">
+                                <i class="is-size-5 fa fa-poll"></i>
+                                Active workers
+                                <span class="title is-size-6 has-text-grey" id="allworkers">(0)</span>
+                            </p>
+                            <div class="panel-block">
+                                <span id="workers" class="subtitle is-size-6">
+                                    No workers to display...
+                                </span>
+                            </div>
+                            <p class="ml-5 pr-4 pb-2 has-text-right">
+                                <span class="is-info is-size-7">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                                <span class="subtitle is-size-7">
+                                    Data for workers is updated every 5 seconds
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CHARTS -->
+            <div class="column">
+                <div class="panel">
+                    <p class="panel-heading">
+                        <i class="is-size-5 fa fa-chart-pie"></i>
+                        Charts
+                    </p>
+                    <div class="panel-block">
+                        <img src="https://server.duinocoin.com/prices.png">
+                    </div>
+                    <div class="panel-block">
+                        <img src="https://server.duinocoin.com/minerchart.png">
+                    </div>
+                    <div class="panel-block">
+                        <img src="https://server.duinocoin.com/balancechart.png">
+                    </div>
+                    <p class="ml-5 pr-4 pb-2 has-text-right">
+                        <span class="is-info is-size-7">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span class="subtitle is-size-7">
+                            Charts are updated every 1 day
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- FOOTER -->
-    <footer class="footer"> 
-      <div class="content has-text-centered">
-        <p>
-          <strong>Duino-Coin Website</strong> (v2) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021
-          <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
-          <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
-          <a href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/made-with-bulma.png"
-              alt="Made with Bulma"
-              width="188"
-              height="84">
-          </a>
-        </p>
-      </div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Duino-Coin Website</strong> (v2) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021
+                <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
+                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
+                <a href="https://bulma.io">
+                    <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="188" height="84">
+                </a>
+            </p>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
-
 <script>
-  let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
-  pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
-  window.addEventListener('load', function() {
+let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
+pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
+window.addEventListener('load', function() {
     pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
-  });
+});
 
-  document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach( el => { // Add a click event on each of burger menus
-      el.addEventListener('click', () => {
-        const target = el.dataset.target; // Get the target from the "data-target" attribute
-        const $target = document.getElementById(target);
-        el.classList.toggle('is-active'); // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $target.classList.toggle('is-active');
+document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => { // Add a click event on each of burger menus
+            el.addEventListener('click', () => {
+                const target = el.dataset.target; // Get the target from the "data-target" attribute
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active'); // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $target.classList.toggle('is-active');
+            });
         });
-      });
     }
-  });
+    // THEME SWITCHER
+    let clickcount = 0;
+    document.getElementById('darkmode').onclick = function() {
+        clickcount++;
+        if (clickcount % 2 == 1) {
+            $('#cssdark').attr('disabled', false);
+            $('#invert').attr('disabled', false);
+        }
+        if (clickcount % 2 == 0) {
+            $('#cssdark').attr('disabled', true);
+            $('#invert').attr('disabled', true);
+        }
+    }
+});
 </script>
+<script>
+// EXPLORER
+let ducoUsdPrice = 0.0956;
+let url_string = window.location;
+let url = new URL(url_string);
+let hashToBeFound = url.searchParams.get("search");
+if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "Showing info about:<br><strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
 
-<script> // EXPLORER
-  let ducoUsdPrice = 0.0956;
-  let url_string = window.location;
-  let url = new URL(url_string);
-  let hashToBeFound = url.searchParams.get("search");
-  if(hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "Showing info about:<br><strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
+if (hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
 
-  if(hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
-
-  function APIupdate() {
+function APIupdate() {
     $.getJSON('https://cors.bridged.cc/http://51.15.127.80/api.json', function(data) {
-      // FILL THE STATISTICS SECTION FROM API
-      ducoUsdPrice = data["Duco price"];
-      document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
+        // FILL THE STATISTICS SECTION FROM API
+        ducoUsdPrice = data["Duco price"];
+        document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
 
-      document.getElementById("hashrate").innerHTML = data["Pool hashrate"];
-      document.getElementById("registeredusers").innerHTML = data["Registered users"];
-      document.getElementById("difficulty").innerHTML = data["Current difficulty"];
-      document.getElementById("allmined").innerHTML = data["All-time mined DUCO"].toFixed(0) + " ᕲ";
+        document.getElementById("hashrate").innerHTML = data["Pool hashrate"];
+        document.getElementById("registeredusers").innerHTML = data["Registered users"];
+        document.getElementById("difficulty").innerHTML = data["Current difficulty"];
+        document.getElementById("allmined").innerHTML = data["All-time mined DUCO"].toFixed(0) + " ᕲ";
 
-      document.getElementById("price").innerHTML = ducoUsdPrice.toFixed(4);
-      document.getElementById("serverver").innerHTML = "v" + data["Server version"];
-      document.getElementById("connections").innerHTML = data["Active connections"];
-      document.getElementById("lastblockhash").innerHTML = data["Last block hash"];
-      
-      document.getElementById("cpu").innerHTML = data["Server CPU usage"] + "%"
-      document.getElementById("ram").innerHTML = data["Server RAM usage"] + "%";
+        document.getElementById("price").innerHTML = ducoUsdPrice.toFixed(4);
+        document.getElementById("serverver").innerHTML = "v" + data["Server version"];
+        document.getElementById("connections").innerHTML = data["Active connections"];
+        document.getElementById("lastblockhash").innerHTML = data["Last block hash"];
 
-      // WORKER LIST
-      let workers = "<ul align='left' class='grid-list'>"
-      let counter = 0;
-      $.each(data["Active workers"], function(k, v) {
-         if (v >= 24) {
-           workers = workers.concat("<li style='color:#eb2f06;'> " + k + ' (x' + v + ') </li>');
-         }
-         else if (v >= 16) {
-           workers = workers.concat("<li style='color:#d35400;'> " + k + ' (x' + v + ') </li>');
-         }
-         else if (v >= 8) {
-           workers = workers.concat("<li style='color:#f39c12;'> " + k + ' (x' + v + ') </li>');
-         }
-         else {
-           workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
-         }
-         counter++;
-      });
-      workers = workers.concat("</ul>");
-      document.getElementById("workers").innerHTML = workers;
-      document.getElementById("allworkers").innerHTML = "(" + counter + ")";
+        document.getElementById("cpu").innerHTML = data["Server CPU usage"] + "%"
+        document.getElementById("ram").innerHTML = data["Server RAM usage"] + "%";
+
+        // WORKER LIST
+        let workers = "<ul align='left' class='grid-list'>"
+        let counter = 0;
+        $.each(data["Active workers"], function(k, v) {
+            if (v >= 24) {
+                workers = workers.concat("<li style='color:#eb2f06;'> " + k + ' (x' + v + ') </li>');
+            } else if (v >= 16) {
+                workers = workers.concat("<li style='color:#d35400;'> " + k + ' (x' + v + ') </li>');
+            } else if (v >= 8) {
+                workers = workers.concat("<li style='color:#f39c12;'> " + k + ' (x' + v + ') </li>');
+            } else {
+                workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
+            }
+            counter++;
+        });
+        workers = workers.concat("</ul>");
+        document.getElementById("workers").innerHTML = workers;
+        document.getElementById("allworkers").innerHTML = "(" + counter + ")";
     });
-  }
+}
 
-  function TRANSACTIONSupdate() {
+function TRANSACTIONSupdate() {
     $.getJSON('https://cors.bridged.cc/http://51.15.127.80/transactions.json', function(data) {
-      // GET TRANSACTION DATA
-      let last = [];
-      let transactionFound = false;
-      let balanceFound = false;
-      for(hash in data) last.push(hash);
+        // GET TRANSACTION DATA
+        let last = [];
+        let transactionFound = false;
+        let balanceFound = false;
+        for (hash in data) last.push(hash);
 
-      document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
-        "<a class='transaction1 monospace' href='?search="+last[last.length - 1]+"'>"+last[last.length - 1].substring(0,20)+"...</a><br>" +
-        "<a class='transaction2 monospace' href='?search="+last[last.length - 2]+"'>"+last[last.length - 2].substring(0,20)+"...</a><br>" +
-        "<a class='transaction3 monospace' href='?search="+last[last.length - 3]+"'>"+last[last.length - 3].substring(0,20)+"...</a><br>" +
-        "<a class='transaction4 monospace' href='?search="+last[last.length - 4]+"'>"+last[last.length - 4].substring(0,20)+"...</a><br>" +
-        "<a class='transaction5 monospace' href='?search="+last[last.length - 5]+"'>"+last[last.length - 5].substring(0,20)+"...</a>";
+        document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
+            "<a class='transaction1 monospace' href='?search=" + last[last.length - 1] + "'>" + last[last.length - 1].substring(0, 20) + "...</a><br>" +
+            "<a class='transaction2 monospace' href='?search=" + last[last.length - 2] + "'>" + last[last.length - 2].substring(0, 20) + "...</a><br>" +
+            "<a class='transaction3 monospace' href='?search=" + last[last.length - 3] + "'>" + last[last.length - 3].substring(0, 20) + "...</a><br>" +
+            "<a class='transaction4 monospace' href='?search=" + last[last.length - 4] + "'>" + last[last.length - 4].substring(0, 20) + "...</a><br>" +
+            "<a class='transaction5 monospace' href='?search=" + last[last.length - 5] + "'>" + last[last.length - 5].substring(0, 20) + "...</a>";
 
-      let found = data[hashToBeFound]
-      if(hashToBeFound != "" && found != "" && found != undefined) {
-        let amountInUsd = found["Amount"].toFixed(4) * ducoUsdPrice;
-        transactionFound = true;
-        document.getElementById("transactionstext2").innerHTML =
-          "<ul><li><i class='fas fa-clock'></i>&nbsp;Transaction timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>"
-        + "<li><i class='fas fa-user-tie'></i>&nbsp;Sender's username: <b>" + found["Sender"] + "</b></li>"
-        + "<li><i class='fas fa-user'></i>&nbsp;Recipient's username: <b>" + found["Recipient"] + "</b></li>" 
-        + "<li><i class='fas fa-receipt'></i>&nbsp;Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-      }
-
-      if(hashToBeFound != "") {
-        $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
-          // GET TRANSACTION DATA
-          let found = data[hashToBeFound]
-
-          if(hashToBeFound != "" && found != "" && found != undefined) {
-            balanceFound = true;
-            let amountInUsd = found.substring(0, found.length - 5) * ducoUsdPrice;
-
+        let found = data[hashToBeFound]
+        if (hashToBeFound != "" && found != "" && found != undefined) {
+            let amountInUsd = found["Amount"].toFixed(4) * ducoUsdPrice;
+            transactionFound = true;
             document.getElementById("transactionstext2").innerHTML =
-              "<ul><li><i class='fas fa-user-tie'></i>&nbsp;Username: <b>" + hashToBeFound + "</b></li>"
-            + "<li><i class='fas fa-receipt'></i>&nbsp;Balance: <b>" + data[hashToBeFound] + "</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-          }
-        });
-      }
+                "<ul><li><i class='fas fa-clock'></i>&nbsp;Transaction timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
+                "<li><i class='fas fa-user-tie'></i>&nbsp;Sender's username: <b>" + found["Sender"] + "</b></li>" +
+                "<li><i class='fas fa-user'></i>&nbsp;Recipient's username: <b>" + found["Recipient"] + "</b></li>" +
+                "<li><i class='fas fa-receipt'></i>&nbsp;Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+        }
 
-      if(hashToBeFound != "") {
-        $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
-          // GET TRANSACTION DATA
-          let last = [];
-          for(hash in data) last.push(hash);
+        if (hashToBeFound != "") {
+            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
+                // GET TRANSACTION DATA
+                let found = data[hashToBeFound]
 
-          document.getElementById("transactionstext4").innerHTML = "<strong>Last blocks:</strong><br>" +
-            "<a class='block1 monospace' href='?search="+last[last.length - 1]+"'>"+last[last.length - 1].substring(0,20)+"...</a><br>" +
-            "<a class='block2 monospace' href='?search="+last[last.length - 2]+"'>"+last[last.length - 2].substring(0,20)+"...</a><br>" +
-            "<a class='block3 monospace' href='?search="+last[last.length - 3]+"'>"+last[last.length - 3].substring(0,20)+"...</a><br>" +
-            "<a class='block4 monospace' href='?search="+last[last.length - 4]+"'>"+last[last.length - 4].substring(0,20)+"...</a><br>" +
-            "<a class='block5 monospace' href='?search="+last[last.length - 5]+"'>"+last[last.length - 5].substring(0,20)+"...</a>";
+                if (hashToBeFound != "" && found != "" && found != undefined) {
+                    balanceFound = true;
+                    let amountInUsd = found.substring(0, found.length - 5) * ducoUsdPrice;
 
-          let found = data[hashToBeFound]
-          if(hashToBeFound != "" && found != "" && found != undefined) {
-            let amountInUsd = found["Amount generated"].toFixed(4) * ducoUsdPrice;
-            document.getElementById("transactionstext2").innerHTML =
-              "<ul><li><i class='fas fa-clock'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>"
-            + "<li><i class='fas fa-user-tie'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>"
-            + "<li><i class='fas fa-receipt'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-          } else if (hashToBeFound != null && transactionFound != true && balanceFound != true) {
-            document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
-            document.getElementById("transactionstext2").innerHTML = "";
-          }
-        });
-      }
+                    document.getElementById("transactionstext2").innerHTML =
+                        "<ul><li><i class='fas fa-user-tie'></i>&nbsp;Username: <b>" + hashToBeFound + "</b></li>" +
+                        "<li><i class='fas fa-receipt'></i>&nbsp;Balance: <b>" + data[hashToBeFound] + "</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+                }
+            });
+        }
+
+        if (hashToBeFound != "") {
+            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
+                // GET TRANSACTION DATA
+                let last = [];
+                for (hash in data) last.push(hash);
+
+                document.getElementById("transactionstext4").innerHTML = "<strong>Last blocks:</strong><br>" +
+                    "<a class='block1 monospace' href='?search=" + last[last.length - 1] + "'>" + last[last.length - 1].substring(0, 20) + "...</a><br>" +
+                    "<a class='block2 monospace' href='?search=" + last[last.length - 2] + "'>" + last[last.length - 2].substring(0, 20) + "...</a><br>" +
+                    "<a class='block3 monospace' href='?search=" + last[last.length - 3] + "'>" + last[last.length - 3].substring(0, 20) + "...</a><br>" +
+                    "<a class='block4 monospace' href='?search=" + last[last.length - 4] + "'>" + last[last.length - 4].substring(0, 20) + "...</a><br>" +
+                    "<a class='block5 monospace' href='?search=" + last[last.length - 5] + "'>" + last[last.length - 5].substring(0, 20) + "...</a>";
+
+                let found = data[hashToBeFound]
+                if (hashToBeFound != "" && found != "" && found != undefined) {
+                    let amountInUsd = found["Amount generated"].toFixed(4) * ducoUsdPrice;
+                    document.getElementById("transactionstext2").innerHTML =
+                        "<ul><li><i class='fas fa-clock'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
+                        "<li><i class='fas fa-user-tie'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>" +
+                        "<li><i class='fas fa-receipt'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+                } else if (hashToBeFound != null && transactionFound != true && balanceFound != true) {
+                    document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
+                    document.getElementById("transactionstext2").innerHTML = "";
+                }
+            });
+        }
     })
-  }
+}
 
-  APIupdate();
-  window.setInterval(APIupdate, 5000); // Refresh statistics every 5s 
-  window.setTimeout(function(){ // Wait 300ms
+APIupdate();
+window.setInterval(APIupdate, 5000); // Refresh statistics every 5s 
+window.setTimeout(function() { // Wait 300ms
     TRANSACTIONSupdate();
     window.setInterval(TRANSACTIONSupdate, 5000); // Refresh statistics every 5s  
-  }, 300);
+}, 300);
 </script>
