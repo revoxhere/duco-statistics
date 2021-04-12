@@ -1,19 +1,19 @@
 {
   "_Duino-Coin Public master server JSON API": "https://github.com/revoxhere/duino-coin",
   "Server version": 2.3,
-  "Active connections": 69,
+  "Active connections": 53,
   "Open threads": 14,
   "Server CPU usage": 100.0,
-  "Server RAM usage": 62.9,
-  "Last update": "12/04/2021 02:46:39 (UTC)",
-  "Pool hashrate": "0 H/s",
+  "Server RAM usage": 59.5,
+  "Last update": "12/04/2021 02:47:54 (UTC)",
+  "Pool hashrate": "3.725 kH/s",
   "Duco price": 0.000548,
   "Duco JustSwap price": 0.0,
   "Registered users": 1755,
-  "All-time mined DUCO": 648436,
+  "All-time mined DUCO": 648440,
   "Current difficulty": 68547,
-  "Mined blocks": 342735152,
-  "Last block hash": "144643542a...",
+  "Mined blocks": 342735153,
+  "Last block hash": "5c24f33db0...",
   "Top 10 richest miners": [
     "52112.5486 DUCO - coinexchange",
     "31816.3035 DUCO - aarican",
@@ -24,8 +24,24 @@
     "15486.71 DUCO - MaddestHoldings",
     "14518.5552 DUCO - PornHub",
     "13719.945 DUCO - AcridHoldings",
-    "11552.9037 DUCO - drn"
+    "11552.9532 DUCO - drn"
   ],
-  "Active workers": {},
-  "Miners": {}
+  "Active workers": {
+    "OliKing800": 1
+  },
+  "Miners": {
+    "140612372219648": {
+      "User": "OliKing800",
+      "Hashrate": 3725,
+      "Is estimated": "True",
+      "Sharetime": 478,
+      "Accepted": 0,
+      "Rejected": 0,
+      "Diff": 275,
+      "Algorithm": "DUCO-S1",
+      "Software": "Unknown miner",
+      "Identifier": "None",
+      "Last share timestamp": "12/04/2021 02:47:54"
+    }
+  }
 }
