@@ -308,13 +308,13 @@
                         Charts
                     </p>
                     <div class="panel-block">
-                        <img src="https://server.duinocoin.com/prices.png">
+                        <img src="http://51.15.127.80/prices.png">
                     </div>
                     <div class="panel-block">
-                        <img src="https://server.duinocoin.com/minerchart.png">
+                        <img src="http://51.15.127.80/minerchart.png">
                     </div>
                     <div class="panel-block">
-                        <img src="https://server.duinocoin.com/balancechart.png">
+                        <img src="http://51.15.127.80/balancechart.png">
                     </div>
                     <p class="ml-5 pr-4 pb-2 has-text-right">
                         <span class="is-info is-size-7">
@@ -387,7 +387,7 @@ if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTM
 if (hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
 
 function APIupdate() {
-    $.getJSON('https://server.duinocoin.com/api.json', function(data) {
+    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/api.json', function(data) {
         // FILL THE STATISTICS SECTION FROM API
         ducoUsdPrice = data["Duco price"];
         document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
@@ -430,7 +430,7 @@ function APIupdate() {
 }
 
 function TRANSACTIONSupdate() {
-    $.getJSON('https://server.duinocoin.com/transactions.json', function(data) {
+    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/transactions.json', function(data) {
         // GET TRANSACTION DATA
         let last = [];
         let transactionFound = false;
@@ -456,7 +456,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://server.duinocoin.com/balances.json', function(data) {
+            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
                 // GET TRANSACTION DATA
                 let found = data[hashToBeFound]
 
@@ -472,7 +472,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
+            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
                 // GET TRANSACTION DATA
                 let last = [];
                 for (hash in data) last.push(hash);
