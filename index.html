@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -142,6 +143,11 @@
                             <bold>0.0 H/s</bold>
                         </span>
                         <span class="heading is-size-6">Net Hashrate</span>
+                        <p class="subtitle is-size-7">
+                            DUCO-S1: <span id="ducos1hashrate">0 H/s</span>
+                            |
+                            XXHASH: <span id="xxhashhashrate">0 H/s</span>
+                        </p>
                     </div>
                     <div class="column is-one-quarter">
                         <i class="icon is-size-4 fa fa-users" style="color:#8e44ad;"></i>
@@ -214,7 +220,7 @@
                             <i class="fas fa-info-circle"></i>
                         </span>
                         <span class="subtitle is-size-7">
-                            Data for statistics is updated every 5 seconds
+                            Data for statistics is updated every 2.5-5 seconds
                         </span>
                     </p>
                 </div>
@@ -264,7 +270,7 @@
                                     <i class="fas fa-info-circle"></i>
                                 </span>
                                 <span class="subtitle is-size-7">
-                                    New transactions should appear here after 30 seconds, blocks after 2 minutes
+                                    New transactions should appear here after 10 seconds, blocks after 2 minutes
                                 </span>
                             </p>
                         </form>
@@ -381,12 +387,15 @@ if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTM
 if (hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
 
 function APIupdate() {
-    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/api.json', function(data) {
+    $.getJSON('https://server.duinocoin.com/api.json', function(data) {
         // FILL THE STATISTICS SECTION FROM API
         ducoUsdPrice = data["Duco price"];
         document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
 
         document.getElementById("hashrate").innerHTML = data["Pool hashrate"];
+        document.getElementById("ducos1hashrate").innerHTML = data["DUCO-S1 hashrate"];
+        document.getElementById("xxhashhashrate").innerHTML = data["DUCO-S1 hashrate"];
+
         document.getElementById("registeredusers").innerHTML = data["Registered users"];
         document.getElementById("difficulty").innerHTML = data["Current difficulty"];
         document.getElementById("allmined").innerHTML = data["All-time mined DUCO"].toFixed(0) + " ᕲ";
@@ -421,7 +430,7 @@ function APIupdate() {
 }
 
 function TRANSACTIONSupdate() {
-    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/transactions.json', function(data) {
+    $.getJSON('https://server.duinocoin.com/transactions.json', function(data) {
         // GET TRANSACTION DATA
         let last = [];
         let transactionFound = false;
@@ -447,7 +456,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
+            $.getJSON('https://server.duinocoin.com/balances.json', function(data) {
                 // GET TRANSACTION DATA
                 let found = data[hashToBeFound]
 
@@ -463,7 +472,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
+            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
                 // GET TRANSACTION DATA
                 let last = [];
                 for (hash in data) last.push(hash);
