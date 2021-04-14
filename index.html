@@ -500,7 +500,7 @@ function TRANSACTIONSupdate() {
 }
 
 APIupdate();
-window.setInterval(APIupdate, 2500); // Refresh statistics every 2.5s 
+window.setInterval(APIupdate, 1000); // Refresh statistics every 1s 
 window.setTimeout(function() { // Wait 300ms
     TRANSACTIONSupdate();
     window.setInterval(TRANSACTIONSupdate, 5000); // Refresh statistics every 5s  
