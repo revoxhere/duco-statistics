@@ -1,21 +1,21 @@
 {
   "_Duino-Coin Public master server JSON API": "https://github.com/revoxhere/duino-coin",
   "Server version": 2.4,
-  "Active connections": 581,
+  "Active connections": 634,
   "Open threads": 14,
   "Server CPU usage": -37.0,
   "Server RAM usage": 0.0,
-  "Last update": "16/04/2021 20:03:17 (UTC)",
-  "Pool hashrate": "inf GH/s",
-  "DUCO-S1 hashrate": "inf GH/s",
+  "Last update": "16/04/2021 20:04:35 (UTC)",
+  "Pool hashrate": "6.2163 kH/s",
+  "DUCO-S1 hashrate": "31.0815 kH/s",
   "XXHASH hashrate": "0 H/s",
   "Duco price": 0.008738,
   "Duco JustSwap price": 0.000226,
   "Registered users": 2468,
-  "All-time mined DUCO": 661157,
+  "All-time mined DUCO": 661158,
   "Current difficulty": 89111,
-  "Mined blocks": 342735163,
-  "Last block hash": "982a14765f...",
+  "Mined blocks": 342735158,
+  "Last block hash": "0d357e9989...",
   "Top 10 richest miners": [
     "51858.9336 DUCO - coinexchange",
     "31816.3035 DUCO - aarican",
@@ -26,131 +26,79 @@
     "15486.71 DUCO - MaddestHoldings",
     "14518.5552 DUCO - PornHub",
     "13719.945 DUCO - AcridHoldings",
-    "11673.8761 DUCO - drn"
+    "11673.8768 DUCO - drn"
   ],
   "Active workers": {
-    "petroleum321": 6,
-    "Dec19100": 1,
-    "herbleduinocoin": 1,
-    "joaquinbvw": 1
+    "Dec19100": 2,
+    "sanduhrgucker": 1,
+    "petroleum321": 1,
+    "Flamy": 1
   },
   "Miners": {
-    "140243482924800": {
-      "User": "petroleum321",
-      "Hashrate": Infinity,
+    "140220255127296": {
+      "User": "sanduhrgucker",
+      "Hashrate": 6430.19,
       "Is estimated": "False",
-      "Sharetime": 16,
+      "Sharetime": 665,
       "Accepted": 0,
       "Rejected": 0,
       "Diff": 250,
       "Algorithm": "DUCO-S1",
       "Software": "ESP32 CORE1 Miner v2.3",
-      "Identifier": "H6",
-      "Last share timestamp": "16/04/2021 20:03:16"
+      "Identifier": "E32 SolarNode950316592",
+      "Last share timestamp": "16/04/2021 20:04:35"
     },
-    "140243961308928": {
+    "140220154414848": {
       "User": "petroleum321",
-      "Hashrate": 7024.57,
+      "Hashrate": 6985.35,
       "Is estimated": "False",
-      "Sharetime": 712,
+      "Sharetime": 1457,
       "Accepted": 0,
       "Rejected": 0,
       "Diff": 250,
       "Algorithm": "DUCO-S1",
       "Software": "ESP32 CORE1 Miner v2.3",
-      "Identifier": "H3",
-      "Last share timestamp": "16/04/2021 20:03:17"
+      "Identifier": "H5",
+      "Last share timestamp": "16/04/2021 20:04:35"
     },
-    "140243382212352": {
-      "User": "petroleum321",
-      "Hashrate": 5559.59,
-      "Is estimated": "False",
-      "Sharetime": 208,
-      "Accepted": 0,
-      "Rejected": 0,
-      "Diff": 250,
-      "Algorithm": "DUCO-S1",
-      "Software": "ESP32 CORE2 Miner v2.3",
-      "Identifier": "F10",
-      "Last share timestamp": "16/04/2021 20:03:17"
-    },
-    "140242291160832": {
-      "User": "petroleum321",
-      "Hashrate": 6607.48,
-      "Is estimated": "False",
-      "Sharetime": 125,
-      "Accepted": 1,
-      "Rejected": 0,
-      "Diff": 250,
-      "Algorithm": "DUCO-S1",
-      "Software": "ESP32 CORE1 Miner v2.3",
-      "Identifier": "H9",
-      "Last share timestamp": "16/04/2021 20:03:17"
-    },
-    "140242685617920": {
-      "User": "petroleum321",
-      "Hashrate": 5292.52,
-      "Is estimated": "False",
-      "Sharetime": 456,
-      "Accepted": 1,
-      "Rejected": 0,
-      "Diff": 250,
-      "Algorithm": "DUCO-S1",
-      "Software": "ESP32 CORE2 Miner v2.3",
-      "Identifier": "H10",
-      "Last share timestamp": "16/04/2021 20:03:17"
-    },
-    "140243600422656": {
+    "140219877455616": {
       "User": "Dec19100",
-      "Hashrate": 5265.41,
+      "Hashrate": 5432.25,
       "Is estimated": "False",
-      "Sharetime": 614,
+      "Sharetime": 1087,
+      "Accepted": 0,
+      "Rejected": 0,
+      "Diff": 250,
+      "Algorithm": "DUCO-S1",
+      "Software": "ESP32 CORE2 Miner v2.3",
+      "Identifier": "0-ESP32",
+      "Last share timestamp": "16/04/2021 20:04:35"
+    },
+    "140216730191616": {
+      "User": "Dec19100",
+      "Hashrate": 5375.0,
+      "Is estimated": "False",
+      "Sharetime": 91,
       "Accepted": 0,
       "Rejected": 0,
       "Diff": 250,
       "Algorithm": "DUCO-S1",
       "Software": "ESP32 CORE2 Miner v2.3",
       "Identifier": "1-ESP32",
-      "Last share timestamp": "16/04/2021 20:03:17"
+      "Last share timestamp": "16/04/2021 20:04:35"
     },
-    "140241938667264": {
-      "User": "petroleum321",
-      "Hashrate": 5196.43,
+    "140219306751744": {
+      "User": "Flamy",
+      "Hashrate": 6858.68,
       "Is estimated": "False",
-      "Sharetime": 73,
-      "Accepted": 0,
-      "Rejected": 0,
-      "Diff": 250,
-      "Algorithm": "DUCO-S1",
-      "Software": "ESP32 CORE2 Miner v2.3",
-      "Identifier": "H4",
-      "Last share timestamp": "16/04/2021 20:03:17"
-    },
-    "140243533281024": {
-      "User": "herbleduinocoin",
-      "Hashrate": 6407.41,
-      "Is estimated": "False",
-      "Sharetime": 137,
+      "Sharetime": 872,
       "Accepted": 0,
       "Rejected": 0,
       "Diff": 250,
       "Algorithm": "DUCO-S1",
       "Software": "ESP32 CORE1 Miner v2.3",
-      "Identifier": "ESP32",
-      "Last share timestamp": "16/04/2021 20:03:17"
-    },
-    "140243843811072": {
-      "User": "joaquinbvw",
-      "Hashrate": 10364.86,
-      "Is estimated": "False",
-      "Sharetime": 1260,
-      "Accepted": 0,
-      "Rejected": 0,
-      "Diff": 250,
-      "Algorithm": "DUCO-S1",
-      "Software": "ESP32 CORE1 Miner v2.4",
-      "Identifier": "ESP32",
-      "Last share timestamp": "16/04/2021 20:03:17"
+      "Identifier": "EXPERTMINER",
+      "Last share timestamp": "16/04/2021 20:04:35"
     }
   }
 }
