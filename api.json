@@ -1,21 +1,21 @@
 {
   "_Duino-Coin Public master server JSON API": "https://github.com/revoxhere/duino-coin",
   "Server version": 2.4,
-  "Active connections": 125,
+  "Active connections": 358,
   "Open threads": 14,
   "Server CPU usage": 0.0,
   "Server RAM usage": 0.0,
-  "Last update": "17/04/2021 08:30:07 (UTC)",
-  "Pool hashrate": "0 H/s",
-  "DUCO-S1 hashrate": "0 H/s",
+  "Last update": "17/04/2021 08:31:25 (UTC)",
+  "Pool hashrate": "1.5445 kH/s",
+  "DUCO-S1 hashrate": "7.7225 kH/s",
   "XXHASH hashrate": "0 H/s",
   "Duco price": 0.008775,
   "Duco JustSwap price": 0.000242,
   "Registered users": 2488,
-  "All-time mined DUCO": 662049,
+  "All-time mined DUCO": 662051,
   "Current difficulty": 89111,
-  "Mined blocks": 342735152,
-  "Last block hash": "144643542a...",
+  "Mined blocks": 342735153,
+  "Last block hash": "f54259cde8...",
   "Top 10 richest miners": [
     "51858.9336 DUCO - coinexchange",
     "31816.3035 DUCO - aarican",
@@ -28,6 +28,22 @@
     "13719.945 DUCO - AcridHoldings",
     "11673.8886 DUCO - drn"
   ],
-  "Active workers": {},
-  "Miners": {}
+  "Active workers": {
+    "Dec19100": 1
+  },
+  "Miners": {
+    "140244185519872": {
+      "User": "Dec19100",
+      "Hashrate": 7722.54,
+      "Is estimated": "False",
+      "Sharetime": 202,
+      "Accepted": 0,
+      "Rejected": 0,
+      "Diff": 250,
+      "Algorithm": "DUCO-S1",
+      "Software": "ESP32 CORE1 Miner v2.3",
+      "Identifier": "0-ESP32",
+      "Last share timestamp": "17/04/2021 08:31:24"
+    }
+  }
 }
