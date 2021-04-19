@@ -386,7 +386,7 @@ if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTM
 if (hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
 
 function APIupdate() {
-    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/api.json', function(data) {
+    $.getJSON('https://server.duinocoin.com/api.json', function(data) {
         // FILL THE STATISTICS SECTION FROM API
         ducoUsdPrice = data["Duco price"];
         document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
@@ -429,7 +429,7 @@ function APIupdate() {
 }
 
 function TRANSACTIONSupdate() {
-    $.getJSON('https://cors.bridged.cc/http://51.15.127.80/transactions.json', function(data) {
+    $.getJSON('https://server.duinocoin.com/transactions.json', function(data) {
         // GET TRANSACTION DATA
         let last = [];
         let transactionFound = false;
@@ -455,7 +455,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/balances.json', function(data) {
+            $.getJSON('https://server.duinocoin.com/balances.json', function(data) {
                 // GET TRANSACTION DATA
                 let found = data[hashToBeFound]
 
@@ -471,7 +471,7 @@ function TRANSACTIONSupdate() {
         }
 
         if (hashToBeFound != "") {
-            $.getJSON('https://cors.bridged.cc/http://51.15.127.80/foundBlocks.json', function(data) {
+            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
                 // GET TRANSACTION DATA
                 let last = [];
                 for (hash in data) last.push(hash);
