@@ -392,8 +392,8 @@ function APIupdate() {
         document.getElementById("lastupdate").innerHTML = "(last update: " + data["Last update"] + ")";
 
         document.getElementById("hashrate").innerHTML = data["Pool hashrate"];
-        document.getElementById("ducos1hashrate").innerHTML = data["DUCO-S1 hashrate"];
-        document.getElementById("xxhashhashrate").innerHTML = data["XXHASH hashrate"];
+        document.getElementById("ducos1hashrate").innerHTML = data["DUCO-S1 hashrate"].toFixed(1);
+        document.getElementById("xxhashhashrate").innerHTML = data["XXHASH hashrate"].toFixed(1);
 
         document.getElementById("registeredusers").innerHTML = data["Registered users"];
         document.getElementById("difficulty").innerHTML = data["Current difficulty"];
