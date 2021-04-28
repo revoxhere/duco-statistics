@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" id="cssdark" disabled="true" href="https://unpkg.com/bulma-prefers-dark">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -341,7 +342,6 @@
         </div>
     </footer>
 </body>
-
 </html>
 <script>
 let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
@@ -362,6 +362,7 @@ document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
             });
         });
     }
+
     // THEME SWITCHER
     let clickcount = 0;
     document.getElementById('darkmode').onclick = function() {
@@ -408,17 +409,24 @@ function APIupdate() {
         document.getElementById("ram").innerHTML = data["Server RAM usage"] + "%";
 
         // WORKER LIST
-        let workers = "<ul align='left' class='grid-list'>"
+        let workers = "<ul align='left' class='grid-list workers is-size-6'>"
         let counter = 0;
         $.each(data["Active workers"], function(k, v) {
-            if (v >= 24) {
-                workers = workers.concat("<li style='color:#eb2f06;'> " + k + ' (x' + v + ') </li>');
+            if (v >= 32) {
+            	if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#eb2f06;">` + v + `</span></li>`);
+               	else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#eb2f06;">` + v + `</span></li>`);
+            } else if (v >= 24) {
+            	if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#f0932b;">` + v + `</span></li>`);
+               	else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#f0932b;">` + v + `</span></li>`);
             } else if (v >= 16) {
-                workers = workers.concat("<li style='color:#d35400;'> " + k + ' (x' + v + ') </li>');
+            	if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#feca57;">` + v + `</span></li>`);
+               	else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#feca57;">` + v + `</span></li>`);
             } else if (v >= 8) {
-                workers = workers.concat("<li style='color:#f39c12;'> " + k + ' (x' + v + ') </li>');
+            	if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#2d3436;">` + v + `</span></li>`);
+               	else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#2d3436;">` + v + `</span></li>`);
             } else {
-                workers = workers.concat("<li>" + k + ' (x' + v + ') </li>');
+            	if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#10ac84;">` + v + `</span></li>`);
+               	else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#10ac84;">` + v + `</span></li>`);
             }
             counter++;
         });
@@ -471,7 +479,7 @@ function TRANSACTIONSupdate() {
             });
         }
 
-        if (hashToBeFound != "") {
+        if (hashToBeFound != "" && hashToBeFound != null) {
             $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
                 // GET TRANSACTION DATA
                 let last = [];
@@ -491,7 +499,7 @@ function TRANSACTIONSupdate() {
                         "<ul><li><i class='fas fa-clock'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
                         "<li><i class='fas fa-user-tie'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>" +
                         "<li><i class='fas fa-receipt'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-                } else if (hashToBeFound != null && transactionFound != true && balanceFound != true) {
+                } else if (hashToBeFound == null && transactionFound != true && balanceFound != true) {
                     document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
                     document.getElementById("transactionstext2").innerHTML = "";
                 }
