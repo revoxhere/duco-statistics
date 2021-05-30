@@ -487,7 +487,7 @@ function APIupdate() {
         document.getElementById("esp8266s").innerHTML = data["Miner distribution"]["ESP8266"];
         document.getElementById("esp32s").innerHTML = Math.round(data["Miner distribution"]["ESP32"] / 2);
         document.getElementById("rpis").innerHTML = Math.round(data["Miner distribution"]["RPi"] / 4);
-        document.getElementById("cpus").innerHTML = Math.round(data["Miner distribution"]["CPU"]);
+        document.getElementById("cpus").innerHTML = Math.round(data["Miner distribution"]["CPU"] / 4);
         document.getElementById("gpus").innerHTML = data["Miner distribution"]["GPU"];
         document.getElementById("others").innerHTML = data["Miner distribution"]["Other"];
 
