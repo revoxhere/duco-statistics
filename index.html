@@ -50,10 +50,6 @@
         /* Monospace font for TXIDs */
         font-family: 'JetBrains Mono', monospace !important;
       }
-      p, span {
-        /* Allow word breaks */
-        word-break: break-all !important; 
-      }
       #workers {
         /* Splitted worker columns */
         columns: 3;
@@ -222,6 +218,48 @@
                             OF THE HASHCHAIN
                         </p>
                     </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="arduinos" style="color:#16a085;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Arduinos</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="esp8266s" style="color:#e74c3c;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">ESP8266s</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="esp32s" style="color:#8e44ad;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">ESP32s</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="rpis" style="color:#ff6b6b;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Raspberry Pis</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="cpus" style="color:#0abde3;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">CPUs</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="gpus" style="color:#2ecc71;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">GPUs</span>
+                    </div>
+                    <div class="column level-item has-text-centered">
+                        <span class="title is-size-4" id="others" style="color:#6c5ce7;">
+                            <bold>0</bold>
+                        </span>
+                        <span class="heading is-size-6">Others</span>
+                    </div>
                 </div>
             </div>
             <div class="columns">
@@ -283,7 +321,7 @@
                                 </button>
                             </div>
                             <p class="subtitle is-size-5 m-5" id="transactionstext1">
-                                Nothing found... (yet!)
+                                Enter something in the search box above to search through the chain
                             </p>
                             <p class="subtitle is-size-6 m-5" id="transactionstext2"></p>
                             <br>
@@ -418,9 +456,9 @@ let ducoUsdPrice = 0.0956;
 let url_string = window.location;
 let url = new URL(url_string);
 let hashToBeFound = url.searchParams.get("search");
-if (hashToBeFound != null) document.getElementById("transactionstext1").innerHTML = "Showing info about:<br><strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
+if (hashToBeFound) document.getElementById("transactionstext1").innerHTML = "Showing search results for: <strong><span class='gradienttext'>" + hashToBeFound + "</strong></span>";
 
-if (hashToBeFound != null) document.getElementById("transactionstext2").innerHTML = "Please wait...";
+if (hashToBeFound) document.getElementById("transactionstext2").innerHTML = "Nothing was found for your query";
 
 function APIupdate() {
     $.getJSON('https://server.duinocoin.com/api.json', function(data) {
@@ -443,11 +481,21 @@ function APIupdate() {
 
         document.getElementById("serverver").innerHTML = "v" + data["Server version"];
         document.getElementById("cpu").innerHTML = Math.round(data["Server CPU usage"]) + "%"
-        document.getElementById("ram").innerHTML = Math.round(data["Server RAM usage"]) + "%";
+        document.getElementById("ram").innerHTML = Math.round(data["Server RAM usage"]) + "% Threads: " + data["Open threads"];
+
+        document.getElementById("arduinos").innerHTML = data["Miner distribution"]["Arduino"];
+        document.getElementById("esp8266s").innerHTML = data["Miner distribution"]["ESP8266"];
+        document.getElementById("esp32s").innerHTML = Math.round(data["Miner distribution"]["ESP32"] / 2);
+        document.getElementById("rpis").innerHTML = Math.round(data["Miner distribution"]["RPi"] / 4);
+        document.getElementById("cpus").innerHTML = Math.round(data["Miner distribution"]["CPU"] / 2);
+        document.getElementById("gpus").innerHTML = data["Miner distribution"]["GPU"];
+        document.getElementById("others").innerHTML = data["Miner distribution"]["Other"];
+
 
         // WORKER LIST
         let workers = "<ul align='left' class='grid-list workers is-size-6'>"
         let counter = 0;
+        let worker_counter = 0;
         $.each(data["Active workers"], function(k, v) {
             if (v >= 32) {
                 if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#eb2f06;">` + v + `</span></li>`);
@@ -465,92 +513,114 @@ function APIupdate() {
                 if (counter % 2 == 0) workers = workers.concat(`<li><a class="block1" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#10ac84;">` + v + `</span></li>`);
                 else workers = workers.concat(`<li><a class="block2" href="?search=` + k + `"> ` + k + `</a><span class="tag" style="color:#10ac84;">` + v + `</span></li>`);
             }
+            worker_counter += v;
             counter++;
         });
         workers = workers.concat("</ul>");
         document.getElementById("workers").innerHTML = workers;
-        document.getElementById("allworkers").innerHTML = "(" + counter + ")";
+        document.getElementById("allworkers").innerHTML = "(" + worker_counter + " miners on " + counter + " accounts)";
     });
 }
 
-function TRANSACTIONSupdate() {
-    $.getJSON('https://server.duinocoin.com/transactions.json', function(data) {
-        // GET TRANSACTION DATA
+function EXPLORERupdate() {
+    $.getJSON('https://server.duinocoin.com/transactions?limit=5&sort=datetime:desc', function(data) {
+        document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
+            "<a class='transaction1 monospace' href='?search=" + data.result[0].hash + "'>" + data.result[0].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction2 monospace' href='?search=" + data.result[1].hash + "'>" + data.result[1].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction3 monospace' href='?search=" + data.result[2].hash + "'>" + data.result[2].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction4 monospace' href='?search=" + data.result[3].hash + "'>" + data.result[3].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction5 monospace' href='?search=" + data.result[4].hash + "'>" + data.result[4].hash.substring(0, 20) + "</a>";
+    })
+    $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
         let last = [];
-        let transactionFound = false;
-        let balanceFound = false;
         for (hash in data) last.push(hash);
 
-        document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
-            "<a class='transaction1 monospace' href='?search=" + last[last.length - 1] + "'>" + last[last.length - 1].substring(0, 20) + "...</a><br>" +
-            "<a class='transaction2 monospace' href='?search=" + last[last.length - 2] + "'>" + last[last.length - 2].substring(0, 20) + "...</a><br>" +
-            "<a class='transaction3 monospace' href='?search=" + last[last.length - 3] + "'>" + last[last.length - 3].substring(0, 20) + "...</a><br>" +
-            "<a class='transaction4 monospace' href='?search=" + last[last.length - 4] + "'>" + last[last.length - 4].substring(0, 20) + "...</a><br>" +
-            "<a class='transaction5 monospace' href='?search=" + last[last.length - 5] + "'>" + last[last.length - 5].substring(0, 20) + "...</a>";
-
-        let found = data[hashToBeFound]
-        if (hashToBeFound != "" && found != "" && found != undefined) {
-            let amountInUsd = found["Amount"].toFixed(4) * ducoUsdPrice;
-            transactionFound = true;
-            document.getElementById("transactionstext2").innerHTML =
-                "<ul><li><i class='fas fa-clock'></i>&nbsp;Transaction timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
-                "<li><i class='fas fa-user-tie'></i>&nbsp;Sender's username: <b>" + found["Sender"] + "</b></li>" +
-                "<li><i class='fas fa-user'></i>&nbsp;Recipient's username: <b>" + found["Recipient"] + "</b></li>" +
-                "<li><i class='fas fa-receipt'></i>&nbsp;Transfered amount: <b>" + found["Amount"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li>" +
-                "<li><i class='fas fa-envelope'></i>&nbsp;Message: <b>" + found["Memo"] + "</b></li></ul>";
-        }
-
-        if (hashToBeFound != "") {
-            $.getJSON('https://server.duinocoin.com/balances.json', function(data) {
-                // GET TRANSACTION DATA
-                let found = data[hashToBeFound]
-
-                if (hashToBeFound != "" && found != "" && found != undefined) {
-                    balanceFound = true;
-                    let amountInUsd = found.substring(0, found.length - 5) * ducoUsdPrice;
-
-                    document.getElementById("transactionstext2").innerHTML =
-                        "<ul><li><i class='fas fa-user-tie'></i>&nbsp;Username: <b>" + hashToBeFound + "</b></li>" +
-                        "<li><i class='fas fa-receipt'></i>&nbsp;Balance: <b>" + data[hashToBeFound] + "</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-                }
-            });
-        }
-
-        if (hashToBeFound != "") {
-            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
-                // GET TRANSACTION DATA
-                let last = [];
-                for (hash in data) last.push(hash);
-
-                document.getElementById("transactionstext4").innerHTML = "<strong>Last blocks:</strong><br>" +
-                    "<a class='block1 monospace' href='?search=" + last[last.length - 1] + "'>" + last[last.length - 1].substring(0, 20) + "...</a><br>" +
-                    "<a class='block2 monospace' href='?search=" + last[last.length - 2] + "'>" + last[last.length - 2].substring(0, 20) + "...</a><br>" +
-                    "<a class='block3 monospace' href='?search=" + last[last.length - 3] + "'>" + last[last.length - 3].substring(0, 20) + "...</a><br>" +
-                    "<a class='block4 monospace' href='?search=" + last[last.length - 4] + "'>" + last[last.length - 4].substring(0, 20) + "...</a><br>" +
-                    "<a class='block5 monospace' href='?search=" + last[last.length - 5] + "'>" + last[last.length - 5].substring(0, 20) + "...</a>";
-
-                let found = data[hashToBeFound]
-                if (hashToBeFound != "" && found != "" && found != undefined) {
-                    let amountInUsd = found["Amount generated"].toFixed(4) * ducoUsdPrice;
-                    document.getElementById("transactionstext2").innerHTML =
-                        "<ul><li><i class='fas fa-clock'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
-                        "<li><i class='fas fa-user-tie'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>" +
-                        "<li><i class='fas fa-receipt'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
-                };
-            });
-
-        } else if (hashToBeFound == null && transactionFound != true && balanceFound != true) {
-            document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
-            document.getElementById("transactionstext2").innerHTML = "";
-        }
+        document.getElementById("transactionstext4").innerHTML = "<strong>Last blocks:</strong><br>" +
+            "<a class='block1 monospace' href='?search=" + last[last.length - 1] + "'>" + last[last.length - 1].substring(0, 20) + "</a><br>" +
+            "<a class='block2 monospace' href='?search=" + last[last.length - 2] + "'>" + last[last.length - 2].substring(0, 20) + "</a><br>" +
+            "<a class='block3 monospace' href='?search=" + last[last.length - 3] + "'>" + last[last.length - 3].substring(0, 20) + "</a><br>" +
+            "<a class='block4 monospace' href='?search=" + last[last.length - 4] + "'>" + last[last.length - 4].substring(0, 20) + "</a><br>" +
+            "<a class='block5 monospace' href='?search=" + last[last.length - 5] + "'>" + last[last.length - 5].substring(0, 20) + "</a>";
     })
 }
 
-APIupdate();
-window.setInterval(APIupdate, 2000); // Refresh statistics every 2s
+function search() {
+    let cont = true;
+    if (cont) {
+        try {
+            $.getJSON('https://server.duinocoin.com/transactions/' + hashToBeFound, function(data) {
 
-window.setTimeout(function() {
-    TRANSACTIONSupdate();
-    window.setInterval(TRANSACTIONSupdate, 5000); // Refresh transactions and blocks every 5s  
-}, 300);
+                if (data.success == true) {
+                    cont = false;
+
+                    let amountInUsd = data.result.amount.toFixed(4) * ducoUsdPrice;
+
+                    document.getElementById("transactionstext2").innerHTML =
+                        "<ul><li><i class='fas fa-fw fa-info-circle' style='color:#27ae60'></i>&nbsp;Type: transaction</li>" +
+                        "<li><i class='fas fa-fw fa-clock' style='color:#2980b9'></i>&nbsp;Timestamp: <b>" + data.result.datetime + "</b> (UTC)</li>" +
+                        "<li><i class='fas fa-fw fa-user-tie' style='color:#8e44ad'></i>&nbsp;Sender's username: <b>" + data.result.sender + "</b></li>" +
+                        "<li><i class='fas fa-fw fa-user' style='color:#e74c3c'></i>&nbsp;Recipient's username: <b>" + data.result.recipient + "</b></li>" +
+                        "<li><i class='fas fa-fw fa-receipt' style='color:#27ae60'></i>&nbsp;Transfered amount: <b>" + data.result.amount.toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li>" +
+                        "<li><i class='fas fa-envelope' style='color:#f39c12'></i>&nbsp;&nbsp;Message: <b>" + data.result.memo + "</b></li></ul>";
+                } else {
+                    document.getElementById("transactionstext2").innerHTML = "No transaction found";
+                }
+            });
+        } catch (e) {
+            //console.log(e);
+        }
+    }
+
+    if (cont) {
+        try {
+            $.getJSON('https://server.duinocoin.com/balances/' + hashToBeFound, function(data) {
+                if (data.success == true) {
+                    cont = false;
+
+                    let amountInUsd = data.result.balance * ducoUsdPrice;
+
+                    document.getElementById("transactionstext2").innerHTML =
+                        "<ul><li><i class='fas fa-fw fa-info-circle' style='color:#27ae60'></i>&nbsp;Type: wallet</li>" +
+                        "<li><i class='fas fa-fw fa-user-tie' style='color:#e74c3c'></i>&nbsp;Username: <b>" + hashToBeFound + "</b></li>" +
+                        "<li><i class='fas fa-fw fa-receipt' style='color:#2980b9'></i>&nbsp;Balance: <b>" + data.result.balance + "</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+                } else {
+                    document.getElementById("transactionstext2").innerHTML = "No user found";
+                }
+            });
+        } catch (e) {
+            //console.log(e);
+        }
+    }
+
+    if (cont) {
+        try {
+            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
+                let found = data[hashToBeFound]
+                if (hashToBeFound != "" && found != "" && found != undefined) {
+                    cont = false;
+
+                    let amountInUsd = found["Amount generated"].toFixed(4) * ducoUsdPrice;
+                    document.getElementById("transactionstext2").innerHTML =
+                        "<ul><li><i class='fas fa-fw fa-info-circle' style='color:#27ae60'></i>&nbsp;Type: block</li>" +
+                        "<li><i class='fas fa-fw fa-clock' style='color:#3498db'></i>&nbsp;Block generation timestamp: <b>" + found["Date"] + " " + found["Time"] + "</b> (UTC)</li>" +
+                        "<li><i class='fas fa-fw fa-user-tie' style='color:#ee5253'></i>&nbsp;Finder's username: <b>" + found["Finder"] + "</b></li>" +
+                        "<li><i class='fas fa-fw fa-receipt' style='color:#ff9f43'></i>&nbsp;Generated amount: <b>" + found["Amount generated"].toFixed(4) + " DUCO</b> (≈" + amountInUsd.toFixed(4) + " USD)</li></ul>";
+                }
+            });
+        } catch (e) {
+            //console.log(e);
+        }
+    } else if (cont) {
+        document.getElementById("transactionstext1").innerHTML = "No data was found for: <strong><br><strong><span class='gradienttext monospace'>" + hashToBeFound + "</strong></span>";
+        document.getElementById("transactionstext2").innerHTML = "";
+    }
+}
+
+APIupdate();
+window.setInterval(APIupdate, 2500); // Refresh statistics every 2.5s
+
+EXPLORERupdate();
+window.setInterval(EXPLORERupdate, 5000); // Refresh statistics every 5s
+
+if (hashToBeFound) search();
 </script>
