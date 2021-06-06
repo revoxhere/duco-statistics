@@ -523,13 +523,13 @@ function APIupdate() {
 }
 
 function EXPLORERupdate() {
-    $.getJSON('https://server.duinocoin.com/transactions?limit=5&sort=datetime:desc', function(data) {
+    $.getJSON('https://server.duinocoin.com/transactions', function(data) {
         document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
-            "<a class='transaction1 monospace' href='?search=" + data.result[0].hash + "'>" + data.result[0].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction2 monospace' href='?search=" + data.result[1].hash + "'>" + data.result[1].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction3 monospace' href='?search=" + data.result[2].hash + "'>" + data.result[2].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction4 monospace' href='?search=" + data.result[3].hash + "'>" + data.result[3].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction5 monospace' href='?search=" + data.result[4].hash + "'>" + data.result[4].hash.substring(0, 20) + "</a>";
+            "<a class='transaction1 monospace' href='?search=" + data.result[data.result.length - 1].hash + "'>" + data.result[data.result.length - 1].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction2 monospace' href='?search=" + data.result[data.result.length - 2].hash + "'>" + data.result[data.result.length - 2].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction3 monospace' href='?search=" + data.result[data.result.length - 3].hash + "'>" + data.result[data.result.length - 3].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction4 monospace' href='?search=" + data.result[data.result.length - 4].hash + "'>" + data.result[data.result.length - 4].hash.substring(0, 20) + "</a><br>" +
+            "<a class='transaction5 monospace' href='?search=" + data.result[data.result.length - 5].hash + "'>" + data.result[data.result.length - 5].hash.substring(0, 20) + "</a>";
     })
     $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
         let last = [];
