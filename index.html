@@ -523,13 +523,17 @@ function APIupdate() {
 }
 
 function EXPLORERupdate() {
-    $.getJSON('https://server.duinocoin.com/transactions', function(data) {
+    $.getJSON('https://server.duinocoin.com/transactions.json', function(data) {
+        hashes = []
+        for (hash in data) {
+            hashes.push(data[hash])
+        }
         document.getElementById("transactionstext3").innerHTML = "<strong>Last transactions:</strong><br>" +
-            "<a class='transaction1 monospace' href='?search=" + data.result[data.result.length - 1].hash + "'>" + data.result[data.result.length - 1].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction2 monospace' href='?search=" + data.result[data.result.length - 2].hash + "'>" + data.result[data.result.length - 2].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction3 monospace' href='?search=" + data.result[data.result.length - 3].hash + "'>" + data.result[data.result.length - 3].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction4 monospace' href='?search=" + data.result[data.result.length - 4].hash + "'>" + data.result[data.result.length - 4].hash.substring(0, 20) + "</a><br>" +
-            "<a class='transaction5 monospace' href='?search=" + data.result[data.result.length - 5].hash + "'>" + data.result[data.result.length - 5].hash.substring(0, 20) + "</a>";
+            "<a class='transaction1 monospace' href='?search=" + hashes[hashes.length - 1]["Hash"] + "'>" + hashes[hashes.length - 1]["Hash"].substring(0, 20) + "</a><br>" +
+            "<a class='transaction2 monospace' href='?search=" + hashes[hashes.length - 2]["Hash"] + "'>" + hashes[hashes.length - 2]["Hash"].substring(0, 20) + "</a><br>" +
+            "<a class='transaction3 monospace' href='?search=" + hashes[hashes.length - 3]["Hash"] + "'>" + hashes[hashes.length - 3]["Hash"].substring(0, 20) + "</a><br>" +
+            "<a class='transaction4 monospace' href='?search=" + hashes[hashes.length - 4]["Hash"] + "'>" + hashes[hashes.length - 4]["Hash"].substring(0, 20) + "</a><br>" +
+            "<a class='transaction5 monospace' href='?search=" + hashes[hashes.length - 5]["Hash"] + "'>" + hashes[hashes.length - 5]["Hash"].substring(0, 20) + "</a>";
     })
     $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
         let last = [];
