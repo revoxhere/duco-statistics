@@ -1,0 +1,298 @@
+.is-primary {
+    /* Override Bulmas primary color to Duco-Colored gradient*/
+    background: linear-gradient(135deg, #e74c3c, #f39c12) !important;
+}
+
+.gradienttext {
+    /* Gradient text */
+    background: -webkit-linear-gradient(135deg, #C56CD6, #3425AF) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: #EA2027 !important;
+}
+
+.monospace {
+    /* Monospace font for TXIDs */
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+@media (max-width: 768px) {
+    #workers {
+        /* Splitted worker columns */
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        overflow: hidden;
+    }
+}
+
+
+@media (min-width: 768px) {
+    #workers {
+        /* Splitted worker columns */
+        columns: 6;
+        -webkit-columns: 6;
+        -moz-columns: 6;
+        overflow: hidden;
+    }
+}
+
+img {
+    image-rendering: -moz-crisp-edges;
+    /* Firefox */
+    image-rendering: -o-crisp-edges;
+    /* Opera */
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE (non-standard property) */
+}
+
+.block1,
+.block3,
+.block5,
+.transaction2,
+.transaction4 {
+    color: #5f27cd;
+}
+
+.block2,
+.block4,
+.transaction1,
+.transacion3,
+.transaction5 {
+    color: #0984e3;
+}
+
+.card-orange {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #f2d50f 0%, #da0641 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+#workers {
+    max-height: 50em;
+    overflow: auto;
+}
+
+.card-green {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #b1ea4d 0%, #459522 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-blue {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-purple {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #C56CD6 0%, #3425AF 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-turquoise {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-red {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #F5515F 0%, #A1051D 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-grey {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #313131 0%, #534d4d 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-red-two {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #C51A4A 0%, #BC1142 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.card-pomegrante {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #F36265 0%, #961276 100%);
+    height: 1.75em !important;
+    width: 1.75em !important;
+    color: white;
+}
+
+.ducos1_indicator {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: #0984e3 !important;
+    width: 5em !important;
+    color: white;
+}
+
+.xxhash_indicator {
+    top: 0.15em;
+    position: relative;
+    padding: 0.3em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    background: #5f27cd !important;
+    width: 5em !important;
+    color: white;
+}
+
+
+.modal {
+    animation: fadeIn 0.2s;
+    -webkit-animation: fadeIn 0.2s;
+    -moz-animation: fadeIn 0.2s;
+    -o-animation: fadeIn 0.2s;
+    -ms-animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #636e72;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2d3436;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
