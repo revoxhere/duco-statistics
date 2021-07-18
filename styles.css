@@ -296,3 +296,24 @@ img {
         background: #555;
     }
 }
+
+.scale-in {
+    -webkit-animation-name: scaleIn;
+            animation-name: scaleIn;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+}
+
+@-webkit-keyframes scaleIn {
+  from {-webkit-transform: scale(0);transform: scale(0);}
+  to {-webkit-transform: scale(1);transform: scale(1);}
+}
+
+@keyframes scaleIn {
+  from {-webkit-transform: scale(0);transform: scale(0);}
+  to {-webkit-transform: scale(1);transform: scale(1);}
+}
+
+.modal-background {
+    background-color: rgba(0, 0, 0, .4) !important;
+}
