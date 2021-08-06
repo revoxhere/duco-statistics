@@ -947,12 +947,12 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://cors.bridged.cc/http://149.91.88.18:6001/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6001/statistics")
         .then(response => response.json())
         .then(data => {
             update_element("pulse_connections", data["connections"]);
-            update_element("pulse_cpu", round_to(1, data["cpu"]) + "%");
-            update_element("pulse_ram", round_to(1, data["ram"]) + "%");
+            update_element("pulse_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
+            update_element("pulse_ram", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
 
