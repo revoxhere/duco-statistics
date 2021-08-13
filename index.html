@@ -457,7 +457,7 @@
                                             <i class="fa fa-fw fa-microchip"></i>
                                             CPU:
                                             <b>
-                                                <span id="pulse_cpu">
+                                                <span id="pulse_cpu2">
                                                     ...
                                                 </span>
                                             </b>
@@ -468,7 +468,7 @@
                                             <i class="fa fa-fw fa-memory"></i>
                                             RAM:
                                             <b>
-                                                <span id="pulse_ram">
+                                                <span id="pulse_ram2">
                                                     ...
                                                 </span>
                                             </b>
@@ -479,9 +479,20 @@
                                     <div class="column is-half">
                                         <span class="subtitle is-size-6">
                                             <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS:
+                                            CLIENTS (1):
                                             <b>
-                                                <span id="pulse_connections">
+                                                <span id="pulse_connections1">
+                                                    ...
+                                                </span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                    <div class="column is-half">
+                                        <span class="subtitle is-size-6">
+                                            <i class="fa fa-fw fa-code-branch"></i>
+                                            CLIENTS (2):
+                                            <b>
+                                                <span id="pulse_connections2">
                                                     ...
                                                 </span>
                                             </b>
@@ -950,9 +961,15 @@ function pulse_update() {
     fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6001/statistics")
         .then(response => response.json())
         .then(data => {
-            update_element("pulse_connections", data["connections"]);
-            update_element("pulse_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("pulse_ram", round_to(1, parseFloat(data["ram"])) + "%");
+            update_element("pulse_connections1", data["connections"]);
+        })
+
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6003/statistics")
+        .then(response => response.json())
+        .then(data => {
+            update_element("pulse_connections2", data["connections"]);
+            update_element("pulse_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
+            update_element("pulse_ram2", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
 
