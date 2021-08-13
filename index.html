@@ -385,13 +385,31 @@
                     <div class="panel-block">
                         <div class="columns is-multiline">
                             <div class="column is-full">
-                                <p class="title">
-                                    <i class="is-size-7 card-orange fa fa-server"></i>
-                                    <span class="title is-size-5">
-                                        MASTER SERVER
-                                    </span>
-                                    <br>
-                                </p>
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p class="pb-1" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                            <b>MASTER</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (3 cores)<br>
+                                                <b>RAM</b>: 4 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 40 GB SSD<br>
+                                                <b>Provider</b>: Scaleway (DEV-1M)<br>
+                                                <b>Purpose</b>: The master node that processes transactions,
+                                                stores user wallets, and provides API functions. If there are no
+                                                other nodes available, it can also handle the miners.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="columns">
                                     <div class="column is-half">
                                         <p class="subtitle is-size-6">
@@ -442,15 +460,31 @@
                                 </div>
                             </div>
                             <div class="column is-full">
-                                <p class="title">
-                                    <i class="is-size-7 card-green fa fa-server"></i>
-                                    <span class="title is-size-5">
-                                        <a href="http://149.91.88.18:6001">
-                                            PULSE POOL
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <a href="http://149.91.88.18:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                            <b>PULSE POOL</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
                                         </a>
-                                    </span>
-                                    <br>
-                                </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
+                                                <b>RAM</b>: 4 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 40 GB SSD<br>
+                                                <b>Provider</b>: PulseHeberg<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
                                 <div class="columns">
                                     <div class="column is-half">
                                         <span class="subtitle is-size-6">
@@ -501,14 +535,10 @@
                                 </div>
                             </div>
                             <div class="column is-full">
-                                <p class="title">
-                                    <i class="is-size-7 card-purple fa fa-server"></i>
-                                    <span class="title is-size-5">
-                                        MORE NODES
-                                    </span>
-                                    <br>
-                                </p>
-                                <div class="columns">
+                                <i class="is-size-7 card-purple fa fa-server"></i>&nbsp;
+                                <b>MORE NODES</b>
+                                <br>
+                                <div class="columns mt-1">
                                     <div class="column is-half">
                                         <span class="subtitle is-size-6">
                                             <i class="fa fa-fw fa-question"></i>
