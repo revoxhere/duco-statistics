@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <html lang="en">
-    <title>Duino-Coin | Network</title>
-    <link rel="icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png" />
-    <link rel="shortcut icon" href="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" type="image/png" />
+    <title>Duino-Coin | Network statistics</title>
+    <link rel="icon" href="assets/stats.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/stats.png" type="image/png" />
     <meta name="description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
     <meta name="keywords" content="duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
     <link rel="canonical" href="https://duinocoin.com" />
@@ -18,24 +18,22 @@
     <meta property="og:site" content="duinocoin.com" />
     <meta property="og:title" content="Duino-Coin | Network" />
     <meta property="og:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything." />
-    <meta property="og:image" content="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true" />
+    <meta property="og:image" content="assets/stats.png" />
     <meta property="og:url" content="https://duinocoin.com" />
     <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="Duino-Coin | Network">
     <meta name="twitter:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
-    <meta name="twitter:image" content="https://github.com/revoxhere/duino-coin/blob/master/Resources/explorer.png?raw=true">
+    <meta name="twitter:image" content="assets/stats.png">
     <meta name="twitter:site" content="@DuinoCoin">
     <meta name="twitter:creator" content="@DuinoCoin">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.0.0/dist/bulma-divider.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Imports -->
+    <link rel="stylesheet" type="text/css" href="assets/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bulma-prefers-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bulma-pageloader.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="assets/fontawesome.js"></script>
+    <script src="assets/jquery.min.js"></script>
 </head>
 
 <body>
@@ -45,8 +43,8 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://duinocoin.com">
-                <img src="/assets/duco.svg" height="172">
-                &nbsp;&nbsp;&nbsp;Home
+                <img src="assets/duco.svg" height="172">
+                &nbsp;Home
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarDuinoCoin">
                 <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
@@ -63,8 +61,14 @@
                 <a class="navbar-item" href="https://duinocoin.com/donate.html">
                     <i class="fas fa-heart" style="color:#ee5253;"></i>&nbsp;Donate
                 </a>
+                <a class="navbar-item" href="https://duinocoin.com/team.html">
+                    <i class="fas fa-user" style="color:#eb2f06;"></i>&nbsp;Our Team
+                </a>
+                <a class="navbar-item" href="https://duinocoin.com/apps.html">
+                    <i class="fas fa-lightbulb" style="color:#ED4C67;"></i>&nbsp;Apps
+                </a>
                 <a class="navbar-item" href="https://duinocoin.com/contact.html">
-                    <i class="fas fa-user" style="color:#eb2f06;"></i>&nbsp;Our Team/Contact
+                    <i class="fas fa-envelope" style="color:#B53471;"></i>&nbsp;Contact Us
                 </a>
             </div>
             <div class="navbar-end">
