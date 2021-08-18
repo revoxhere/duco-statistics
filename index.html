@@ -592,20 +592,9 @@
                                     <div class="column is-half">
                                         <span class="subtitle is-size-6">
                                             <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS (1):
+                                            CLIENTS:
                                             <b>
                                                 <span id="star_connections1">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS (2):
-                                            <b>
-                                                <span id="star_connections2">
                                                     ...
                                                 </span>
                                             </b>
@@ -1083,7 +1072,7 @@ function pulse_update() {
 }
     
 function star_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90/:6001/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90:6001/statistics")
         .then(response => response.json())
         .then(data => {
             update_element("star_connections2", data["connections"]);
