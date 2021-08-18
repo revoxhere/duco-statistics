@@ -539,6 +539,81 @@
                                 </div>
                             </div>
                             <div class="column is-full">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                            <b>STAR POOL</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: UNKNOWN<br>
+                                                <b>RAM</b>: UNKNOWN<br>
+                                                <b>OS</b>: UNKNOWN<br>
+                                                <b>Storage</b>: UNKNOWN<br>
+                                                <b>Provider</b>: UNKNOWN<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <span class="subtitle is-size-6">
+                                            <i class="fa fa-fw fa-microchip"></i>
+                                            CPU:
+                                            <b>
+                                                <span id="star_cpu2">
+                                                    ...
+                                                </span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                    <div class="column is-half">
+                                        <span class="subtitle is-size-6">
+                                            <i class="fa fa-fw fa-memory"></i>
+                                            RAM:
+                                            <b>
+                                                <span id="star_ram2">
+                                                    ...
+                                                </span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <span class="subtitle is-size-6">
+                                            <i class="fa fa-fw fa-code-branch"></i>
+                                            CLIENTS (1):
+                                            <b>
+                                                <span id="star_connections1">
+                                                    ...
+                                                </span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                    <div class="column is-half">
+                                        <span class="subtitle is-size-6">
+                                            <i class="fa fa-fw fa-code-branch"></i>
+                                            CLIENTS (2):
+                                            <b>
+                                                <span id="star_connections2">
+                                                    ...
+                                                </span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-full">
                                 <i class="is-size-7 card-purple fa fa-server"></i>&nbsp;
                                 <b>MORE NODES</b>
                                 <br>
@@ -1006,9 +1081,22 @@ function pulse_update() {
             update_element("pulse_ram2", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
+    
+function star_update() {
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90/:6001/statistics")
+        .then(response => response.json())
+        .then(data => {
+            update_element("star_connections2", data["connections"]);
+            update_element("star_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
+            update_element("star_ram2", round_to(1, parseFloat(data["ram"])) + "%");
+        })
+}
 
 pulse_update();
 window.setInterval(pulse_update, 7500); // Refresh every 7.5s because we use a proxy
+    
+star_update();
+window.setInterval(star_update, 7500); // Refresh every 7.5s because we use a proxy
 
 update_stats();
 window.setInterval(update_stats, 2500); // Refresh every 2.5s
