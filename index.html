@@ -866,9 +866,18 @@ function update_stats() {
                 let workers = `<ul class="workers">`
                 let counter = 0;
                 let worker_counter = 0;
+                let sorted_workers = [];
                 for (worker in data["Active workers"]) {
-                    workers += `<li><a href="?search=` + worker + `"> ` + worker + `</a>&nbsp;<span class="tag">` + data["Active workers"][worker] + ` worker(s)</span></li>`;
-                    worker_counter += data["Active workers"][worker];
+                    sorted_workers.push({
+                        "User": worker,
+                        "Miners": data["Active workers"][worker]
+                    })
+                }
+                sorted_workers.sort((a, b) => b.Miners - a.Miners);
+                for (let i = 0; i < sorted_workers.length; i++) {
+                    let worker = sorted_workers[i];
+                    workers += `<li><a href="?search=` + worker.User + `"> ` + worker.User + `</a>&nbsp;<span class="tag">` + worker.Miners + ` worker(s)</span></li>`;
+                    worker_counter += worker.Miners;
                     counter++;
                     //if (counter > 100) break;
                 }
