@@ -1108,13 +1108,13 @@ function star_update() {
 }
 
 function winner_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180/statistics.json")
+    fetch("http://193.164.7.180/statistics.json")
         .then(response => response.json())
         .then(data => {
             update_element("winner_connections", data["connections"]);
         })
 
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180/statistics_2.json")
+    fetch("http://193.164.7.180/statistics_2.json")
         .then(response => response.json())
         .then(data => {
             update_element("winner_connections2", data["connections"]);
