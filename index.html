@@ -1108,18 +1108,18 @@ function star_update() {
 }
 
 function winner_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://193.164.7.180/statistics.json")
         .then(response => response.json())
         .then(data => {
-            update_element("winner_connections", data["connections"]);
+            update_element("winner_connections", data["contents"]["connections"]);
         })
 
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180/statistics_2.json")
+    fetch("https://api.allorigins.win/get?url=http://193.164.7.180/statistics_2.json")
         .then(response => response.json())
         .then(data => {
             update_element("winner_connections2", data["connections"]);
-            update_element("winner_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("winner_ram", round_to(1, parseFloat(data["ram"])) + "%");
+            update_element("winner_cpu", round_to(1, parseFloat(data["contents"]["cpu"])) + "%");
+            update_element("winner_ram", round_to(1, parseFloat(data["contents"]["ram"])) + "%");
         })
 }
 
