@@ -1082,7 +1082,7 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6003")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18/statistics_2.json")
         .then(response => response.json())
         .then(data => {
             update_element("pulse_connections1", data["connections"]);
