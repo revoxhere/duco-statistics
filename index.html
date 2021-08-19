@@ -299,8 +299,8 @@
                 </div>
             </div>
         </div>
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-multiline">
+            <div class="column is-half">
                 <div class="columns is-full is-multiline">
                     <!-- EXPLORER -->
                     <div class="column">
@@ -343,7 +343,7 @@
                 </div>
             </div>
             <!-- CHARTS -->
-            <div class="column">
+            <div class="column is-half">
                 <div class="panel">
                     <p class="panel-heading heading">
                         <i class="is-size-7 card-red fa fa-chart-pie"></i>
@@ -352,24 +352,22 @@
                             (click to enlarge)
                         </span>
                     </p>
-                    <div class="columns">
-                        <div class="column is-half">
+                    <div class="columns is-multiline">
+                        <div class="column">
                             <div class="panel-block">
                                 <a onclick="enlarge_prices()">
                                     <img src="https://server.duinocoin.com/prices.png">
                                 </a>
                             </div>
                         </div>
-                        <div class="column is-half">
+                        <div class="column">
                             <div class="panel-block">
                                 <a onclick="enlarge_miners()">
                                     <img src="https://server.duinocoin.com/minerchart.png">
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column is-half">
+                        <div class="column">
                             <div class="panel-block">
                                 <a onclick="enlarge_balances()">
                                     <img src="https://server.duinocoin.com/balancechart.png">
@@ -380,394 +378,349 @@
                 </div>
             </div>
             <!-- NODES -->
-            <div class="column">
+            <div class="column is-full mt-3">
                 <div class="panel">
                     <p class="panel-heading heading">
-                        <i class="is-size-7 fa fa-database card-blue"></i>
+                        <i class="is-size-7 fa fa-database card-orange"></i>
                         NODES
                     </p>
-                    <div class="panel-block">
-                        <div class="columns is-multiline">
-                            <div class="column is-full">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
-                                        <p class="pb-1" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
-                                            <b>MASTER</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
+                    <div class="columns m-1">
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <p class="pb-1" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                        <b>MASTER</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (4 cores)<br>
+                                            <b>RAM</b>: 8 GB<br>
+                                            <b>OS</b>: Debian 10 Buster<br>
+                                            <b>Storage</b>: 40 GB SSD<br>
+                                            <b>Provider</b>: Scaleway (DEV-1L)<br>
+                                            <b>Purpose</b>: The master node that processes transactions,
+                                            stores user wallets, and provides API functions. If there are no
+                                            other nodes available, it can also handle the miners.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <p class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU:
+                                        <p class="subtitle" id="master_cpu">
+                                            ...
                                         </p>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (4 cores)<br>
-                                                <b>RAM</b>: 8 GB<br>
-                                                <b>OS</b>: Debian 10 Buster<br>
-                                                <b>Storage</b>: 40 GB SSD<br>
-                                                <b>Provider</b>: Scaleway (DEV-1L)<br>
-                                                <b>Purpose</b>: The master node that processes transactions,
-                                                stores user wallets, and provides API functions. If there are no
-                                                other nodes available, it can also handle the miners.
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </p>
                                 </div>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <p class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-microchip"></i>
-                                            CPU:
-                                            <b>
-                                                <span id="master_cpu">
-                                                    ...
-                                                </span>
-                                            </b>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM:
+                                        <p class="subtitle" id="master_ram">
+                                            ...
                                         </p>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-memory"></i>
-                                            RAM:
-                                            <b>
-                                                <span id="master_ram">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS:
-                                            <b>
-                                                <span id="master_connections">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-th"></i>
-                                            THREADS:
-                                            <b>
-                                                <span id="master_threads">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="column is-full">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
-                                        <a href="http://149.91.88.18:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
-                                            <b>PULSE POOL</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
-                                                <b>RAM</b>: 4 GB<br>
-                                                <b>OS</b>: Debian 10 Buster<br>
-                                                <b>Storage</b>: 40 GB SSD<br>
-                                                <b>Provider</b>: PulseHeberg<br>
-                                                <b>Purpose</b>: Miners get jobs from this node.
-                                                The node periodicaly syncs data with the master node
-                                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS:
+                                        <p class="subtitle" id="master_connections">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-th"></i>
+                                        THREADS:
+                                        <p class="subtitle" id="master_threads">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <a href="http://149.91.88.18:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-red fa fa-heart"></i>&nbsp;
+                                        <b>PULSE POOL</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
+                                            <b>RAM</b>: 4 GB<br>
+                                            <b>OS</b>: Debian 10 Buster<br>
+                                            <b>Storage</b>: 40 GB SSD<br>
+                                            <b>Provider</b>: PulseHeberg<br>
+                                            <b>Purpose</b>: Miners get jobs from this node.
+                                            The node periodicaly syncs data with the master node
                                         </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-microchip"></i>
-                                            CPU:
-                                            <b>
-                                                <span id="pulse_cpu2">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-memory"></i>
-                                            RAM:
-                                            <b>
-                                                <span id="pulse_ram2">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU:
+                                        <p class="subtitle" id="pulse_cpu2">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS (1):
-                                            <b>
-                                                <span id="pulse_connections1">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS (2):
-                                            <b>
-                                                <span id="pulse_connections2">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM:
+                                        <p class="subtitle" id="pulse_ram2">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="column is-full">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
-                                        <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
-                                            <b>STAR POOL</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (1 core)<br>
-                                                <b>RAM</b>: 1 GB<br>
-                                                <b>OS</b>: Debian 10 Buster<br>
-                                                <b>Storage</b>: 10 GB<br>
-                                                <b>Provider</b>: Scaleway (Stardust)<br>
-                                                <b>Purpose</b>: Miners get jobs from this node.
-                                                The node periodicaly syncs data with the master node
-                                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS (1):
+                                        <p class="subtitle" id="pulse_connections1">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS (2):
+                                        <p class="subtitle" id="pulse_connections2">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-orange fa fa-star"></i>&nbsp;
+                                        <b>STAR POOL</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (1 core)<br>
+                                            <b>RAM</b>: 1 GB<br>
+                                            <b>OS</b>: Debian 10 Buster<br>
+                                            <b>Storage</b>: 10 GB<br>
+                                            <b>Provider</b>: Scaleway (Stardust)<br>
+                                            <b>Purpose</b>: Miners get jobs from this node.
+                                            The node periodicaly syncs data with the master node
                                         </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-microchip"></i>
-                                            CPU:
-                                            <b>
-                                                <span id="star_cpu">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-memory"></i>
-                                            RAM:
-                                            <b>
-                                                <span id="star_ram">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                            </div>
+                            <br>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU:
+                                        <p class="subtitle" id="star_cpu">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS:
-                                            <b>
-                                                <span id="star_connections">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM:
+                                        <p class="subtitle" id="star_ram">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="column is-full">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
-                                        <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
-                                            <b>WINNER POOL</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: Intel Xeon X5670 @ 2.9 GHz (4 cores)<br>
-                                                <b>RAM</b>: 2 GB<br>
-                                                <b>OS</b>: Debian 10 Buster<br>
-                                                <b>Storage</b>: 40 GB<br>
-                                                <b>Provider</b>: @Maxteal#8376<br>
-                                                <b>Purpose</b>: Miners get jobs from this node.
-                                                The node periodicaly syncs data with the master node
-                                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS:
+                                        <p class="subtitle" id="star_connections">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-turquoise fa fa-trophy"></i>&nbsp;
+                                        <b>WINNER POOL</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: Intel Xeon X5670 @ 2.9 GHz (4 cores)<br>
+                                            <b>RAM</b>: 2 GB<br>
+                                            <b>OS</b>: Debian 10 Buster<br>
+                                            <b>Storage</b>: 40 GB<br>
+                                            <b>Provider</b>: @Maxteal#8376<br>
+                                            <b>Purpose</b>: Miners get jobs from this node.
+                                            The node periodicaly syncs data with the master node
                                         </div>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-microchip"></i>
-                                            CPU:
-                                            <b>
-                                                <span id="winner_cpu">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-memory"></i>
-                                            RAM:
-                                            <b>
-                                                <span id="winner_ram">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                            </div>
+                            <br>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU:
+                                        <p class="subtitle" id="winner_cpu">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-code-branch"></i>
-                                            CLIENTS:
-                                            <b>
-                                                <span id="winner_connections">
-                                                    ...
-                                                </span>
-                                            </b>
-                                        </span>
-                                    </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM:
+                                        <p class="subtitle" id="winner_ram">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="column is-full">
-                                <i class="is-size-7 card-purple fa fa-server"></i>&nbsp;
-                                <b>MORE NODES</b>
-                                <br>
-                                <div class="columns mt-1">
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fa fa-fw fa-question"></i>
-                                            Coming soon
-                                        </span>
-                                    </div>
-                                    <div class="column is-half">
-                                        <span class="subtitle is-size-6">
-                                            <i class="fab fa-fw fa-github"></i>
-                                            Apply on
-                                            <a href="https://github.com/revoxhere/duino-coin/issues">
-                                                GitHub
-                                            </a>
-                                        </span>
-                                    </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS (1):
+                                        <p class="subtitle" id="winner_connections">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS (2):
+                                        <p class="subtitle" id="winner_connections2">
+                                            ...
+                                        </p>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ACTIVE WORKERS -->
-        <div class="column is-full">
-            <div class="panel">
-                <p class="panel-heading">
-                    <i class="is-size-7 card-purple fa fa-users"></i>
-                    ACTIVE WORKERS
-                    <span class="title is-size-6 has-text-grey" id="allworkers">
-                        (not loaded by default)
-                    </span>
-                </p>
-                <div class="panel-block">
-                    <span id="workers" class="subtitle is-size-6">
-                        <button id="loadworkers" class="button is-info" onclick="start_loading_workers()">
-                            Load all workers
-                        </button>
-                    </span>
+            <!-- ACTIVE WORKERS -->
+            <div class="column is-full">
+                <div class="panel">
+                    <p class="panel-heading">
+                        <i class="is-size-7 card-purple fa fa-users"></i>
+                        ACTIVE WORKERS
+                        <span class="title is-size-6 has-text-grey" id="allworkers">
+                            (not loaded by default)
+                        </span>
+                    </p>
+                    <div class="panel-block">
+                        <span id="workers" class="subtitle is-size-6">
+                            <button id="loadworkers" class="button is-info" onclick="start_loading_workers()">
+                                Load all workers
+                            </button>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="large_prices" class="modal scale-in">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head has-background-success">
-                <p class="modal-card-title"><b style="color: white">DUCO price chart</b></p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="content">
-                    <img src="https://server.duinocoin.com/prices.png">
-                </div>
-            </section>
+        <div id="large_prices" class="modal scale-in">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-success">
+                    <p class="modal-card-title"><b style="color: white">DUCO price chart</b></p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <img src="https://server.duinocoin.com/prices.png">
+                    </div>
+                </section>
+            </div>
         </div>
-    </div>
-    <div id="large_miners" class="modal scale-in">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head has-background-success">
-                <p class="modal-card-title"><b style="color: white">Most popular miners</b></p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="content">
-                    <img src="https://server.duinocoin.com/minerchart.png">
-                </div>
-            </section>
+        <div id="large_miners" class="modal scale-in">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-success">
+                    <p class="modal-card-title"><b style="color: white">Most popular miners</b></p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <img src="https://server.duinocoin.com/minerchart.png">
+                    </div>
+                </section>
+            </div>
         </div>
-    </div>
-    <div id="large_balances" class="modal scale-in">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head has-background-success">
-                <p class="modal-card-title"><b style="color: white">Account rich list</b></p>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="content">
-                    <img src="https://server.duinocoin.com/balancechart.png">
-                </div>
-            </section>
+        <div id="large_balances" class="modal scale-in">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-success">
+                    <p class="modal-card-title"><b style="color: white">Account rich list</b></p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="content">
+                        <img src="https://server.duinocoin.com/balancechart.png">
+                    </div>
+                </section>
+            </div>
         </div>
-    </div>
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Duino-Coin Website</strong> (v3) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021 from the <b>Duino</b> team
-                <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
-                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
-                <a href="https://bulma.io">
-                    <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="188" height="84">
-                </a>
-            </p>
-        </div>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Duino-Coin Website</strong> (v3) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021 from the <b>Duino</b> team
+                    <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
+                    <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="188" height="84">
+                    </a>
+                </p>
+            </div>
+        </footer>
 </body>
 
 </html>
@@ -1120,7 +1073,7 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6001/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:5998/statistics")
         .then(response => response.json())
         .then(data => {
             update_element("pulse_connections1", data["connections"]);
@@ -1134,7 +1087,7 @@ function pulse_update() {
             update_element("pulse_ram2", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
-    
+
 function star_update() {
     fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90:6001/statistics")
         .then(response => response.json())
@@ -1144,12 +1097,18 @@ function star_update() {
             update_element("star_ram", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
-    
+
 function winner_update() {
     fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180:6001/statistics")
         .then(response => response.json())
         .then(data => {
             update_element("winner_connections", data["connections"]);
+        })
+
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://193.164.7.180:6003/statistics")
+        .then(response => response.json())
+        .then(data => {
+            update_element("winner_connections2", data["connections"]);
             update_element("winner_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
             update_element("winner_ram", round_to(1, parseFloat(data["ram"])) + "%");
         })
@@ -1157,10 +1116,10 @@ function winner_update() {
 
 pulse_update();
 window.setInterval(pulse_update, 7500); // Refresh every 7.5s because we use a proxy
-    
+
 star_update();
 window.setInterval(star_update, 7500); // Refresh every 7.5s because we use a proxy
-    
+
 winner_update();
 window.setInterval(winner_update, 7500); // Refresh every 7.5s because we use a proxy
 
