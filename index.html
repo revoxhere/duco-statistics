@@ -1082,13 +1082,13 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:5998/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6003")
         .then(response => response.json())
         .then(data => {
             update_element("pulse_connections1", data["connections"]);
         })
 
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18:6003/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18/statistics.json")
         .then(response => response.json())
         .then(data => {
             update_element("pulse_connections2", data["connections"]);
