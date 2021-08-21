@@ -388,8 +388,8 @@
                         <div class="column">
                             <div class="dropdown is-hoverable">
                                 <div class="dropdown-trigger mb-3">
-                                    <p class="pb-1" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                    <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-green fa fa-heart"></i>&nbsp;
                                         <b>MASTER</b>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -413,13 +413,13 @@
                             </div>
                             <div class="columns">
                                 <div class="column is-half">
-                                    <p class="title is-size-6">
+                                    <span class="title is-size-6">
                                         <i class="fa fa-fw fa-microchip"></i>
                                         CPU:
                                         <p class="subtitle" id="master_cpu">
                                             ...
                                         </p>
-                                    </p>
+                                    </span>
                                 </div>
                                 <div class="column is-half">
                                     <span class="title is-size-6">
@@ -457,7 +457,7 @@
                                 <div class="dropdown-trigger mb-3">
                                     <a href="http://149.91.88.18:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
                                         <i class="is-size-7 card-red fa fa-heart"></i>&nbsp;
-                                        <b>PULSE POOL</b>
+                                        <b>PULSE</b>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                                         </span>
@@ -522,8 +522,8 @@
                             <div class="dropdown is-hoverable">
                                 <div class="dropdown-trigger mb-3">
                                     <a href="http://51.158.182.90:6001/" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-orange fa fa-star"></i>&nbsp;
-                                        <b>STAR POOL</b>
+                                        <i class="is-size-7 card-turquoise fa fa-star"></i>&nbsp;
+                                        <b>STAR</b>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                                         </span>
@@ -579,9 +579,9 @@
                         <div class="column">
                             <div class="dropdown is-hoverable">
                                 <div class="dropdown-trigger mb-3">
-                                    <a href="http://193.164.7.180:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-turquoise fa fa-trophy"></i>&nbsp;
-                                        <b>WINNER POOL</b>
+                                    <a href="https://beyondpool.io" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-orange fa fa-trophy"></i>&nbsp;
+                                        <b>WINNER</b>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                                         </span>
@@ -637,6 +637,64 @@
                                         <i class="fa fa-fw fa-code-branch"></i>
                                         CLIENTS (2):
                                         <p class="subtitle" id="winner_connections2">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <a href="http://193.164.7.180:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-blue fa fa-rocket"></i>&nbsp;
+                                        <b>BEYOND</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: Intel Xeon E5-2676 @ 2.4 GHz (1 core)<br>
+                                            <b>RAM</b>: 2 GB<br>
+                                            <b>OS</b>: Ubuntu 18.04<br>
+                                            <b>Storage</b>: 60 GB<br>
+                                            <b>Provider</b>: @Beyondtoshi#0001<br>
+                                            <b>Purpose</b>: Miners get jobs from this node.
+                                            The node periodicaly syncs data with the master node
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU:
+                                        <p class="subtitle" id="beyond_cpu">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM:
+                                        <p class="subtitle" id="beyond_ram">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS:
+                                        <p class="subtitle" id="beyond_connections">
                                             ...
                                         </p>
                                     </span>
@@ -1125,6 +1183,17 @@ function winner_update() {
         })
 }
 
+function beyond_update() {
+    fetch("https://api.allorigins.win/get?url=http://beyondpool.io/statistics.json")
+        .then(response => response.json())
+        .then(data => {
+            data = JSON.parse(data["contents"]);
+            update_element("beyond_connections", data["connections"]);
+            update_element("beyond_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
+            update_element("beyond_ram", round_to(1, parseFloat(data["ram"])) + "%");
+        })
+}
+
 pulse_update();
 window.setInterval(pulse_update, 7500); // Refresh every 7.5s because we use a proxy
 
@@ -1133,6 +1202,9 @@ window.setInterval(star_update, 7500); // Refresh every 7.5s because we use a pr
 
 winner_update();
 window.setInterval(winner_update, 7500); // Refresh every 7.5s because we use a proxy
+
+beyond_update();
+window.setInterval(beyond_update, 7500); // Refresh every 7.5s because we use a proxy
 
 update_stats();
 window.setInterval(update_stats, 2500); // Refresh every 2.5s
