@@ -1098,7 +1098,7 @@ function pulse_update() {
 }
 
 function star_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90:6001/statistics")
+    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90/statistics.json")
         .then(response => response.json())
         .then(data => {
             update_element("star_connections", data["connections"]);
