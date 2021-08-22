@@ -1140,15 +1140,17 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18/statistics_2.json")
+    fetch("https://api.allorigins.win/get?url=hhttp://149.91.88.18/statistics_2.json")
         .then(response => response.json())
         .then(data => {
+            data = JSON.parse(data["contents"]);
             update_element("pulse_connections1", data["connections"]);
         })
 
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://149.91.88.18/statistics.json")
+    fetch("https://api.allorigins.win/get?url=hhttp://149.91.88.18/statistics.json")
         .then(response => response.json())
         .then(data => {
+            data = JSON.parse(data["contents"]);
             update_element("pulse_connections2", data["connections"]);
             update_element("pulse_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
             update_element("pulse_ram2", round_to(1, parseFloat(data["ram"])) + "%");
@@ -1156,9 +1158,10 @@ function pulse_update() {
 }
 
 function star_update() {
-    fetch("https://api.codetabs.com/v1/proxy?quest=http://51.158.182.90/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://51.158.182.90/statistics.json")
         .then(response => response.json())
         .then(data => {
+            data = JSON.parse(data["contents"]);
             update_element("star_connections", data["connections"]);
             update_element("star_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
             update_element("star_ram", round_to(1, parseFloat(data["ram"])) + "%");
