@@ -673,7 +673,7 @@
                                 <div class="column is-half">
                                     <span class="title is-size-6">
                                         <i class="fa fa-fw fa-microchip"></i>
-                                        CPU:
+                                        CPU (1):
                                         <p class="subtitle" id="beyond_cpu">
                                             ...
                                         </p>
@@ -682,8 +682,28 @@
                                 <div class="column is-half">
                                     <span class="title is-size-6">
                                         <i class="fa fa-fw fa-memory"></i>
-                                        RAM:
+                                        RAM (1):
                                         <p class="subtitle" id="beyond_ram">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-microchip"></i>
+                                        CPU (2):
+                                        <p class="subtitle" id="beyond_cpu2">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-memory"></i>
+                                        RAM (2):
+                                        <p class="subtitle" id="beyond_ram2">
                                             ...
                                         </p>
                                     </span>
@@ -1210,6 +1230,8 @@ function beyond_update() {
         .then(data => {
             data = JSON.parse(data["contents"]);
             update_element("beyond_connections2", data["connections"]);
+            update_element("beyond_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
+            update_element("beyond_ram2", round_to(1, parseFloat(data["ram"])) + "%");
         })
 }
 
