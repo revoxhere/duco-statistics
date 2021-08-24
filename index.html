@@ -699,6 +699,15 @@
                                         </p>
                                     </span>
                                 </div>
+                                <div class="column is-half">
+                                    <span class="title is-size-6">
+                                        <i class="fa fa-fw fa-code-branch"></i>
+                                        CLIENTS (2):
+                                        <p class="subtitle" id="beyond_connections2">
+                                            ...
+                                        </p>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1187,13 +1196,20 @@ function winner_update() {
 }
 
 function beyond_update() {
-    fetch("https://api.allorigins.win/get?url=http://beyondpool.io/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://node1.beyondpool.io/statistics.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
             update_element("beyond_connections", data["connections"]);
             update_element("beyond_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
             update_element("beyond_ram", round_to(1, parseFloat(data["ram"])) + "%");
+        })
+
+    fetch("https://api.allorigins.win/get?url=http://node2.beyondpool.io/statistics.json")
+        .then(response => response.json())
+        .then(data => {
+            data = JSON.parse(data["contents"]);
+            update_element("beyond_connections2", data["connections"]);
         })
 }
 
