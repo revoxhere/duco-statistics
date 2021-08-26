@@ -579,73 +579,6 @@
                         <div class="column">
                             <div class="dropdown is-hoverable">
                                 <div class="dropdown-trigger mb-3">
-                                    <a href="http://193.164.7.180:6001" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-orange fa fa-trophy"></i>&nbsp;
-                                        <b>WINNER</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: Intel Xeon X5670 @ 2.9 GHz (4 cores)<br>
-                                            <b>RAM</b>: 2 GB<br>
-                                            <b>OS</b>: Debian 10 Buster<br>
-                                            <b>Storage</b>: 40 GB<br>
-                                            <b>Provider</b>: @Maxteal#8376<br>
-                                            <b>Purpose</b>: Miners get jobs from this node.
-                                            The node periodicaly syncs data with the master node
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
-                                        CPU:
-                                        <p class="subtitle" id="winner_cpu">
-                                            ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
-                                        RAM:
-                                        <p class="subtitle" id="winner_ram">
-                                            ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (1):
-                                        <p class="subtitle" id="winner_connections">
-                                            ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (2):
-                                        <p class="subtitle" id="winner_connections2">
-                                            ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
                                     <a href="https://beyondpool.io" aria-haspopup="true" aria-controls="dropdown-menu4">
                                         <i class="is-size-7 card-blue fa fa-rocket"></i>&nbsp;
                                         <b>BEYOND</b>
@@ -1197,24 +1130,6 @@ function star_update() {
         })
 }
 
-function winner_update() {
-    fetch("https://api.allorigins.win/get?url=http://193.164.7.180/statistics.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("winner_connections", data["connections"]);
-        })
-
-    fetch("https://api.allorigins.win/get?url=http://193.164.7.180/statistics_2.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("winner_connections2", data["connections"]);
-            update_element("winner_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("winner_ram", round_to(1, parseFloat(data["ram"])) + "%");
-        })
-}
-
 function beyond_update() {
     fetch("https://api.allorigins.win/get?url=http://node1.beyondpool.io/statistics.json")
         .then(response => response.json())
@@ -1240,9 +1155,6 @@ window.setInterval(pulse_update, 7500); // Refresh every 7.5s because we use a p
 
 star_update();
 window.setInterval(star_update, 7500); // Refresh every 7.5s because we use a proxy
-
-winner_update();
-window.setInterval(winner_update, 7500); // Refresh every 7.5s because we use a proxy
 
 beyond_update();
 window.setInterval(beyond_update, 7500); // Refresh every 7.5s because we use a proxy
