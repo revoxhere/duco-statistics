@@ -1102,14 +1102,14 @@ function search() {
 
 
 function pulse_update() {
-    fetch("https://api.allorigins.win/get?url=hhttp://149.91.88.18/statistics_2.json")
+    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics_2.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
             update_element("pulse_connections1", data["connections"]);
         })
 
-    fetch("https://api.allorigins.win/get?url=hhttp://149.91.88.18/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
