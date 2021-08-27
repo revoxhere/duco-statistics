@@ -212,7 +212,7 @@
                             MINED SHARES
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-blue fa fa-microchip"></i>
                             <span id="arduinos">
@@ -224,7 +224,7 @@
                             ARDUINOS
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-red fa fa-wifi"></i>
                             <span id="esp8266s">
@@ -236,7 +236,7 @@
                             ESP8266S
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-grey fa fa-wifi"></i>
                             <span id="esp32s">
@@ -248,7 +248,7 @@
                             ESP32S
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-red-two fab fa-raspberry-pi"></i>
                             <span id="rpis">
@@ -260,7 +260,7 @@
                             RASPBERRY PIS
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-green fa fa-laptop"></i>
                             <span id="cpus">
@@ -269,10 +269,22 @@
                             <br>
                         </span>
                         <span class="heading is-size-6">
-                            PC CPUS
+                            CPUS
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
+                        <span class="title">
+                            <i class="is-size-6 card-blue fab fa-android"></i>
+                            <span id="phones">
+                                ...
+                            </span>
+                            <br>
+                        </span>
+                        <span class="heading is-size-6">
+                            PHONES
+                        </span>
+                    </div>
+                    <div class="column">
                         <span class="title">
                             <i class="is-size-6 card-purple fa fa-desktop"></i>
                             <span id="gpus">
@@ -281,19 +293,19 @@
                             <br>
                         </span>
                         <span class="heading is-size-6">
-                            PC GPUS
+                            GRAPHIC CARDS
                         </span>
                     </div>
-                    <div class="column is-one-seventh">
+                    <div class="column">
                         <span class="title">
-                            <i class="is-size-6 card-orange fa fa-laptop"></i>
+                            <i class="is-size-6 card-orange fa fa-question-circle"></i>
                             <span id="others">
                                 ...
                             </span>
                             <br>
                         </span>
                         <span class="heading is-size-6">
-                            OTHERS
+                            UNKNOWN
                         </span>
                     </div>
                 </div>
@@ -326,7 +338,7 @@
                             </p>
                             <p class="subtitle mx-5" id="transactionstext2"></p>
                             <br>
-                            <div class="columns">
+                            <div class="columns is-mobile">
                                 <div class="column is-half">
                                     <p class="subtitle is-size-6 mx-5" id="transactionstext3">
                                         Please wait...
@@ -686,7 +698,7 @@
                 </div>
             </div>
         </div>
-        <div id="large_prices" class="modal scale-in">
+        <div id="large_prices" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head has-background-success">
@@ -700,7 +712,7 @@
                 </section>
             </div>
         </div>
-        <div id="large_miners" class="modal scale-in">
+        <div id="large_miners" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head has-background-success">
@@ -714,7 +726,7 @@
                 </section>
             </div>
         </div>
-        <div id="large_balances" class="modal scale-in">
+        <div id="large_balances" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head has-background-success">
@@ -822,11 +834,11 @@ function update_element(element, value) {
 
     if (value != old_value) {
         setTimeout(function() {
-            $(element).fadeOut('fast', function() {
+            $(element).fadeOut(150, function() {
                 $(element).text(value);
-                $(element).fadeIn('fast');
+                $(element).fadeIn(150);
             });
-        }, Math.floor(Math.random() * 1500));
+        }, Math.floor(Math.random() * 1000));
     }
 }
 
@@ -876,6 +888,8 @@ function update_stats() {
 
             /* ---------------- */
 
+            console.log(data["Miner distribution"]);
+
             update_element("arduinos", data["Miner distribution"]["Arduino"])
 
             update_element("esp8266s", data["Miner distribution"]["ESP8266"])
@@ -884,7 +898,10 @@ function update_stats() {
 
             update_element("rpis", Math.round(data["Miner distribution"]["RPi"] / 4))
 
-            update_element("cpus", Math.round(data["Miner distribution"]["CPU"] / 6))
+            update_element("cpus", Math.round(data["Miner distribution"]["Web"] +
+                data["Miner distribution"]["CPU"] / 8))
+
+            update_element("phones", Math.round(data["Miner distribution"]["Phone"] / 8))
 
             update_element("gpus", data["Miner distribution"]["GPU"])
 
@@ -941,9 +958,9 @@ function last_explorer_hashes() {
                 if (hash >= 5) break
                 this_hash = hashes[hash].Hash;
                 if (this_hash.length == 40) {
-                    transaction_hashes_html += "<a class='transaction1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 14) + "</a><br>";
+                    transaction_hashes_html += "<a class='transaction1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
                 } else {
-                    transaction_hashes_html += "<a class='transaction2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 14) + "</a><br>";
+                    transaction_hashes_html += "<a class='transaction2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
                 }
             }
             $("#transactionstext3").html(transaction_hashes_html);
@@ -961,9 +978,9 @@ function last_explorer_hashes() {
                 if (hash >= 5) break
                 this_hash = last[hash];
                 if (this_hash.length == 40) {
-                    block_hashes_html += "<a class='block2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 14) + "</a><br>";
+                    block_hashes_html += "<a class='block2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
                 } else {
-                    block_hashes_html += "<a class='block1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 14) + "</a><br>";
+                    block_hashes_html += "<a class='block1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
                 }
             }
             $("#transactionstext4").html(block_hashes_html);
