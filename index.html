@@ -30,16 +30,12 @@
     <!-- Imports -->
     <link rel="stylesheet" type="text/css" href="assets/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="assets/bulma-prefers-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/bulma-pageloader.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="assets/fontawesome.js"></script>
     <script src="assets/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
-        <span class="title">Duino-Coin Network</span>
-    </div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://duinocoin.com">
@@ -791,12 +787,6 @@ function enlarge_balances() {
 }
 </script>
 <script>
-let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
-pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
-window.addEventListener('load', function() {
-    pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
-});
-
 document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     if ($navbarBurgers.length > 0) {
