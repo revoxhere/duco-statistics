@@ -1103,11 +1103,11 @@ function search() {
                                     ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
                             }
 
-                            i += 1;
                             if (i > 10) {
-                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (data["result"]["miners"].length - i) + " more miners...";
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (data["result"]["miners"].length - i) + " more miner(s)...";
                                 break;
                             }
+                            i += 1;
                         }
                     } else {
                         found_user_html += "&nbsp; &nbsp; &nbsp; &bull; No miners found for that user";
