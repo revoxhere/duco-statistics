@@ -987,6 +987,19 @@ function last_explorer_hashes() {
         })
 }
 
+function get_prefix(symbol, value) {
+    value = parseFloat(value);
+    if (value / 1000000000 > 0.5)
+        value = round_to(2, value / 1000000000) + " G" + symbol;
+    else if (value / 1000000 > 0.5)
+        value = round_to(2, value / 1000000) + " M" + symbol;
+    else if (value / 1000 > 0.5)
+        value = round_to(2, value / 1000) + " k" + symbol;
+    else
+        value = round_to(2, value) + " " + symbol;
+    return value;
+}
+
 function search() {
     let cont = true;
     if (cont) {
@@ -1041,13 +1054,13 @@ function search() {
             })
     }
     if (cont) {
-        fetch('https://server.duinocoin.com/balances/' + hashToBeFound)
+        fetch('https://server.duinocoin.com/users/' + hashToBeFound)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
                 if (data.success == true) {
                     cont = false;
-                    let amount_usd = data.result.balance * duco_price;
+                    let amount_usd = data.result.balance.balance * duco_price;
 
                     found_user_html = `<ul><li>` +
                         `<i class='fas fa-fw card-green is-size-7 fa-info-circle'></i>` +
@@ -1062,10 +1075,85 @@ function search() {
                         `<li>` +
                         `<i class='fas fa-fw card-blue is-size-7 fa-wallet'></i>` +
                         `&nbsp;Balance: <b>` +
-                        round_to(10, data.result.balance) +
+                        round_to(10, data.result.balance.balance) +
                         ` DUCO</b> (≈$` +
                         round_to(4, amount_usd) +
-                        `)</li></ul>`;
+                        `)</li>`;
+
+                    found_user_html += `<li>` +
+                        `<i class='fas fa-fw card-orange is-size-7 fa-cog'></i>` +
+                        `&nbsp;Miners <b>(` + data["result"]["miners"].length + `)</b>:</li>` +
+                        `<li class='is-size-6'>`;
+                    i = 0;
+                    if (data["result"]["miners"].length) {
+                        for (miner in data["result"]["miners"]) {
+                            if (data["result"]["miners"][miner]["identifier"] != "None") {
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" +
+                                    data["result"]["miners"][miner]["identifier"] +
+                                    "</b> <span class='has-text-grey'>(" +
+                                    data["result"]["miners"][miner]["software"] +
+                                    ")</span> - " +
+                                    data["result"]["miners"][miner]["accepted"] + "/" +
+                                    data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"] +
+                                    ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
+                            } else {
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" + data["result"]["miners"][miner]["software"] + "</b> - " +
+                                    data["result"]["miners"][miner]["accepted"] + "/" +
+                                    data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"] +
+                                    ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
+                            }
+
+                            i += 1;
+                            if (i > 10) {
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (data["result"]["miners"].length - i) + " more miners...";
+                                break;
+                            }
+                        }
+                    } else {
+                        found_user_html += "&nbsp; &nbsp; &nbsp; &bull; No miners found for that user";
+                    }
+
+                    found_user_html += `<li>` +
+                        `<i class='fas fa-fw card-purple is-size-7 fa-receipt'></i>` +
+                        `&nbsp;Last 10 transactions:</li>` +
+                        `<li class='is-size-6'>`;
+                    i = 0;
+                    if (data["result"]["transactions"].length) {
+                        for (transaction in data["result"]["transactions"].reverse()) {
+                            if (data["result"]["transactions"][transaction]["sender"] == data["result"]["balance"]["username"]) {
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; " +
+                                    "<span class='has-text-grey'>" +
+                                    data["result"]["transactions"][transaction]["datetime"] +
+                                    "</span><span class='has-text-danger-dark'>" +
+                                    " Sent <b>" +
+                                    Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
+                                    " DUCO</b></span> to " +
+                                    "<a href='?search=" +
+                                    data["result"]["transactions"][transaction]["recipient"] + "'><b>" +
+                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b><br>"
+                            } else {
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; " +
+                                    "<span class='has-text-grey'>" +
+                                    data["result"]["transactions"][transaction]["datetime"] +
+                                    "</span><span class='has-text-success-dark'>" +
+                                    " Received <b>" +
+                                    Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
+                                    " DUCO</b></span> from " +
+                                    "<a href='?search=" +
+                                    data["result"]["transactions"][transaction]["sender"] + "'><b>" +
+                                    data["result"]["transactions"][transaction]["sender"] + "</a></b><br>"
+                            }
+
+                            i += 1;
+                            if (i > 10) {
+                                break;
+                            }
+                        }
+                    } else {
+                        found_user_html += "&nbsp; &nbsp; &bull; No transactions found for that user";
+                    }
+
+                    found_user_html += "</ul>"
 
                     $("#transactionstext2").html(found_user_html);
 
