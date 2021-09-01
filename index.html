@@ -1068,10 +1068,20 @@ function search() {
                         round_to(10, data.result.balance.balance) +
                         ` DUCO</b> (≈$` +
                         round_to(4, amount_usd) +
-                        `)</li>`;
+                        `)</li>` +
+                        `<li>` +
+                        `<i class='fas fa-fw card-turquoise is-size-7 fa-check'></i>` +
+                        `&nbsp;Verified: <b>` +
+                        data.result.balance.verified +
+                        `</b></li>` +
+                        `<li>` +
+                        `<i class='fas fa-fw card-orange is-size-7 fa-calendar'></i>` +
+                        `&nbsp;Created: <b>` +
+                        data.result.balance.created +
+                        `</b></li>`;
 
                     found_user_html += `<li>` +
-                        `<i class='fas fa-fw card-orange is-size-7 fa-cog'></i>` +
+                        `<i class='fas fa-fw card-purple is-size-7 fa-cog'></i>` +
                         `&nbsp;Miners <b>(` + data["result"]["miners"].length + `)</b>:</li>` +
                         `<li class='is-size-6'>`;
                     i = 0;
@@ -1104,7 +1114,7 @@ function search() {
                     }
 
                     found_user_html += `<li>` +
-                        `<i class='fas fa-fw card-purple is-size-7 fa-receipt'></i>` +
+                        `<i class='fas fa-fw card-pomegrante is-size-7 fa-receipt'></i>` +
                         `&nbsp;Last 10 transactions:</li>` +
                         `<li class='is-size-6'>`;
                     i = 0;
