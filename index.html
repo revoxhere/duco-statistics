@@ -1130,7 +1130,7 @@ function search() {
                                     " DUCO</b></span> to " +
                                     "<a href='?search=" +
                                     data["result"]["transactions"][transaction]["recipient"] + "'><b>" +
-                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b><br>"
+                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b> " + "<a href='?search=" + data["result"]["transactions"][transaction]["hash"] + "'>(" + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
                             } else {
                                 found_user_html += "&nbsp; &nbsp; &nbsp; &bull; " +
                                     "<span class='has-text-grey'>" +
@@ -1141,7 +1141,7 @@ function search() {
                                     " DUCO</b></span> from " +
                                     "<a href='?search=" +
                                     data["result"]["transactions"][transaction]["sender"] + "'><b>" +
-                                    data["result"]["transactions"][transaction]["sender"] + "</a></b><br>"
+                                    data["result"]["transactions"][transaction]["sender"] + "</a></b> " + "<a href='?search=" + data["result"]["transactions"][transaction]["hash"] + "'>(" + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
                             }
 
                             i += 1;
