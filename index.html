@@ -1214,7 +1214,7 @@ function pulse_update() {
             update_element("pulse_connections1", data["connections"]);
         })
 
-    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics_1.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
@@ -1225,7 +1225,7 @@ function pulse_update() {
 }
 
 function star_update() {
-    fetch("https://api.allorigins.win/get?url=http://51.158.182.90/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://51.158.182.90/statistics_1.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
@@ -1236,7 +1236,7 @@ function star_update() {
 }
 
 function beyond_update() {
-    fetch("https://api.allorigins.win/get?url=http://node1.beyondpool.io/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://node1.beyondpool.io/statistics_1.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
@@ -1245,7 +1245,7 @@ function beyond_update() {
             update_element("beyond_ram", round_to(1, parseFloat(data["ram"])) + "%");
         })
 
-    fetch("https://api.allorigins.win/get?url=http://node2.beyondpool.io/statistics.json")
+    fetch("https://api.allorigins.win/get?url=http://node2.beyondpool.io/statistics_1.json")
         .then(response => response.json())
         .then(data => {
             data = JSON.parse(data["contents"]);
