@@ -94,9 +94,8 @@
     <div class="container">
         <!-- STATISTICS -->
         <div class="panel">
-            <p class="panel-heading heading">
-                <i class="is-size-7 card-red-two fa fa-poll"></i>
-                NETWORK STATS
+            <p class="panel-heading">
+                Network statistics
                 <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: loading data)</span>
             </p>
             <div class="panel-block">
@@ -313,11 +312,10 @@
                     <!-- EXPLORER -->
                     <div class="column">
                         <form class="panel">
-                            <p class="panel-heading heading">
-                                <i class="is-size-7 card-turquoise fa fa-search-dollar"></i>
-                                EXPLORER
+                            <p class="panel-heading">
+                                Chain explorer
                             </p>
-                            <div class="container mx-1">
+                            <div class="container m-1">
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
                                         <input class="input" type="text" placeholder="Enter username, transaction or block hash" name="search">
@@ -353,9 +351,8 @@
             <!-- CHARTS -->
             <div class="column is-half">
                 <div class="panel">
-                    <p class="panel-heading heading">
-                        <i class="is-size-7 card-red fa fa-chart-pie"></i>
-                        CHARTS
+                    <p class="panel-heading">
+                        Charts
                         <span class="title is-size-6 has-text-grey">
                             (click to enlarge)
                         </span>
@@ -388,16 +385,15 @@
             <!-- NODES -->
             <div class="column is-full mt-3">
                 <div class="panel">
-                    <p class="panel-heading heading">
-                        <i class="is-size-7 fa fa-database card-orange"></i>
-                        NODES
+                    <p class="panel-heading">
+                        Mining nodes
                     </p>
                     <div class="columns m-1">
                         <div class="column">
                             <div class="dropdown is-hoverable">
                                 <div class="dropdown-trigger mb-3">
                                     <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-green fa fa-heart"></i>&nbsp;
+                                        <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
                                         <b>MASTER</b>
                                         <span class="icon is-small">
                                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -420,43 +416,25 @@
                                 </div>
                             </div>
                             <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
+                                <div class="column">
+                                    <p class="title is-size-6">
                                         CPU:
-                                        <p class="subtitle" id="master_cpu">
+                                        <b id="master_cpu">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
+                                        </b>
                                         RAM:
-                                        <p class="subtitle" id="master_ram">
+                                        <b id="master_ram">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS:
-                                        <p class="subtitle" id="master_connections">
+                                        </b>
+                                        Clients:
+                                        <b id="master_connections">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-th"></i>
-                                        THREADS:
-                                        <p class="subtitle" id="master_threads">
+                                        </b>
+                                        Threads:
+                                        <b id="master_threads">
                                             ...
-                                        </p>
-                                    </span>
+                                        </b>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -486,43 +464,25 @@
                                 </div>
                             </div>
                             <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
+                                <div class="column">
+                                    <p class="title is-size-6">
                                         CPU:
-                                        <p class="subtitle" id="pulse_cpu2">
+                                        <b id="pulse_cpu2">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
+                                        </b>
                                         RAM:
-                                        <p class="subtitle" id="pulse_ram2">
+                                        <b id="pulse_ram2">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (1):
-                                        <p class="subtitle" id="pulse_connections1">
+                                        </b>
+                                        Clients (instance 1):
+                                        <b id="pulse_connections1">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (2):
-                                        <p class="subtitle" id="pulse_connections2">
+                                        </b>
+                                        Clients (instance 2):
+                                        <b id="pulse_connections2">
                                             ...
-                                        </p>
-                                    </span>
+                                        </b>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -553,34 +513,21 @@
                             </div>
                             <br>
                             <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
+                                <div class="column">
+                                    <p class="title is-size-6">
                                         CPU:
-                                        <p class="subtitle" id="star_cpu">
+                                        <b id="star_cpu">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
+                                        </b>
                                         RAM:
-                                        <p class="subtitle" id="star_ram">
+                                        <b id="star_ram">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS:
-                                        <p class="subtitle" id="star_connections">
+                                        </b>
+                                        Clients:
+                                        <b id="star_connections">
                                             ...
-                                        </p>
-                                    </span>
+                                        </b>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -611,63 +558,33 @@
                             </div>
                             <br>
                             <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
-                                        CPU (1):
-                                        <p class="subtitle" id="beyond_cpu">
+                                <div class="column">
+                                    <p class="subtitle is-size-6">
+                                        CPU (instance 1):
+                                        <b id="beyond_cpu">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
-                                        RAM (1):
-                                        <p class="subtitle" id="beyond_ram">
+                                        </b>
+                                        RAM (instance 1):
+                                        <b id="beyond_ram">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-microchip"></i>
-                                        CPU (2):
-                                        <p class="subtitle" id="beyond_cpu2">
+                                        </b>
+                                        Clients (instance 1):
+                                        <b id="beyond_connections">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-memory"></i>
-                                        RAM (2):
-                                        <p class="subtitle" id="beyond_ram2">
+                                        </b><br>
+                                        CPU (instance 2):
+                                        <b id="beyond_cpu2">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (1):
-                                        <p class="subtitle" id="beyond_connections">
+                                        </b>
+                                        RAM (instance 2):
+                                        <b id="beyond_ram2">
                                             ...
-                                        </p>
-                                    </span>
-                                </div>
-                                <div class="column is-half">
-                                    <span class="title is-size-6">
-                                        <i class="fa fa-fw fa-code-branch"></i>
-                                        CLIENTS (2):
-                                        <p class="subtitle" id="beyond_connections2">
+                                        </b>
+                                        Clients (instance 2):
+                                        <b id="beyond_connections2">
                                             ...
-                                        </p>
-                                    </span>
+                                        </b>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -677,16 +594,41 @@
             <!-- ACTIVE WORKERS -->
             <div class="column is-full">
                 <div class="panel">
-                    <p class="panel-heading">
-                        <i class="is-size-7 card-purple fa fa-users"></i>
-                        ACTIVE WORKERS
-                        <span class="title is-size-6 has-text-grey" id="allworkers">
-                            (not loaded by default)
-                        </span>
-                    </p>
+                    <div class="panel-heading">
+                        Active workers
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <span class="is-size-6 has-text-grey-dark" id="allworkers">
+                                    (not loaded by default - prepare for a lot of data!)
+                                </span>
+                            </div>
+                            <div class="column is-narrow">
+                                <div class="columns is-multiline" style="text-align:right;">
+                                    <div class="column is-narrow">
+                                        <p class="is-size-6 has-text-grey-dark">
+                                            <i class="fa fa-times-circle has-text-danger"></i>
+                                            unverified account
+                                        </p>
+                                    </div>
+                                    <div class="column is-narrow">
+                                        <p class="is-size-6 has-text-grey-dark">
+                                            <i class="fa fa-check has-text-success"></i>
+                                            verified account
+                                        </p>
+                                    </div>
+                                    <div class="column is-narrow">
+                                        <p class="is-size-6 has-text-grey-dark">
+                                            <span class="tag">123</span>
+                                            amount of workers
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="panel-block">
                         <span id="workers" class="subtitle is-size-6">
-                            <button id="loadworkers" class="button is-info" onclick="start_loading_workers()">
+                            <button id="loadworkers" class="button is-outlined is-info" onclick="fill_worker_list()">
                                 Load all workers
                             </button>
                         </span>
@@ -828,7 +770,7 @@ function update_element(element, value) {
                 $(element).text(value);
                 $(element).fadeIn(150);
             });
-        }, Math.floor(Math.random() * 1000));
+        }, Math.floor(Math.random() * 400));
     }
 }
 
@@ -839,9 +781,58 @@ function round_to(precision, value) {
 }
 
 
-function start_loading_workers() {
+function fill_worker_list() {
     $("#loadworkers").addClass("is-loading")
-    load_workers = true;
+    fetch("https://server.duinocoin.com/statistics_miners")
+        .then(response => response.json())
+        .then(data => {
+            data = data.result;
+            let workers = `<ul class="workers">`
+            let counter = 0;
+            let worker_counter = 0;
+            let sorted_workers = [];
+            for (worker in data) {
+                sorted_workers.push({
+                    "User": worker,
+                    "Verified": data[worker]["v"],
+                    "Miners": data[worker]["w"]
+                })
+            }
+            sorted_workers.sort((a, b) => b.Miners - a.Miners);
+            for (let i = 0; i < sorted_workers.length; i++) {
+                let worker = sorted_workers[i];
+
+                if (worker.Verified == "yes") {
+                    workers +=
+                        `<li class="has-text-success">
+                                  <i class="fas fa-check"></i>
+                                  <a href="?search=` + worker.User + `"> ` +
+                        worker.User +
+                        `</a><b class="tag">` +
+                        worker.Miners +
+                        `</b></li>`;
+                } else {
+                    workers +=
+                        `<li class="has-text-danger">
+                                  <i class="fas fa-times-circle"></i>
+                                  <a href="?search=` + worker.User + `"> ` +
+                        worker.User +
+                        `</a>
+                        <b class="tag">` +
+                        worker.Miners +
+                        `</b></li>`;
+                }
+
+                worker_counter += worker.Miners;
+                counter++;
+            }
+            workers += `</ul>`;
+            document.getElementById("workers").innerHTML = workers;
+            $("#allworkers").text("(" + worker_counter + " workers on " + counter + " accounts)");
+        });
+    window.setInterval(function() {
+        fill_worker_list()
+    }, 30000);
 }
 
 
@@ -878,8 +869,6 @@ function update_stats() {
 
             /* ---------------- */
 
-            console.log(data["Miner distribution"]);
-
             update_element("arduinos", data["Miner distribution"]["Arduino"])
 
             update_element("esp8266s", data["Miner distribution"]["ESP8266"])
@@ -904,31 +893,6 @@ function update_stats() {
             update_element("master_cpu", round_to(1, data["Server CPU usage"]) + "%")
             update_element("master_ram", round_to(1, data["Server RAM usage"]) + "%")
             update_element("master_threads", data["Open threads"])
-
-            // WORKER LIST
-            if (load_workers) {
-                let workers = `<ul class="workers">`
-                let counter = 0;
-                let worker_counter = 0;
-                let sorted_workers = [];
-                for (worker in data["Active workers"]) {
-                    sorted_workers.push({
-                        "User": worker,
-                        "Miners": data["Active workers"][worker]
-                    })
-                }
-                sorted_workers.sort((a, b) => b.Miners - a.Miners);
-                for (let i = 0; i < sorted_workers.length; i++) {
-                    let worker = sorted_workers[i];
-                    workers += `<li><a href="?search=` + worker.User + `"> ` + worker.User + `</a>&nbsp;<span class="tag">` + worker.Miners + ` worker(s)</span></li>`;
-                    worker_counter += worker.Miners;
-                    counter++;
-                    //if (counter > 100) break;
-                }
-                workers += `</ul>`;
-                $("#workers").html(workers);
-                $("#allworkers").text("(" + worker_counter + " workers on " + counter + " accounts)");
-            }
         })
 }
 
@@ -1094,12 +1058,12 @@ function search() {
                                     data["result"]["miners"][miner]["software"] +
                                     ")</span> - " +
                                     data["result"]["miners"][miner]["accepted"] + "/" +
-                                    data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"] +
+                                    (data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"]) +
                                     ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
                             } else {
                                 found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" + data["result"]["miners"][miner]["software"] + "</b> - " +
                                     data["result"]["miners"][miner]["accepted"] + "/" +
-                                    data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"] +
+                                    (data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"]) +
                                     ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
                             }
 
