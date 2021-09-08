@@ -1170,69 +1170,60 @@ function search() {
 }
 
 
-function pulse_update() {
-    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics_2.json")
+function update_pools() {
+    fetch("https://server.duinocoin.com/all_pools")
         .then(response => response.json())
         .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("pulse_connections1", data["connections"]);
-        })
+            if (data.success === true) {
+                let pools = {};
+                data.result.forEach(pool => {
+                    pools[pool["name"]] = pool;
+                });
+                // Update pool info, add new pools here
 
-    fetch("https://api.allorigins.win/get?url=http://149.91.88.18/statistics_1.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("pulse_connections2", data["connections"]);
-            update_element("pulse_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("pulse_ram2", round_to(1, parseFloat(data["ram"])) + "%");
-        })
-}
+                // Pulse pool
+                let pulse1_data = pools["pulse-pool-1"];
+                let pulse2_data = pools["pulse-pool-2"];
 
-function star_update() {
-    fetch("https://api.allorigins.win/get?url=http://51.158.182.90/statistics_1.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("star_connections", data["connections"]);
-            update_element("star_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("star_ram", round_to(1, parseFloat(data["ram"])) + "%");
-        })
-}
+                update_element("pulse_connections1", pulse1_data["connections"]);
 
-function beyond_update() {
-    fetch("https://api.allorigins.win/get?url=http://node1.beyondpool.io/statistics_1.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("beyond_connections", data["connections"]);
-            update_element("beyond_cpu", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("beyond_ram", round_to(1, parseFloat(data["ram"])) + "%");
-        })
+                update_element("pulse_connections2", pulse2_data["connections"]);
+                update_element("pulse_cpu2", round_to(1, parseFloat(pulse2_data["cpu"])) + "%");
+                update_element("pulse_ram2", round_to(1, parseFloat(pulse2_data["ram"])) + "%");
 
-    fetch("https://api.allorigins.win/get?url=http://node2.beyondpool.io/statistics_1.json")
-        .then(response => response.json())
-        .then(data => {
-            data = JSON.parse(data["contents"]);
-            update_element("beyond_connections2", data["connections"]);
-            update_element("beyond_cpu2", round_to(1, parseFloat(data["cpu"])) + "%");
-            update_element("beyond_ram2", round_to(1, parseFloat(data["ram"])) + "%");
+                // Star pool
+                let star1_data = pools["star-pool-1"];
+
+                update_element("star_connections", star1_data["connections"]);
+                update_element("star_cpu", round_to(1, parseFloat(star1_data["cpu"])) + "%");
+                update_element("star_ram", round_to(1, parseFloat(star1_data["ram"])) + "%");
+
+                // Beyond pool
+                let beyond1_data = pools["beyond-pool-1"];
+                let beyond2_data = pools["beyond-pool-2"];
+
+                update_element("beyond_connections", beyond1_data["connections"]);
+                update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
+                update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
+
+                update_element("beyond_connections2", beyond2_data["connections"]);
+                update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
+                update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
+
+                // End of list of pools to update
+            }
         })
 }
 
-pulse_update();
-window.setInterval(pulse_update, 7500); // Refresh every 7.5s because we use a proxy
-
-star_update();
-window.setInterval(star_update, 7500); // Refresh every 7.5s because we use a proxy
-
-beyond_update();
-window.setInterval(beyond_update, 7500); // Refresh every 7.5s because we use a proxy
 
 update_stats();
 window.setInterval(update_stats, 2500); // Refresh every 2.5s
 
 last_explorer_hashes();
 window.setInterval(last_explorer_hashes, 5000); // Refresh every 5s
+
+update_pools();
+window.setInterval(update_pools, 5000); // Refresh every 5s
 
 if (hashToBeFound) search();
 </script>
