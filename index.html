@@ -806,7 +806,7 @@ function fill_worker_list() {
                     workers +=
                         `<li class="has-text-success">
                                   <i class="fas fa-check"></i>
-                                  <a href="?search=` + worker.User + `"> ` +
+                                  <a onclick="link_search('${worker.User}')">` +
                         worker.User +
                         `</a><b class="tag">` +
                         worker.Miners +
@@ -815,7 +815,7 @@ function fill_worker_list() {
                     workers +=
                         `<li class="has-text-danger">
                                   <i class="fas fa-times-circle"></i>
-                                  <a href="?search=` + worker.User + `"> ` +
+                                  <a onclick="link_search('${worker.User}')">` +
                         worker.User +
                         `</a>
                         <b class="tag">` +
@@ -912,9 +912,9 @@ function last_explorer_hashes() {
                 if (hash >= 5) break
                 this_hash = hashes[hash].Hash;
                 if (this_hash.length == 40) {
-                    transaction_hashes_html += "<a class='transaction1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
+                    transaction_hashes_html += `<a class='transaction2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 20) + "</a><br>";
                 } else {
-                    transaction_hashes_html += "<a class='transaction2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
+                    transaction_hashes_html += `<a class='transaction2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 20) + "</a><br>";
                 }
             }
             $("#transactionstext3").html(transaction_hashes_html);
@@ -932,9 +932,9 @@ function last_explorer_hashes() {
                 if (hash >= 5) break
                 this_hash = last[hash];
                 if (this_hash.length == 40) {
-                    block_hashes_html += "<a class='block2 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
+                    block_hashes_html += `<a class='block2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 20) + "</a><br>";
                 } else {
-                    block_hashes_html += "<a class='block1 monospace' href='?search=" + this_hash + "'>" + this_hash.substring(0, 20) + "</a><br>";
+                    block_hashes_html += `<a class='block1 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 20) + "</a><br>";
                 }
             }
             $("#transactionstext4").html(block_hashes_html);
@@ -954,7 +954,7 @@ function get_prefix(symbol, value) {
     return value;
 }
 
-function search() {
+function search(hashToBeFound) {
     let cont = true;
     if (cont) {
         fetch('https://server.duinocoin.com/transactions/' + hashToBeFound)
@@ -979,15 +979,13 @@ function search() {
                         `<li>` +
                         `<i class='fas fa-fw card-blue is-size-7 fa-user-tie'></i>` +
                         `&nbsp;Sender: <b>` +
-                        `<a href="?search=` +
-                        data.result.sender + `">` +
+                        `<a onclick="link_search('${data.result.sender}')">` +
                         data.result.sender +
                         `</a></b></li>` +
                         `<li>` +
                         `<i class='fas fa-fw card-orange is-size-7 fa-user'></i>` +
                         `&nbsp;Recipient: <b>` +
-                        `<a href="?search=` +
-                        data.result.recipient + `">` +
+                        `<a onclick="link_search('${data.result.recipient}')">` +
                         data.result.recipient +
                         `</a></b></li>` +
                         `<li>` +
@@ -1022,8 +1020,7 @@ function search() {
                         `<li>` +
                         `<i class='fas fa-fw card-red is-size-7 fa-user-tie'></i>` +
                         `&nbsp;Username: <b>` +
-                        `<a href="?search=` +
-                        hashToBeFound + `">` +
+                        `<a onclick="link_search('${hashToBeFound}')">` +
                         hashToBeFound +
                         `</a></b></li>` +
                         `<li>` +
@@ -1092,9 +1089,9 @@ function search() {
                                     " Sent <b>" +
                                     Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
                                     " DUCO</b></span> to " +
-                                    "<a href='?search=" +
-                                    data["result"]["transactions"][transaction]["recipient"] + "'><b>" +
-                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b> " + "<a href='?search=" + data["result"]["transactions"][transaction]["hash"] + "'>(" + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
+                                    `<a onclick="link_search('${data["result"]["transactions"][transaction]["recipient"]}')">` +
+                                    "<b>" +
+                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
                             } else {
                                 found_user_html += "&nbsp; &nbsp; &nbsp; &bull; " +
                                     "<span class='has-text-grey'>" +
@@ -1103,9 +1100,8 @@ function search() {
                                     " Received <b>" +
                                     Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
                                     " DUCO</b></span> from " +
-                                    "<a href='?search=" +
-                                    data["result"]["transactions"][transaction]["sender"] + "'><b>" +
-                                    data["result"]["transactions"][transaction]["sender"] + "</a></b> " + "<a href='?search=" + data["result"]["transactions"][transaction]["hash"] + "'>(" + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
+                                    `<a onclick="link_search('${data["result"]["transactions"][transaction]["sender"]}')">` + "<b>" +
+                                    data["result"]["transactions"][transaction]["sender"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
                             }
 
                             i += 1;
@@ -1153,8 +1149,7 @@ function search() {
                         `<li>` +
                         `<i class='fas fa-fw card-blue is-size-7 fa-user-tie'></i>` +
                         `&nbsp;Finder: <b>` +
-                        `<a href="?search=` +
-                        found["Finder"] + `">` +
+                        `<a onclick="link_search('${found["Finder"]}')">` +
                         found["Finder"] +
                         `</a></b></li>` +
                         `</b></li>` +
@@ -1215,7 +1210,6 @@ function update_pools() {
         })
 }
 
-
 update_stats();
 window.setInterval(update_stats, 2500); // Refresh every 2.5s
 
@@ -1225,5 +1219,10 @@ window.setInterval(last_explorer_hashes, 5000); // Refresh every 5s
 update_pools();
 window.setInterval(update_pools, 5000); // Refresh every 5s
 
-if (hashToBeFound) search();
+function link_search(hash) {
+    search(hash);
+    console.log(hash);
+}
+
+if (hashToBeFound) search(hashToBeFound);
 </script>
