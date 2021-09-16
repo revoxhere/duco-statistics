@@ -474,12 +474,8 @@
                                         <b id="pulse_ram2">
                                             ...
                                         </b>
-                                        Clients (instance 1):
+                                        Clients:
                                         <b id="pulse_connections1">
-                                            ...
-                                        </b>
-                                        Clients (instance 2):
-                                        <b id="pulse_connections2">
                                             ...
                                         </b>
                                     </p>
@@ -582,6 +578,51 @@
                                         </b>
                                         Clients (instance 2):
                                         <b id="beyond_connections2">
+                                            ...
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger mb-3">
+                                    <span aria-haspopup="true" aria-controls="dropdown-menu4">
+                                        <i class="is-size-7 card-grey fa fa-heart-broken"></i>&nbsp;
+                                        <b>SVKO</b>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="content m-3">
+                                            <b>CPU</b>: 2.6 GHz (4 cores)<br>
+                                            <b>RAM</b>: 8 GB<br>
+                                            <b>OS</b>: Debian 10 Buster<br>
+                                            <b>Storage</b>: 60 GB<br>
+                                            <b>Provider</b>: revox<br>
+                                            <b>Purpose</b>: Miners get jobs from this node.
+                                            The node periodicaly syncs data with the master node
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="columns">
+                                <div class="column">
+                                    <p class="subtitle is-size-6">
+                                        CPU:
+                                        <b id="svko_cpu">
+                                            ...
+                                        </b>
+                                        RAM:
+                                        <b id="svko_ram">
+                                            ...
+                                        </b>
+                                        Clients:
+                                        <b id="svko_connections">
                                             ...
                                         </b>
                                     </p>
@@ -1180,9 +1221,8 @@ function update_pools() {
                 let pulse1_data = pools["pulse-pool-1"];
                 let pulse2_data = pools["pulse-pool-2"];
 
-                update_element("pulse_connections1", pulse1_data["connections"]);
+                update_element("pulse_connections1", pools["pulse-pool-1"]["connections"] + pools["pulse-pool-2"]["connections"] + pools["pulse-pool-3"]["connections"] + pools["pulse-pool-4"]["connections"]);
 
-                update_element("pulse_connections2", pulse2_data["connections"]);
                 update_element("pulse_cpu2", round_to(1, parseFloat(pulse2_data["cpu"])) + "%");
                 update_element("pulse_ram2", round_to(1, parseFloat(pulse2_data["ram"])) + "%");
 
@@ -1197,13 +1237,21 @@ function update_pools() {
                 let beyond1_data = pools["beyond-pool-1"];
                 let beyond2_data = pools["beyond-pool-2"];
 
-                update_element("beyond_connections", beyond1_data["connections"]);
+                update_element("beyond_connections", beyond1_data["connections"] + pools["beyond-pool-4"]["connections"]);
                 update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
                 update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
 
-                update_element("beyond_connections2", beyond2_data["connections"]);
+                update_element("beyond_connections2", beyond2_data["connections"] + pools["beyond-pool-3"]["connections"]);
                 update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
                 update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
+
+                // Svko pool
+                let svko1_data = pools["svko-pool-1"];
+                let svko2_data = pools["svko-pool-2"];
+
+                update_element("svko_connections", svko2_data["connections"] + svko1_data["connections"]);
+                update_element("svko_cpu", round_to(1, parseFloat(svko1_data["cpu"])) + "%");
+                update_element("svko_ram", round_to(1, parseFloat(svko1_data["ram"])) + "%");
 
                 // End of list of pools to update
             }
