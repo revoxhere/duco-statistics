@@ -299,23 +299,108 @@ img {
 
 .scale-in {
     -webkit-animation-name: scaleIn;
-            animation-name: scaleIn;
+    animation-name: scaleIn;
     -webkit-animation-duration: .5s;
-            animation-duration: .5s;
+    animation-duration: .5s;
 }
 
 @-webkit-keyframes scaleIn {
-  from {-webkit-transform: scale(0);transform: scale(0);}
-  to {-webkit-transform: scale(1);transform: scale(1);}
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 @keyframes scaleIn {
-  from {-webkit-transform: scale(0);transform: scale(0);}
-  to {-webkit-transform: scale(1);transform: scale(1);}
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 .modal-background {
     background-color: rgba(0, 0, 0, .4) !important;
     -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.box-grey {
+    background-color: transparent !important;
+}
+
+.canvascontainer {
+    margin: auto !important;
+    display: block;
+}
+
+#balance_chart {
+    opacity: 0.25 !important;
+    position: fixed !important;
+    touch-action: none !important;
+    display: inline !important;
+    overflow: hidden !important;
+    height: 10em !important;
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .box,
+    input,
+    .tag,
+    select {
+        /* Fallback for firefox that still doesn't support blur */
+        background-color: rgba(0, 0, 0, .8) !important;
+    }
+
+    @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+        .box {
+            backdrop-filter: blur(9px) saturate(180%);
+            -webkit-backdrop-filter: blur(9px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.57);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+
+        input {
+            background-color: rgba(17, 25, 40, 0.57) !important;
+        }
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    .box,
+    input,
+    .tag,
+    select {
+        /* Fallback for firefox that still doesn't support blur */
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @supports ((-webkit-backdrop-filter: blur(9px)) or (backdrop-filter: blur(9px))) {
+        .box {
+            backdrop-filter: blur(9px) saturate(180%);
+            -webkit-backdrop-filter: blur(9px) saturate(180%);
+            background-color: rgba(255, 240, 222, 0.57);
+            border-radius: 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+        }
+
+        input {
+            background-color: rgba(255, 240, 222, 0.57) !important;
+        }
+    }
+
 }
