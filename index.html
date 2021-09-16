@@ -90,653 +90,689 @@
             </div>
         </div>
     </nav>
-    <br>
-    <div class="container">
-        <!-- STATISTICS -->
-        <div class="panel">
-            <p class="panel-heading">
-                Network statistics
-                <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: loading data)</span>
-            </p>
-            <div class="panel-block">
-                <div class="columns is-multiline">
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-orange fa fa-tachometer-alt"></i>
-                            <span id="hashrate">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="subtitle is-size-7">
-                            DUCO-S1: <b><span id="ducos1hashrate">Please wait</span></b>,
-                            XXHASH: <b><span id="xxhashhashrate">Please wait</span></b>
-                        </span>
-                        <span class="heading is-size-6">
-                            NET HASHRATE
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-blue fa fa-users"></i>
-                            <span id="registeredusers">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            REGISTERED USERS
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-red fa fa-cog"></i>
-                            <span id="difficulty">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            NET MINING DIFFICULTY
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-purple fa fa-coins"></i>
-                            <span id="allmined">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            DUCO IN CIRCULATION
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-purple fa fa-dollar-sign"></i>
-                            <span id="price">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="subtitle is-size-7">
-                            JustSwap: <b><span id="justswapprice">Please wait</span></b>,
-                            Node-S: <b><span id="nodesprice">Please wait</span></b>
-                        </span>
-                        <span class="heading is-size-6">
-                            <a style="color:#EE5A24" href="https://exchange.duinocoin.com">
-                                DUCO EXCHANGE
-                            </a>
-                            PRICE
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-green fa fa-leaf"></i>
-                            <span id="watt_usage">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            ESTIMATED NET ENERGY USAGE
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-turquoise fa fa-hashtag"></i>
-                            <span id="lastblockhash">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            LAST BLOCK HASH
-                        </span>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <span class="title">
-                            <i class="is-size-6 card-pomegrante fa fa-border-all"></i>
-                            <span id="shares">
-                                Please wait
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            MINED SHARES
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-blue fa fa-microchip"></i>
-                            <span id="arduinos">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            ARDUINOS
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-red fa fa-wifi"></i>
-                            <span id="esp8266s">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            ESP8266S
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-grey fa fa-wifi"></i>
-                            <span id="esp32s">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            ESP32S
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-red-two fab fa-raspberry-pi"></i>
-                            <span id="rpis">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            RASPBERRY PIS
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-green fa fa-laptop"></i>
-                            <span id="cpus">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            CPUS
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-blue fab fa-android"></i>
-                            <span id="phones">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            PHONES
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-purple fa fa-desktop"></i>
-                            <span id="gpus">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            GRAPHIC CARDS
-                        </span>
-                    </div>
-                    <div class="column">
-                        <span class="title">
-                            <i class="is-size-6 card-orange fa fa-question-circle"></i>
-                            <span id="others">
-                                ...
-                            </span>
-                            <br>
-                        </span>
-                        <span class="heading is-size-6">
-                            UNKNOWN
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns is-multiline">
-            <div class="column is-half">
-                <div class="columns is-full is-multiline">
-                    <!-- EXPLORER -->
-                    <div class="column">
-                        <form class="panel">
-                            <p class="panel-heading">
-                                Chain explorer
-                            </p>
-                            <div class="container m-1">
-                                <div class="field has-addons">
-                                    <p class="control is-expanded">
-                                        <input class="input" type="text" placeholder="Enter username, transaction or block hash" name="search">
-                                    </p>
-                                    <p class="control">
-                                        <button type="submit" class="button is-full is-info">
-                                            Search
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="subtitle m-5" id="transactionstext1">
-                                Enter something in the search box above to search through the chain
-                            </p>
-                            <p class="subtitle mx-5" id="transactionstext2"></p>
-                            <br>
-                            <div class="columns is-mobile">
-                                <div class="column is-half">
-                                    <p class="subtitle is-size-6 mx-5" id="transactionstext3">
-                                        Please wait...
-                                    </p>
-                                </div>
-                                <div class="column is-half">
-                                    <p class="subtitle is-size-6 mx-5" id="transactionstext4">
-                                        Please wait...
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- CHARTS -->
-            <div class="column is-half">
-                <div class="panel">
-                    <p class="panel-heading">
-                        Charts
-                        <span class="title is-size-6 has-text-grey">
-                            (click to enlarge)
-                        </span>
-                    </p>
+    <section class="section">
+        <div class="container">
+            <!-- STATISTICS -->
+            <div class="panel">
+                <p class="panel-heading">
+                    Network statistics
+                    <span class="title is-size-6 has-text-grey" id="lastupdate">(last update: loading data)</span>
+                </p>
+                <div class="panel-block">
                     <div class="columns is-multiline">
-                        <div class="column">
-                            <div class="panel-block">
-                                <a onclick="enlarge_prices()">
-                                    <img src="https://server.duinocoin.com/prices.png">
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-orange fa fa-tachometer-alt"></i>
+                                <span id="hashrate">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="subtitle is-size-7">
+                                DUCO-S1: <b><span id="ducos1hashrate">Please wait</span></b>,
+                                XXHASH: <b><span id="xxhashhashrate">Please wait</span></b>
+                            </span>
+                            <span class="heading is-size-6">
+                                NET HASHRATE
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-blue fa fa-users"></i>
+                                <span id="registeredusers">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                REGISTERED USERS
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-red fa fa-cog"></i>
+                                <span id="difficulty">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                NET MINING DIFFICULTY
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-purple fa fa-coins"></i>
+                                <span id="allmined">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                DUCO IN CIRCULATION
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-purple fa fa-dollar-sign"></i>
+                                <span id="price">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="subtitle is-size-7">
+                                JustSwap: <b><span id="justswapprice">Please wait</span></b>,
+                                Node-S: <b><span id="nodesprice">Please wait</span></b>
+                            </span>
+                            <span class="heading is-size-6">
+                                <a style="color:#EE5A24" href="https://exchange.duinocoin.com">
+                                    DUCO EXCHANGE
                                 </a>
-                            </div>
+                                PRICE
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-green fa fa-leaf"></i>
+                                <span id="watt_usage">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                ESTIMATED NET ENERGY USAGE
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-turquoise fa fa-hashtag"></i>
+                                <span id="lastblockhash">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                LAST BLOCK HASH
+                            </span>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <span class="title">
+                                <i class="is-size-6 card-pomegrante fa fa-border-all"></i>
+                                <span id="shares">
+                                    Please wait
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                MINED SHARES
+                            </span>
                         </div>
                         <div class="column">
-                            <div class="panel-block">
-                                <a onclick="enlarge_miners()">
-                                    <img src="https://server.duinocoin.com/minerchart.png">
-                                </a>
-                            </div>
+                            <span class="title">
+                                <i class="is-size-6 card-blue fa fa-microchip"></i>
+                                <span id="arduinos">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                ARDUINOS
+                            </span>
                         </div>
                         <div class="column">
-                            <div class="panel-block">
-                                <a onclick="enlarge_balances()">
-                                    <img src="https://server.duinocoin.com/balancechart.png">
-                                </a>
-                            </div>
+                            <span class="title">
+                                <i class="is-size-6 card-red fa fa-wifi"></i>
+                                <span id="esp8266s">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                ESP8266S
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-grey fa fa-wifi"></i>
+                                <span id="esp32s">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                ESP32S
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-red-two fab fa-raspberry-pi"></i>
+                                <span id="rpis">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                RASPBERRY PIS
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-green fa fa-laptop"></i>
+                                <span id="cpus">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                CPUS
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-blue fab fa-android"></i>
+                                <span id="phones">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                PHONES
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-purple fa fa-desktop"></i>
+                                <span id="gpus">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                GRAPHIC CARDS
+                            </span>
+                        </div>
+                        <div class="column">
+                            <span class="title">
+                                <i class="is-size-6 card-orange fa fa-question-circle"></i>
+                                <span id="others">
+                                    ...
+                                </span>
+                                <br>
+                            </span>
+                            <span class="heading is-size-6">
+                                UNKNOWN
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- NODES -->
-            <div class="column is-full mt-3">
-                <div class="panel">
-                    <p class="panel-heading">
-                        Mining nodes
-                    </p>
-                    <div class="columns m-1">
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="columns is-full is-multiline">
+                        <!-- EXPLORER -->
                         <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
-                                    <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
-                                        <b>MASTER</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (4 cores)<br>
-                                            <b>RAM</b>: 8 GB<br>
-                                            <b>OS</b>: Debian 10 Buster<br>
-                                            <b>Storage</b>: 40 GB SSD<br>
-                                            <b>Provider</b>: Scaleway (DEV-1L)<br>
-                                            <b>Hosted by</b>: revox & Bilaboz from the <b>Duino</b> team<br>
-                                            <b>Purpose</b>: The master node that processes transactions,
-                                            stores user wallets, and provides API functions. If there are no
-                                            other nodes available, it can also handle the miners.
-                                        </div>
+                            <form class="panel">
+                                <p class="panel-heading">
+                                    Chain explorer
+                                </p>
+                                <div class="container m-1">
+                                    <div class="field has-addons">
+                                        <p class="control is-expanded">
+                                            <input class="input" type="text" placeholder="Enter username, transaction or block hash" name="search">
+                                        </p>
+                                        <p class="control">
+                                            <button type="submit" class="button is-full is-info">
+                                                Search
+                                            </button>
+                                        </p>
                                     </div>
                                 </div>
+                                <p class="subtitle m-5" id="transactionstext1">
+                                    Enter something in the search box above to search through the chain
+                                </p>
+                                <p class="subtitle mx-5" id="transactionstext2"></p>
+                                <br>
+                                <div class="columns is-mobile">
+                                    <div class="column is-half">
+                                        <p class="subtitle is-size-6 mx-5" id="transactionstext3">
+                                            Please wait...
+                                        </p>
+                                    </div>
+                                    <div class="column is-half">
+                                        <p class="subtitle is-size-6 mx-5" id="transactionstext4">
+                                            Please wait...
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- CHARTS -->
+                <div class="column is-half">
+                    <div class="panel">
+                        <p class="panel-heading">
+                            Charts
+                            <span class="title is-size-6 has-text-grey">
+                                (click to enlarge)
+                            </span>
+                        </p>
+                        <div class="columns is-multiline">
+                            <div class="column">
+                                <div class="panel-block">
+                                    <a onclick="enlarge_prices()">
+                                        <img src="https://server.duinocoin.com/prices.png">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="title is-size-6">
-                                        CPU:
-                                        <b id="master_cpu">
-                                            ...
-                                        </b>
-                                        RAM:
-                                        <b id="master_ram">
-                                            ...
-                                        </b>
-                                        Clients:
-                                        <b id="master_connections">
-                                            ...
-                                        </b>
-                                        Threads:
-                                        <b id="master_threads">
-                                            ...
-                                        </b>
-                                    </p>
+                            <div class="column">
+                                <div class="panel-block">
+                                    <a onclick="enlarge_miners()">
+                                        <img src="https://server.duinocoin.com/minerchart.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="panel-block">
+                                    <a onclick="enlarge_balances()">
+                                        <img src="https://server.duinocoin.com/balancechart.png">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
-                                    <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-red fa fa-heart"></i>&nbsp;
-                                        <b>PULSE</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
-                                            <b>RAM</b>: 4 GB<br>
-                                            <b>OS</b>: Debian 10 Buster<br>
-                                            <b>Storage</b>: 40 GB SSD<br>
-                                            <b>Provider</b>: PulseHeberg<br>
-                                            <b>Hosted by</b>: Bilaboz from the <b>Duino</b> team<br>
-                                            <b>Purpose</b>: Miners get jobs from this node.
-                                            The node periodicaly syncs data with the master node
+                    </div>
+                </div>
+                <!-- NODES -->
+                <div class="column is-full mt-3">
+                    <div class="panel">
+                        <p class="panel-heading">
+                            Mining nodes
+                        </p>
+                        <div class="columns m-1">
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-green fa fa-server"></i>&nbsp;
+                                            <b>MASTER</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (4 cores)<br>
+                                                <b>RAM</b>: 8 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 40 GB SSD<br>
+                                                <b>Provider</b>: Scaleway (DEV-1L)<br>
+                                                <b>Hosted by</b>: revox & Bilaboz from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: The master node that processes transactions,
+                                                stores user wallets, and provides API functions. If there are no
+                                                other nodes available, it can also handle the miners.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="title is-size-6">
-                                        CPU:
-                                        <b id="pulse_cpu2">
-                                            ...
-                                        </b>
-                                        RAM:
-                                        <b id="pulse_ram2">
-                                            ...
-                                        </b>
-                                        Clients:
-                                        <b id="pulse_connections1">
-                                            ...
-                                        </b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
-                                    <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-turquoise fa fa-star"></i>&nbsp;
-                                        <b>STAR</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (1 core)<br>
-                                            <b>RAM</b>: 1 GB<br>
-                                            <b>OS</b>: Debian 10 Buster<br>
-                                            <b>Storage</b>: 10 GB<br>
-                                            <b>Provider</b>: Scaleway (Stardust)<br>
-                                            <b>Hosted by</b>: revox & Bilaboz from the <b>Duino</b> team<br>
-                                            <b>Purpose</b>: Miners get jobs from this node.
-                                            The node periodicaly syncs data with the master node
-                                        </div>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="master_cpu">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="master_ram">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="master_connections">
+                                                ...
+                                            </b><br>
+                                            Threads:
+                                            <b id="master_threads">
+                                                ...
+                                            </b>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="title is-size-6">
-                                        CPU:
-                                        <b id="star_cpu">
-                                            ...
-                                        </b>
-                                        RAM:
-                                        <b id="star_ram">
-                                            ...
-                                        </b>
-                                        Clients:
-                                        <b id="star_connections">
-                                            ...
-                                        </b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
-                                    <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-blue fa fa-rocket"></i>&nbsp;
-                                        <b>BEYOND</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: Intel Xeon E5-2676 @ 2.4 GHz (1 core)<br>
-                                            <b>RAM</b>: 2 GB<br>
-                                            <b>OS</b>: Ubuntu 18.04<br>
-                                            <b>Storage</b>: 60 GB<br>
-                                            <b>Provider</b>: Amazon AWS<br>
-                                            <b>Hosted by</b>: Beyondtoshi from the <b>Duino</b> team<br>
-                                            <b>Purpose</b>: Miners get jobs from this node.
-                                            The node periodicaly syncs data with the master node
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-red fa fa-heart"></i>&nbsp;
+                                            <b>PULSE</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
+                                                <b>RAM</b>: 4 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 40 GB SSD<br>
+                                                <b>Provider</b>: PulseHeberg<br>
+                                                <b>Hosted by</b>: Bilaboz from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="pulse_cpu2">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="pulse_ram2">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="pulse_connections1">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="subtitle is-size-6">
-                                        CPU (instance 1):
-                                        <b id="beyond_cpu">
-                                            ...
-                                        </b>
-                                        RAM (instance 1):
-                                        <b id="beyond_ram">
-                                            ...
-                                        </b>
-                                        Clients (instance 1):
-                                        <b id="beyond_connections">
-                                            ...
-                                        </b><br>
-                                        CPU (instance 2):
-                                        <b id="beyond_cpu2">
-                                            ...
-                                        </b>
-                                        RAM (instance 2):
-                                        <b id="beyond_ram2">
-                                            ...
-                                        </b>
-                                        Clients (instance 2):
-                                        <b id="beyond_connections2">
-                                            ...
-                                        </b>
-                                    </p>
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-orange fa fa-star"></i>&nbsp;
+                                            <b>STAR</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: AMD EPYC 7281 @ 2.1 GHz (1 core)<br>
+                                                <b>RAM</b>: 1 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 10 GB<br>
+                                                <b>Provider</b>: Scaleway (Stardust)<br>
+                                                <b>Hosted by</b>: revox & Bilaboz from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="star_cpu">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="star_ram">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="star_connections">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-blue fa fa-rocket"></i>&nbsp;
+                                            <b>BEYOND</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: Intel Xeon E5-2676 @ 2.4 GHz (1 core)<br>
+                                                <b>RAM</b>: 2 GB<br>
+                                                <b>OS</b>: Ubuntu 18.04<br>
+                                                <b>Storage</b>: 60 GB<br>
+                                                <b>Provider</b>: Amazon AWS<br>
+                                                <b>Hosted by</b>: Beyondtoshi from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="beyond_cpu">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="beyond_ram">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="beyond_connections">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-turquoise fa fa-rocket"></i>&nbsp;
+                                            <b>BEYOND 2</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: Intel Xeon E5-2676 @ 2.4 GHz (1 core)<br>
+                                                <b>RAM</b>: 2 GB<br>
+                                                <b>OS</b>: Ubuntu 18.04<br>
+                                                <b>Storage</b>: 60 GB<br>
+                                                <b>Provider</b>: Amazon AWS<br>
+                                                <b>Hosted by</b>: Beyondtoshi from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="beyond_cpu2">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="beyond_ram2">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="beyond_connections2">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <span aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-grey fa fa-heart-broken"></i>&nbsp;
+                                            <b>SVKO</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: 2.6 GHz (4 cores)<br>
+                                                <b>RAM</b>: 8 GB<br>
+                                                <b>OS</b>: Debian 10 Buster<br>
+                                                <b>Storage</b>: 60 GB<br>
+                                                <b>Provider</b>: noez.de<br>
+                                                <b>Hosted by</b>: revox from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="svko_cpu">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="svko_ram">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="svko_connections">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="dropdown is-hoverable">
-                                <div class="dropdown-trigger mb-3">
-                                    <span aria-haspopup="true" aria-controls="dropdown-menu4">
-                                        <i class="is-size-7 card-grey fa fa-heart-broken"></i>&nbsp;
-                                        <b>SVKO</b>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                        </span>
+                    </div>
+                </div>
+                <!-- ACTIVE WORKERS -->
+                <div class="column is-full">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            Active workers
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <span class="is-size-6 has-text-grey-dark" id="allworkers">
+                                        (not loaded by default - prepare for a lot of data!)
                                     </span>
                                 </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="content m-3">
-                                            <b>CPU</b>: 2.6 GHz (4 cores)<br>
-                                            <b>RAM</b>: 8 GB<br>
-                                            <b>OS</b>: Debian 10 Buster<br>
-                                            <b>Storage</b>: 60 GB<br>
-                                            <b>Provider</b>: noez.de<br>
-                                            <b>Hosted by</b>: revox from the <b>Duino</b> team<br>
-                                            <b>Purpose</b>: Miners get jobs from this node.
-                                            The node periodicaly syncs data with the master node
+                                <div class="column is-narrow">
+                                    <div class="columns is-multiline" style="text-align:right;">
+                                        <div class="column is-narrow">
+                                            <p class="is-size-6 has-text-grey-dark">
+                                                <i class="fa fa-times-circle has-text-danger"></i>
+                                                unverified account
+                                            </p>
+                                        </div>
+                                        <div class="column is-narrow">
+                                            <p class="is-size-6 has-text-grey-dark">
+                                                <i class="fa fa-check has-text-success"></i>
+                                                verified account
+                                            </p>
+                                        </div>
+                                        <div class="column is-narrow">
+                                            <p class="is-size-6 has-text-grey-dark">
+                                                <span class="tag">123</span>
+                                                amount of workers
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="subtitle is-size-6">
-                                        CPU:
-                                        <b id="svko_cpu">
-                                            ...
-                                        </b>
-                                        RAM:
-                                        <b id="svko_ram">
-                                            ...
-                                        </b>
-                                        Clients:
-                                        <b id="svko_connections">
-                                            ...
-                                        </b>
-                                    </p>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="panel-block">
+                            <span id="workers" class="subtitle is-size-6">
+                                <button id="loadworkers" class="button is-outlined is-info" onclick="fill_worker_list()">
+                                    Load all workers
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ACTIVE WORKERS -->
-            <div class="column is-full">
-                <div class="panel">
-                    <div class="panel-heading">
-                        Active workers
-                        <div class="columns is-mobile">
-                            <div class="column">
-                                <span class="is-size-6 has-text-grey-dark" id="allworkers">
-                                    (not loaded by default - prepare for a lot of data!)
-                                </span>
-                            </div>
-                            <div class="column is-narrow">
-                                <div class="columns is-multiline" style="text-align:right;">
-                                    <div class="column is-narrow">
-                                        <p class="is-size-6 has-text-grey-dark">
-                                            <i class="fa fa-times-circle has-text-danger"></i>
-                                            unverified account
-                                        </p>
-                                    </div>
-                                    <div class="column is-narrow">
-                                        <p class="is-size-6 has-text-grey-dark">
-                                            <i class="fa fa-check has-text-success"></i>
-                                            verified account
-                                        </p>
-                                    </div>
-                                    <div class="column is-narrow">
-                                        <p class="is-size-6 has-text-grey-dark">
-                                            <span class="tag">123</span>
-                                            amount of workers
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <div id="large_prices" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head has-background-success">
+                        <p class="modal-card-title"><b style="color: white">DUCO price chart</b></p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="content">
+                            <img src="https://server.duinocoin.com/prices.png">
                         </div>
-                    </div>
-                    <div class="panel-block">
-                        <span id="workers" class="subtitle is-size-6">
-                            <button id="loadworkers" class="button is-outlined is-info" onclick="fill_worker_list()">
-                                Load all workers
-                            </button>
-                        </span>
-                    </div>
+                    </section>
+                </div>
+            </div>
+            <div id="large_miners" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head has-background-success">
+                        <p class="modal-card-title"><b style="color: white">Most popular miners</b></p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="content">
+                            <img src="https://server.duinocoin.com/minerchart.png">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="large_balances" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head has-background-success">
+                        <p class="modal-card-title"><b style="color: white">Account rich list</b></p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="content">
+                            <img src="https://server.duinocoin.com/balancechart.png">
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-        <div id="large_prices" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head has-background-success">
-                    <p class="modal-card-title"><b style="color: white">DUCO price chart</b></p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-                <section class="modal-card-body">
-                    <div class="content">
-                        <img src="https://server.duinocoin.com/prices.png">
-                    </div>
-                </section>
-            </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Duino-Coin Website</strong> (v3) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021 from the <b>Duino</b> team
+                <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
+                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
+                <a href="https://bulma.io">
+                    <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="188" height="84">
+                </a>
+            </p>
         </div>
-        <div id="large_miners" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head has-background-success">
-                    <p class="modal-card-title"><b style="color: white">Most popular miners</b></p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-                <section class="modal-card-body">
-                    <div class="content">
-                        <img src="https://server.duinocoin.com/minerchart.png">
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div id="large_balances" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head has-background-success">
-                    <p class="modal-card-title"><b style="color: white">Account rich list</b></p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-                <section class="modal-card-body">
-                    <div class="content">
-                        <img src="https://server.duinocoin.com/balancechart.png">
-                    </div>
-                </section>
-            </div>
-        </div>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Duino-Coin Website</strong> (v3) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021 from the <b>Duino</b> team
-                    <br>Hosted by <a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a> and/or GitHub Pages
-                    <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a><br>
-                    <a href="https://bulma.io">
-                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="188" height="84">
-                    </a>
-                </p>
-            </div>
-        </footer>
+    </footer>
 </body>
 
 </html>
