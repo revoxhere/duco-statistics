@@ -281,18 +281,6 @@
                         </div>
                         <div class="column">
                             <span class="title">
-                                <i class="is-size-6 card-purple fa fa-desktop"></i>
-                                <span id="gpus">
-                                    ...
-                                </span>
-                                <br>
-                            </span>
-                            <span class="heading is-size-6">
-                                GRAPHIC CARDS
-                            </span>
-                        </div>
-                        <div class="column">
-                            <span class="title">
                                 <i class="is-size-6 card-orange fa fa-question-circle"></i>
                                 <span id="others">
                                     ...
@@ -300,7 +288,7 @@
                                 <br>
                             </span>
                             <span class="heading is-size-6">
-                                UNKNOWN
+                                UNKNOWN/OTHER
                             </span>
                         </div>
                     </div>
@@ -963,8 +951,6 @@ function update_stats() {
                 data["Miner distribution"]["CPU"] / 8))
 
             update_element("phones", Math.round(data["Miner distribution"]["Phone"] / 8))
-
-            update_element("gpus", data["Miner distribution"]["GPU"])
 
             update_element("others", data["Miner distribution"]["Other"])
 
