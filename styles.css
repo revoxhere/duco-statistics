@@ -353,54 +353,7 @@ img {
     display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    .box,
-    input,
-    .tag,
-    select {
-        /* Fallback for firefox that still doesn't support blur */
-        background-color: rgba(0, 0, 0, .8) !important;
-    }
-
-    @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-        .box {
-            backdrop-filter: blur(9px) saturate(180%);
-            -webkit-backdrop-filter: blur(9px) saturate(180%);
-            background-color: rgba(17, 25, 40, 0.57);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.125);
-        }
-
-        input {
-            background-color: rgba(17, 25, 40, 0.57) !important;
-        }
-    }
-
-}
-
-@media (prefers-color-scheme: light) {
-
-    .box,
-    input,
-    .tag,
-    select {
-        /* Fallback for firefox that still doesn't support blur */
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    @supports ((-webkit-backdrop-filter: blur(9px)) or (backdrop-filter: blur(9px))) {
-        .box {
-            backdrop-filter: blur(9px) saturate(180%);
-            -webkit-backdrop-filter: blur(9px) saturate(180%);
-            background-color: rgba(255, 240, 222, 0.57);
-            border-radius: 12px;
-            border: 1px solid rgba(209, 213, 219, 0.3);
-        }
-
-        input {
-            background-color: rgba(255, 240, 222, 0.57) !important;
-        }
-    }
-
+.box {
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
 }
