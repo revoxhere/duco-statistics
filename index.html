@@ -306,12 +306,12 @@
                                 <div class="container m-1">
                                     <div class="field has-addons">
                                         <p class="control is-expanded">
-                                            <input class="input" type="text" placeholder="Enter username, transaction or block hash" name="search">
+                                            <input class="input" id="search_input" type="text" placeholder="Enter username, transaction or block hash" name="search">
                                         </p>
                                         <p class="control">
-                                            <button type="submit" class="button is-full is-info">
+                                            <a onclick="button_search()" class="button is-full is-info">
                                                 Search
-                                            </button>
+                                            </a>
                                         </p>
                                     </div>
                                 </div>
@@ -818,29 +818,18 @@ let duco_price = 0.00045;
 let load_workers = false;
 let url_string = window.location;
 let url = new URL(url_string);
-let hashToBeFound = url.searchParams.get("search");
-
-
-if (hashToBeFound) {
-    $("#transactionstext1").html(`Results for: <strong><span class='gradienttext'>` +
-        hashToBeFound +
-        `</strong></span>`);
-    $("#transactionstext2").html("Nothing found or still searching 🤷");
-}
-
+let to_search = url.searchParams.get("search");
 
 function update_element(element, value) {
     // Nicely fade in the new value if it changed
     element = "#" + element;
     old_value = $(element).text()
 
-    if (value != old_value) {
-        setTimeout(function() {
-            $(element).fadeOut(150, function() {
-                $(element).text(value);
-                $(element).fadeIn(150);
-            });
-        }, Math.floor(Math.random() * 400));
+    if ($("<div>" + value + "</div>").text() != old_value) {
+        $(element).fadeOut(50, function() {
+            $(element).html(value);
+            $(element).fadeIn(250);
+        });
     }
 }
 
@@ -854,6 +843,9 @@ function round_to(precision, value) {
 function fill_worker_list() {
     $("#loadworkers").addClass("is-loading")
     fetch("https://server.duinocoin.com/statistics_miners")
+        .catch(function(error) {
+            console.log(error);
+        })
         .then(response => response.json())
         .then(data => {
             data = data.result;
@@ -900,14 +892,14 @@ function fill_worker_list() {
             document.getElementById("workers").innerHTML = workers;
             $("#allworkers").text("(" + worker_counter + " workers on " + counter + " accounts)");
         });
-    window.setInterval(function() {
-        fill_worker_list()
-    }, 30000);
 }
 
 
 function update_stats() {
     fetch("https://server.duinocoin.com/api.json")
+        .catch(function(error) {
+            console.log(error);
+        })
         .then(response => response.json())
         .then(data => {
             // FILL THE STATISTICS SECTION FROM API
@@ -967,6 +959,9 @@ function update_stats() {
 
 function last_explorer_hashes() {
     fetch("https://server.duinocoin.com/transactions.json")
+        .catch(function(error) {
+            console.log(error);
+        })
         .then(response => response.json())
         .then(data => {
 
@@ -988,6 +983,9 @@ function last_explorer_hashes() {
             $("#transactionstext3").html(transaction_hashes_html);
         })
     fetch("https://server.duinocoin.com/foundBlocks.json")
+        .catch(function(error) {
+            console.log(error);
+        })
         .then(response => response.json())
         .then(data => {
             let last = [];
@@ -1024,8 +1022,18 @@ function get_prefix(symbol, value) {
 
 function search(hashToBeFound) {
     let cont = true;
+    if (hashToBeFound) {
+        console.log(hashToBeFound);
+        $("#transactionstext1").html(`Results for: <a class="gradienttext" onclick="link_search('${hashToBeFound}')">${hashToBeFound}</a></span>`);
+    }
     if (cont) {
         fetch('https://server.duinocoin.com/transactions/' + hashToBeFound)
+            .catch(function(error) {
+                found_transaction_html = `<ul class="subtitle"><li>` +
+                    `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
+                update_element("transactionstext2", found_transaction_html);
+            })
             .then(response => response.json())
             .then(data => {
                 if (data.success == true && data.result != "No transaction found") {
@@ -1069,15 +1077,20 @@ function search(hashToBeFound) {
                         data.result.memo +
                         `</b></i></li></ul>`
 
-                    $("#transactionstext2").html(found_transaction_html);
+                    update_element("transactionstext2", found_transaction_html);
                 }
             })
     }
     if (cont) {
         fetch('https://server.duinocoin.com/users/' + hashToBeFound)
+            .catch(function(error) {
+                found_transaction_html = `<ul class="subtitle"><li>` +
+                    `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> - slow down!</li></ul>`;
+                update_element("transactionstext2", found_transaction_html);
+            })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 if (data.success == true) {
                     cont = false;
                     let amount_usd = data.result.balance.balance * duco_price;
@@ -1183,15 +1196,21 @@ function search(hashToBeFound) {
 
                     found_user_html += "</ul>"
 
-                    $("#transactionstext2").html(found_user_html);
-
+                    update_element("transactionstext2", found_transaction_html);
                 }
             })
     }
     if (cont) {
         fetch('https://server.duinocoin.com/foundBlocks.json')
+            .catch(function(error) {
+                found_transaction_html = `<ul class="subtitle"><li>` +
+                    `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> - slow down!</li></ul>`;
+                update_element("transactionstext2", found_transaction_html);
+            })
             .then(response => response.json())
             .then(data => {
+                cont = false;
                 let found = data[hashToBeFound]
                 if (hashToBeFound != "" && found != "" && found != undefined) {
                     cont = false;
@@ -1226,15 +1245,19 @@ function search(hashToBeFound) {
                         round_to(2, found["Amount generated"]) +
                         ` DUCO</b> (≈$` + round_to(4, amount_usd) + `)</li></ul>`;
 
-                    $("#transactionstext2").html(found_block_html);
+                    update_element("transactionstext2", found_transaction_html);
                 }
             })
     }
+    if (cont) $("#transactionstext2").text(`Nothing interesting found for your query 🤷`);
 }
 
 
 function update_pools() {
     fetch("https://server.duinocoin.com/all_pools")
+        .catch(function(error) {
+            console.log(error);
+        })
         .then(response => response.json())
         .then(data => {
             if (data.success === true) {
@@ -1294,10 +1317,14 @@ window.setInterval(last_explorer_hashes, 5000); // Refresh every 5s
 update_pools();
 window.setInterval(update_pools, 5000); // Refresh every 5s
 
-function link_search(hash) {
-    search(hash);
-    console.log(hash);
+function button_search() {
+    to_search = $('#search_input').val();
+    search(to_search);
 }
 
-if (hashToBeFound) search(hashToBeFound);
+function link_search(to_search) {
+    search(to_search);
+}
+
+if (to_search) search(to_search);
 </script>
