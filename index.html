@@ -1027,15 +1027,7 @@ function search(hashToBeFound) {
         $("#transactionstext1").html(`Results for: <a class="gradienttext" onclick="link_search('${hashToBeFound}')">${hashToBeFound}</a></span>`);
     }
     if (cont) {
-        fetch('https://server.duinocoin.com/transactions/' + hashToBeFound)
-            .catch(function(error) {
-                found_transaction_html = `<ul class="subtitle"><li>` +
-                    `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
-                update_element("transactionstext2", found_transaction_html);
-            })
-            .then(response => response.json())
-            .then(data => {
+        $.getJSON("https://server.duinocoin.com/transactions/" + hashToBeFound, function(data) {
                 if (data.success == true && data.result != "No transaction found") {
                     cont = false;
                     let amount_usd = data.result.amount * duco_price;
@@ -1080,17 +1072,15 @@ function search(hashToBeFound) {
                     update_element("transactionstext2", found_transaction_html);
                 }
             })
-    }
-    if (cont) {
-        fetch('https://server.duinocoin.com/users/' + hashToBeFound)
-            .catch(function(error) {
+            .fail(function(error) {
                 found_transaction_html = `<ul class="subtitle"><li>` +
                     `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down!</li></ul>`;
+                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
                 update_element("transactionstext2", found_transaction_html);
-            })
-            .then(response => response.json())
-            .then(data => {
+            });
+    }
+    if (cont) {
+        $.getJSON('https://server.duinocoin.com/users/' + hashToBeFound, function(data) {
                 if (data.success == true) {
                     cont = false;
                     let amount_usd = data.result.balance.balance * duco_price;
@@ -1196,20 +1186,18 @@ function search(hashToBeFound) {
 
                     found_user_html += "</ul>"
 
-                    update_element("transactionstext2", found_transaction_html);
+                    update_element("transactionstext2", found_user_html);
                 }
             })
-    }
-    if (cont) {
-        fetch('https://server.duinocoin.com/foundBlocks.json')
-            .catch(function(error) {
+            .fail(function(error) {
                 found_transaction_html = `<ul class="subtitle"><li>` +
                     `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down!</li></ul>`;
+                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
                 update_element("transactionstext2", found_transaction_html);
-            })
-            .then(response => response.json())
-            .then(data => {
+            });
+    }
+    if (cont) {
+        $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
                 cont = false;
                 let found = data[hashToBeFound]
                 if (hashToBeFound != "" && found != "" && found != undefined) {
@@ -1245,9 +1233,15 @@ function search(hashToBeFound) {
                         round_to(2, found["Amount generated"]) +
                         ` DUCO</b> (≈$` + round_to(4, amount_usd) + `)</li></ul>`;
 
-                    update_element("transactionstext2", found_transaction_html);
+                    update_element("transactionstext2", found_block_html);
                 }
             })
+            .fail(function(error) {
+                found_transaction_html = `<ul class="subtitle"><li>` +
+                    `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
+                update_element("transactionstext2", found_transaction_html);
+            });
     }
     if (cont) $("#transactionstext2").text(`Nothing interesting found for your query 🤷`);
 }
@@ -1319,10 +1313,12 @@ window.setInterval(update_pools, 5000); // Refresh every 5s
 
 function button_search() {
     to_search = $('#search_input').val();
+    console.log("Button search for ", to_search)
     search(to_search);
 }
 
 function link_search(to_search) {
+    console.log("Link search for ", to_search)
     search(to_search);
 }
 
