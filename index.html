@@ -1278,14 +1278,14 @@ function update_pools() {
                 update_element("star_ram", round_to(1, parseFloat(star1_data["ram"])) + "%");
 
                 // Beyond pool
-                let beyond1_data = pools["beyond-pool-2"];
-                let beyond2_data = pools["beyond-pool-1"];
+                let beyond1_data = pools["beyond-pool-1"];
+                let beyond2_data = pools["beyond-pool-3"];
 
-                update_element("beyond_connections", pools["beyond-pool-2"]["connections"] + pools["beyond-pool-3"]["connections"]);
+                update_element("beyond_connections", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-2"]["connections"]);
                 update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
                 update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
 
-                update_element("beyond_connections2", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-4"]["connections"]);
+                update_element("beyond_connections2", pools["beyond-pool-3"]["connections"] + pools["beyond-pool-4"]["connections"]);
                 update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
                 update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
 
