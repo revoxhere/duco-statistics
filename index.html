@@ -656,6 +656,52 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="column">
+                                <div class="dropdown is-hoverable">
+                                    <div class="dropdown-trigger mb-3">
+                                        <span aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <i class="is-size-7 card-purple fa fa-plus"></i>&nbsp;
+                                            <b>NULL</b>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="content m-3">
+                                                <b>CPU</b>: Intel Xeon E5-1650 3.8 GHz (1 core)<br>
+                                                <b>RAM</b>: 2 GB<br>
+                                                <b>OS</b>: Ubuntu 18.04<br>
+                                                <b>Storage</b>: 36 GB<br>
+                                                <b>Provider</b>: noez.de<br>
+                                                <b>Hosted by</b>: null from the <b>Duino</b> team<br>
+                                                <b>Purpose</b>: Miners get jobs from this node.
+                                                The node periodicaly syncs data with the master node
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="columns">
+                                    <div class="column">
+                                        <p class="subtitle">
+                                            CPU:
+                                            <b id="null_cpu">
+                                                ...
+                                            </b><br>
+                                            RAM:
+                                            <b id="null_ram">
+                                                ...
+                                            </b><br>
+                                            Clients:
+                                            <b id="null_connections">
+                                                ...
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1296,6 +1342,13 @@ function update_pools() {
                 update_element("svko_connections", svko2_data["connections"] + svko1_data["connections"]);
                 update_element("svko_cpu", round_to(1, parseFloat(svko1_data["cpu"])) + "%");
                 update_element("svko_ram", round_to(1, parseFloat(svko1_data["ram"])) + "%");
+
+                // Null pool
+                let null_data = pools["null-pool-1"];
+
+                update_element("null_connections", null_data["connections"]);
+                update_element("null_cpu", round_to(1, parseFloat(null_data["cpu"])) + "%");
+                update_element("null_ram", round_to(1, parseFloat(null_data["ram"])) + "%");
 
                 // End of list of pools to update
             }
