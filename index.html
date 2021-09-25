@@ -1066,6 +1066,22 @@ function get_prefix(symbol, value) {
     return value;
 }
 
+String.prototype.escape = function() {
+    var tagsToReplace = {
+        '&': ' ',
+        '\\': ' ',
+        '/': ' ',
+        '(': ' ',
+        ')': ' ',
+        '`': ' ',
+        '<': ' ',
+        '>': ' '
+    };
+    return this.replace(/[&<>]/g, function(tag) {
+        return tagsToReplace[tag] || tag;
+    });
+};
+
 function search(hashToBeFound) {
     let cont = true;
     if (hashToBeFound) {
@@ -1119,9 +1135,13 @@ function search(hashToBeFound) {
                 }
             })
             .fail(function(error) {
+                console.log(error.responseText);
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
                 found_transaction_html = `<ul class="subtitle"><li>` +
                     `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 update_element("transactionstext2", found_transaction_html);
             });
     }
@@ -1236,9 +1256,12 @@ function search(hashToBeFound) {
                 }
             })
             .fail(function(error) {
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
                 found_transaction_html = `<ul class="subtitle"><li>` +
                     `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 update_element("transactionstext2", found_transaction_html);
             });
     }
@@ -1283,9 +1306,12 @@ function search(hashToBeFound) {
                 }
             })
             .fail(function(error) {
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
                 found_transaction_html = `<ul class="subtitle"><li>` +
                     `<i class='fas fa-fw card-red is-size-7 fa-info-circle'></i>` +
-                    `&nbsp;Error: <b>${error}</b> - slow down 🤦‍♀️</li></ul>`;
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 update_element("transactionstext2", found_transaction_html);
             });
     }
@@ -1365,15 +1391,15 @@ update_pools();
 window.setInterval(update_pools, 5000); // Refresh every 5s
 
 function button_search() {
-    to_search = $('#search_input').val();
-    console.log("Button search for ", to_search)
-    search(to_search);
+    to_search = $('#search_input').val().escape();
+    console.log("Button search for ", to_search.escape())
+    search(to_search.escape());
 }
 
 function link_search(to_search) {
-    console.log("Link search for ", to_search)
-    search(to_search);
+    console.log("Link search for ", to_search.escape())
+    search(to_search.escape());
 }
 
-if (to_search) search(to_search);
+if (to_search.escape()) search(to_search.escape());
 </script>
