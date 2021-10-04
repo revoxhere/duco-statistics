@@ -1334,47 +1334,54 @@ function update_pools() {
                 // Update pool info, add new pools here
 
                 // Pulse pool
-                let pulse1_data = pools["pulse-pool-1"];
-                let pulse2_data = pools["pulse-pool-2"];
+                try {
+                    let pulse1_data = pools["pulse-pool-1"];
+                    let pulse2_data = pools["pulse-pool-2"];
+                    update_element("pulse_connections1", pools["pulse-pool-1"]["connections"] + pools["pulse-pool-2"]["connections"] + pools["pulse-pool-3"]["connections"] + pools["pulse-pool-4"]["connections"]);
 
-                update_element("pulse_connections1", pools["pulse-pool-1"]["connections"] + pools["pulse-pool-2"]["connections"] + pools["pulse-pool-3"]["connections"] + pools["pulse-pool-4"]["connections"]);
-
-                update_element("pulse_cpu2", round_to(1, parseFloat(pulse2_data["cpu"])) + "%");
-                update_element("pulse_ram2", round_to(1, parseFloat(pulse2_data["ram"])) + "%");
+                    update_element("pulse_cpu2", round_to(1, parseFloat(pulse2_data["cpu"])) + "%");
+                    update_element("pulse_ram2", round_to(1, parseFloat(pulse2_data["ram"])) + "%");
+                } catch (e) { console.log(e) };
 
                 // Star pool
-                let star1_data = pools["star-pool-1"];
-
-                update_element("star_connections", star1_data["connections"]);
-                update_element("star_cpu", round_to(1, parseFloat(star1_data["cpu"])) + "%");
-                update_element("star_ram", round_to(1, parseFloat(star1_data["ram"])) + "%");
+                try {
+                    let star1_data = pools["star-pool-1"];
+                    update_element("star_connections", star1_data["connections"]);
+                    update_element("star_cpu", round_to(1, parseFloat(star1_data["cpu"])) + "%");
+                    update_element("star_ram", round_to(1, parseFloat(star1_data["ram"])) + "%");
+                } catch (e) { console.log(e) };
 
                 // Beyond pool
-                let beyond1_data = pools["beyond-pool-1"];
-                let beyond2_data = pools["beyond-pool-3"];
+                try {
+                    let beyond1_data = pools["beyond-pool-1"];
+                    let beyond2_data = pools["beyond-pool-3"];
+                    update_element("beyond_connections", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-2"]["connections"]);
+                    update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
+                    update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
 
-                update_element("beyond_connections", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-2"]["connections"]);
-                update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
-                update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
-
-                update_element("beyond_connections2", pools["beyond-pool-3"]["connections"] + pools["beyond-pool-4"]["connections"]);
-                update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
-                update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
+                    update_element("beyond_connections2", pools["beyond-pool-3"]["connections"] + pools["beyond-pool-4"]["connections"]);
+                    update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
+                    update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
+                } catch (e) { console.log(e) };
 
                 // Svko pool
-                let svko1_data = pools["svko-pool-1"];
-                let svko2_data = pools["svko-pool-2"];
+                try {
+                    let svko1_data = pools["svko-pool-1"];
+                    let svko2_data = pools["svko-pool-2"];
 
-                update_element("svko_connections", svko2_data["connections"] + svko1_data["connections"]);
-                update_element("svko_cpu", round_to(1, parseFloat(svko1_data["cpu"])) + "%");
-                update_element("svko_ram", round_to(1, parseFloat(svko1_data["ram"])) + "%");
+                    update_element("svko_connections", svko2_data["connections"] + svko1_data["connections"]);
+                    update_element("svko_cpu", round_to(1, parseFloat(svko1_data["cpu"])) + "%");
+                    update_element("svko_ram", round_to(1, parseFloat(svko1_data["ram"])) + "%");
+                } catch (e) { console.log(e) };
 
                 // Null pool
-                let null_data = pools["null-pool-1"];
+                try {
+                    let null_data = pools["null-pool-1"];
 
-                update_element("null_connections", null_data["connections"]);
-                update_element("null_cpu", round_to(1, parseFloat(null_data["cpu"])) + "%");
-                update_element("null_ram", round_to(1, parseFloat(null_data["ram"])) + "%");
+                    update_element("null_connections", null_data["connections"]);
+                    update_element("null_cpu", round_to(1, parseFloat(null_data["cpu"])) + "%");
+                    update_element("null_ram", round_to(1, parseFloat(null_data["ram"])) + "%");
+                } catch (e) { console.log(e) };
 
                 // End of list of pools to update
             }
