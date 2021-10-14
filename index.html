@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#EE5A24">
     <!-- Open Graph Metadata -->
-    <meta property="og:site_name" content="Duino-Coin" />
+    <meta property="og:site_name" content="Duino-Coin | Network" />
     <meta property="og:site" content="duinocoin.com" />
     <meta property="og:title" content="Duino-Coin | Network" />
     <meta property="og:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything." />
@@ -375,6 +375,9 @@
                     <div class="panel">
                         <p class="panel-heading">
                             Mining nodes
+                            <span class="has-text-weight-normal">
+                                (load balanced)
+                            </span>
                         </p>
                         <div class="columns m-1">
                             <div class="column">
@@ -457,15 +460,15 @@
                                     <div class="column">
                                         <p class="subtitle">
                                             CPU:
-                                            <b id="pulse_cpu2">
+                                            <b id="pulse_cpu">
                                                 ...
                                             </b><br>
                                             RAM:
-                                            <b id="pulse_ram2">
+                                            <b id="pulse_ram">
                                                 ...
                                             </b><br>
                                             Clients:
-                                            <b id="pulse_connections1">
+                                            <b id="pulse_connections">
                                                 ...
                                             </b>
                                         </p>
@@ -710,33 +713,27 @@
                     <div class="panel">
                         <div class="panel-heading">
                             Active workers
-                            <div class="columns is-mobile">
-                                <div class="column">
-                                    <span class="is-size-6 has-text-grey-dark" id="allworkers">
-                                        (not loaded by default - prepare for a lot of data!)
-                                    </span>
+                            <span class="has-text-weight-normal" id="allworkers">
+                                (be prepared for lots of data)
+                            </span>
+                            <div class="columns is-multiline mt-1 is-mobile">
+                                <div class="column is-narrow">
+                                    <p class="is-size-6 has-text-grey-dark">
+                                        <i class="fa fa-times-circle has-text-danger"></i>
+                                        unverified account
+                                    </p>
                                 </div>
                                 <div class="column is-narrow">
-                                    <div class="columns is-multiline" style="text-align:right;">
-                                        <div class="column is-narrow">
-                                            <p class="is-size-6 has-text-grey-dark">
-                                                <i class="fa fa-times-circle has-text-danger"></i>
-                                                unverified account
-                                            </p>
-                                        </div>
-                                        <div class="column is-narrow">
-                                            <p class="is-size-6 has-text-grey-dark">
-                                                <i class="fa fa-check has-text-success"></i>
-                                                verified account
-                                            </p>
-                                        </div>
-                                        <div class="column is-narrow">
-                                            <p class="is-size-6 has-text-grey-dark">
-                                                <span class="tag">123</span>
-                                                amount of workers
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <p class="is-size-6 has-text-grey-dark">
+                                        <i class="fa fa-check has-text-success"></i>
+                                        verified account
+                                    </p>
+                                </div>
+                                <div class="column is-narrow">
+                                    <p class="is-size-6 has-text-grey-dark">
+                                        <span class="tag">123</span>
+                                        amount of workers
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1086,6 +1083,7 @@ function search(hashToBeFound) {
     let cont = true;
     if (hashToBeFound) {
         console.log(hashToBeFound);
+        window.history.pushState('Duino-Coin | Network statistics', 'Duino-Coin | Network statistics', `?search=${hashToBeFound}`);
         $("#transactionstext1").html(`Results for: <a class="gradienttext" onclick="link_search('${hashToBeFound}')">${hashToBeFound}</a></span>`);
     }
     if (cont) {
@@ -1129,7 +1127,12 @@ function search(hashToBeFound) {
                         `<i class='fas fa-fw card-turquoise is-size-7 fa-envelope'></i>` +
                         `&nbsp;Message: <b><i>` +
                         data.result.memo +
-                        `</b></i></li></ul>`
+                        `</b></i></li>` +
+                        `<li>` +
+                        `<i class='fas fa-fw card-grey is-size-7 fa-list'></i>` +
+                        `&nbsp;Identifier: <b>` +
+                        data.result.id +
+                        `</b></li></ul>`
 
                     update_element("transactionstext2", found_transaction_html);
                 }
@@ -1180,29 +1183,53 @@ function search(hashToBeFound) {
 
                     found_user_html += `<li>` +
                         `<i class='fas fa-fw card-purple is-size-7 fa-cog'></i>` +
-                        `&nbsp;Miners <b>(` + data["result"]["miners"].length + `)</b>:</li>` +
+                        `&nbsp;Miners:</li>` +
                         `<li class='is-size-6'>`;
-                    i = 0;
-                    if (data["result"]["miners"].length) {
-                        for (miner in data["result"]["miners"]) {
-                            if (data["result"]["miners"][miner]["identifier"] != "None") {
+
+                    if (data.result.miners.length) {
+                        let threaded_miners = {};
+                        user_miners = data.result.miners;
+
+                        for (let miner in user_miners) {
+                            let miner_wallet_id = user_miners[miner]["wd"];
+                            if (!miner_wallet_id) miner_wallet_id = Math.random();
+                            const miner_hashrate = user_miners[miner]["hashrate"];
+                            const miner_rejected = user_miners[miner]["rejected"];
+                            const miner_accepted = user_miners[miner]["accepted"];
+
+                            if (!threaded_miners[miner_wallet_id]) {
+                                threaded_miners[miner_wallet_id] = user_miners[miner];
+                                threaded_miners[miner_wallet_id]["threads"] = 1;
+                                continue;
+                            } else if (threaded_miners[miner_wallet_id]) {
+                                threaded_miners[miner_wallet_id]["hashrate"] += miner_hashrate;
+                                threaded_miners[miner_wallet_id]["rejected"] += miner_rejected;
+                                threaded_miners[miner_wallet_id]["accepted"] += miner_accepted;
+                                threaded_miners[miner_wallet_id]["threads"] += 1;
+                                continue;
+                            }
+                        }
+
+                        i = 0;
+                        for (miner in threaded_miners) {
+                            if (threaded_miners[miner]["identifier"] != "None") {
                                 found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" +
-                                    data["result"]["miners"][miner]["identifier"] +
+                                    threaded_miners[miner]["identifier"] +
                                     "</b> <span class='has-text-grey'>(" +
-                                    data["result"]["miners"][miner]["software"] +
+                                    threaded_miners[miner]["software"] +
                                     ")</span> - " +
-                                    data["result"]["miners"][miner]["accepted"] + "/" +
-                                    (data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"]) +
-                                    ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
+                                    threaded_miners[miner]["accepted"] + "/" +
+                                    (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"]) +
+                                    ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
                             } else {
-                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" + data["result"]["miners"][miner]["software"] + "</b> - " +
-                                    data["result"]["miners"][miner]["accepted"] + "/" +
-                                    (data["result"]["miners"][miner]["accepted"] + data["result"]["miners"][miner]["rejected"]) +
-                                    ", <b>" + get_prefix("H/s", data["result"]["miners"][miner]["hashrate"]) + "</b><br>";
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; <b>" + threaded_miners[miner]["software"] + "</b> - " +
+                                    threaded_miners[miner]["accepted"] + "/" +
+                                    (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"]) +
+                                    ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
                             }
 
                             if (i > 10) {
-                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (data["result"]["miners"].length - i) + " more miner(s)...";
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (threaded_miners.length - i) + " more miner(s)...";
                                 break;
                             }
                             i += 1;
@@ -1213,7 +1240,7 @@ function search(hashToBeFound) {
 
                     found_user_html += `<li>` +
                         `<i class='fas fa-fw card-pomegrante is-size-7 fa-receipt'></i>` +
-                        `&nbsp;Last 10 transactions:</li>` +
+                        `&nbsp;Last transactions:</li>` +
                         `<li class='is-size-6'>`;
                     i = 0;
                     if (data["result"]["transactions"].length) {
@@ -1336,12 +1363,25 @@ function update_pools() {
                 // Pulse pool
                 try {
                     let pulse1_data = pools["pulse-pool-1"];
-                    let pulse2_data = pools["pulse-pool-2"];
-                    update_element("pulse_connections1", pools["pulse-pool-1"]["connections"] + pools["pulse-pool-2"]["connections"] + pools["pulse-pool-3"]["connections"] + pools["pulse-pool-4"]["connections"]);
+                    if (pulse1_data) pulseconns1 = pulse1_data.connections;
+                    else pulseconns1 = 0;
 
-                    update_element("pulse_cpu2", round_to(1, parseFloat(pulse2_data["cpu"])) + "%");
-                    update_element("pulse_ram2", round_to(1, parseFloat(pulse2_data["ram"])) + "%");
-                } catch (e) { console.log(e) };
+                    let pulse2_data = pools["pulse-pool-2"];
+                    if (pulse2_data) pulseconns2 = pulse2_data.connections;
+                    else pulseconns2 = 0;
+
+                    let pulse3_data = pools["pulse-pool-3"];
+                    if (pulse3_data) pulseconns3 = pulse3_data.connections;
+                    else pulseconns3 = 0;
+
+                    let pulse4_data = pools["pulse-pool-4"];
+                    if (pulse4_data) pulseconns4 = pulse4_data.connections;
+                    else pulseconns4 = 0;
+
+                    update_element("pulse_connections", pulseconns1 + pulseconns2 + pulseconns3 + pulseconns4);
+                    update_element("pulse_cpu", round_to(1, parseFloat(pulse1_data["cpu"])) + "%");
+                    update_element("pulse_ram", round_to(1, parseFloat(pulse1_data["ram"])) + "%");
+                } catch (e) { console.error(e) };
 
                 // Star pool
                 try {
@@ -1389,13 +1429,20 @@ function update_pools() {
 }
 
 update_stats();
-window.setInterval(update_stats, 2500); // Refresh every 2.5s
+window.setInterval(update_stats, 5000);
 
 last_explorer_hashes();
-window.setInterval(last_explorer_hashes, 5000); // Refresh every 5s
+window.setInterval(last_explorer_hashes, 5000);
 
 update_pools();
-window.setInterval(update_pools, 5000); // Refresh every 5s
+window.setInterval(update_pools, 5000); 
+
+$("#search_input").on('keydown', function(e) {
+    if (e.which === 13) {
+        e.preventDefault();
+        button_search();
+    }
+});
 
 function button_search() {
     to_search = $('#search_input').val().escape();
