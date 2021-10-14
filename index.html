@@ -1186,6 +1186,7 @@ function search(hashToBeFound) {
                         `&nbsp;Miners:</li>` +
                         `<li class='is-size-6'>`;
 
+                    miner_count = 0;
                     if (data.result.miners.length) {
                         let threaded_miners = {};
                         user_miners = data.result.miners;
@@ -1200,6 +1201,7 @@ function search(hashToBeFound) {
                             if (!threaded_miners[miner_wallet_id]) {
                                 threaded_miners[miner_wallet_id] = user_miners[miner];
                                 threaded_miners[miner_wallet_id]["threads"] = 1;
+                                miner_count += 1;
                                 continue;
                             } else if (threaded_miners[miner_wallet_id]) {
                                 threaded_miners[miner_wallet_id]["hashrate"] += miner_hashrate;
@@ -1229,7 +1231,7 @@ function search(hashToBeFound) {
                             }
 
                             if (i > 10) {
-                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (threaded_miners.length - i) + " more miner(s)...";
+                                found_user_html += "&nbsp; &nbsp; &nbsp; &bull; And " + (miner_count - i) + " more miner(s)...";
                                 break;
                             }
                             i += 1;
