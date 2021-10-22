@@ -434,51 +434,6 @@
                                 <div class="dropdown is-hoverable">
                                     <div class="dropdown-trigger mb-3">
                                         <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-red fa fa-heart"></i>&nbsp;
-                                            <b>PULSE</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: Intel Xeon E5-2690 @ 2.6 GHz (4 cores)<br>
-                                                <b>RAM</b>: 4 GB<br>
-                                                <b>OS</b>: Debian 10 Buster<br>
-                                                <b>Storage</b>: 40 GB SSD<br>
-                                                <b>Provider</b>: PulseHeberg<br>
-                                                <b>Hosted by</b>: Bilaboz from the <b>Duino</b> team<br>
-                                                <b>Purpose</b>: Miners get jobs from this node.
-                                                The node periodicaly syncs data with the master node
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="columns">
-                                    <div class="column">
-                                        <p class="subtitle">
-                                            CPU:
-                                            <b id="pulse_cpu">
-                                                ...
-                                            </b><br>
-                                            RAM:
-                                            <b id="pulse_ram">
-                                                ...
-                                            </b><br>
-                                            Clients:
-                                            <b id="pulse_connections">
-                                                ...
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
-                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
                                             <i class="is-size-7 card-orange fa fa-star"></i>&nbsp;
                                             <b>STAR</b>
                                             <span class="icon is-small">
@@ -1361,29 +1316,6 @@ function update_pools() {
                     pools[pool["name"]] = pool;
                 });
                 // Update pool info, add new pools here
-
-                // Pulse pool
-                try {
-                    let pulse1_data = pools["pulse-pool-1"];
-                    if (pulse1_data) pulseconns1 = pulse1_data.connections;
-                    else pulseconns1 = 0;
-
-                    let pulse2_data = pools["pulse-pool-2"];
-                    if (pulse2_data) pulseconns2 = pulse2_data.connections;
-                    else pulseconns2 = 0;
-
-                    let pulse3_data = pools["pulse-pool-3"];
-                    if (pulse3_data) pulseconns3 = pulse3_data.connections;
-                    else pulseconns3 = 0;
-
-                    let pulse4_data = pools["pulse-pool-4"];
-                    if (pulse4_data) pulseconns4 = pulse4_data.connections;
-                    else pulseconns4 = 0;
-
-                    update_element("pulse_connections", pulseconns1 + pulseconns2 + pulseconns3 + pulseconns4);
-                    update_element("pulse_cpu", round_to(1, parseFloat(pulse1_data["cpu"])) + "%");
-                    update_element("pulse_ram", round_to(1, parseFloat(pulse1_data["ram"])) + "%");
-                } catch (e) { console.error(e) };
 
                 // Star pool
                 try {
