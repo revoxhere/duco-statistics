@@ -525,52 +525,6 @@
                             <div class="column">
                                 <div class="dropdown is-hoverable">
                                     <div class="dropdown-trigger mb-3">
-                                        <p aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <i class="is-size-7 card-turquoise fa fa-rocket"></i>&nbsp;
-                                            <b>BEYOND 2</b>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="content m-3">
-                                                <b>CPU</b>: Intel Xeon E5-2676 @ 2.4 GHz (1 core)<br>
-                                                <b>RAM</b>: 2 GB<br>
-                                                <b>OS</b>: Ubuntu 18.04<br>
-                                                <b>Storage</b>: 60 GB<br>
-                                                <b>Provider</b>: Amazon AWS<br>
-                                                <b>Hosted by</b>: Beyondtoshi from the <b>Duino</b> team<br>
-                                                <b>Purpose</b>: Miners get jobs from this node.
-                                                The node periodicaly syncs data with the master node
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="columns">
-                                    <div class="column">
-                                        <p class="subtitle">
-                                            CPU:
-                                            <b id="beyond_cpu2">
-                                                ...
-                                            </b><br>
-                                            RAM:
-                                            <b id="beyond_ram2">
-                                                ...
-                                            </b><br>
-                                            Clients:
-                                            <b id="beyond_connections2">
-                                                ...
-                                            </b>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger mb-3">
                                         <span aria-haspopup="true" aria-controls="dropdown-menu4">
                                             <i class="is-size-7 card-grey fa fa-heart-broken"></i>&nbsp;
                                             <b>SVKO</b>
@@ -1328,14 +1282,9 @@ function update_pools() {
                 // Beyond pool
                 try {
                     let beyond1_data = pools["beyond-pool-1"];
-                    let beyond2_data = pools["beyond-pool-3"];
                     update_element("beyond_connections", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-2"]["connections"]);
                     update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
                     update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
-
-                    update_element("beyond_connections2", pools["beyond-pool-3"]["connections"] + pools["beyond-pool-4"]["connections"]);
-                    update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
-                    update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
                 } catch (e) { console.log(e) };
 
                 // Svko pool
