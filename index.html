@@ -1,106 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <html lang="en">
-    <title>Duino-Coin | Network statistics</title>
-    <link rel="icon" href="assets/stats.png" type="image/png" />
-    <link rel="shortcut icon" href="assets/stats.png" type="image/png" />
-    <meta name="description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
-    <meta name="keywords" content="duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
-    <link rel="canonical" href="https://duinocoin.com" />
+    <link rel="canonical" href="https://explorer.duinocoin.com/" />
     <meta name="robots" content="index, follow">
+    <!-- Favicons -->
     <meta name="theme-color" content="#EE5A24">
-    <!-- Open Graph Metadata -->
-    <meta property="og:site_name" content="Duino-Coin | Network" />
-    <meta property="og:site" content="duinocoin.com" />
-    <meta property="og:title" content="Duino-Coin | Network" />
-    <meta property="og:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything." />
-    <meta property="og:image" content="assets/stats.png" />
-    <meta property="og:url" content="https://duinocoin.com" />
-    <meta property="og:type" content="website" />
-    <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="Duino-Coin | Network">
-    <meta name="twitter:description" content="View network statistics of Duino-Coin - coin that can be mined with almost everything.">
-    <meta name="twitter:image" content="assets/stats.png">
-    <meta name="twitter:site" content="@DuinoCoin">
-    <meta name="twitter:creator" content="@DuinoCoin">
-    <!-- Imports -->
-    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/bulma-prefers-dark.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="ducostyle.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png?v=3">
+    <link rel="manifest" href="favicons/site.webmanifest?v=3">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg?v=3" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico?v=3">
+    <!-- Primary Meta Tags -->
+    <title>Duino-Coin network statistics and chain explorer</title>
+    <meta name="title" content="Duino-Coin network statistics and chain explorer">
+    <meta name="description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
+    <meta name="keywords" content="duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://explorer.duinocoin.com/">
+    <meta property="og:title" content="Duino-Coin network statistics and chain explorer">
+    <meta property="og:description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
+    <!--<meta property="og:image" content="/assets/explorer.png">-->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://explorer.duinocoin.com/">
+    <meta property="twitter:title" content="Duino-Coin network statistics and chain explorer">
+    <meta property="twitter:description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
+    <!-- CSS -->
+    <link rel="preload" href="assets/mystyles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="assets/mystyles.css">
+    <!-- Jquery and FA -->
+    <link rel="preload" href="assets/fontawesome.js" as="script">
     <script src="assets/fontawesome.js"></script>
+    <link rel="preload" href="assets/jquery.min.js" as="script">
     <script src="assets/jquery.min.js"></script>
+    <!-- Others -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" as="script">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"></script>
+    <style>
+        a>figure {
+        transition: 0.2s all;
+    }
+
+    a>figure:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-item:hover {
+        color: #ff9f43;
+    }
+
+    .button:hover:not(.workers) {
+        transform: scale(1.1);
+    }
+
+    #transactionstext1 {
+        overflow-wrap: break-word;
+    }
+
+    #wavecontainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    #waveduco {
+        height: 12rem;
+        color: white;
+        z-index: 1;
+        position: absolute;
+        display: table;
+        margin: 0 auto;
+        animation: scale 2.73s ease-in-out infinite;
+    }
+
+    #devices {
+        transition: opacity 0.5s;
+    }
+
+    .hide {
+        opacity: 0 !important;
+    }
+
+    @keyframes scale {
+        0% {
+            transform: scale(1.3);
+        }
+
+        30% {
+            transform: scale(0.9);
+        }
+
+        85% {
+            transform: scale(1.3);
+        }
+
+        100% {
+            transform: scale(1.3);
+        }
+    }
+        @import url('https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.1.0/dist/bulma-divider.min.css');
+        #transactionstext4,
+        #transactionstext3 {
+            overflow: hidden;
+        }
+
+        #transactionstext4:before,
+        #transactionstext3:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            pointer-events: none;
+            height: 10em;
+            width: 7.5%;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0), #070707);
+        }
+
+        #transactionstext3:before {
+            right: 50%;
+        }
+
+        @media (prefers-color-scheme: light) {
+            #transactionstext4:before,
+            #transactionstext3:before {
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0), #ffffff);
+            }
+        }
+
+        #workers {
+            max-height: 25em;
+            overflow: auto;
+        }
+
+        @media (max-width: 768px) {
+            #workers {
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            #workers {
+                columns: 4;
+                -webkit-columns: 4;
+                -moz-columns: 4;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div id="pageloader">
+        <div id="loader"></div>
+    </div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://duinocoin.com">
-                <img src="assets/duco.svg">
+            <a class="navbar-item is-active" href="https://duinocoin.com">
+                <img src="assets/duino.png" height="172">
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="DuinoNavbar">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
                 <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="DuinoNavbar" class="navbar-menu">
+        <div id="navbar" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/blob/gh-pages/assets/whitepaper.pdf">
-                    <span class="icon">
-                        <i class="fa fa-book" style="color:#ff7a3e;" aria-hidden="true"></i>
-                    </span>
-                    <span>Whitepaper</span>
-                </a>
                 <a class="navbar-item" href="https://explorer.duinocoin.com">
-                    <span class="icon">
-                        <i class="fa fa-poll" style="color:#ff6a48;" aria-hidden="true"></i>
-                    </span>
-                    <span>Network</span>
+                    Network stats & explorer
                 </a>
-                <a class="navbar-item" href="https://duinocoin.com/donate.html">
-                    <span class="icon">
-                        <i class="fa fa-heart" style="color:#ff5a54;" aria-hidden="true"></i>
-                    </span>
-                    <span>Donate</span>
-                </a>
-                <a class="navbar-item" href="https://duinocoin.com/team.html">
-                    <span class="icon">
-                        <i class="fa fa-user-friends" style="color:#ff4962;" aria-hidden="true"></i>
-                    </span>
-                    <span>Team</span>
-                </a>
-                <a class="navbar-item" href="https://duinocoin.com/apps.html">
-                    <span class="icon">
-                        <i class="fa fa-lightbulb" style="color:#ff3870;" aria-hidden="true"></i>
-                    </span>
-                    <span>Apps</span>
-                </a>
-                <a class="navbar-item" href="https://duinocoin.com/contact.html">
-                    <span class="icon">
-                        <i class="fa fa-envelope" style="color:#ff2780;" aria-hidden="true"></i>
-                    </span>
-                    <span>Contact</span>
-                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Resources
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/blob/gh-pages/assets/whitepaper.pdf">
+                            <span>
+                                <i class="fa fa-fw fa-book"></i>
+                                <span>Whitepaper</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/tree/useful-tools#branding">
+                            <span>
+                                <i class="fa fa-fw fa-brush"></i>
+                                <span>Branding</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/tree/useful-tools">
+                            <span>
+                                <i class="fa fa-fw fa-code"></i>
+                                <span>API docs
+                                </span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/apps.html">
+                            <span>
+                                <i class="fa fa-fw fa-check"></i>
+                                <span>Apps and faucets</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Duino team
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://duinocoin.com/team.html">
+                            <span>
+                                <i class="fa fa-fw fa-users"></i>
+                                <span>Meet our team</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/donate.html">
+                            <span>
+                                <i class="fa fa-fw fa-heart"></i>
+                                <span>Donate</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://store.duinocoin.com">
+                            <span>
+                                <i class="fa fa-fw fa-tshirt"></i>
+                                <span>Official merch</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://duinocoin.com/contact.html">
+                            <span>
+                                <i class="fa fa-fw fa-envelope"></i>
+                                <span>Contact us</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/legal.html">
+                            <span>
+                                <i class="fa fa-fw fa-balance-scale"></i>
+                                <span>Terms of service</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-end">
-                <a class="navbar-item is-hidden-mobile" href="https://twitter.com/DuinoCoin/">
-                    <i class="fab fa-twitter icon fa-lg" aria-hidden="true"></i>
-                </a>
-                <a class="navbar-item is-hidden-mobile" href="https://www.reddit.com/r/Duinocoin/">
-                    <i class="fab fa-reddit icon fa-lg" aria-hidden="true"></i>
-                </a>
-                <a class="navbar-item is-hidden-mobile" href="https://discord.gg/kvBkccy">
-                    <i class="fab fa-discord icon fa-lg" aria-hidden="true"></i>
-                </a>
-                <a class="navbar-item is-hidden-mobile" href="https://github.com/revoxhere/duino-coin">
-                    <i class="fab fa-github icon fa-lg" aria-hidden="true"></i>
-                </a>
-                <div class="navbar-item">
-                    <a class="button is-duco is-rounded" style="border:none" href="https://duinocoin.com/getting-started.html">
+        </div>
+        <div class="navbar-end is-hidden-touch">
+            <a class="navbar-item" href="https://twitter.com/DuinoCoin/">
+                <i class="fab fa-lg fa-twitter"></i>
+            </a>
+            <a class="navbar-item" href="https://www.reddit.com/r/Duinocoin/">
+                <i class="fab fa-lg fa-reddit"></i>
+            </a>
+            <a class="navbar-item" href="https://discord.gg/kvBkccy">
+                <i class="fab fa-lg fa-discord"></i>
+            </a>
+            <a class="navbar-item" href="https://github.com/revoxhere/duino-coin">
+                <i class="fab fa-lg fa-github"></i>
+            </a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="https://duinocoin.com/getting-started.html">
                         <strong>Get started</strong>
                     </a>
                 </div>
@@ -110,139 +279,76 @@
     <section class="section">
         <div class="container">
             <!-- STATISTICS -->
-            <div class="panel blur" style="overflow:hidden">
+            <div class="panel mt-nav" style="overflow:hidden">
                 <p class="panel-heading heading is-size-5">
                     <span style="color:#ff7a3e">Live</span> Duino network statistics
                 </p>
-                <div class="panel-content">
-                    <div class="columns is-multiline" style="margin:auto !important">
-                        <div class="column is-full">
-                            <nav class="level">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            Net hashrate
-                                        </p>
-                                        <p class="title" id="hashrate">
-                                            Please wait
-                                        </p>
-                                    </div>
+                <div>
+                    <div class="columns is-mobile is-multiline" style="margin:auto !important">
+                        <div class="column">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <canvas id="hashratechart" height="50em" width="100em"></canvas>
+                                    <p class="title" id="hashrate">
+                                        Please wait
+                                    </p>
+                                    <p class="heading is-size-6">
+                                        Net hashrate
+                                    </p>
                                 </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            Users
-                                        </p>
-                                        <p class="title" id="registeredusers">
-                                            Please wait
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            DUCO in circulation
-                                        </p>
-                                        <p class="title" id="allmined">
-                                            Please wait
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            Net energy usage
-                                        </p>
-                                        <p class="title" id="watt_usage">
-                                            Please wait
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            Mined shares
-                                        </p>
-                                        <p class="title" id="shares">
-                                            Please wait
-                                        </p>
-                                    </div>
-                                </div>
-                            </nav>
+                            </div>
                         </div>
-                        <div class="column is-full">
-                            <nav class="level">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            Arduinos
-                                        </p>
-                                        <p class="title" id="arduinos">
-                                            0
-                                        </p>
-                                    </div>
+                        <div class="column">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <canvas id="userchart" height="50em" width="100em"></canvas>
+                                    <p class="title" id="registeredusers">
+                                        Please wait
+                                    </p>
+                                    <p class="heading is-size-6">
+                                        Users
+                                    </p>
                                 </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            ESP8266S
-                                        </p>
-                                        <p class="title" id="esp8266s">
-                                            0
-                                        </p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <canvas id="circulationchart" height="50em" width="100em"></canvas>
+                                    <p class="title" id="allmined">
+                                        Please wait
+                                    </p>
+                                    <p class="heading is-size-6">
+                                        DUCO in circulation
+                                    </p>
                                 </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            ESP32S
-                                        </p>
-                                        <p class="title" id="esp32s">
-                                            0
-                                        </p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <canvas id="energychart" height="50em" width="100em"></canvas>
+                                    <p class="title" id="watt_usage">
+                                        Please wait
+                                    </p>
+                                    <p class="heading is-size-6">
+                                        Net energy usage
+                                    </p>
                                 </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            RASPBERRY PIS
-                                        </p>
-                                        <p class="title" id="rpis">
-                                            0
-                                        </p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <canvas id="sharechart" height="50em" width="100em"></canvas>
+                                    <p class="title" id="shares">
+                                        Please wait
+                                    </p>
+                                    <p class="heading is-size-6">
+                                        Mined shares
+                                    </p>
                                 </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            CPUS
-                                        </p>
-                                        <p class="title" id="cpus">
-                                            0
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            PHONES
-                                        </p>
-                                        <p class="title" id="phones">
-                                            0
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading is-size-6">
-                                            OTHERS
-                                        </p>
-                                        <p class="title" id="others">
-                                            0
-                                        </p>
-                                    </div>
-                                </div>
-                            </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,23 +356,28 @@
             <div class="columns is-multiline">
                 <div class="column is-half">
                     <!-- EXPLORER -->
-                    <form class="panel blur">
+                    <form class="panel">
                         <p class="panel-heading heading is-size-5">
                             Chain explorer
                         </p>
                         <div class="container m-4">
                             <div class="field has-addons">
-                                <p class="control is-expanded">
-                                    <input class="input is-rounded ducoinput" id="search_input" type="text" placeholder="Enter wallet name, transaction or block hash" name="search">
+                                <p class="control is-expanded" id="searchcontrol">
+                                    <input class="input ducoinput" id="search_input" type="text" placeholder="e.g. revox" name="search">
                                 </p>
                                 <p class="control">
-                                    <a onclick="button_search()" class="button is-rounded is-full is-search">
+                                    <a onclick="button_search()" class="button is-search">
                                         Search
                                     </a>
                                 </p>
                             </div>
-                            <p class="is-size-5 has-text-centered" id="transactionstext1">
-                                Enter something in the search box above to search through the chain
+                            <p class="is-size-5" id="transactionstext1">
+                                Enter something in the search box above to search through the chain<br>
+                                <p class="content" id="transactionstext1_sub">
+                                    You can search by Duino usernames, transaction hash IDs and block hashes.
+                                    The explorer will display all known information about searched query.<br>
+                                    Latest blocks and transactions are announced by the masternode and can be accessed by the links below.
+                                </p>
                             </p>
                             <p class="is-size-6" id="transactionstext2"></p>
                             <br>
@@ -291,174 +402,62 @@
                 <div class="column is-half">
                     <div class="columns is-multiline">
                         <div class="column is-full">
-                            <div class="panel blur">
-                                <p class="panel-heading heading is-size-5">
-                                    Charts
-                                </p>
-                                <div class="columns is-multiline m-3">
-                                    <div class="column">
-                                        <div class="panel-block">
-                                            <a class="modal-button" data-target="modal-prices">
-                                                <img src="https://server.duinocoin.com/prices.png">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="panel-block">
-                                            <a class="modal-button" data-target="modal-miners">
-                                                <img src="https://server.duinocoin.com/minerchart.png">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="panel-block">
-                                            <a class="modal-button" data-target="modal-balances">
-                                                <img src="https://server.duinocoin.com/balancechart.png">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column is-full">
                             <!-- NODES -->
-                            <div class="panel blur" style="overflow:hidden">
+                            <div class="panel" style="overflow:hidden">
                                 <p class="panel-heading heading is-size-5">
                                     Mining nodes
                                 </p>
-                                <div class="level is-centered m-3 is-multiline">
-                                    <div class="level-item has-text-left">
-                                        <div>
-                                            <p class="heading is-size-6">
-                                                <i class="fa fa-server"></i>&nbsp;
-                                                MASTER
-                                            </p>
-                                            <p class="title is-size-6" id="hashrate">
-                                                CPU:
-                                                <b id="master_cpu">
-                                                    ...
-                                                </b><br>
-                                                RAM:
-                                                <b id="master_ram">
-                                                    ...
-                                                </b><br>
-                                                Clients:
-                                                <b id="master_connections">
-                                                    ...
-                                                </b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="level-item has-text-left">
-                                        <div>
-                                            <p class="heading is-size-6">
-                                                <i class="fa fa-star"></i>&nbsp;
-                                                STAR
-                                            </p>
-                                            <p class="title is-size-6" id="hashrate">
-                                                CPU:
-                                                <b id="star_cpu">
-                                                    ...
-                                                </b><br>
-                                                RAM:
-                                                <b id="star_ram">
-                                                    ...
-                                                </b><br>
-                                                Clients:
-                                                <b id="star_connections">
-                                                    ...
-                                                </b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="level-item has-text-left">
-                                        <div>
-                                            <p class="heading is-size-6">
-                                                <i class="fa fa-rocket"></i>&nbsp;
-                                                BEYOND
-                                            </p>
-                                            <p class="title is-size-6" id="hashrate">
-                                                CPU:
-                                                <b id="beyond_cpu">
-                                                    ...
-                                                </b><br>
-                                                RAM:
-                                                <b id="beyond_ram">
-                                                    ...
-                                                </b><br>
-                                                Clients:
-                                                <b id="beyond_connections">
-                                                    ...
-                                                </b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="level-item has-text-left">
-                                        <div>
-                                            <p class="heading is-size-6">
-                                                <i class="fa fa-heart-broken"></i>&nbsp;
-                                                SVKO
-                                            </p>
-                                            <p class="title is-size-6" id="hashrate">
-                                                CPU:
-                                                <b id="svko_cpu">
-                                                    ...
-                                                </b><br>
-                                                RAM:
-                                                <b id="svko_ram">
-                                                    ...
-                                                </b><br>
-                                                Clients:
-                                                <b id="svko_connections">
-                                                    ...
-                                                </b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="level-item has-text-left">
-                                        <div>
-                                            <p class="heading is-size-6">
-                                                <i class="fa fa-plus"></i>&nbsp;
-                                                NULL
-                                            </p>
-                                            <p class="title is-size-6" id="hashrate">
-                                                CPU:
-                                                <b id="null_cpu">
-                                                    ...
-                                                </b><br>
-                                                RAM:
-                                                <b id="null_ram">
-                                                    ...
-                                                </b><br>
-                                                Clients:
-                                                <b id="null_connections">
-                                                    ...
-                                                </b>
-                                            </p>
-                                        </div>
-                                    </div>
+                                <div id="pools" class="columns m-3 is-mobile is-multiline">
+                                    Loading node data...
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="column is-full">
+                    <div class="panel">
+                        <p class="panel-heading heading is-size-5">
+                            Charts
+                        </p>
+                        <div class="columns is-multiline m-3">
+                            <div class="column is-one-third">
+                                <p class="heading has-text-centered is-size-5">
+                                    Price - last 30 days
+                                </p>
+                                <canvas id="pricechart"></canvas>
+                            </div>
+                            <div class="column is-one-third">
+                                <p class="heading has-text-centered is-size-5">
+                                    Miner distribution
+                                </p>
+                                <canvas id="distributionchart"></canvas>
+                            </div>
+                            <div class="column is-one-third">
+                                <p class="heading has-text-centered is-size-5">
+                                    Balance distribution
+                                </p>
+                                <canvas id="userducochart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- ACTIVE WORKERS -->
-                <div class="column is-full" id="workersdiv">
-                    <div class="panel blur">
+                <div class="column is-full">
+                    <div class="panel">
                         <div class="panel-heading">
                             <p class="heading is-size-5">
-                                Active workers
+                                Active workers (<span id="workercount">?</span>)
                             </p>
                             <div class="columns is-multiline mt-1 is-mobile">
                                 <div class="column is-narrow">
                                     <p class="is-size-6 has-text-grey-dark">
-                                        <i class="fa fa-times-circle has-text-danger"></i>
+                                        <i class="fa fa-circle has-text-danger"></i>
                                         unverified account
                                     </p>
                                 </div>
                                 <div class="column is-narrow">
                                     <p class="is-size-6 has-text-grey-dark">
-                                        <i class="fa fa-check has-text-success"></i>
+                                        <i class="fa fa-circle has-text-success"></i>
                                         verified account
                                     </p>
                                 </div>
@@ -470,283 +469,525 @@
                                 </div>
                             </div>
                         </div>
-                        <p id="workers" class="is-size-6 is-size-6 m-3">
-                            <button id="loadworkers" class="button is-rounded" onclick="fill_worker_list()">
-                                Load all workers
-                            </button>
-                        </p>
+                        <div class="panel-block">
+                            <p id="workers" class="is-size-6 is-size-6">
+                                <button id="loadworkers" class="button workers" onclick="fill_worker_list()">
+                                    Load all workers
+                                </button>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    </div>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <strong>Duino-Coin</strong> website by <strong><a href="https://revoxhere.github.io">Robert "revox" Piotrowski</a></strong> from the <strong>Duino team</strong> 2019-2021
-            <br>Hosted by <strong><a href="https://kristian-kramer.com">Kristian "Tech1k" Kramer</a></strong> and/or <strong><a href="https://pages.github.com">GitHub Pages</a></strong>
-            <br>Made with <strong><a href="https://bulma.io">Bulma</a>
+            <p>
+                <strong>Duino-Coin Stats</strong> by <a href="https://revoxhere.github.io">Robert "revox" Piotrowski </a> from the <strong>Duino team</strong> 2019-2022
+                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a>
+            </p>
         </div>
     </footer>
-    <div id="modal-prices" class="modal modal-fx-fadeInScale">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <img src=" https://server.duinocoin.com/prices.png" alt="Price chart">
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div id="modal-miners" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <img src=" https://server.duinocoin.com/minerchart.png" alt="Miner distribution chart">
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div id="modal-balances" class="modal modal-fx-fadeInScale">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <img src=" https://server.duinocoin.com/balancechart.png" alt="Balance distribution chart">
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        if ($navbarBurgers.length > 0) {
-            $navbarBurgers.forEach(el => { // Add a click event on each of burger menus
-                el.addEventListener('click', () => {
-                    const target = el.dataset.target; // Get the target from the "data-target" attribute
-                    const $target = document.getElementById(target);
-                    el.classList.toggle('is-active'); // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-    });
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+<script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+<script>
+$("meta[name='og:image']").attr('content', '/assets/explorer.png');
+const pageloader = document.getElementById('loader');
+let duco_price = 0.00045;
+let load_workers = false;
+let url_string = window.location;
+let url = new URL(url_string);
+let to_search = url.searchParams.get("search");
 
-    let duco_price = 0.00045;
-    let load_workers = false;
-    let url_string = window.location;
-    let url = new URL(url_string);
-    let to_search = url.searchParams.get("search");
+bodymovin.loadAnimation({
+    wrapper: pageloader,
+    animType: 'svg',
+    autoplay: true,
+    loop: true,
+    path: 'assets/loader.json'
+});
 
-    function update_element(element, value) {
+
+function update_element(element, value, animate = false) {
+    if (animate) {
+        $(`#${element}`).fadeOut(300);
+        $(`#${element}`).html(value).fadeIn(300);
+    } else {
         $(`#${element}`).html(value);
     }
+}
 
 
-    function round_to(precision, value) {
-        power_of_ten = 10 ** precision;
-        return Math.round(value * power_of_ten) / power_of_ten;
-    }
+function round_to(precision, value) {
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+}
 
 
-    function fill_worker_list() {
-        $("#loadworkers").addClass("is-loading")
-        fetch("https://server.duinocoin.com/statistics_miners")
-            .catch(function(error) {
-                console.log(error);
-            })
-            .then(response => response.json())
-            .then(data => {
-                data = data.result;
-                let workers = `<ul class="workers">`
-                let counter = 0;
-                let worker_counter = 0;
-                let sorted_workers = [];
-                for (worker in data) {
-                    sorted_workers.push({
-                        "User": worker,
-                        "Verified": data[worker]["v"],
-                        "Miners": data[worker]["w"]
-                    })
-                }
-                sorted_workers.sort((a, b) => b.Miners - a.Miners);
-                for (let i = 0; i < sorted_workers.length; i++) {
-                    let worker = sorted_workers[i];
+function fill_worker_list() {
+    $("#loadworkers").addClass("is-loading")
+    fetch("https://server.duinocoin.com/statistics_miners")
+        .catch(function(error) {
+            console.log(error);
+        })
+        .then(response => response.json())
+        .then(data => {
+            data = data.result;
+            let workers = `<ul class="workers">`
+            let counter = 0;
+            let worker_counter = 0;
+            let sorted_workers = [];
+            for (worker in data) {
+                sorted_workers.push({
+                    "User": worker,
+                    "Verified": data[worker]["v"],
+                    "Miners": data[worker]["w"]
+                })
+            }
+            sorted_workers.sort((a, b) => b.Miners - a.Miners);
+            for (let i = 0; i < sorted_workers.length; i++) {
+                let worker = sorted_workers[i];
 
-                    if (worker.Verified == "yes") {
-                        workers +=
-                            `<li class="has-text-success">
-                                  <i class="fas fa-check"></i>
-                                  <a onclick="link_search('${worker.User}')">` +
-                            worker.User +
-                            `</a><b class="tag">` +
-                            worker.Miners +
-                            `</b></li>`;
-                    } else {
-                        workers +=
-                            `<li class="has-text-danger">
-                                  <i class="fas fa-times-circle"></i>
-                                  <a onclick="link_search('${worker.User}')">` +
-                            worker.User +
-                            `</a>
+                if (worker.Verified == "yes") {
+                    workers +=
+                        `<li>
+                                  <a class="has-text-success" onclick="link_search('${worker.User}')">` +
+                        worker.User +
+                        `</a><b class="tag">` +
+                        worker.Miners +
+                        `</b></li>`;
+                } else {
+                    workers +=
+                        `<li>
+                                  <i></i>
+                                  <a class="has-text-danger onclick="link_search('${worker.User}')">` +
+                        worker.User +
+                        `</a>
                         <b class="tag">` +
-                            worker.Miners +
-                            `</b></li>`;
-                    }
-
-                    worker_counter += worker.Miners;
-                    counter++;
-                }
-                workers += `</ul>`;
-                document.getElementById("workers").innerHTML = workers;
-                $("#allworkers").text("(" + worker_counter + " workers on " + counter + " accounts)");
-            });
-    }
-
-
-    const scientific_prefix = (value) => {
-        value = parseFloat(value);
-        if (value / 1000000 > 0.5)
-            value = round_to(4, value / 1000000) + " M";
-        else if (value / 1000 > 0.5)
-            value = round_to(4, value / 1000) + " k";
-        else
-            value = round_to(4, value) + " ";
-        return value;
-    };
-
-    function update_stats() {
-        fetch("https://server.duinocoin.com/api.json")
-            .catch(function(error) {
-                console.log(error);
-            })
-            .then(response => response.json())
-            .then(data => {
-                duco_price = data["Duco price"];
-
-                update_element("hashrate", data["Pool hashrate"])
-
-                update_element("registeredusers", data["Registered users"])
-
-                update_element("allmined", scientific_prefix(data["All-time mined DUCO"]));
-
-                update_element("watt_usage", data["Net energy usage"])
-
-                update_element("shares", scientific_prefix(data["Mined blocks"]))
-
-                update_element("arduinos", data["Miner distribution"]["Arduino"])
-
-                update_element("esp8266s", data["Miner distribution"]["ESP8266"])
-
-                update_element("esp32s", Math.round(data["Miner distribution"]["ESP32"] / 2))
-
-                update_element("rpis", Math.round(data["Miner distribution"]["RPi"] / 4))
-
-                update_element("cpus", Math.round(data["Miner distribution"]["Web"] +
-                    data["Miner distribution"]["CPU"] / 4))
-
-                update_element("phones", Math.round(data["Miner distribution"]["Phone"] / 4))
-
-                update_element("others", data["Miner distribution"]["Other"])
-
-                /* Nodes */
-
-                update_element("master_connections", data["Active connections"])
-                update_element("master_ver", data["Server version"])
-                update_element("master_cpu", round_to(1, data["Server CPU usage"]) + "%")
-                update_element("master_ram", round_to(1, data["Server RAM usage"]) + "%")
-                update_element("master_threads", data["Open threads"])
-            })
-    }
-
-
-    function last_explorer_hashes() {
-        fetch("https://server.duinocoin.com/transactions.json")
-            .catch(function(error) {
-                console.log(error);
-            })
-            .then(response => response.json())
-            .then(data => {
-
-                hashes = []
-                for (hash in data) {
-                    hashes.push(data[hash])
+                        worker.Miners +
+                        `</b></li>`;
                 }
 
-                transaction_hashes_html = "";
-                for (hash in hashes.reverse()) {
-                    if (hash >= 5) break
-                    this_hash = hashes[hash].Hash;
-                    if (this_hash.length == 40) {
-                        transaction_hashes_html += `<a class='transaction2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
-                    } else {
-                        transaction_hashes_html += `<a class='transaction1 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
-                    }
-                }
-                $("#transactionstext3").html(transaction_hashes_html);
-            })
-        fetch("https://server.duinocoin.com/foundBlocks.json")
-            .catch(function(error) {
-                console.log(error);
-            })
-            .then(response => response.json())
-            .then(data => {
-                let last = [];
-                for (hash in data) {
-                    last.push(hash);
-                }
-
-                block_hashes_html = "";
-                for (hash in last.reverse()) {
-                    if (hash >= 5) break
-                    this_hash = last[hash];
-                    if (this_hash.length == 40) {
-                        block_hashes_html += `<a class='block2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
-                    } else {
-                        block_hashes_html += `<a class='block1 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
-                    }
-                }
-                $("#transactionstext4").html(block_hashes_html);
-            })
-    }
-
-    function get_prefix(symbol, value) {
-        value = parseFloat(value);
-        if (value / 1000000000 > 0.5)
-            value = round_to(2, value / 1000000000) + " G" + symbol;
-        else if (value / 1000000 > 0.5)
-            value = round_to(2, value / 1000000) + " M" + symbol;
-        else if (value / 1000 > 0.5)
-            value = round_to(2, value / 1000) + " k" + symbol;
-        else
-            value = round_to(2, value) + " " + symbol;
-        return value;
-    }
-
-    String.prototype.escape = function() {
-        var tagsToReplace = {
-            '&': ' ',
-            '\\': ' ',
-            '/': ' ',
-            '(': ' ',
-            ')': ' ',
-            '`': ' ',
-            '<': ' ',
-            '>': ' '
-        };
-        return this.replace(/[&<>]/g, function(tag) {
-            return tagsToReplace[tag] || tag;
+                worker_counter += worker.Miners;
+                counter++;
+            }
+            workers += `</ul>`;
+            document.getElementById("workers").innerHTML = workers;
+            $("#allworkers").text("(" + worker_counter + " workers on " + counter + " accounts)");
         });
+}
+
+
+const scientific_prefix = (value) => {
+    value = parseFloat(value);
+    if (value / 1000000 > 0.5)
+        value = round_to(4, value / 1000000) + " M";
+    else if (value / 1000 > 0.5)
+        value = round_to(4, value / 1000) + " k";
+    else
+        value = round_to(4, value) + " ";
+    return value;
+};
+firststart = true;
+
+let opts = {
+    angle: 0,
+    lineWidth: 0.5,
+    radiusScale: 1,
+    pointer: { strokeWidth: 0 },
+    limitMax: false,
+    limitMin: true,
+    colorStart: '#EF7A44',
+    generateGradient: false,
+    highDpiSupport: true,
+};
+
+var target = document.getElementById('hashratechart');
+let hashrate_gauge = new Gauge(target).setOptions(opts);
+hashrate_gauge.maxValue = 2500;
+hashrate_gauge.setMinValue(0);
+hashrate_gauge.animationSpeed = 100;
+
+var target = document.getElementById('userchart');
+let user_gauge = new Gauge(target).setOptions(opts);
+user_gauge.maxValue = 50000;
+user_gauge.setMinValue(0);
+user_gauge.animationSpeed = 100;
+
+var target = document.getElementById('circulationchart');
+let circulation_gauge = new Gauge(target).setOptions(opts);
+circulation_gauge.maxValue = 28110000;
+circulation_gauge.setMinValue(0);
+circulation_gauge.animationSpeed = 100;
+
+var target = document.getElementById('energychart');
+let energy_gauge = new Gauge(target).setOptions(opts);
+energy_gauge.maxValue = 100;
+energy_gauge.setMinValue(0);
+energy_gauge.animationSpeed = 100;
+
+var target = document.getElementById('sharechart');
+let share_gauge = new Gauge(target).setOptions(opts);
+share_gauge.maxValue = 150000000000;
+share_gauge.setMinValue(0);
+share_gauge.animationSpeed = 100;
+
+master_server = {}
+
+
+function fetch_price() {
+    fetch("https://server.duinocoin.com/historic_prices?currency=max&limit=30")
+        .catch(function(error) {
+            console.log(error);
+        })
+        .then(response => response.json())
+        .then(data => {
+            data = data.result;
+
+            let date_labels = []
+            let prices = []
+
+            for (day in data.reverse()) {
+                date_labels.push(data[day]["day"]);
+                prices.push(data[day]["price"])
+            }
+
+            var ctx = document.getElementById('pricechart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: date_labels,
+                    datasets: [{
+                        label: '',
+                        data: prices,
+                        backgroundColor: 'rgba(239, 122, 68, 0.8)',
+                        borderColor: 'rgba(255, 255, 255, 1)',
+                        borderWidth: 1.5
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    return '$' + value.toFixed(5);
+                                }
+                            },
+                            beginAtZero: false
+                        }],
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+
+                    }
+                }
+            });
+
+        });
+}
+
+function update_stats() {
+    fetch("https://server.duinocoin.com/api.json")
+        .catch(function(error) {
+            console.log(error);
+        })
+        .then(response => response.json())
+        .then(data => {
+            duco_price = data["Duco price"];
+
+            data["Miner distribution"]["ESP32"] /= 2
+            data["Miner distribution"]["RPi"] /= 4
+            data["Miner distribution"]["CPU"] /= 6
+            data["Miner distribution"]["Web"] /= 6
+            data["Miner distribution"]["Phone"] /= 4
+
+            update_element("hashrate", data["Pool hashrate"])
+            hashrate_gauge.set(parseInt(data["Pool hashrate"]));
+
+            update_element("registeredusers", data["Registered users"])
+            user_gauge.set(data["Registered users"]);
+
+            update_element("allmined", scientific_prefix(data["All-time mined DUCO"]));
+            circulation_gauge.set(data["All-time mined DUCO"])
+
+            update_element("watt_usage", data["Net energy usage"])
+            energy_gauge.set(parseInt(data["Net energy usage"]))
+
+            update_element("shares", scientific_prefix(data["Mined blocks"]))
+            share_gauge.set(parseInt(data["Mined blocks"]))
+
+            update_element("arduinos", data["Miner distribution"]["Arduino"])
+
+            update_element("esp8266s", data["Miner distribution"]["ESP8266"])
+
+            update_element("esp32s", Math.round(data["Miner distribution"]["ESP32"]))
+
+            update_element("rpis", Math.round(data["Miner distribution"]["RPi"]))
+
+            update_element("cpus", Math.round(data["Miner distribution"]["Web"] +
+                data["Miner distribution"]["CPU"]))
+
+            update_element("phones", Math.round(data["Miner distribution"]["Phone"]))
+
+            update_element("others", data["Miner distribution"]["Other"])
+
+
+            aktualizacja = new Date() / 1000 - data["Last sync"]
+
+            master_server = {
+                "icon": "fa-server",
+                "name": `MASTERNODE v${data["Server version"]}`,
+                "ram": data["Server CPU usage"],
+                "cpu": data["Server RAM usage"],
+                "connections": data["Active connections"],
+                "lastsync": `${round_to(0, aktualizacja)}s ago`
+            }
+
+            labels = []
+            mnrdata = []
+            $("#workercount").text(data["Miner distribution"]["All"])
+            delete data["Miner distribution"]["All"]
+            for (label in data["Miner distribution"]) {
+                labels.push(label)
+                mnrdata.push(Math.round(data["Miner distribution"][label]))
+            }
+
+            userlabels = []
+            usrdata = []
+            ignored = ["celoDUCO", "maticDUCO", "bscDUCO"]
+            for (label in data["Top 10 richest miners"]) {
+                user = data["Top 10 richest miners"][label].split(" - ")
+                if (!ignored.includes(user[1])) {
+                    userlabels.push(user[1])
+                    usrdata.push(parseInt(user[0]))
+                }
+            }
+            userlabels.push("Other accounts")
+            usrdata.push(parseInt(data["All-time mined DUCO"]))
+
+            if (firststart) {
+                const ctx = document.getElementById('distributionchart').getContext('2d');
+                const distributionchart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: mnrdata,
+                            backgroundColor: [
+                                '#00C07B',
+                                '#5E68FF',
+                                '#EE5253',
+                                'rgba(253, 167, 223, 1.0)',
+                                'rgba(16, 172, 132, 1.0)',
+                                '#2e86de',
+                                '#5f27cd',
+                                'rgba(255, 159, 67, 1.0)',
+                                'rgba(0, 148, 50, 1.0)',
+                                '#EF7A44'
+                            ],
+                            borderWidth: 1.5
+                        }]
+                    },
+                    options: {
+                        rotation: 45,
+                        animation: {
+                            duration: 1500
+                        },
+                        legend: false,
+                        tooltips: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            cornerRadius: 8,
+                            caretSize: 0,
+                            displayColors: false
+                        },
+                        plugins: {
+                            labels: {
+                                render: 'label',
+                                showZero: false,
+                                fontSize: 12,
+                                fontColor: '#fff',
+                                fontStyle: 'normal',
+                                fontFamily: "'Lato', 'Helvetica', 'Arial', sans-serif",
+                                textShadow: true,
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowOffsetY: -1,
+                                shadowColor: 'rgba(0,0,0,0.5)',
+                                arc: false,
+                                position: 'border',
+                                overlap: false,
+                                outsidePadding: 4,
+                                textMargin: 4
+                            }
+                        }
+                    }
+                });
+
+                const ctxt = document.getElementById('userducochart').getContext('2d');
+                const userchart = new Chart(ctxt, {
+                    type: 'pie',
+                    data: {
+                        labels: userlabels,
+                        datasets: [{
+                            data: usrdata,
+                            backgroundColor: [
+                                '#00C07B',
+                                '#5E68FF',
+                                '#EE5253',
+                                'rgba(253, 167, 223, 1.0)',
+                                'rgba(16, 172, 132, 1.0)',
+                                'rgba(255, 159, 67, 1.0)',
+                                'rgba(0, 148, 50, 1.0)',
+                                '#EF7A44'
+                            ],
+                            borderWidth: 1.5
+                        }]
+                    },
+                    options: {
+                        rotation: (-0.47 * Math.PI) - (25 / 180 * Math.PI),
+                        animation: {
+                            duration: 1500
+                        },
+                        legend: false,
+                        tooltips: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            cornerRadius: 8,
+                            caretSize: 0,
+                            displayColors: false
+                        },
+                        plugins: {
+                            labels: {
+                                render: 'label',
+                                showZero: false,
+                                fontSize: 12,
+                                fontColor: '#fff',
+                                fontStyle: 'normal',
+                                fontFamily: "'Lato', 'Helvetica', 'Arial', sans-serif",
+                                textShadow: true,
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowOffsetY: -1,
+                                shadowColor: 'rgba(0,0,0,0.5)',
+                                arc: false,
+                                position: 'border',
+                                overlap: false,
+                                outsidePadding: 4,
+                                textMargin: 4
+                            }
+                        }
+                    }
+                });
+                firststart = false;
+            }
+        })
+}
+
+
+function last_explorer_hashes() {
+    fetch("https://server.duinocoin.com/transactions.json")
+        .catch(function(error) {})
+        .then(response => response.json())
+        .then(data => {
+
+            hashes = []
+            for (hash in data) {
+                hashes.push(data[hash])
+            }
+
+            transaction_hashes_html = "";
+            for (hash in hashes.reverse()) {
+                if (hash >= 5) break
+                this_hash = hashes[hash].Hash;
+                if (this_hash.length == 40) {
+                    transaction_hashes_html += `<a class='transaction2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
+                } else {
+                    transaction_hashes_html += `<a class='transaction1 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
+                }
+            }
+            $("#transactionstext3").html(transaction_hashes_html);
+        })
+    fetch("https://server.duinocoin.com/foundBlocks.json")
+        .catch(function(error) {})
+        .then(response => response.json())
+        .then(data => {
+            let last = [];
+            for (hash in data) {
+                last.push(hash);
+            }
+
+            block_hashes_html = "";
+            for (hash in last.reverse()) {
+                if (hash >= 5) break
+                this_hash = last[hash];
+                if (this_hash.length == 40) {
+                    block_hashes_html += `<a class='block2 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
+                } else {
+                    block_hashes_html += `<a class='block1 monospace' onclick="link_search('${this_hash}')">` + this_hash.substring(0, 40) + "</a><br>";
+                }
+            }
+            $("#transactionstext4").html(block_hashes_html);
+        })
+}
+
+function get_prefix(symbol, value) {
+    value = parseFloat(value);
+    if (value / 1000000000 > 0.5)
+        value = round_to(2, value / 1000000000) + " G" + symbol;
+    else if (value / 1000000 > 0.5)
+        value = round_to(2, value / 1000000) + " M" + symbol;
+    else if (value / 1000 > 0.5)
+        value = round_to(2, value / 1000) + " k" + symbol;
+    else
+        value = round_to(2, value) + " " + symbol;
+    return value;
+}
+
+String.prototype.escape = function() {
+    var tagsToReplace = {
+        '&': ' ',
+        '\\': ' ',
+        '/': ' ',
+        '(': ' ',
+        ')': ' ',
+        '`': ' ',
+        '<': ' ',
+        '>': ' '
     };
+    return this.replace(/[&<>]/g, function(tag) {
+        return tagsToReplace[tag] || tag;
+    });
+};
 
-    function search(searched_string) {
-        let cont = true;
-        if (searched_string) {
-            console.log(searched_string);
-            window.history.pushState('Duino-Coin | Network statistics', 'Duino-Coin | Network statistics', `?search=${searched_string}`);
-            $("#transactionstext1").html(`<div class="divider">Results&nbsp;for&nbsp;<span style="overflow:hidden"><a onclick="link_search('${searched_string}')">${searched_string}</a></span></div>`);
-        }
-        if (cont) {
-            $.getJSON("https://server.duinocoin.com/transactions/" + searched_string, function(data) {
-                    if (data.success == true && data.result != "No transaction found") {
-                        cont = false;
-                        let amount_usd = data.result.amount * duco_price;
-                        if (searched_string.length == 40) transaction_type = "DUCO-S1";
-                        else transaction_type = "XXHASH"
+function search(searched_string) {
+    let cont = true;
+    if (searched_string) {
+        window.history.pushState('Duino-Coin network statistics and chain explorer', 'Duino-Coin network statistics and chain explorer', `?search=${searched_string}`);
+        $("#transactionstext1").html(`<div class="divider">Results&nbsp;for&nbsp;<span style="overflow:hidden"><a onclick="link_search('${searched_string}')">${searched_string}</a></span></div>`);
+        $("#transactionstext1_sub").html("");
+    }
+    if (cont) {
+        $("#searchcontrol").addClass("is-loading");
+        $.getJSON("https://server.duinocoin.com/transactions/" + searched_string, function(data) {
+                if (data.success == true && data.result != "No transaction found") {
+                    cont = false;
+                    let amount_usd = data.result.amount * duco_price;
+                    if (searched_string.length == 40) transaction_type = "DUCO-S1";
+                    else transaction_type = "XXHASH"
 
-                        found_transaction_html = `
+                    found_transaction_html = `
                             <table class="table is-narrow is-fullwidth">
                                 <tbody>
                                     <tr>
@@ -823,116 +1064,118 @@
                                 </tbody>
                             </table>`
 
-                        update_element("transactionstext2", found_transaction_html);
-                    }
-                })
-                .fail(function(error) {
-                    console.log(error.responseText);
-                    if (error.responseText.includes("500")) error = "500 - internal server error";
-                    else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
-                    else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
-                    found_transaction_html = `<ul class="is-size-6"><li>` +
-                        `<i class='fas fa-info-circle'></i>` +
-                        `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
+                    $("#searchcontrol").removeClass("is-loading");
                     update_element("transactionstext2", found_transaction_html);
-                });
-        }
-        if (cont) {
-            $.getJSON('https://server.duinocoin.com/users/' + searched_string, function(data) {
-                    if (data.success == true) {
-                        cont = false;
-                        let amount_usd = data.result.balance.balance * duco_price;
+                }
+            })
+            .fail(function(error) {
+                console.log(error.responseText);
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
+                found_transaction_html = `<ul class="is-size-6"><li>` +
+                    `<i class='fas fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
+                $("#searchcontrol").removeClass("is-loading");
+                update_element("transactionstext2", found_transaction_html);
+            });
+    }
+    if (cont) {
+        $.getJSON('https://server.duinocoin.com/users/' + searched_string, function(data) {
+                if (data.success == true) {
+                    cont = false;
+                    let amount_usd = data.result.balance.balance * duco_price;
 
-                        miner_str = "";
-                        miner_count = 0;
-                        if (data.result.miners.length) {
-                            let threaded_miners = {};
-                            user_miners = data.result.miners;
+                    miner_str = "";
+                    miner_count = 0;
+                    if (data.result.miners.length) {
+                        let threaded_miners = {};
+                        user_miners = data.result.miners;
 
-                            for (let miner in user_miners) {
-                                let miner_wallet_id = user_miners[miner]["wd"];
-                                if (!miner_wallet_id) miner_wallet_id = Math.random();
-                                const miner_hashrate = user_miners[miner]["hashrate"];
-                                const miner_rejected = user_miners[miner]["rejected"];
-                                const miner_accepted = user_miners[miner]["accepted"];
+                        for (let miner in user_miners) {
+                            let miner_wallet_id = user_miners[miner]["wd"];
+                            if (!miner_wallet_id) miner_wallet_id = Math.random();
+                            const miner_hashrate = user_miners[miner]["hashrate"];
+                            const miner_rejected = user_miners[miner]["rejected"];
+                            const miner_accepted = user_miners[miner]["accepted"];
 
-                                if (!threaded_miners[miner_wallet_id]) {
-                                    threaded_miners[miner_wallet_id] = user_miners[miner];
-                                    threaded_miners[miner_wallet_id]["threads"] = 1;
-                                    miner_count += 1;
-                                    continue;
-                                } else if (threaded_miners[miner_wallet_id]) {
-                                    threaded_miners[miner_wallet_id]["hashrate"] += miner_hashrate;
-                                    threaded_miners[miner_wallet_id]["rejected"] += miner_rejected;
-                                    threaded_miners[miner_wallet_id]["accepted"] += miner_accepted;
-                                    threaded_miners[miner_wallet_id]["threads"] += 1;
-                                    continue;
-                                }
+                            if (!threaded_miners[miner_wallet_id]) {
+                                threaded_miners[miner_wallet_id] = user_miners[miner];
+                                threaded_miners[miner_wallet_id]["threads"] = 1;
+                                miner_count += 1;
+                                continue;
+                            } else if (threaded_miners[miner_wallet_id]) {
+                                threaded_miners[miner_wallet_id]["hashrate"] += miner_hashrate;
+                                threaded_miners[miner_wallet_id]["rejected"] += miner_rejected;
+                                threaded_miners[miner_wallet_id]["accepted"] += miner_accepted;
+                                threaded_miners[miner_wallet_id]["threads"] += 1;
+                                continue;
                             }
-
-                            i = 0;
-                            for (miner in threaded_miners) {
-                                if (threaded_miners[miner]["identifier"] != "None") {
-                                    miner_str += "<b>" +
-                                        threaded_miners[miner]["identifier"] +
-                                        "</b> <span class='has-text-grey'>(" +
-                                        threaded_miners[miner]["software"] +
-                                        ")</span> - " +
-                                        get_prefix("", threaded_miners[miner]["accepted"]) + "/" +
-                                        get_prefix("", (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"])) +
-                                        ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
-                                } else {
-                                    miner_str += "<b>" + threaded_miners[miner]["software"] + "</b> - " +
-                                        threaded_miners[miner]["accepted"] + "/" +
-                                        (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"]) +
-                                        ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
-                                }
-
-                                if (i > 10) {
-                                    miner_str += "And " + (miner_count - i) + " more miner(s)...";
-                                    break;
-                                }
-                                i += 1;
-                            }
-                        } else {
-                            miner_str += "No miners found for that user";
                         }
 
-                        tx_str = "";
                         i = 0;
-                        if (data["result"]["transactions"].length) {
-                            for (transaction in data["result"]["transactions"].reverse()) {
-                                if (data["result"]["transactions"][transaction]["sender"] == data["result"]["balance"]["username"]) {
-                                    tx_str += "<span class='has-text-grey'>" +
-                                        data["result"]["transactions"][transaction]["datetime"] +
-                                        "</span> Sent <span class='has-text-danger-dark'>" +
-                                        " <b>" +
-                                        Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
-                                        " DUCO</b></span> to " +
-                                        `<a onclick="link_search('${data["result"]["transactions"][transaction]["recipient"]}')">` +
-                                        "<b>" +
-                                        data["result"]["transactions"][transaction]["recipient"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
-                                } else {
-                                    tx_str += "<span class='has-text-grey'>" +
-                                        data["result"]["transactions"][transaction]["datetime"] +
-                                        "</span> Received <span class='has-text-success-dark'>" +
-                                        "<b>" +
-                                        Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
-                                        " DUCO</b></span> from " +
-                                        `<a onclick="link_search('${data["result"]["transactions"][transaction]["sender"]}')">` + "<b>" +
-                                        data["result"]["transactions"][transaction]["sender"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
-                                }
-
-                                i += 1;
-                                if (i > 10) {
-                                    break;
-                                }
+                        for (miner in threaded_miners) {
+                            if (threaded_miners[miner]["identifier"] != "None") {
+                                miner_str += "<b>" +
+                                    threaded_miners[miner]["identifier"] +
+                                    "</b> <span class='has-text-grey'>(" +
+                                    threaded_miners[miner]["software"] +
+                                    ")</span> - " +
+                                    get_prefix("", threaded_miners[miner]["accepted"]) + "/" +
+                                    get_prefix("", (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"])) +
+                                    ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
+                            } else {
+                                miner_str += "<b>" + threaded_miners[miner]["software"] + "</b> - " +
+                                    threaded_miners[miner]["accepted"] + "/" +
+                                    (threaded_miners[miner]["accepted"] + threaded_miners[miner]["rejected"]) +
+                                    ", <b>" + get_prefix("H/s", threaded_miners[miner]["hashrate"]) + `</b> (${((threaded_miners[miner]["threads"] == 1) ? ("1 thread") : (`${threaded_miners[miner]["threads"]} threads`))}) <br>`;
                             }
-                        } else {
-                            tx_str += "No transactions found for that user";
-                        }
 
-                        found_user_html = `
+                            if (i > 10) {
+                                miner_str += "And " + (miner_count - i) + " more miner(s)...";
+                                break;
+                            }
+                            i += 1;
+                        }
+                    } else {
+                        miner_str += "No miners found for that user";
+                    }
+
+                    tx_str = "";
+                    i = 0;
+                    if (data["result"]["transactions"].length) {
+                        for (transaction in data["result"]["transactions"].reverse()) {
+                            if (data["result"]["transactions"][transaction]["sender"] == data["result"]["balance"]["username"]) {
+                                tx_str += "<span class='has-text-grey'>" +
+                                    data["result"]["transactions"][transaction]["datetime"] +
+                                    "</span> Sent <span class='has-text-danger-dark'>" +
+                                    " <b>" +
+                                    Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
+                                    " DUCO</b></span> to " +
+                                    `<a onclick="link_search('${data["result"]["transactions"][transaction]["recipient"]}')">` +
+                                    "<b>" +
+                                    data["result"]["transactions"][transaction]["recipient"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
+                            } else {
+                                tx_str += "<span class='has-text-grey'>" +
+                                    data["result"]["transactions"][transaction]["datetime"] +
+                                    "</span> Received <span class='has-text-success-dark'>" +
+                                    "<b>" +
+                                    Math.round(data["result"]["transactions"][transaction]["amount"] * 1000) / 1000 +
+                                    " DUCO</b></span> from " +
+                                    `<a onclick="link_search('${data["result"]["transactions"][transaction]["sender"]}')">` + "<b>" +
+                                    data["result"]["transactions"][transaction]["sender"] + "</a></b> " + `<a onclick="link_search('${data["result"]["transactions"][transaction]["hash"]}')">(` + data["result"]["transactions"][transaction]["hash"].substr(data["result"]["transactions"][transaction]["hash"].length - 8) + ")</a><br>"
+                            }
+
+                            i += 1;
+                            if (i > 10) {
+                                break;
+                            }
+                        }
+                    } else {
+                        tx_str += "No transactions found for that user";
+                    }
+
+                    found_user_html = `
                             <table class="table is-narrow is-fullwidth">
                                 <tbody>
                                     <tr>
@@ -1011,33 +1254,35 @@
                                 </tbody>
                             </table>`
 
-                        update_element("transactionstext2", found_user_html);
-                    }
-                })
-                .fail(function(error) {
-                    if (error.responseText.includes("500")) error = "500 - internal server error";
-                    else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
-                    else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
-                    found_transaction_html = `<ul class="is-size-6"><li>` +
-                        `<i class='fas fa-info-circle'></i>` +
-                        `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
-                    update_element("transactionstext2", found_transaction_html);
-                });
-        }
-        if (cont) {
-            $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
+                    $("#searchcontrol").removeClass("is-loading");
+                    update_element("transactionstext2", found_user_html);
+                }
+            })
+            .fail(function(error) {
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
+                found_transaction_html = `<ul class="is-size-6"><li>` +
+                    `<i class='fas fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
+                $("#searchcontrol").removeClass("is-loading");
+                update_element("transactionstext2", found_transaction_html);
+            });
+    }
+    if (cont) {
+        $.getJSON('https://server.duinocoin.com/foundBlocks.json', function(data) {
+                cont = false;
+                let found = data[searched_string]
+                if (searched_string != "" && found != "" && found != undefined) {
                     cont = false;
-                    let found = data[searched_string]
-                    if (searched_string != "" && found != "" && found != undefined) {
-                        cont = false;
-                        let amount_usd = found["Amount generated"] * duco_price;
-                        if (searched_string.length == 40) block_type = "DUCO-S1";
-                        else block_type = "XXHASH"
+                    let amount_usd = found["Amount generated"] * duco_price;
+                    if (searched_string.length == 40) block_type = "DUCO-S1";
+                    else block_type = "XXHASH"
 
-                        found["Finder"] = found["Finder"].replace("(DUCO-S1)", "")
-                        found["Finder"] = found["Finder"].replace("(XXHASH)", "")
+                    found["Finder"] = found["Finder"].replace("(DUCO-S1)", "")
+                    found["Finder"] = found["Finder"].replace("(XXHASH)", "")
 
-                        found_block_html = `
+                    found_block_html = `
                             <table class="table is-fullwidth">
                                 <tbody>
                                     <tr>
@@ -1090,112 +1335,133 @@
                                 </tbody>
                             </table>`
 
-                        update_element("transactionstext2", found_block_html);
-                    }
-                })
-                .fail(function(error) {
-                    if (error.responseText.includes("500")) error = "500 - internal server error";
-                    else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
-                    else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
-                    found_transaction_html = `<ul class="is-size-6"><li>` +
-                        `<i class='fas fa-info-circle'></i>` +
-                        `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
-                    update_element("transactionstext2", found_transaction_html);
-                });
-        }
-        if (cont) $("#transactionstext2").text(`Nothing interesting found for your query 🤷`);
-    }
-
-
-    function update_pools() {
-        fetch("https://server.duinocoin.com/all_pools")
-            .catch(function(error) {
-                console.log(error);
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success === true) {
-                    let pools = {};
-                    data.result.forEach(pool => {
-                        pools[pool["name"]] = pool;
-                    });
-                    // Update pool info, add new pools here
-
-                    // Star pool
-                    try {
-                        let star1_data = pools["star-pool-1"];
-                        update_element("star_connections", star1_data["connections"]);
-                        update_element("star_cpu", round_to(1, parseFloat(star1_data["cpu"])) + "%");
-                        update_element("star_ram", round_to(1, parseFloat(star1_data["ram"])) + "%");
-                    } catch (e) { console.log(e) };
-
-                    // Beyond pool
-                    try {
-                        let beyond1_data = pools["beyond-pool-1"];
-                        let beyond2_data = pools["beyond-pool-3"];
-                        update_element("beyond_connections", pools["beyond-pool-1"]["connections"] + pools["beyond-pool-2"]["connections"]);
-                        update_element("beyond_cpu", round_to(1, parseFloat(beyond1_data["cpu"])) + "%");
-                        update_element("beyond_ram", round_to(1, parseFloat(beyond1_data["ram"])) + "%");
-
-                        update_element("beyond_connections2", pools["beyond-pool-3"]["connections"] + pools["beyond-pool-4"]["connections"]);
-                        update_element("beyond_cpu2", round_to(1, parseFloat(beyond2_data["cpu"])) + "%");
-                        update_element("beyond_ram2", round_to(1, parseFloat(beyond2_data["ram"])) + "%");
-                    } catch (e) { console.log(e) };
-
-                    // Svko pool
-                    try {
-                        let svko1_data = pools["svko-pool-1"];
-                        let svko2_data = pools["svko-pool-2"];
-
-                        update_element("svko_connections", svko2_data["connections"] + svko1_data["connections"]);
-                        update_element("svko_cpu", round_to(1, parseFloat(svko1_data["cpu"])) + "%");
-                        update_element("svko_ram", round_to(1, parseFloat(svko1_data["ram"])) + "%");
-                    } catch (e) { console.log(e) };
-
-                    // Null pool
-                    try {
-                        let null_data = pools["null-pool-1"];
-
-                        update_element("null_connections", null_data["connections"]);
-                        update_element("null_cpu", round_to(1, parseFloat(null_data["cpu"])) + "%");
-                        update_element("null_ram", round_to(1, parseFloat(null_data["ram"])) + "%");
-                    } catch (e) { console.log(e) };
-
-                    // End of list of pools to update
+                    $("#searchcontrol").removeClass("is-loading");
+                    update_element("transactionstext2", found_block_html);
                 }
             })
+            .fail(function(error) {
+                if (error.responseText.includes("500")) error = "500 - internal server error";
+                else if (error.responseText.includes("429")) error = "429 - too many requests (slow down)";
+                else if (error.responseText.includes("404")) error = "404 - nothing interesting found";
+                found_transaction_html = `<ul class="is-size-6"><li>` +
+                    `<i class='fas fa-info-circle'></i>` +
+                    `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
+                $("#searchcontrol").removeClass("is-loading");
+                update_element("transactionstext2", found_transaction_html);
+            });
     }
-
-    update_stats();
-    window.setInterval(update_stats, 5000);
-
-    last_explorer_hashes();
-    window.setInterval(last_explorer_hashes, 5000);
-
-    update_pools();
-    window.setInterval(update_pools, 5000);
-
-    $("#search_input").on('keydown', function(e) {
-        if (e.which === 13) {
-            e.preventDefault();
-            button_search();
-        }
-    });
-
-    function button_search() {
-        to_search = $('#search_input').val().escape();
-        console.log("Button search for ", to_search.escape())
-        search(to_search.escape());
+    if (cont) {
+        setTimeout(function() { $("#searchcontrol").removeClass("is-loading"); }, 500);
+        $("#transactionstext2").text(`Nothing interesting found for your query 🤷`);
     }
+}
 
-    function link_search(to_search) {
-        console.log("Link search for ", to_search.escape())
-        search(to_search.escape());
+function getColor(value) {
+    var hue = ((1 - value) * 128).toString(10);
+    return ["hsl(", hue, ", 100%, 25%)"].join("");
+}
+
+function update_pools() {
+    fetch("https://server.duinocoin.com/all_pools")
+        .catch(function(error) {
+            console.log(error);
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success === true) {
+                data = data.result;
+
+                node_html = "";
+
+                data = {
+                    "master": master_server,
+                    ...data
+                }
+                for (node in data) {
+                    cpucolor = getColor(data[node]["cpu"] / 100);
+                    ramcolor = getColor(data[node]["ram"] / 100);
+
+                    if (parseInt(data[node]["lastsync"]) < 60) {
+                        synccolor = "has-text-success";
+                        syncicon = "fa-check-circle";
+                    } else if (parseInt(data[node]["lastsync"]) < 360) {
+                        synccolor = "has-text-warning";
+                        syncicon = "fa-exclamation-triangle";
+                    } else {
+                        synccolor = "has-text-danger";
+                        syncicon = "fa-times-circle";
+                    }
+
+                    if (parseInt(data[node]["lastsync"]) < 3600) {
+                        node_html += `
+                        <div class="column" style="min-width:200px">
+                            <p class="heading title mb-1 is-size-6">
+                                <i class="fa ${data[node]["icon"]}"></i>
+                                <span>${data[node]["name"].replace("pool", "node")}</span>
+                            </p>
+                            <div class="content">
+                                Last sync: <strong>${data[node]["lastsync"]}</strong>
+                                <i class="${synccolor} fa ${syncicon}"></i>
+                                <br>
+                                CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong><br>
+                                RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
+                                Clients: <strong>${data[node]["connections"]}</strong>
+                            </div>
+                        </div>`
+                    }
+                }
+                update_element("pools", node_html)
+            }
+        })
+}
+
+update_stats();
+window.setInterval(update_stats, 5000);
+
+last_explorer_hashes();
+window.setInterval(last_explorer_hashes, 5000);
+
+update_pools();
+window.setInterval(update_pools, 5000);
+
+fetch_price();
+
+$("#search_input").on('keydown', function(e) {
+    if (e.which === 13) {
+        e.preventDefault();
+        button_search();
     }
+});
 
-    if (to_search.escape()) search(to_search.escape());
-    </script>
-    <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-</body>
+function button_search() {
+    to_search = $('#search_input').val().escape();
+    console.log("Button search for ", to_search.escape())
+    search(to_search.escape());
+}
+
+function link_search(to_search) {
+    console.log("Link search for ", to_search.escape())
+    search(to_search.escape());
+}
+
+if (to_search) search(to_search.escape());
+
+
+/* On page loaded */
+$(window).on('load', function() {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+        });
+    }
+    $("#pageloader").fadeOut();
+});
+</script>
 
 </html>
