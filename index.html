@@ -499,13 +499,25 @@
 <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
 <script>
-$("meta[name='og:image']").attr('content', '/assets/explorer.png');
+
 const pageloader = document.getElementById('loader');
 let duco_price = 0.00045;
 let load_workers = false;
 let url_string = window.location;
 let url = new URL(url_string);
 let to_search = url.searchParams.get("search");
+
+function change_tags(data, type) {
+    $("meta[name='og:image']").attr('content', '/assets/explorer.png');
+
+    $("meta[name='title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
+    $("meta[name='og:title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
+    $("meta[name='twitter:title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
+
+    $("meta[name='description']").attr(`View details of ${type}: ${data} in the official Duino-Coin chain explorer.`);
+    $("meta[name='og:description']").attr(`View details of ${type}: ${data} in the official Duino-Coin chain explorer.`);
+    $("meta[name='twitter:description']").attr(`View details of ${type}: ${data} in the official Duino-Coin chain explorer.`);
+}
 
 bodymovin.loadAnimation({
     wrapper: pageloader,
@@ -987,6 +999,8 @@ function search(searched_string) {
                     if (searched_string.length == 40) transaction_type = "DUCO-S1";
                     else transaction_type = "XXHASH"
 
+                    change_tags(searched_string, "transaction");
+
                     found_transaction_html = `
                             <table class="table is-narrow is-fullwidth">
                                 <tbody>
@@ -1085,6 +1099,8 @@ function search(searched_string) {
                 if (data.success == true) {
                     cont = false;
                     let amount_usd = data.result.balance.balance * duco_price;
+
+                    change_tags(searched_string, "user");
 
                     miner_str = "";
                     miner_count = 0;
@@ -1278,6 +1294,8 @@ function search(searched_string) {
                     let amount_usd = found["Amount generated"] * duco_price;
                     if (searched_string.length == 40) block_type = "DUCO-S1";
                     else block_type = "XXHASH"
+
+                    change_tags(searched_string, "block");
 
                     found["Finder"] = found["Finder"].replace("(DUCO-S1)", "")
                     found["Finder"] = found["Finder"].replace("(XXHASH)", "")
