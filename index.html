@@ -25,7 +25,7 @@
     <meta property="og:url" content="https://explorer.duinocoin.com/">
     <meta property="og:title" content="Duino-Coin network statistics and chain explorer">
     <meta property="og:description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
-    <!--<meta property="og:image" content="/assets/explorer.png">-->
+    <meta property="og:image" content="/assets/explorer.png">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://explorer.duinocoin.com/">
@@ -508,8 +508,6 @@ let url = new URL(url_string);
 let to_search = url.searchParams.get("search");
 
 function change_tags(data, type) {
-    $("meta[name='og:image']").attr('content', '/assets/explorer.png');
-
     $("meta[name='title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
     $("meta[name='og:title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
     $("meta[name='twitter:title']").attr(`${type}: ${data} - browse the official Duino-Coin explorer`);
