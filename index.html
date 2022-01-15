@@ -627,13 +627,13 @@ let opts = {
 
 var target = document.getElementById('hashratechart');
 let hashrate_gauge = new Gauge(target).setOptions(opts);
-hashrate_gauge.maxValue = 2500;
+hashrate_gauge.maxValue = 3000;
 hashrate_gauge.setMinValue(0);
 hashrate_gauge.animationSpeed = 100;
 
 var target = document.getElementById('userchart');
 let user_gauge = new Gauge(target).setOptions(opts);
-user_gauge.maxValue = 50000;
+user_gauge.maxValue = 60000;
 user_gauge.setMinValue(0);
 user_gauge.animationSpeed = 100;
 
