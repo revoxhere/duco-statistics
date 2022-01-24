@@ -775,7 +775,7 @@ function update_stats() {
 
             update_element("registeredusers", data["Registered users"])
             user_gauge.set(data["Registered users"]);
-            hashrate_gauge.maxValue = data["Registered users"]/10;
+            hashrate_gauge.maxValue = (data["Registered users"]/10)+500;
 
             update_element("allmined", scientific_prefix(data["All-time mined DUCO"]));
             circulation_gauge.set(data["All-time mined DUCO"])
