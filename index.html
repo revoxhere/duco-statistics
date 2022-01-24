@@ -627,13 +627,12 @@ let opts = {
 
 var target = document.getElementById('hashratechart');
 let hashrate_gauge = new Gauge(target).setOptions(opts);
-hashrate_gauge.maxValue = 5000;
 hashrate_gauge.setMinValue(0);
 hashrate_gauge.animationSpeed = 100;
 
 var target = document.getElementById('userchart');
 let user_gauge = new Gauge(target).setOptions(opts);
-user_gauge.maxValue = 60000;
+user_gauge.maxValue = 75000;
 user_gauge.setMinValue(0);
 user_gauge.animationSpeed = 100;
 
@@ -776,6 +775,7 @@ function update_stats() {
 
             update_element("registeredusers", data["Registered users"])
             user_gauge.set(data["Registered users"]);
+            hashrate_gauge.maxValue = data["Registered users"]/10;
 
             update_element("allmined", scientific_prefix(data["All-time mined DUCO"]));
             circulation_gauge.set(data["All-time mined DUCO"])
@@ -801,9 +801,7 @@ function update_stats() {
 
             update_element("others", data["Miner distribution"]["Other"])
 
-
             aktualizacja = new Date() / 1000 - data["Last sync"]
-
             master_server = {
                 "icon": "fa-server",
                 "name": `MASTERNODE v${data["Server version"]}`,
