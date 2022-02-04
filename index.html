@@ -770,7 +770,7 @@ function update_stats() {
             data["Miner distribution"]["Web"] /= 6
             data["Miner distribution"]["Phone"] /= 4
 
-            update_element("hashrate", data["Pool hashrate"])
+            update_element("hashrate", data["DUCO-S1 hashrate"])
             hashrate_gauge.set(parseInt(data["Pool hashrate"]));
 
             update_element("registeredusers", data["Registered users"])
