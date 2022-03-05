@@ -1234,13 +1234,23 @@ function search(searched_string) {
                         tx_str += "No transactions found for that user";
                     }
 
+                    if (data.result.balance.last_login != 0) 
+                        last_login_str = new Date(data.result.balance.last_login*1000).toLocaleString();
+                    else
+                        last_login_str = "before 5.03.2022";
+
+                    if (data.result.balance.stake_date != 0)
+                        stake_str = `yes - ${data.result.balance.stake_amount} DUCO (ends on ${new Date(data.result.balance.stake_date*1000).toLocaleString()})`;
+                    else
+                        stake_str = "no";
+
                     found_user_html = `
                             <table class="table is-narrow is-fullwidth">
                                 <tbody>
                                     <tr>
                                         <th>
                                             <span class="icon-text">
-                                                <i class="icon fa fa-user"></i>
+                                                <i class="icon fa fa-fw fa-user"></i>
                                                 <span>Wallet name</span> 
                                             </span>
                                         </th>
@@ -1253,7 +1263,7 @@ function search(searched_string) {
                                     <tr>
                                         <th>
                                             <span class="icon-text">
-                                                <i class="icon fa fa-coins"></i>
+                                                <i class="icon fa fa-fw fa-coins"></i>
                                                 <span>Balance</span>
                                             </span>
                                         </th>
@@ -1265,7 +1275,7 @@ function search(searched_string) {
                                     <tr>
                                         <th>
                                             <span class="icon-text">
-                                                <i class="icon fa fa-check-circle"></i>
+                                                <i class="icon fa fa-fw fa-check-circle"></i>
                                                 <span>Verified</span>
                                             </span>
                                         </th>
@@ -1276,7 +1286,7 @@ function search(searched_string) {
                                     <tr>
                                         <th>
                                             <span class="icon-text">
-                                                <i class="icon fa fa-calendar"></i>
+                                                <i class="icon fa fa-fw fa-calendar"></i>
                                                 <span>Creation date</span>
                                             </span>
                                         </th>
@@ -1285,9 +1295,31 @@ function search(searched_string) {
                                         </th>
                                     </tr>
                                     <tr>
+                                        <th>
+                                            <span class="icon-text">
+                                                <i class="icon fa fa-fw fa-signal"></i>
+                                                <span>Last seen</span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            ${last_login_str}
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="icon-text">
+                                                <i class="icon fa fa-fw fa-layer-group"></i>
+                                                <span>Staking</span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            ${stake_str}
+                                        </th>
+                                    </tr>
+                                    <tr>
                                         <th colspan="2">
                                             <span class="icon-text">
-                                                <i class="icon fa fa-cog"></i>
+                                                <i class="icon fa fa-fw fa-cog"></i>
                                                 <span>Miners</span>
                                             </span>
                                         </th>
@@ -1300,7 +1332,7 @@ function search(searched_string) {
                                     <tr>
                                         <th colspan="2">
                                             <span class="icon-text">
-                                                <i class="icon fas fa-people-arrows"></i>
+                                                <i class="icon fa-fw fas fa-people-arrows"></i>
                                                 <span>Transactions</span>
                                             </span>
                                         </th>
