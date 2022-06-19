@@ -385,13 +385,15 @@
                                 <div class="column is-half">
                                     <div class="divider">Last transactions</div>
                                     <p class="is-size-6 is-size-6" id="transactionstext3">
-                                        Please wait
+                                        <span>Fetching data</span>
+                                    <i class="fa fa-spin fa-circle-notch"></i>
                                     </p>
                                 </div>
                                 <div class="column is-half">
                                     <div class="divider">Last blocks</div>
                                     <p class="is-size-6 is-size-6" id="transactionstext4">
-                                        Please wait
+                                        <span>Fetching data</span>
+                                    <i class="fa fa-spin fa-circle-notch"></i>
                                     </p>
                                 </div>
                             </div>
@@ -408,7 +410,8 @@
                                     Mining nodes
                                 </p>
                                 <div id="pools" class="columns m-3 is-mobile is-multiline">
-                                    Loading node data...
+                                    <span>Fetching data</span>&nbsp;
+                                    <i class="fa icon fa-spin fa-circle-notch"></i>
                                 </div>
                             </div>
                         </div>
@@ -469,7 +472,7 @@
                                 </div>
                                 <div class="column is-narrow">
                                     <p class="is-size-6 has-text-grey-dark">
-                                        <span class="tag">123</span>
+                                        <span class="tag">1</span>
                                         amount of workers
                                     </p>
                                 </div>
@@ -487,9 +490,6 @@
             </div>
         </div>
     </section>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
     </div>
     <!-- FOOTER -->
     <footer class="footer">
@@ -533,8 +533,9 @@ bodymovin.loadAnimation({
 
 function update_element(element, value, animate = false) {
     if (animate) {
-        $(`#${element}`).fadeOut(300);
-        $(`#${element}`).html(value).fadeIn(300);
+        $(`#${element}`).fadeOut('fast', function() {
+            $(`#${element}`).html(value).fadeIn('fast');
+        });
     } else {
         $(`#${element}`).html(value);
     }
@@ -1122,7 +1123,7 @@ function search(searched_string) {
                             </table>`
 
                     $("#searchcontrol").removeClass("is-loading");
-                    update_element("transactionstext2", found_transaction_html);
+                    update_element("transactionstext2", found_transaction_html, true);
                 }
             })
             .fail(function(error) {
@@ -1134,7 +1135,7 @@ function search(searched_string) {
                     `<i class='fas fa-info-circle'></i>` +
                     `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 $("#searchcontrol").removeClass("is-loading");
-                update_element("transactionstext2", found_transaction_html);
+                update_element("transactionstext2", found_transaction_html, true);
             });
     }
     if (cont) {
@@ -1346,7 +1347,7 @@ function search(searched_string) {
                             </table>`
 
                     $("#searchcontrol").removeClass("is-loading");
-                    update_element("transactionstext2", found_user_html);
+                    update_element("transactionstext2", found_user_html, true);
                 }
             })
             .fail(function(error) {
@@ -1357,7 +1358,7 @@ function search(searched_string) {
                     `<i class='fas fa-info-circle'></i>` +
                     `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 $("#searchcontrol").removeClass("is-loading");
-                update_element("transactionstext2", found_transaction_html);
+                update_element("transactionstext2", found_transaction_html, true);
             });
     }
     if (cont) {
@@ -1429,7 +1430,7 @@ function search(searched_string) {
                             </table>`
 
                     $("#searchcontrol").removeClass("is-loading");
-                    update_element("transactionstext2", found_block_html);
+                    update_element("transactionstext2", found_block_html, true);
                 }
             })
             .fail(function(error) {
@@ -1440,7 +1441,7 @@ function search(searched_string) {
                     `<i class='fas fa-info-circle'></i>` +
                     `&nbsp;Error: <b>${error}</b> 🤦‍♀️</li></ul>`;
                 $("#searchcontrol").removeClass("is-loading");
-                update_element("transactionstext2", found_transaction_html);
+                update_element("transactionstext2", found_transaction_html, true);
             });
     }
     if (cont) {
