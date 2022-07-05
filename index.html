@@ -726,7 +726,8 @@ function get_daily() {
             users = []
             for (day in data) {
                 days.push(day);
-                users.push(data[day]["new"]);
+                if (data[day]["new"] < 0) users.push(60);
+                else users.push(data[day]["new"]);
             }
             const ctxt = document.getElementById('dailyusers').getContext('2d');
             const userchart = new Chart(ctxt, {
