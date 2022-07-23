@@ -824,7 +824,7 @@ function update_stats() {
 
             userlabels = []
             usrdata = []
-            ignored = ["celoDUCO", "maticDUCO", "bscDUCO"]
+            ignored = ["celoDUCO", "maticDUCO", "bscDUCO", "coinexchange"]
             for (label in data["Top 10 richest miners"]) {
                 user = data["Top 10 richest miners"][label].split(" - ")
                 if (!ignored.includes(user[1])) {
@@ -1116,7 +1116,7 @@ function search(searched_string) {
                                                 <span>Memo</span>
                                             </span>
                                         </th>
-                                        <th>
+                                        <th style="word-break:break-all;">
                                             ${data.result.memo}
                                         </th>
                                     </tr>
