@@ -744,7 +744,9 @@ function get_daily() {
                 options: {
                     scales: {
                         yAxes: [{
-                            beginAtZero: true
+                            ticks: {
+                                beginAtZero: true
+                            }
                         }],
                     },
                     animation: {
