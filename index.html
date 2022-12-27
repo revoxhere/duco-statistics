@@ -387,14 +387,14 @@
                                     <div class="divider">Last transactions</div>
                                     <p class="is-size-6 is-size-6" id="transactionstext3">
                                         <span>Fetching data</span>
-                                    <i class="fa fa-spin fa-circle-notch"></i>
+                                        <i class="fa fa-spin fa-circle-notch"></i>
                                     </p>
                                 </div>
                                 <div class="column is-half">
                                     <div class="divider">Last blocks</div>
                                     <p class="is-size-6 is-size-6" id="transactionstext4">
                                         <span>Fetching data</span>
-                                    <i class="fa fa-spin fa-circle-notch"></i>
+                                        <i class="fa fa-spin fa-circle-notch"></i>
                                     </p>
                                 </div>
                             </div>
@@ -442,53 +442,60 @@
                                 </p>
                                 <canvas id="userducochart"></canvas>
                             </div>
-                            <!--<div class="column is-half">
+                            <div class="column is-half">
                                 <p class="heading has-text-centered is-size-5">
                                     Daily new users
                                 </p>
                                 <canvas id="dailyusers"></canvas>
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-                <!-- ACTIVE WORKERS -->
-                <div class="column is-full">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <p class="heading is-size-5">
-                                Active workers (<span id="workercount">?</span>)
-                            </p>
-                            <div class="columns is-multiline mt-1 is-mobile">
-                                <div class="column is-narrow">
-                                    <p class="is-size-6 has-text-grey-dark">
-                                        <i class="fa fa-circle has-text-danger"></i>
-                                        unverified account
-                                    </p>
-                                </div>
-                                <div class="column is-narrow">
-                                    <p class="is-size-6 has-text-grey-dark">
-                                        <i class="fa fa-circle has-text-success"></i>
-                                        verified account
-                                    </p>
-                                </div>
-                                <div class="column is-narrow">
-                                    <p class="is-size-6 has-text-grey-dark">
-                                        <span class="tag">1</span>
-                                        amount of workers
-                                    </p>
-                                </div>
                             </div>
-                        </div>
-                        <div class="panel-block">
-                            <p id="workers" class="is-size-6 is-size-6">
-                                <button id="loadworkers" class="button workers" onclick="fill_worker_list()">
-                                    Load all workers
-                                </button>
-                            </p>
+                            <div class="column is-half">
+                                <p class="heading has-text-centered is-size-5">
+                                    Daily hashrate and miners
+                                </p>
+                                <canvas id="minercharts"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- ACTIVE WORKERS -->
+            <div class="column is-full">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <p class="heading is-size-5">
+                            Active workers (<span id="workercount">?</span>)
+                        </p>
+                        <div class="columns is-multiline mt-1 is-mobile">
+                            <div class="column is-narrow">
+                                <p class="is-size-6 has-text-grey-dark">
+                                    <i class="fa fa-circle has-text-danger"></i>
+                                    unverified account
+                                </p>
+                            </div>
+                            <div class="column is-narrow">
+                                <p class="is-size-6 has-text-grey-dark">
+                                    <i class="fa fa-circle has-text-success"></i>
+                                    verified account
+                                </p>
+                            </div>
+                            <div class="column is-narrow">
+                                <p class="is-size-6 has-text-grey-dark">
+                                    <span class="tag">1</span>
+                                    amount of workers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-block">
+                        <p id="workers" class="is-size-6 is-size-6">
+                            <button id="loadworkers" class="button workers" onclick="fill_worker_list()">
+                                Load all workers
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     </div>
@@ -717,26 +724,34 @@ function fetch_price() {
 }
 
 function get_daily() {
-    fetch("https://duco.sytes.net/dailynewusers.json")
+    fetch("https://server.duinocoin.com/historic_data?limit=30")
         .catch(function(error) {
             console.log(error);
         })
         .then(response => response.json())
         .then(data => {
+            data = data.result;
             days = []
             users = []
-            for (day in data) {
-                days.push(day);
-                if (data[day]["new"] < 0) users.push(60);
-                else users.push(data[day]["new"]);
+
+            hashrate_daily = []
+            workers_daily = []
+            for (day in data.reverse()) {
+                try {
+                    users.push(data[day]["users"] - data[day - 1]["users"]);
+                    hashrate_daily.push(parseFloat(data[day]["hashrate"].replace(" GH/s", "")))
+                    workers_daily.push(data[day]["miners"])
+                    days.push(data[day]["day"]);
+                } catch (err) {}
             }
+
             const ctxt = document.getElementById('dailyusers').getContext('2d');
-            const userchart = new Chart(ctxt, {
+            const dailyusers = new Chart(ctxt, {
                 type: 'bar',
                 data: {
-                    labels: days.slice(-30),
+                    labels: days,
                     datasets: [{
-                        data: users.slice(-30),
+                        data: users,
                         backgroundColor: '#00C07B',
                         borderWidth: 1.5
                     }]
@@ -758,6 +773,56 @@ function get_daily() {
                     plugins: {
                         labels: {
                             fontSize: 0,
+                        }
+                    }
+                }
+            });
+            console.log(workers_daily)
+            const ctxtx = document.getElementById('minercharts').getContext('2d');
+            const minercharts = new Chart(ctxtx, {
+                type: 'line',
+                data: {
+                    labels: days,
+                    datasets: [{
+                        yAxisID: 'A',
+                        label: 'Net hashrate [GH/s]',
+                        data: hashrate_daily,
+                        backgroundColor: '#3498db88',
+                    }, {
+                        yAxisID: 'B',
+                        label: 'Active workers',
+                        data: workers_daily,
+                        backgroundColor: '#e67e2288',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        yAxes: [{
+                                id: 'A',
+                                type: 'linear',
+                                position: 'right',
+                                ticks: { beginAtZero: true },
+                                grid: { display: false }
+                            },
+                            {
+                                id: 'B',
+                                type: 'linear',
+                                position: 'left',
+                                ticks: { beginAtZero: true },
+                                grid: { display: false }
+                            }
+                        ],
+                    },
+                    animation: {
+                        duration: 1500
+                    },
+                    legend: {
+                        display: true
+                    },
+                    plugins: {
+                        labels: {
+                            fontSize: 0
                         }
                     }
                 }
@@ -1244,8 +1309,8 @@ function search(searched_string) {
                         tx_str += "No transactions found for that user";
                     }
 
-                    if (data.result.balance.last_login != 0) 
-                        last_login_str = new Date(data.result.balance.last_login*1000).toLocaleString();
+                    if (data.result.balance.last_login != 0)
+                        last_login_str = new Date(data.result.balance.last_login * 1000).toLocaleString();
                     else
                         last_login_str = "before 5.03.2022";
 
