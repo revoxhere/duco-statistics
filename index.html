@@ -1560,6 +1560,12 @@ function update_pools() {
                         syncicon = "fa-times-circle";
                     }
 
+                    if (data[node]["region"]) {
+                        region = data[node]["region"];
+                    } else {
+                        region = "Common";
+                    }
+
                     if (parseInt(data[node]["lastsync"]) < 3600) {
                         node_html += `
                         <div class="column" style="min-width:200px">
@@ -1571,9 +1577,9 @@ function update_pools() {
                                 Last sync: <strong>${data[node]["lastsync"]}</strong>
                                 <i class="${synccolor} fa ${syncicon}"></i>
                                 <br>
-                                CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong><br>
-                                RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
+                                CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong> RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
                                 Clients: <strong>${data[node]["connections"]}</strong>
+                                Region: <strong>${region}</strong>
                             </div>
                         </div>`
                     }
