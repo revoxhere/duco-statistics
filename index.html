@@ -738,7 +738,7 @@ function get_daily() {
             workers_daily = []
             for (day in data.reverse()) {
                 try {
-                    if (data[day]["users"] - data[day - 1]["users"] <= 0) {
+                    if (data[day]["users"] - data[day - 1]["users"] >= 0) {
                         users.push(data[day]["users"] - data[day - 1]["users"]);
                     } else {
                         users.push(10);
