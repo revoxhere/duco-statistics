@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 Page Not Found | Duino-Coin Explorer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
+    <link rel="shortcut icon" href="favicons/favicon.ico?v=3">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://explorer.duinocoin.com/">
+    <meta property="og:title" content="Duino-Coin network statistics and chain explorer">
+    <meta property="og:description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
+    <meta property="og:image" content="/assets/explorer.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://explorer.duinocoin.com/">
+    <meta property="twitter:title" content="Duino-Coin network statistics and chain explorer">
+    <meta property="twitter:description" content="View real-time statistics of the Duino-Coin network and browse through the blockchain.">
+    <!-- CSS -->
+    <link rel="preload" href="assets/mystyles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="assets/mystyles.css">
+    <!-- Jquery and FA -->
+    <link rel="preload" href="assets/fontawesome.js" as="script">
+    <script src="assets/fontawesome.js"></script>
+    <link rel="preload" href="assets/jquery.min.js" as="script">
+    <script src="assets/jquery.min.js"></script>
+    <!-- Others -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" as="script">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item is-active" href="https://duinocoin.com">
+                <img src="assets/duino.png" height="172">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://explorer.duinocoin.com">
+                    Network stats & explorer
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Resources
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/blob/gh-pages/assets/whitepaper.pdf">
+                            <span>
+                                <i class="fa fa-fw fa-book"></i>
+                                <span>Whitepaper</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/tree/useful-tools#branding">
+                            <span>
+                                <i class="fa fa-fw fa-brush"></i>
+                                <span>Branding</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://github.com/revoxhere/duino-coin/tree/useful-tools">
+                            <span>
+                                <i class="fa fa-fw fa-code"></i>
+                                <span>API docs
+                                </span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/apps.html">
+                            <span>
+                                <i class="fa fa-fw fa-check"></i>
+                                <span>Apps and faucets</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Duino team
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://duinocoin.com/team.html">
+                            <span>
+                                <i class="fa fa-fw fa-users"></i>
+                                <span>Meet our team</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/donate.html">
+                            <span>
+                                <i class="fa fa-fw fa-heart"></i>
+                                <span>Donate</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://store.duinocoin.com">
+                            <span>
+                                <i class="fa fa-fw fa-tshirt"></i>
+                                <span>Official merch</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://duinocoin.com/contact.html">
+                            <span>
+                                <i class="fa fa-fw fa-envelope"></i>
+                                <span>Contact us</span>
+                            </span>
+                        </a>
+                        <a class="navbar-item" href="https://duinocoin.com/legal.html">
+                            <span>
+                                <i class="fa fa-fw fa-balance-scale"></i>
+                                <span>Terms of service</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-end is-hidden-touch">
+            <a class="navbar-item" href="https://twitter.com/DuinoCoin/">
+                <i class="fab fa-lg fa-twitter"></i>
+            </a>
+            <a class="navbar-item" href="https://www.reddit.com/r/Duinocoin/">
+                <i class="fab fa-lg fa-reddit"></i>
+            </a>
+            <a class="navbar-item" href="https://discord.gg/kvBkccy">
+                <i class="fab fa-lg fa-discord"></i>
+            </a>
+            <a class="navbar-item" href="https://github.com/revoxhere/duino-coin">
+                <i class="fab fa-lg fa-github"></i>
+            </a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="https://duinocoin.com/getting-started.html">
+                        <strong>Get started</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="section">
+        <br/><br/><br/>
+        <div class="container has-text-centered">
+            <p class="title">
+                404 - Page Not Found
+            </p>
+            <p class="subtitle">
+                That page doesn't exist or was moved.
+            </p>
+            <p class="subtitle has-text-danger-dark">
+                If you believe something should be here please open an issue on our
+                <a href="https://github.com/revoxhere/duco-statistics">
+                    GitHub repository
+                </a>
+            </p>
+            <img src="https://i1.wp.com/boingboing.net/wp-content/uploads/2011/12/404.jpg?w=750">
+            <br/><br/>
+            <div align="center">
+                <a href="https://exchange.duinocoin.com" class="button is-primary">
+                    <span><i class="fa fa-home"></i>&nbsp;Return to Duino-Coin Explorer</span>
+                </a>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Duino-Coin Stats</strong> by <a href="https://revoxhere.github.io">Robert "revox" Piotrowski </a> from the <strong>Duino team</strong> 2019-2023
+                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-statistics">here</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
