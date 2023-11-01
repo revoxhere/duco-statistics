@@ -738,7 +738,11 @@ function get_daily() {
             workers_daily = []
             for (day in data.reverse()) {
                 try {
-                    users.push(data[day]["users"] - data[day - 1]["users"]);
+                    if (data[day]["users"] - data[day - 1]["users"] <= 0) {
+                        users.push(data[day]["users"] - data[day - 1]["users"]);
+                    } else {
+                        users.push(10);
+                    }
                     hashrate_daily.push(parseFloat(data[day]["hashrate"].replace(" GH/s", "")))
                     workers_daily.push(data[day]["miners"])
                     days.push(data[day]["day"]);
