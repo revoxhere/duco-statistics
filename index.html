@@ -1575,7 +1575,7 @@ function update_pools() {
                         <div class="column" style="min-width:200px">
                             <p class="heading title mb-1 is-size-6">
                                 <i class="fa ${data[node]["icon"]}"></i>
-                                <span>${data[node]["name"].replace("-", " ").replace("north", "n.")}</span>
+                                <span>${data[node]["name"].replaceAll("-", " ").replaceAll("north", "n.")}</span>
                             </p>
                             <div class="content">
                                 Last sync: <strong>${data[node]["lastsync"]}</strong>
