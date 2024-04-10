@@ -1534,7 +1534,7 @@ function getColor(value) {
 }
 
 function update_pools() {
-    fetch("https://server.duinocoin.com/all_pools")
+    fetch("https://server.duinocoin.com/all_pools?v=2")
         .catch(function(error) {
             console.log(error);
         })
