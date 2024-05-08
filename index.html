@@ -136,7 +136,7 @@
         }
 
         #workers {
-            max-height: 25em;
+            max-height: 50em;
             overflow: auto;
         }
 
@@ -352,6 +352,38 @@
                             </div>
                         </div>
                     </div>
+                    <div class="columns is-multiline m-3">
+                        <div class="column is-one-third">
+                            <p class="heading has-text-centered is-size-5">
+                                <u>Estimated</u> price
+                            </p>
+                            <canvas id="pricechart"></canvas>
+                        </div>
+                        <div class="column is-one-third">
+                            <p class="heading has-text-centered is-size-5">
+                                Miner distribution
+                            </p>
+                            <canvas id="distributionchart"></canvas>
+                        </div>
+                        <div class="column is-one-third">
+                            <p class="heading has-text-centered is-size-5">
+                                Balance distribution
+                            </p>
+                            <canvas id="userducochart"></canvas>
+                        </div>
+                        <div class="column is-half">
+                            <p class="heading has-text-centered is-size-5">
+                                Daily new users
+                            </p>
+                            <canvas id="dailyusers"></canvas>
+                        </div>
+                        <div class="column is-half">
+                            <p class="heading has-text-centered is-size-5">
+                                Daily hashrate and miners
+                            </p>
+                            <canvas id="minercharts"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="columns is-multiline">
@@ -361,10 +393,10 @@
                         <p class="panel-heading heading is-size-5">
                             Chain explorer
                         </p>
-                        <div class="container m-4">
+                        <div class="container m-3">
                             <div class="field has-addons">
                                 <p class="control is-expanded" id="searchcontrol">
-                                    <input class="input ducoinput" id="search_input" type="text" placeholder="e.g. revox" name="search">
+                                    <input class="input ducoinput" id="search_input" type="text" placeholder="e.g. coinexchange" name="search">
                                 </p>
                                 <p class="control">
                                     <a onclick="button_search()" class="button is-search">
@@ -381,7 +413,8 @@
                                 </p>
                             </p>
                             <p class="is-size-6" id="transactionstext2"></p>
-                            <br>
+                        </div>
+                        <div class="container m-3">
                             <div class="columns is-mobile">
                                 <div class="column is-half">
                                     <div class="divider">Last transactions</div>
@@ -400,102 +433,89 @@
                             </div>
                         </div>
                     </form>
+
+                    <!-- ACTIVE WORKERS -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <p class="heading is-size-5">
+                                Active workers (<span id="workercount">?</span>)
+                            </p>
+                            <div class="columns is-multiline mt-1 is-mobile">
+                                <div class="column is-narrow">
+                                    <p class="is-size-6 has-text-grey">
+                                        <i class="fa fa-circle has-text-danger"></i>
+                                        unverified account
+                                    </p>
+                                </div>
+                                <div class="column is-narrow">
+                                    <p class="is-size-6 has-text-grey">
+                                        <i class="fa fa-circle has-text-success"></i>
+                                        verified account
+                                    </p>
+                                </div>
+                                <div class="column is-narrow">
+                                    <p class="is-size-6 has-text-grey">
+                                        <span class="tag">1</span>
+                                        amount of workers
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-block">
+                            <p id="workers" class="is-size-6 is-size-6">
+                                <button id="loadworkers" class="button workers" onclick="fill_worker_list()">
+                                    Load all workers (it may take a while)
+                                </button>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <!-- CHARTS -->
                 <div class="column is-half">
-                    <div class="columns is-multiline">
-                        <div class="column is-full">
-                            <!-- NODES -->
-                            <div class="panel" style="overflow:hidden">
-                                <p class="panel-heading heading is-size-5">
-                                    Mining nodes
-                                </p>
-                                <div id="pools" class="columns m-3 is-mobile is-multiline">
-                                    <span>Fetching data</span>&nbsp;
-                                    <i class="fa icon fa-spin fa-circle-notch"></i>
+                    <!-- NODES -->
+                    <div id="pools" class="columns is-mobile is-multiline">
+                        <div class="column">
+                            <div class="panel">
+                                <p class="panel-heading heading">Common services</p>
+                                <div class="content m-3">
+                                    <div class="columns is-multiline">
+                                        <div class="content m-3" style="min-width:200px">
+                                            <p class="heading title mb-1 is-size-6">
+                                                <i class="fa fa-link"></i>
+                                                Websites
+                                            </p>
+                                            <div class="content">
+                                                Operational <i class="fa fa-check-circle has-text-success"></i><br>
+                                                with <b class="icon-text" style="color:#F48121">
+                                                    <img class="icon" src='https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png'>
+
+                                                    <span>Cloudflare</span>
+                                                </b>
+                                            </div>
+                                            <p class="heading title mb-1 is-size-6">
+                                                <i class="fa fa-cog"></i>
+                                                APIs
+                                            </p>
+                                            <div class="content has-text-weight-bold">
+                                                Possible problems <i class="fa fa-times-circle has-text-danger"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <p class="panel-heading heading">Servers</p>
+                                <div class="content m-3">
+                                    <div class="columns is-multiline">
+                                        <div class="content m-3" style="min-width:200px">
+                                            Fetching data...
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-full">
-                    <div class="panel">
-                        <p class="panel-heading heading is-size-5">
-                            Charts
-                        </p>
-                        <div class="columns is-multiline m-3">
-                            <div class="column is-one-third">
-                                <p class="heading has-text-centered is-size-5">
-                                    Price
-                                </p>
-                                <canvas id="pricechart"></canvas>
-                            </div>
-                            <div class="column is-one-third">
-                                <p class="heading has-text-centered is-size-5">
-                                    Miner distribution
-                                </p>
-                                <canvas id="distributionchart"></canvas>
-                            </div>
-                            <div class="column is-one-third">
-                                <p class="heading has-text-centered is-size-5">
-                                    Balance distribution
-                                </p>
-                                <canvas id="userducochart"></canvas>
-                            </div>
-                            <div class="column is-half">
-                                <p class="heading has-text-centered is-size-5">
-                                    Daily new users
-                                </p>
-                                <canvas id="dailyusers"></canvas>
-                            </div>
-                            <div class="column is-half">
-                                <p class="heading has-text-centered is-size-5">
-                                    Daily hashrate and miners
-                                </p>
-                                <canvas id="minercharts"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!-- ACTIVE WORKERS -->
-            <div class="column is-full">
-                <div class="panel">
-                    <div class="panel-heading">
-                        <p class="heading is-size-5">
-                            Active workers (<span id="workercount">?</span>)
-                        </p>
-                        <div class="columns is-multiline mt-1 is-mobile">
-                            <div class="column is-narrow">
-                                <p class="is-size-6 has-text-grey-dark">
-                                    <i class="fa fa-circle has-text-danger"></i>
-                                    unverified account
-                                </p>
-                            </div>
-                            <div class="column is-narrow">
-                                <p class="is-size-6 has-text-grey-dark">
-                                    <i class="fa fa-circle has-text-success"></i>
-                                    verified account
-                                </p>
-                            </div>
-                            <div class="column is-narrow">
-                                <p class="is-size-6 has-text-grey-dark">
-                                    <span class="tag">1</span>
-                                    amount of workers
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-block">
-                        <p id="workers" class="is-size-6 is-size-6">
-                            <button id="loadworkers" class="button workers" onclick="fill_worker_list()">
-                                Load all workers
-                            </button>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
     </div>
@@ -642,7 +662,7 @@ hashrate_gauge.animationSpeed = 100;
 
 var target = document.getElementById('userchart');
 let user_gauge = new Gauge(target).setOptions(opts);
-user_gauge.maxValue = 100000;
+user_gauge.maxValue = 125000;
 user_gauge.setMinValue(0);
 user_gauge.animationSpeed = 100;
 
@@ -724,7 +744,7 @@ function fetch_price() {
 }
 
 function get_daily() {
-    fetch("https://server.duinocoin.com/historic_data?limit=30")
+    fetch("https://server.duinocoin.com/historic_data?limit=14")
         .catch(function(error) {
             console.log(error);
         })
@@ -835,6 +855,28 @@ function get_daily() {
 }
 get_daily()
 
+webminer_proxy = "wait";
+closed_by_client = false;
+
+function update_ws_proxy() {
+    start_time = new Date();
+    const exampleSocket = new WebSocket(
+      "wss://magi.duinocoin.com:8443/", "wss"
+    );
+    exampleSocket.onmessage = (event) => {
+      if(event.data.includes(".")) {
+        webminer_ping = new Date() - start_time;
+        closed_by_client = true;
+        exampleSocket.close();
+        webminer_proxy = "ok";
+      }
+    };
+    exampleSocket.addEventListener("close", (event) => {
+        if (!closed_by_client) webminer_proxy = "down";
+        closed_by_client = false;
+    });
+}
+
 function update_stats() {
     fetch("https://server.duinocoin.com/api.json")
         .catch(function(error) {
@@ -846,9 +888,8 @@ function update_stats() {
 
             data["Miner distribution"]["ESP32"] /= 2
             data["Miner distribution"]["RPi"] /= 4
-            data["Miner distribution"]["CPU"] /= 6
-            data["Miner distribution"]["Web"] /= 6
-            data["Miner distribution"]["Phone"] /= 4
+            data["Miner distribution"]["CPU"] /= 4
+            data["Miner distribution"]["Web"] /= 3
 
             update_element("hashrate", data["DUCO-S1 hashrate"])
             hashrate_gauge.set(parseInt(data["Pool hashrate"]));
@@ -883,7 +924,7 @@ function update_stats() {
             aktualizacja = new Date() / 1000 - data["Last sync"]
             master_server = {
                 "icon": "fa-server",
-                "name": `MASTER-NODE v${data["Server version"]}`,
+                "name": `Masternodes`,
                 "cpu": data["Server CPU usage"],
                 "ram": data["Server RAM usage"],
                 "connections": data["Active connections"],
@@ -915,7 +956,7 @@ function update_stats() {
             if (firststart) {
                 const ctx = document.getElementById('distributionchart').getContext('2d');
                 const distributionchart = new Chart(ctx, {
-                    type: 'doughnut',
+                    type: 'bar',
                     data: {
                         labels: labels,
                         datasets: [{
@@ -932,38 +973,38 @@ function update_stats() {
                                 'rgba(0, 148, 50, 1.0)',
                                 '#EF7A44'
                             ],
-                            borderWidth: 1.5
+                            borderWidth: 2.0
                         }]
                     },
                     options: {
-                        rotation: 45,
+                        rotation: 60,
                         animation: {
                             duration: 1500
                         },
                         legend: false,
                         tooltips: {
                             backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                            cornerRadius: 8,
+                            cornerRadius: 3,
                             caretSize: 0,
                             displayColors: false
                         },
                         plugins: {
                             labels: {
-                                render: 'label',
+                                render: "label",
                                 showZero: false,
                                 fontSize: 12,
-                                fontColor: '#fff',
+                                fontColor: '#888',
                                 fontStyle: 'normal',
                                 fontFamily: "'Lato', 'Helvetica', 'Arial', sans-serif",
                                 textShadow: true,
-                                shadowBlur: 10,
+                                shadowBlur: 5,
                                 shadowOffsetX: 0,
-                                shadowOffsetY: -1,
-                                shadowColor: 'rgba(0,0,0,0.5)',
-                                arc: false,
+                                shadowOffsetY: 0,
+                                shadowColor: 'rgba(255,255,255,0.8)',
+                                arc: true,
                                 position: 'border',
                                 overlap: false,
-                                outsidePadding: 4,
+                                outsidePadding: 8,
                                 textMargin: 4
                             }
                         }
@@ -987,7 +1028,7 @@ function update_stats() {
                                 'rgba(0, 148, 50, 1.0)',
                                 '#EF7A44'
                             ],
-                            borderWidth: 1.5
+                            borderWidth: 2.0
                         }]
                     },
                     options: {
@@ -1011,9 +1052,9 @@ function update_stats() {
                                 fontStyle: 'normal',
                                 fontFamily: "'Lato', 'Helvetica', 'Arial', sans-serif",
                                 textShadow: true,
-                                shadowBlur: 10,
+                                shadowBlur: 5,
                                 shadowOffsetX: 0,
-                                shadowOffsetY: -1,
+                                shadowOffsetY: 0,
                                 shadowColor: 'rgba(0,0,0,0.5)',
                                 arc: false,
                                 position: 'border',
@@ -1534,16 +1575,83 @@ function getColor(value) {
 }
 
 function update_pools() {
+    start_time = new Date();
     fetch("https://server.duinocoin.com/all_pools?v=" +new Date())
         .catch(function(error) {
             console.log(error);
         })
         .then(response => response.json())
         .then(data => {
+            end_time = new Date();
             if (data.success === true) {
                 data = data.result;
 
                 node_html = "";
+                eu_html = "";
+                au_html = "";
+                as_html = "";
+                sa_html = "";
+                na_html = "";
+                common_html = `<div class="content m-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa fa-link"></i>
+                                        Websites
+                                    </p>
+                                    <div class="content">
+                                        Operational <i class="fa fa-check-circle has-text-success"></i><br>
+                                        with <b class="icon-text" style="color:#F48121">
+                                            <img class="icon" src='https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png'>
+
+                                            <span>Cloudflare</span>
+                                        </b>
+                                    </div>
+                                </div>
+                                <div class="content m-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa fa-cog"></i>
+                                        APIs
+                                    </p>
+                                    <div class="content">
+                                        Operational <i class="fa fa-check-circle has-text-success"></i><br>
+                                        Response time: <b>${end_time - start_time}ms</b>
+                                    </div>
+                                </div>`;
+
+                if (webminer_proxy == "ok") {
+                    common_html += `
+                                <div class="content m-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Web miner proxy
+                                    </p>
+                                    <div class="content">
+                                        Operational <i class="fa fa-check-circle has-text-success"></i><br>
+                                        Response time: <b>${webminer_ping}ms</b>
+                                    </div>
+                                </div>`
+                } else if (webminer_proxy == "wait") {
+                    common_html += `
+                                <div class="content m-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Web miner proxy
+                                    </p>
+                                    <div class="content">
+                                        Connecting...
+                                    </div>
+                                </div>`
+                } else {
+                    common_html += `
+                                <div class="content m-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Web miner proxy
+                                    </p>
+                                    <div class="content has-text-weight-bold">
+                                        Possible problems <i class="fa fa-times-circle has-text-danger"></i><br>
+                                    </div>
+                                </div>`
+                }
 
                 data = {
                     "master": master_server,
@@ -1553,15 +1661,18 @@ function update_pools() {
                     cpucolor = getColor(data[node]["cpu"] / 100);
                     ramcolor = getColor(data[node]["ram"] / 100);
 
-                    if (parseInt(data[node]["lastsync"]) < 60) {
+                    if (parseInt(data[node]["lastsync"]) < 30) {
                         synccolor = "has-text-success";
                         syncicon = "fa-check-circle";
+                        sync_text = "Operational";
                     } else if (parseInt(data[node]["lastsync"]) < 360) {
                         synccolor = "has-text-warning";
                         syncicon = "fa-exclamation-triangle";
+                        sync_text = `Last sync: <strong>${data[node]["lastsync"]}</strong>`;
                     } else {
                         synccolor = "has-text-danger";
                         syncicon = "fa-times-circle";
+                        sync_text = `<b>Possible problems, last sync: <strong>${data[node]["lastsync"]}</strong></b>`
                     }
 
                     if (data[node]["region"]) {
@@ -1571,30 +1682,167 @@ function update_pools() {
                     }
 
                     if (parseInt(data[node]["lastsync"]) < 3600) {
-                        node_html += `
-                        <div class="column" style="min-width:200px">
-                            <p class="heading title mb-1 is-size-6">
-                                <i class="fa ${data[node]["icon"]}"></i>
-                                <span>${data[node]["name"].replaceAll("-", " ").replaceAll("north", "n.")}</span>
-                            </p>
-                            <div class="content">
-                                Last sync: <strong>${data[node]["lastsync"]}</strong>
-                                <i class="${synccolor} fa ${syncicon}"></i>
-                                <br>
-                                CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong> RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
-                                Clients: <strong>${data[node]["connections"]}</strong>
-                                Region: <strong>${region}</strong>
-                            </div>
-                        </div>`
+                        if (data[node]["name"] == "Mini miner proxy") {
+                            node_column = (`
+                                <div class="content p-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa ${data[node]["icon"]}"></i>
+                                        <span>${data[node]["name"].replaceAll("-", " ")}</span>
+                                    </p>
+                                    <div class="content">
+                                        ${sync_text}
+                                        <i class="${synccolor} fa ${syncicon}"></i>
+                                        <br>
+                                        Clients: <strong>${data[node]["connections"]}</strong>
+                                    </div>
+                                </div>`);
+                        } else {
+                            node_column = (`
+                                <div class="content p-3" style="min-width:200px">
+                                    <p class="heading title mb-1 is-size-6">
+                                        <i class="fa ${data[node]["icon"]}"></i>
+                                        <span>${data[node]["name"].replaceAll("-", " ")}</span>
+                                    </p>
+                                    <div class="content">
+                                        ${sync_text}
+                                        <i class="${synccolor} fa ${syncicon}"></i>
+                                        <br>
+                                        CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong> RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
+                                        Clients: <strong>${data[node]["connections"]}</strong>
+                                    </div>
+                                </div>`);
+                        }
+
+                        if (data[node]["region"] == "EU") eu_html += node_column;
+                        else if (data[node]["region"] == "AU") au_html += node_column;
+                        else if (data[node]["region"] == "SA") sa_html += node_column;
+                        else if (data[node]["region"] == "AS") as_html += node_column;
+                        else if (data[node]["region"] == "NA") na_html += node_column;
+                        else common_html += node_column;
                     }
                 }
-                update_element("pools", node_html)
+
+                if (common_html) {
+                    node_html += (`<div class="column">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">Common services</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${common_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`);
+                }
+
+                if (eu_html) {
+                    node_html += (`<div class="column is-full">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">Europe servers</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${eu_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`);
+                }
+
+                if (as_html) {
+                    node_html += (`<div class="column is-half">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">Asia servers</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${as_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`);
+                }
+
+                if (sa_html) {
+                    node_html += (`<div class="column is-half">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">South America servers</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${sa_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`);
+                }
+
+                if (na_html) {
+                    node_html += (`<div class="column is-half">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">North America servers</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${na_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`)
+                }
+
+                if (au_html) {
+                    node_html += (`<div class="column is-half">
+                                        <div class="panel">
+                                            <p class="panel-heading heading">Australia & Oceania servers</p>
+                                            <div class="content m-3">
+                                                <div class="columns is-multiline">
+                                                    ${au_html}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`);
+                }
+
+                update_element("pools", node_html);
+            } else {
+                common_html = `<div class="column">
+                                    <div class="panel">
+                                        <p class="panel-heading heading">Common services</p>
+                                        <div class="content m-3">
+                                            <div class="columns is-multiline">
+                                                <div class="content m-3" style="min-width:200px">
+                                                    <p class="heading title mb-1 is-size-6">
+                                                        <i class="fa fa-link"></i>
+                                                        Websites
+                                                    </p>
+                                                    <div class="content">
+                                                        Operational <i class="fa fa-check-circle has-text-success"></i><br>
+                                                        with <b class="icon-text" style="color:#F48121">
+                                                            <img class="icon" src='https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png'>
+
+                                                            <span>Cloudflare</span>
+                                                        </b>
+                                                    </div>
+                                                    <p class="heading title mb-1 is-size-6">
+                                                        <i class="fa fa-cog"></i>
+                                                        APIs
+                                                    </p>
+                                                    <div class="content has-text-weight-bold">
+                                                        Possible problems <i class="fa fa-times-circle has-text-danger"></i><br>
+                                                        Response time: <b>${end_time - start_time}ms</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                update_element("pools", common_html);
             }
         })
 }
 
 update_stats();
 window.setInterval(update_stats, 5000);
+
+update_ws_proxy();
+window.setInterval(update_ws_proxy, 10000);
 
 last_explorer_hashes();
 window.setInterval(last_explorer_hashes, 5000);
