@@ -955,7 +955,7 @@ function update_stats() {
 
             if (firststart) {
                 const ctx = document.getElementById('distributionchart').getContext('2d');
-                const distributionchart = new Chart(ctx, {
+                distributionchart = new Chart(ctx, {
                     type: 'bar',
                     data: {
                         labels: labels,
@@ -991,7 +991,7 @@ function update_stats() {
                         plugins: {
                             labels: {
                                 render: "value",
-                                showZero: false,
+                                showZero: true,
                                 fontSize: 12,
                                 fontColor: '#888',
                                 fontStyle: 'normal',
@@ -1004,15 +1004,15 @@ function update_stats() {
                                 arc: true,
                                 position: 'border',
                                 overlap: false,
-                                outsidePadding: 8,
-                                textMargin: 4
+                                outsidePadding: 12,
+                                textMargin: -1
                             }
                         }
                     }
                 });
 
                 const ctxt = document.getElementById('userducochart').getContext('2d');
-                const userchart = new Chart(ctxt, {
+                userchart = new Chart(ctxt, {
                     type: 'pie',
                     data: {
                         labels: userlabels,
@@ -1059,13 +1059,30 @@ function update_stats() {
                                 arc: false,
                                 position: 'border',
                                 overlap: false,
-                                outsidePadding: 4,
-                                textMargin: 4
+                                outsidePadding: 12,
+                                textMargin: 6
                             }
                         }
                     }
                 });
                 firststart = false;
+            } else {
+                distributionchart.data.datasets.forEach((dataset) => {
+                    dataset.data.pop();
+                });
+                distributionchart.data.datasets.forEach((dataset) => {
+                    dataset.data = mnrdata
+                });
+                distributionchart.update(1);
+
+                userchart.data.datasets.forEach((dataset) => {
+                    dataset.data.pop();
+                });
+                userchart.data.datasets.forEach((dataset) => {
+                    dataset.data = usrdata
+                });
+                userchart.update(1);
+ 
             }
         })
 }
