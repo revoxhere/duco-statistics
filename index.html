@@ -361,7 +361,7 @@
                         </div>
                         <div class="column is-one-third">
                             <p class="heading has-text-centered is-size-5">
-                                Miner distribution
+                                DEVICE DISTRIBUTION (<span id="totaldevices">0</span>)
                             </p>
                             <canvas id="distributionchart"></canvas>
                         </div>
@@ -988,6 +988,15 @@ function update_stats() {
                             caretSize: 0,
                             displayColors: false
                         },
+                        scales: {
+                            yAxes: [{
+                                display: true,
+                                ticks: {
+                                    suggestedMin: 0,
+                                    suggestedMax: Math.max(...mnrdata) + 500
+                                }
+                            }]
+                        },
                         plugins: {
                             labels: {
                                 render: "value",
@@ -997,15 +1006,13 @@ function update_stats() {
                                 fontStyle: 'normal',
                                 fontFamily: "'Lato', 'Helvetica', 'Arial', sans-serif",
                                 textShadow: true,
-                                shadowBlur: 5,
-                                shadowOffsetX: 0,
-                                shadowOffsetY: 0,
-                                shadowColor: 'rgba(255,255,255,0.8)',
-                                arc: true,
+                                shadowBlur: 10,
+                                shadowOffsetX: 1,
+                                shadowOffsetY: 1,
+                                shadowColor: 'rgba(255,255,255,1.0)',
                                 position: 'border',
                                 overlap: false,
-                                outsidePadding: 12,
-                                textMargin: -1
+                                textMargin: 0
                             }
                         }
                     }
@@ -1084,6 +1091,7 @@ function update_stats() {
                 userchart.update(1);
  
             }
+            $("#totaldevices").text(mnrdata.reduce((a, b) => a + b))
         })
 }
 
@@ -1865,7 +1873,7 @@ last_explorer_hashes();
 window.setInterval(last_explorer_hashes, 5000);
 
 update_pools();
-window.setInterval(update_pools, 5000);
+window.setInterval(update_pools, 3000);
 
 fetch_price();
 
