@@ -1879,7 +1879,7 @@ function update_pools() {
 let mini_miner_http_status = false;
 
 function update_http_proxy() {
-    $.get("http://185.117.3.49/miniminer.html", )
+    $.get("https://api.allorigins.win/raw?url=http://185.117.3.49/miniminer.html", )
       .done(function(data) {
         mini_miner_http_status = true;
       })
