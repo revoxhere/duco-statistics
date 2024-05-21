@@ -1706,17 +1706,30 @@ function update_pools() {
                         region = "Common";
                     }
 
+                    if (mini_miner_http_status) {
+                        mini_miner_http_status_icon = `<i class="has-text-success fa fa-check-circle"></i>`
+                    } else {
+                        mini_miner_http_status_icon = `<i class="has-text-danger fa fa-times-circle"></i>`
+                    }
+
                     if (parseInt(data[node]["lastsync"]) < 3600) {
                         if (data[node]["name"] == "Mini miner proxy") {
                             node_column = (`
                                 <div class="content p-3" style="min-width:200px">
                                     <p class="heading title mb-1 is-size-6">
                                         <i class="fa ${data[node]["icon"]}"></i>
-                                        <span>${data[node]["name"].replaceAll("-", " ")}</span>
+                                        <span>Mini Miner proxies</span>
                                     </p>
                                     <div class="content">
-                                        ${sync_text}
+                                        <a href="https://server.duinocoin.com/miniminer.html" target="_blank">
+                                            HTTPS
+                                        </a>
                                         <i class="${synccolor} fa ${syncicon}"></i>
+                                        &nbsp;
+                                        <a href="http://185.117.3.49/miniminer.html" target="_blank">
+                                            HTTP
+                                        </a>
+                                        ${mini_miner_http_status_icon}
                                         <br>
                                         Clients: <strong>${data[node]["connections"]}</strong>
                                     </div>
@@ -1863,11 +1876,28 @@ function update_pools() {
         })
 }
 
+let mini_miner_http_status = false;
+
+function update_http_proxy() {
+    $.get("http://185.117.3.49/miniminer.html", )
+      .done(function(data) {
+        mini_miner_http_status = true;
+      })
+      .fail(function(jqxhr, textStatus, error ) {
+        var err = textStatus + ", " + error;
+        mini_miner_http_status = false;
+        console.log( "Mini miner is down: " + err );
+    });
+}
+
 update_stats();
 window.setInterval(update_stats, 5000);
 
 update_ws_proxy();
 window.setInterval(update_ws_proxy, 10000);
+
+update_http_proxy();
+window.setInterval(update_http_proxy, 5000);
 
 last_explorer_hashes();
 window.setInterval(last_explorer_hashes, 5000);
