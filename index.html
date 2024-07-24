@@ -1726,7 +1726,7 @@ function update_pools() {
                                         </a>
                                         <i class="${synccolor} fa ${syncicon}"></i>
                                         &nbsp;
-                                        <a href="http://185.117.3.49/miniminer.html" target="_blank">
+                                        <a href="http://2.56.244.72/miniminer.html" target="_blank">
                                             HTTP
                                         </a>
                                         ${mini_miner_http_status_icon}
@@ -1879,7 +1879,7 @@ function update_pools() {
 let mini_miner_http_status = false;
 
 function update_http_proxy() {
-    $.get("https://api.allorigins.win/raw?url=http://185.117.3.49/miniminer.html?v=" + new Date(), )
+    $.get("https://api.allorigins.win/raw?url=http://2.56.244.72/miniminer.html?v=" + new Date(), )
       .done(function(data) {
         mini_miner_http_status = true;
       })
