@@ -1685,6 +1685,15 @@ function update_pools() {
                     cpucolor = getColor(data[node]["cpu"] / 100);
                     ramcolor = getColor(data[node]["ram"] / 100);
 
+                    node_type = data[node]["type"];
+                    if (node_type == "Official") {
+                        node_type = `<span class="tag is-success">${node_type}</span>`
+                    } else if (node_type) {
+                        node_type = `<span class="tag is-primary">${node_type}</span>`
+                    } else {
+                        node_type = ``;
+                    }
+
                     if (parseInt(data[node]["lastsync"]) < 30) {
                         synccolor = "has-text-success";
                         syncicon = "fa-check-circle";
@@ -1745,7 +1754,8 @@ function update_pools() {
                                         <i class="${synccolor} fa ${syncicon}"></i>
                                         <br>
                                         CPU: <strong style="color:${cpucolor}">${data[node]["cpu"]}%</strong> RAM: <strong style="color:${ramcolor}">${data[node]["ram"]}%</strong><br>
-                                        Clients: <strong>${data[node]["connections"]}</strong>
+                                        Clients: <strong>${data[node]["connections"]}</strong><br>
+                                        ${node_type}
                                     </div>
                                 </div>`);
                         }
