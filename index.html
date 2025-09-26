@@ -1694,7 +1694,7 @@ function update_pools() {
                         node_type = ``;
                     }
 
-                    if (parseInt(data[node]["lastsync"]) < 30) {
+                    if (parseInt(data[node]["lastsync"]) < 20) {
                         synccolor = "has-text-success";
                         syncicon = "fa-check-circle";
                         sync_text = "Operational";
